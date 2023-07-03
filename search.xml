@@ -21,12 +21,4 @@
         <tag>熊貓文</tag>
       </tags>
   </entry>
-  <entry>
-    <title>about</title>
-    <url>/about/</url>
-    <content><![CDATA[<h2 id="this-is-about-me"><a href="#this-is-about-me" class="headerlink" title="this is about me."></a>this is about me.</h2>]]></content>
-      <tags>
-        <tag>about</tag>
-      </tags>
-  </entry>
 </search>
