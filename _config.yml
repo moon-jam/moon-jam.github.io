@@ -105,3 +105,9 @@ deploy:
   type: git
   repo: https://github.com/moon-jam/moon-jam.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
