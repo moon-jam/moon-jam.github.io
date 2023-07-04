@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://moon-jam.github.io/en
+url: https://moon-jam.github.io
 permalink: /:title/
 permalink_defaults:
 pretty_urls:
@@ -31,7 +31,7 @@ i18n_dir:
 skip_render:
 
 # Writing
-new_post_name: :lang/:title.md # File name of new posts
+new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
