@@ -1,5 +1,5 @@
 ---
-title: '404 - 真巧，竟然在這裡遇到你！'
+title: '404 Not Found！'
 comments: false
 permalink: /404.html
 ---
