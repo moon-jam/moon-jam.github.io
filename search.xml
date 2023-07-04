@@ -4,13 +4,16 @@
     <title>Hexo 建立網站</title>
     <url>//Hexo-%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99/</url>
     <content><![CDATA[<p>我的這個Blog就是用Hexo建的，趁今天剛做完打第一篇教學文，這東東其實蠻簡單的，除非你要裝一些酷酷的東西，然後就會搞很久(然後最後還是有些沒用出來QAQ</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄(XD<br><a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4">【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌</a><br><a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)</a><br><a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">上面那個的上課講義</a><br><a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點就有些可能要再查一下</a><br><a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo - NexT 主題篇 - 可以安裝的套件(他部落格裡面還有很多Hexo的教學)</a><br><a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a></p>
 ]]></content>
       <categories>
-        <category>-中文 -教學文</category>
+        <category>中文</category>
+        <category>教學文</category>
       </categories>
       <tags>
-        <tag>-Hexo -NexT</tag>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>

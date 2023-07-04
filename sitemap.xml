@@ -65,7 +65,14 @@
 
   
   <url>
-    <loc>https://moon-jam.github.io/tags/Hexo-NexT/</loc>
+    <loc>https://moon-jam.github.io/tags/Hexo/</loc>
+    <lastmod>2023-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://moon-jam.github.io/tags/NexT/</loc>
     <lastmod>2023-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -81,14 +88,14 @@
 
   
   <url>
-    <loc>https://moon-jam.github.io/categories/%E4%B8%AD%E6%96%87-%E6%95%99%E5%AD%B8%E6%96%87/</loc>
+    <loc>https://moon-jam.github.io/categories/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2023-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://moon-jam.github.io/categories/%E4%B8%AD%E6%96%87/</loc>
+    <loc>https://moon-jam.github.io/categories/%E4%B8%AD%E6%96%87/%E6%95%99%E5%AD%B8%E6%96%87/</loc>
     <lastmod>2023-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
