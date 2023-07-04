@@ -4,8 +4,12 @@
     <title>hello world</title>
     <url>/zh-TW/hello-world/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>網站</category>
+      </categories>
       <tags>
         <tag>熊貓文</tag>
+        <tag>繁體中文</tag>
       </tags>
   </entry>
 </search>
