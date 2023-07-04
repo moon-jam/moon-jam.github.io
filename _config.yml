@@ -8,7 +8,7 @@ subtitle: "I'm a panda"
 description: ""
 keywords: "Moon Jam"
 author: Moon Jam
-language: en
+language: zh-TW
 timezone: ""
 
 # URL
@@ -103,8 +103,8 @@ theme: NexT
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/moon-jam/en.git
-  branch: gh-pages
+  repo: https://github.com/moon-jam/moon-jam.github.io.git
+  branch: master
 
 live2d:
   enable: true
