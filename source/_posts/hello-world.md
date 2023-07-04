@@ -2,7 +2,6 @@
 title: Hello World
 lang: zh-TW
 categories:
-  - 中文
   - 熊貓文
 tags:
   - 熊貓文
