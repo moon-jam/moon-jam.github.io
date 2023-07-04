@@ -124,4 +124,10 @@ live2d:
   mobile:
     show: fasle
 
-    
+nofollow:
+  enable: true
+  exclude:   # 排除项
+  - tophat.top
+
+sitemap:
+	path: sitemap.xml
