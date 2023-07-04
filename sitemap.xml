@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://moon-jam.github.io/404.html</loc>
+    <loc>https://moon-jam.github.io/zh-TW/hello-world/</loc>
     
     <lastmod>2023-07-04</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.github.io/zh-TW/hello-world/</loc>
+    <loc>https://moon-jam.github.io/404.html</loc>
     
     <lastmod>2023-07-04</lastmod>
     
@@ -63,7 +63,7 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.github.io/tags/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87/</loc>
+    <loc>https://moon-jam.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2023-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
