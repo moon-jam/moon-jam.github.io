@@ -21,12 +21,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"moon-jam.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="這是一個不存在的頁面很抱歉，目前這個連結已經失效 預計將在約 5 秒後返回首頁。 如果你很急著想看文章，你可以 點這裡 返回首頁。  let countTime &#x3D; 5;  function count() {   document.getElementById(&#39;timeout&#39;).textContent &#x3D; countTime;   countTime -&#x3D; 1;   if(countTime">
+    <meta name="description" content="這是一個不存在的頁面很抱歉，目前這個連結已經失效 預計將在約 5 秒後返回首頁。 如果你很急著想看文章，你可以 點這裡 返回首頁。  let countTime &#x3D; 5;  function count() {   document.getEle">
 <meta property="og:type" content="website">
 <meta property="og:title" content="404 Not Found！">
 <meta property="og:url" content="https://moon-jam.github.io/404.html">
 <meta property="og:site_name" content="Moon Jam&#39;s Blog">
-<meta property="og:description" content="這是一個不存在的頁面很抱歉，目前這個連結已經失效 預計將在約 5 秒後返回首頁。 如果你很急著想看文章，你可以 點這裡 返回首頁。  let countTime &#x3D; 5;  function count() {   document.getElementById(&#39;timeout&#39;).textContent &#x3D; countTime;   countTime -&#x3D; 1;   if(countTime">
+<meta property="og:description" content="這是一個不存在的頁面很抱歉，目前這個連結已經失效 預計將在約 5 秒後返回首頁。 如果你很急著想看文章，你可以 點這裡 返回首頁。  let countTime &#x3D; 5;  function count() {   document.getEle">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-07-04T07:31:37.292Z">
 <meta property="article:modified_time" content="2023-07-04T07:31:37.292Z">
@@ -56,7 +56,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -311,6 +311,26 @@ count();
 
 
 
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"moon-jam/moon-jam.github.io","issue_term":"pathname","theme":"github-light"}</script>
 <script src="/js/third-party/comments/utterances.js"></script>
 
@@ -324,5 +344,5 @@ count();
 
     gtag('config', 'G-18MK2QJN0M');
   </script>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":"fasle"},"log":false});</script></body>
 </html>
