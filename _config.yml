@@ -41,7 +41,7 @@ external_link:
   exclude: ""
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -106,3 +106,28 @@ deploy:
   type: git
   repo: https://github.com/moon-jam/moon-jam.github.io.git
   branch: master
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-hijiki
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: fasle
+
+nofollow:
+  enable: true
+  exclude:   # 排除项
+  - tophat.top
+
+sitemap:
+	path: sitemap.xml
