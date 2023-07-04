@@ -278,7 +278,7 @@ symbols_count_time:
   time: true # 文章是否顯示閱讀時間
   total_symbols: true # 網頁底部是否顯示字數統計
   total_time: true # 網頁底部是否顯示閱讀時間
-  exclude_codeblock: false # 排除程式碼字數統計
+  exclude_codeblock: true # 排除程式碼字數統計
   awl: 2 #平均文字長度，中文為 2, 英文為 5, 預設為 4
   wpm: 275 #一分鐘閱讀字數，預設為 275
   suffix: "mins."
@@ -387,16 +387,16 @@ codeblock:
   # Code Highlight theme
   # All available themes: https://theme-next.js.org/highlight/
   theme:
-    light: default
-    dark: stackoverflow-dark
+    light: github-dark
+    dark: github-dark
   prism:
     light: prism
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
-    style:
+    style: mac
 
 back2top:
   enable: true
@@ -598,16 +598,16 @@ pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # Medium Zoom is a JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
 # For more information: https://medium-zoom.francoischalifour.com
-mediumzoom: false
+mediumzoom: true
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: false
+lazyload: true
 
 # Automatically insert whitespace between CJK and half-width characters.
 # For more information: https://github.com/vinta/pangu.js
@@ -939,3 +939,14 @@ vendors:
 css: css
 js: js
 images: images
+
+# hexo-hide-posts
+hide_posts:
+  enable: true
+  # 可以改成其他你喜欢的名字
+  filter: hidden
+  # 指定你想要传递隐藏文章的 generator，比如让所有隐藏文章在存档页面可见
+  # 常见的 generators 有：index, tag, category, archive, sitemap, feed, etc.
+  public_generators: []
+  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录
+  noindex: true
