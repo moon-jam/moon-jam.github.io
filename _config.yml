@@ -8,15 +8,14 @@ subtitle: "I'm a panda"
 description: ""
 keywords: "Moon Jam"
 author: Moon Jam
-language: 
-  -en
-  -zh-TW
+language: en
+  # -zh-TW
 timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://moon-jam.github.io
-permalink: :lang/:title/
+permalink: /:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -29,7 +28,7 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
+i18n_dir:
 skip_render:
 
 # Writing

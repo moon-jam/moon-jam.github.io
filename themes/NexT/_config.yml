@@ -205,7 +205,7 @@ footer:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa-solid fa-paw
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#000000"
 
