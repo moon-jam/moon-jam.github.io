@@ -1,120 +1,103 @@
-name: English
-
+---
+name: 繁體中文
 title:
-  archive: Archive
-  category: Category
-  tag: Tag
-  schedule: Schedule
-
+  archive: 歸檔
+  category: 分類
+  tag: 標籤
+  schedule: 時間表
 menu:
-  home: Home
-  archives: Archives
-  categories: Categories
-  tags: Tags
-  about: About
-  search: Search
-  schedule: Schedule
-  sitemap: Sitemap
-  commonweal: Commonweal 404
-
+  home: 首頁
+  archives: 歸檔
+  categories: 分類
+  tags: 標籤
+  about: 關於
+  search: 搜尋
+  schedule: 時間表
+  sitemap: 網站地圖
+  commonweal: 公益 404
 sidebar:
-  overview: Overview
-  toc: Table of Contents
+  overview: 本站概要
+  toc: 文章目錄
   links: Links
-
 post:
-  posted: Posted on
-  edited: Edited on
-  created: Created
-  modified: Modified
-  edit: Edit this post
-  in: In
-  read_more: Read more
-  untitled: Untitled
-  sticky: Sticky
-  views: Views
-  related_posts: Related Posts
+  posted: 發表於
+  edited: 更新於
+  created: 創建時間
+  modified: 修改時間
+  edit: 編輯
+  in: 分類於
+  read_more: 閱讀全文
+  untitled: 未命名
+  sticky: 置頂
+  views: 閱讀次數
+  related_posts: 相關文章
   copyright:
-    author: Post author
-    link: Post link
-    post_author: Written by
-    post_link: This article originally appeared on
-    license_title: Copyright Notice
-    license_content: "All articles in this blog are licensed under %s unless stating additionally."
+    author: 作者
+    link: 文章連結
+    post_author: 已寫入
+    post_link: 文章最初發表於
+    license_title: 版權聲明
+    license_content: "本網誌所有文章除特別聲明外，均採用 %s 許可協議。轉載請註明出處！"
     license_content_reprint: "This article is a reprinted article and has been reprinted with permission. Please indicate the source!"
-
 footer:
-  powered: "Powered by %s"
-  total_views: Total Views
-  total_visitors: Total Visitors
-
+  powered: "由 %s 強力驅動"
+  total_views: 總瀏覽次數
+  total_visitors: 訪客總數
 widget:
   github: Follow me on GitHub
   chat: Chat
-
 counter:
   tag_cloud:
-    zero: No tags
-    one: 1 tag in total
-    other: "%d tags in total"
-
+    zero: 沒有標籤
+    one: 目前共有 1 個標籤
+    other: "目前共有 %d 個標籤"
   categories:
-    zero: No categories
-    one: 1 category in total
-    other: "%d categories in total"
-
+    zero: 沒有分類
+    one: 目前共有 1 個分類
+    other: "目前共有 %d 個分類"
   archive_posts:
-    zero: No posts.
-    one: 1 post.
-    other: "%d posts in total."
-
+    zero: 沒有文章。
+    one: 目前共有 1 篇文章。
+    other: "目前共有 %d 篇文章。"
 state:
-  posts: posts
-  tags: tags
-  categories: categories
-
+  posts: 文章
+  tags: 標籤
+  categories: 分類
 search:
-  placeholder: Searching...
-  empty: "We didn't find any results for the search: %s"
-  hits_time: "%s results found in %s ms"
-  hits: "%s results found"
-
+  placeholder: 搜尋...
+  empty: "我們無法找到任何有關 %s 的搜索結果"
+  hits_time: "%s 找到 %s 個結果"
+  hits: "找到 %s 個結果"
 cheers:
-  um: Um..
-  ok: OK
-  nice: Nice
-  good: Good
-  great: Great
-  excellent: Excellent
-
-keep_on: Keep on posting.
-
+  um: 嗯..
+  ok: 還行
+  nice: 好
+  good: 很好
+  great: 非常好
+  excellent: 太棒了
+keep_on: 繼續努力。
 symbol:
-  comma: ", "
-  period: ". "
-  colon: ": "
-
+  comma: "，"
+  period: "。"
+  colon: "："
 reward:
-  donate: Donate
-  wechatpay: WeChat Pay
-  alipay: Alipay
-  paypal: PayPal
-  bitcoin: Bitcoin
+  donate: 捐贈
+  wechatpay: 微信支付
+  alipay: 支付寶
+  paypal: 貝寶
+  bitcoin: 比特幣
   comment: Buy me a coffee
-
 follow_me:
-  welcome: Welcome to my other publishing channels
-
+  welcome: 歡迎關注我的其它發布渠道
 accessibility:
-  nav_toggle: Toggle navigation bar
-  prev_page: Previous page
-  next_page: Next page
-  back_to_top: Back to top
-  select_lang: Select language
-
+  nav_toggle: 切換導航欄
+  prev_page: 上一頁
+  next_page: 下一頁
+  back_to_top: 回到頂端
+  select_lang: 選擇語言
 symbols_count_time:
-  count: Word count in article
-  count_total: Word count total
-  time: Reading time
-  time_total: Reading time total
-  time_minutes: mins.
+  count: 文章字數
+  count_total: 總字數
+  time: 所需閱讀時間
+  time_total: 所需總閱讀時間
+  time_minutes: 分鐘
