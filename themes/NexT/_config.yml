@@ -257,7 +257,7 @@ excerpt_description: true
 # Hexo supports excerpts by adding tag.
 # You can automate this by using hexo-auto-excerpt plugin.
 # See: https://github.com/ashisherc/hexo-auto-excerpt
-excerpt_length: 350
+excerpt_length: 200
 
 # Read more button
 # If true, the read more button will be displayed in excerpt section.

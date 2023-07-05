@@ -1,7 +1,8 @@
 ---
-title: 還沒做好😥，稍等一下🙏
-date:
+title: {{ title }}
+date: {{ date }}
 tags:
 categories:
 hidden: true
+description: 
 ---

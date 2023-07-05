@@ -10,6 +10,7 @@ categories:
 abbrlink: 19590
 date: 2023-07-05 00:00:00
 # hidden: true
+description: 
 ---
 
 ## 前言
@@ -160,7 +161,7 @@ theme: next
 [【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌](https://hackmd.io/@Heidi-Liu/note-hexo-github#【學習筆記】如何使用-Hexo--GitHub-Pages-架設個人網誌)  
 [使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)](https://youtu.be/jOJI9ekTzK8)  
 [使用 Hexo 建置網站（上面影片的上課講義）](https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA)  
-[中國的教學，還蠻詳細的但有點就有些可能要再查一下](https://blog.csdn.net/as480133937/article/details/100138838)  
+[中國的教學，還蠻詳細的但有點舊有些可能要再查一下](https://blog.csdn.net/as480133937/article/details/100138838)  
 [試著學 Hexo - NexT 主題篇 - 可以安裝的套件(他部落格裡面還有很多Hexo的教學)](https://israynotarray.com/hexo/20201003/38607376/)  
 [在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue](https://nijialin.com/2021/05/15/hexo-utterances-comment/)  
 [這個是用Butterfly做的，做的超猛](https://zsyyblog.com)  
