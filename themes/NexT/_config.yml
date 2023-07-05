@@ -252,7 +252,7 @@ footer:
 # ---------------------------------------------------------------
 
 # Use `description` in front-matter to specify post excerpt.
-excerpt_description: true
+excerpt_description: false
 
 # Hexo supports excerpts by adding tag.
 # You can automate this by using hexo-auto-excerpt plugin.
