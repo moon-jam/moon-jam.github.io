@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨</p>
-<p>看到好多厲害的人都有自己的 Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del></p>
-<p>之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ<br>還差 favicon 跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
-]]></content>
-      <categories>
-        <category>熊貓文</category>
-      </categories>
-      <tags>
-        <tag>熊貓文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
     <url>/Hexo-NexT_Github-Page_build-blog/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的Blog就是用Hexo、NexT、Github Page做出來的，而且不同其他架Blog的那種網站，做出來之後你的Blog後面會有一個github.io的後綴（就像<a href="https://moon-jam.github.io/">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了<br><del>不過要是你想裝一些酷酷的東西，就有可能搞很久(最後還是有些沒用出來QAQ</del></p>
@@ -74,7 +60,7 @@
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這個Blog前前後後大概花了10個小時，大概有七成時間都是在找bug🥲，不過成果還算滿意😀。</p>
 <p>期間為了要有一些更酷的功能，所以又找了很多的擴充，然後遇到好多奇怪的狀況，debug了好久，然後還是有些做不出來，像是那個同一站內切換語言，我看有人做出來，想說應該有插件不會太難，結果我就用了三四個小時有時候切語言只有一半的東西切到，有時候切過去了切不回來，不然就是切過去之後沒有出先該出現的東西，後來實在用不好，所以才變成現在我分成中英兩個站點，然後分兩個地方更新，實在有點麻煩，而且如果要改設定還要改兩次，如果有人知道怎麼用的希望可以在底下跟我說🙏。其實本來還有動態背景跟酷酷的滑鼠爆炸特效，但感覺這樣網站看起來有點小亂，還是簡單一點比較好（枉費我浪費這麼多時間😠</p>
 <p>對了我有用一點點SEO優化，不知道哪天我的網站可以在google上被搜尋到。之後不知道會不會想要買一個自己的網域，感覺也很酷。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄XD<br><a href="https://hexo.io/zh-tw/">Hexo官方網站</a><br><a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#%E3%80%90%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E3%80%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Hexo--GitHub-Pages-%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E8%AA%8C">【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌</a><br><a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)</a><br><a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">使用 Hexo 建置網站（上面影片的上課講義）</a><br><a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點就有些可能要再查一下</a><br><a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo - NexT 主題篇 - 可以安裝的套件(他部落格裡面還有很多Hexo的教學)</a><br><a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a><br><a href="https://zsyyblog.com/">這個是用Butterfly做的，做的超猛</a><br><a href="https://siriusq.top/en/hexo-hext-8-language-switch.html">Hexo Next 8 Language Switch</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄XD<br><a href="https://hexo.io/zh-tw/">Hexo官方網站</a><br><a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#%E3%80%90%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E3%80%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Hexo--GitHub-Pages-%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E8%AA%8C">【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌</a><br><a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)</a><br><a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">使用 Hexo 建置網站（上面影片的上課講義）</a><br><a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點舊有些可能要再查一下</a><br><a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo - NexT 主題篇 - 可以安裝的套件(他部落格裡面還有很多Hexo的教學)</a><br><a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a><br><a href="https://zsyyblog.com/">這個是用Butterfly做的，做的超猛</a><br><a href="https://siriusq.top/en/hexo-hext-8-language-switch.html">Hexo Next 8 Language Switch</a></p>
 ]]></content>
       <categories>
         <category>中文</category>
@@ -83,6 +69,20 @@
       <tags>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨</p>
+<p>看到好多厲害的人都有自己的 Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del></p>
+<p>之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ<br>還差 favicon 跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
+]]></content>
+      <categories>
+        <category>熊貓文</category>
+      </categories>
+      <tags>
+        <tag>熊貓文</tag>
       </tags>
   </entry>
 </search>
