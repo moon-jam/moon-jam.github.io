@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨</p>
+<p>看到好多厲害的人都有自己的 Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del></p>
+<p>之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ<br>還差 favicon 跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
+]]></content>
+      <categories>
+        <category>熊貓文</category>
+      </categories>
+      <tags>
+        <tag>熊貓文</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
     <url>/Hexo-NexT_Github-Page_build-blog/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的Blog就是用Hexo、NexT、Github Page做出來的，而且不同其他架Blog的那種網站，做出來之後你的Blog後面會有一個github.io的後綴（就像<a href="https://moon-jam.github.io/">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了<br><del>不過要是你想裝一些酷酷的東西，就有可能搞很久(最後還是有些沒用出來QAQ</del></p>
@@ -69,20 +83,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨</p>
-<p>看到好多厲害的人都有自己的 Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del></p>
-<p>之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ<br>還差 favicon 跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
-]]></content>
-      <categories>
-        <category>熊貓文</category>
-      </categories>
-      <tags>
-        <tag>熊貓文</tag>
       </tags>
   </entry>
 </search>
