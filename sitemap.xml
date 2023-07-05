@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moon-jam.github.io/404.html</loc>
+    
+    <lastmod>2023-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.github.io/Hexo-NexT_Github-Page_build-blog/</loc>
     
     <lastmod>2023-07-05</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://moon-jam.github.io/hello-world/</loc>
     
     <lastmod>2023-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://moon-jam.github.io/404.html</loc>
-    
-    <lastmod>2023-07-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
