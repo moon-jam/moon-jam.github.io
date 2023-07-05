@@ -14,7 +14,7 @@ timezone: ""
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://moon-jam.github.io
-permalink: /:title/
+permalink: :name/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -40,7 +40,7 @@ external_link:
   exclude: ""
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -115,7 +115,7 @@ live2d:
   tagMode: false
   debug: false
   model:
-    use: live2d-widget-model-hijiki
+    use: live2d-widget-model-wanko
   display:
     position: right
     width: 150
