@@ -10,7 +10,7 @@ categories:
 abbrlink: 19590
 date: 2023-07-05 00:00:00
 # hidden: true
-description: 利用 Hexo + NexT + Github Page 建立自己的 Blog
+description: "利用 Hexo + NexT + Github Page 建立自己的 Blog"
 ---
 
 ## 前言
