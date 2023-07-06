@@ -4,7 +4,9 @@ date:
 tags:
 categories:
 hidden: true
-description: 還沒做好😥，稍等一下🙏
+description: {{ title }}
+sticky: false
+top: false
 ---
 
 火速趕稿中...

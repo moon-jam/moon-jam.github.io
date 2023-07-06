@@ -5,7 +5,7 @@ abbrlink: 43211
 date:
 tags:
 categories:
-description: "還沒做好\U0001F625，稍等一下\U0001F64F"
+description: "NexT-day-night-mode"
 ---
 
 火速趕稿中...
