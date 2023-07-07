@@ -1,9 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
+    <url>/Hexo-NexT_Github-Page_build-blog/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的Blog就是用Hexo、NexT、Github Page做出來的，而且不同其他架Blog的那種網站，做出來之後你的Blog後面會有一個github.io的後綴（就像<a href="https://moon-jam.github.io/">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了</p>
+<span id="more"></span>
+<p><del>不過要是你想裝一些酷酷的東西，就有可能搞很久(最後還是有些沒用出來QAQ</del></p>
+<p>如果想要看詳細一點的教學我覺得六角學院的教學影片很棒，跟著做很快就好了，如果覺得我現在的Blog哪裡還可以修正，或是覺得我教學哪裡有問題或是有講錯的歡迎在底下留言指教喔～<br>教學開始嘍！<br>注意事項：這個教學會需要用到vscode，如果不知道他是什麼或是跟他不熟的，建議先去爬爬文看怎麼用再來看這篇喔～</p>
+<h2 id="建構Hexo"><a href="#建構Hexo" class="headerlink" title="建構Hexo"></a>建構Hexo</h2><p>需要先裝<a href="https://nodejs.org/en">Node.js</a>還有<a href="https://git-scm.com/downloads">Git</a><br>然後從vscode開一個資料夾，並在terminal打下面這些</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog_folder_name  //要換成你自己的資料夾名稱</span><br><span class="line">cd blog_folder_path         //要換成你自己的資料夾路徑</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>然後就會看到你的網頁跑出來了</p>
+<h2 id="連接Github"><a href="#連接Github" class="headerlink" title="連接Github"></a>連接Github</h2><p>首先先到github新開一個 Repository（這裡附上本人的<a href="https://github.com/moon-jam/moon-jam.github.io">Repository</a>）<br><img data-src="https://i.imgur.com/yadvxfF.png"><br>然後取名叫做<strong>username</strong>.github.io （username要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點<br>選public，然後其他都不要打勾，完成之後複製這一段<br><img data-src="https://i.imgur.com/XwrVZEQ.png"><br>然後接下來就要把資料夾跟Github連上，輸入以下這些東西</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add.</span><br><span class="line">git commit -m &quot;git init&quot;</span><br><span class="line"></span><br><span class="line">git remote add origin Repository_url //Repository_url換成剛剛複製的那個</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>接著到最外層的資料夾應該會看到一個_config.yml，點進去，然後找到deploy，並修改成下面這樣</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">Repository_url</span> <span class="string">//剛剛複製的那個</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p>這裡要注意一下如果剛剛你Repository名字不是叫username.github.io，要改成這樣子</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">Repository_url</span> <span class="string">//剛剛複製的那個</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+
+<p>此外如果你Repository名稱自己取的話還要找到relative_link，並設定為true</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">relative_link:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>最後就可以部署到github上去了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>完成之後你打開username.github.io，應該就會看到你的網頁了🎉（Repository名稱自己取的則是開啟username.github.io&#x2F;<strong>Repository_name</strong>）</p>
+<p>接下來就可以開始寫部落格了，接下來就來講應該如何新建一片文章，是用markdown語法編輯，如果不熟的可以自己去找找文章，網路上蠻多教學的  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new title //會在source資料夾裡面產生一篇檔名叫做title的檔案，使用markdown語法編輯</span><br></pre></td></tr></table></figure>
+
+<p>完成之後就連打下面三行，就會發現你新的文章已經出現在網站上了(如果還沒的話就在等一下，他可能還要一些時間，或者你可以在terminal打<code>hexo s</code>，就可以在本地看到網站摟)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl //clean 刪掉之前的內容，不刪有時候也可以，但有可能會報錯</span><br><span class="line">hexo g  //generate 建立網站</span><br><span class="line">hexo d  //deploy 部署到github page</span><br></pre></td></tr></table></figure>
+
+<p>然後如果要傳到github上，每次都要<code>git commit -m &quot;&quot;</code>、<code>git push</code>實在太累了，這邊我蠻推薦裝<a href="https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-github">vscode的插件</a>連到Github，可以直接一鍵上傳</p>
+<h2 id="Hexo-設定"><a href="#Hexo-設定" class="headerlink" title="Hexo 設定"></a>Hexo 設定</h2><p>找到外層資料夾最底下的_config.yml，這邊就講有需要調整的，其他有興趣可以自己玩玩看<br><img data-src="https://i.imgur.com/fow2tPF.png"></p>
+<ol>
+<li>Site：<br>  －title就打你想為網站取的名字<br>  －subtitle會顯示在網站title的底下，可以留空不會<br>  －keyword可打可不打<br>  －author打你的想叫的名字，之後如果有地方會用到作者的資訊都會直接從這裡拿<br>  －language就選你想要的語言（繁體中文zh-TW，簡體中文zh-CN，香港zh-HK，英文en）<br>  －timezone就留空就好<br><img data-src="https://i.imgur.com/CLLrsqJ.png" alt="Site"></li>
+<li>URL：<br> －url填自己的網域，如果你有自己的網域的話就填自己的（之後如果哪天有的話再個教學），所以就是填github page的網址<br> －permalink是代表你文章的網址要是什麼，預設是年&#x2F;月&#x2F;日&#x2F;文章標題，不過這裡我建議你該城:name&#x2F;，你也可以用:&#x2F;title這是代表用title當作網址，但如果是中文的話他會變亂碼，這樣對搜尋優化不好（原本用年月日也會因為層數太多所以讓演算法不喜歡），而且網址也會變比較難看，用:name&#x2F;的話會用檔案名稱當作網址，只要你檔名取英文的就好了（也有插件是會自己生成一串數字當作網址，但這樣對搜尋優化應該也不太好)<br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="剩下的兩個不用動他"></li>
+<li>找到theme的地方，後面打上主題的資料夾名稱，詳細就看後面的吧</li>
+</ol>
+<h2 id="套上主題"><a href="#套上主題" class="headerlink" title="套上主題"></a>套上主題</h2><p>我是選擇<a href="https://theme-next.js.org/">NexT</a>，版型相當的好看，而且很多人用，要找資源也還算好找（<a href="https://hexo.io/themes/">這裡</a>可以找其他主題喔）<br><img data-src="https://user-images.githubusercontent.com/16272760/63487983-da41b080-c4df-11e9-951c-64883a8a5e9b.png"></p>
+<h3 id="下載-NexT"><a href="#下載-NexT" class="headerlink" title="下載 NexT"></a>下載 NexT</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/NexT</span><br></pre></td></tr></table></figure>
+
+<p>接著到到最外層資料夾的_config.yml（不是你theme裡面的喔）找到theme的地方，並設成NexT</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">NexT</span></span><br></pre></td></tr></table></figure>
+
+<p>如果要下載別的主題可以點到進主題的github，並複製他的網址，然後改成<code>git clone 你想要的主題 themes/你想要的資料夾名稱</code>，然後把_config.yml中的theme，並設成你取的資料夾名稱</p>
+<p>再輸入<code>hexo s</code>，就看得到摟，部署到網站上就是在輸入上面那三條</p>
+<h3 id="修改NexT主題"><a href="#修改NexT主題" class="headerlink" title="修改NexT主題"></a>修改NexT主題</h3><p>如果要改NexT的主題(就是上面看到的那四種)，可以到<code>theme/NexT/_config.yml</code>，修改裡面的<code>Scheme Settings</code>，把想要的取消註解，其他全部註解掉（像我就是使用Pisces）<br><img data-src="https://i.imgur.com/iXejwcC.png"></p>
+<h2 id="NexT調整"><a href="#NexT調整" class="headerlink" title="NexT調整"></a>NexT調整</h2><p>這邊我就列出我改的東西跟教學，有興趣的再移過去看摟  </p>
+<ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-about-tag-category-archives">關於、標籤、分類、歸檔</a><br> － <a href="/NexT-sidebar-search">搜尋</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-footer">utteranc留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d角色（就是那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+</ol>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這個Blog前前後後大概花了10個小時，大概有七成時間都是在找bug🥲，不過成果還算滿意😀。</p>
+<p>期間為了要有一些更酷的功能，所以又找了很多的擴充，然後遇到好多奇怪的狀況，debug了好久，然後還是有些做不出來，像是那個同一站內切換語言，我看有人做出來，想說應該有插件不會太難，結果我就用了三四個小時有時候切語言只有一半的東西切到，有時候切過去了切不回來，不然就是切過去之後沒有出先該出現的東西，後來實在用不好，所以才變成現在我分成中英兩個站點，然後分兩個地方更新，實在有點麻煩，而且如果要改設定還要改兩次，如果有人知道怎麼用的希望可以在底下跟我說🙏。其實本來還有動態背景跟酷酷的滑鼠爆炸特效，但感覺這樣網站看起來有點小亂，還是簡單一點比較好（枉費我浪費這麼多時間😠</p>
+<p>對了我有用一點點SEO優化，不知道哪天我的網站可以在google上被搜尋到。之後不知道會不會想要買一個自己的網域，感覺也很酷。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄XD<br><a href="https://hexo.io/zh-tw/">Hexo官方網站</a><br><a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#%E3%80%90%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E3%80%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Hexo--GitHub-Pages-%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E8%AA%8C">【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌</a><br><a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)</a><br><a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">使用 Hexo 建置網站（上面影片的上課講義）</a><br><a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點舊有些可能要再查一下</a><br><a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo - NexT 主題篇 - 可以安裝的套件(他部落格裡面還有很多Hexo的教學)</a><br><a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a><br><a href="https://zsyyblog.com/">這個是用Butterfly做的，做的超猛</a><br><a href="https://siriusq.top/en/hexo-hext-8-language-switch.html">Hexo Next 8 Language Switch</a></p>
+]]></content>
+      <categories>
+        <category>中文</category>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 網頁頁底設計</title>
+    <url>/NexT-footer/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底的部分，那總共會分成底下這幾個部分  </p>
+<span id="more"></span>
+<ol>
+<li><a href="/NexT-footer/#%E5%BA%95%E4%B8%8B%E7%9A%84%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81%E8%AA%AA%E6%98%8E%E3%80%81%E9%A0%81%E5%BA%95%E7%9A%84icon%E3%80%81Powered-by%E2%80%A6">底下的版權說明、說明、頁底的icon、Powered by…</a></li>
+<li><a href="(/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
+<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
+</ol>
+<h2 id="底下的版權說明、說明、頁底的icon、Powered-by…"><a href="#底下的版權說明、說明、頁底的icon、Powered-by…" class="headerlink" title="底下的版權說明、說明、頁底的icon、Powered by…"></a>底下的版權說明、說明、頁底的icon、Powered by…</h2><p>首先先移駕到你的theme裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
+<p>然後搜尋<code>footer</code>，找到他的位置</p>
+<ol>
+<li>since：你這個網站開始的時間，在你的頁底就會是XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，你也可以不打，如果不打他就是會顯示今年</li>
+<li>icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以在幾改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外animated就是他會不會在那裡”跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
+<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config去改喔）</li>
+</ol>
+<p><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們更清楚，才不是想曬我的三玖"></p>
+<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></table></figure>
+
+<p>接著在NexT內的_config隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></table></figure>
+
+<p>接著再到最外層資料夾的_config隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">&quot;mins.&quot;</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋<code>busuanzi_count</code>，然後把<code>enable</code>設<code>true</code>就完成了（如果有安裝live2d的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-about-tag-category-archives">關於、標籤、分類、歸檔</a><br> － <a href="/NexT-sidebar-search">搜尋</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a> ✅</p>
+</li>
+<li><p><a href="/NexT-footer">utteranc留言板</a>  </p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a>  </p>
+</li>
+<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a>  </p>
+</li>
+<li><p><a href="/NexT-live2d">live2d角色（就是那隻可愛的狗狗）</a>  </p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a>  </p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>中文</category>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/hello-world/</url>
-    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨</p>
+    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨  </p>
+<span id="more"></span>
 <p>看到好多厲害的人都有自己的 Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del><br>之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ<br>還差 favicon 跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
 ]]></content>
       <categories>
