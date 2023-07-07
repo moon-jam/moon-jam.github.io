@@ -15,10 +15,10 @@ description:
 ## 前言
 
 網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底的部分，那總共會分成底下這幾個部分  
-
+<!--more-->
 1. [底下的版權說明、說明、頁底的icon、Powered by...](/NexT-footer/#底下的版權說明、說明、頁底的icon、Powered-by…)
-2. [字數統計、估計閱讀時間]((/NexT-footer/字數統計、估計閱讀時間)
-3. [閱覽人數](/NexT-footer/閱覽人數)
+2. [字數統計、估計閱讀時間]((/NexT-footer/#字數統計、估計閱讀時間)
+3. [閱覽人數](/NexT-footer/#閱覽人數)
 
 ## 底下的版權說明、說明、頁底的icon、Powered by...
 
@@ -26,12 +26,13 @@ description:
 ![我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，](https://i.imgur.com/DTKXyro.png)
 
 然後搜尋```footer```，找到他的位置
-![Image](https://i.imgur.com/QKMq7vc.png)
 
 1. since：你這個網站開始的時間，在你的頁底就會是XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，你也可以不打，如果不打他就是會顯示今年
 2. icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以在幾改成想要的圖案，如果想要改成自己想要的可以到[這個網站](https://fontawesome.com/icons)找找看，然後把另外animated就是他會不會在那裡"跳"!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去
 ![像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)](https://i.imgur.com/VteB7bj.png)
 3. copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config去改喔）
+
+![我只是想讓你們更清楚，才不是想曬我的三玖](https://i.imgur.com/QKMq7vc.png)
 
 ## 字數統計、估計閱讀時間
 
@@ -41,21 +42,33 @@ description:
 npm install hexo-word-counter
 ```
 
-接著在NexT內的_config貼上這些
+接著在NexT內的_config隨便找個地方貼上這些
 
 ```yml
 symbols_count_time:
-  symbols: true # 在頁底顯示總共有多少字
+  separated_meta: true  # 在文章顯示時要不要分行
+  item_text_post: true  # 在文章要不要用文字說明(但我設true跟false都一樣有文字)
+  item_text_total: true # 在頁底要不要有文字說明
+```
+
+接著再到最外層資料夾的_config隨便找個地方貼上這些
+
+```yml
+symbols_count_time:
+  symbols: true # 在文章顯示總共有多少字
   time: true  # 在文章顯示總共需多少時間
   total_symbols: true # 在頁底顯示總共有多少字
   total_time: true  # 在頁底顯示總共需多少時間
   exclude_codeblock: true  # 是否排除程式碼字數
   awl: 2 #平均文字長度，中文為 2, 英文為 5, 預設為 4
   wpm: 275  # 可以閱讀多少字每分鐘
-  suffix: "mins."
+  suffix: "mins." # 時間的後綴
 ```
 
 ## 閱覽人數
+
+搜尋```busuanzi_count```，然後把```enable```設`true`就完成了（如果有安裝live2d的會有問題，請到[這邊](/NexT-live2d)來看解決辦法）
+![三玖真棒](https://i.imgur.com/4QrLwvl.png)
 
 ## 其他功能
 

@@ -116,8 +116,8 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  隨意看看: /random/ || fa-solid fa-shuffle
-  Switch Langague: /en/ || fa-solid fa-language
+  隨意看看: /random/ || fa fa-shuffle
+  Switch Langague: /en/ || fa fa-language
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -255,6 +255,11 @@ footer:
 # Use `description` in front-matter to specify post excerpt.
 excerpt_description: true
 
+# Hexo supports excerpts by adding tag.
+# You can automate this by using hexo-auto-excerpt plugin.
+# See: https://github.com/ashisherc/hexo-auto-excerpt
+excerpt_length: 350
+
 # Read more button
 # If true, the read more button will be displayed in excerpt section.
 read_more_btn: true
@@ -271,9 +276,9 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
-  separated_meta: true  # 要不要分行
-  item_text_post: true
-  item_text_total: true
+  separated_meta: true  # 在文章顯示時要不要分行
+  item_text_post: true  # 在文章要不要用文字說明(但我設true跟false都一樣有文字)
+  item_text_total: true # 在頁底要不要有文字說明
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false

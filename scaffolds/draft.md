@@ -9,7 +9,7 @@ description:
 sticky: false
 top: false
 ---
-
+<!--more-->
 火速趕稿中...
 
 預計將在約 <span id="timeout">5</span> 秒後返回首頁。
