@@ -1,5 +1,5 @@
 ---
-title: "Hexo-NexT 網頁頁底設計"
+title: "Hexo-NexT 網頁頁底配置"
 lang: zh-TW
 abbrlink: 43212
 date: 2023-07-07
@@ -16,11 +16,14 @@ description:
 
 網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底的部分，那總共會分成底下這幾個部分  
 <!--more-->
-1. [底下的版權說明、說明、頁底的icon、Powered by...](/NexT-footer/#底下的版權說明、說明、頁底的icon、Powered-by…)
+1. [版權說明、icon、Powered by...](/NexT-footer/#版權說明、icon、Powered-by…)
 2. [字數統計、估計閱讀時間]((/NexT-footer/#字數統計、估計閱讀時間)
 3. [閱覽人數](/NexT-footer/#閱覽人數)
 
-## 底下的版權說明、說明、頁底的icon、Powered by...
+完成後你的頁底就會變成像這樣嘍
+![完成後的頁底](https://i.imgur.com/KG0lafJ.png)
+
+## 版權說明、icon、Powered by...
 
 首先先移駕到你的theme裡面主題的_config.yml
 ![我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，](https://i.imgur.com/DTKXyro.png)
@@ -69,6 +72,10 @@ symbols_count_time:
 
 搜尋```busuanzi_count```，然後把```enable```設`true`就完成了（如果有安裝live2d的會有問題，請到[這邊](/NexT-live2d)來看解決辦法）
 ![三玖真棒](https://i.imgur.com/4QrLwvl.png)
+
+## 結語
+
+現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～
 
 ## 其他功能
 
