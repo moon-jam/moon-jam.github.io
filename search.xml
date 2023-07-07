@@ -55,8 +55,11 @@
 </li>
 <li><p><a href="/NexT-live2d">live2d角色（就是那隻可愛的狗狗）</a></p>
 </li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
 </ol>
-<p>還有一些小小的東西就不列了，有興趣再到底下留言區問</p>
 <h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這個Blog前前後後大概花了10個小時，大概有七成時間都是在找bug🥲，不過成果還算滿意😀。</p>
 <p>期間為了要有一些更酷的功能，所以又找了很多的擴充，然後遇到好多奇怪的狀況，debug了好久，然後還是有些做不出來，像是那個同一站內切換語言，我看有人做出來，想說應該有插件不會太難，結果我就用了三四個小時有時候切語言只有一半的東西切到，有時候切過去了切不回來，不然就是切過去之後沒有出先該出現的東西，後來實在用不好，所以才變成現在我分成中英兩個站點，然後分兩個地方更新，實在有點麻煩，而且如果要改設定還要改兩次，如果有人知道怎麼用的希望可以在底下跟我說🙏。其實本來還有動態背景跟酷酷的滑鼠爆炸特效，但感覺這樣網站看起來有點小亂，還是簡單一點比較好（枉費我浪費這麼多時間😠</p>
 <p>對了我有用一點點SEO優化，不知道哪天我的網站可以在google上被搜尋到。之後不知道會不會想要買一個自己的網域，感覺也很酷。</p>
@@ -70,6 +73,30 @@
         <tag>Hexo</tag>
         <tag>NexT</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>還沒做好😥，稍等一下🙏</title>
+    <url>/NexT-day-night-mode/</url>
+    <content><![CDATA[<p>火速趕稿中…</p>
+<p>預計將在約 <span id="timeout">5</span> 秒後返回首頁。</p>
+<p>如果你想看其他文章，你可以 <strong><a href="/">點這裡</a></strong> 返回首頁。</p>
+<script>
+let countTime = 5;
+
+function count() {
+  document.getElementById('timeout').textContent = countTime;
+  countTime -= 1;
+  if(countTime === 0){
+    location.href = '/'; // 記得改成自己網址 Url
+  }
+  setTimeout(() => {
+    count();
+  }, 1000);
+}
+
+count();
+</script>
+]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
