@@ -116,8 +116,8 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  # 隨意看看: /random.html/ || fa fa-shuffle
-  Switch test: /switch_lang/ || fa fa-language
+  # 隨意看看: /random/ || fa fa-shuffle
+  # Switch test: /switch_lang/ || fa fa-language
   Switch Language: https://moon-jam.github.io/en/ || fa fa-language
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
