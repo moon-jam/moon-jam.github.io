@@ -89,11 +89,11 @@
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底的部分，那總共會分成底下這幾個部分  </p>
 <span id="more"></span>
 <ol>
-<li><a href="/NexT-footer/#%E5%BA%95%E4%B8%8B%E7%9A%84%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81%E8%AA%AA%E6%98%8E%E3%80%81%E9%A0%81%E5%BA%95%E7%9A%84icon%E3%80%81Powered-by%E2%80%A6">底下的版權說明、說明、頁底的icon、Powered by…</a></li>
+<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
 <li><a href="(/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
 <li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
 </ol>
-<h2 id="底下的版權說明、說明、頁底的icon、Powered-by…"><a href="#底下的版權說明、說明、頁底的icon、Powered-by…" class="headerlink" title="底下的版權說明、說明、頁底的icon、Powered by…"></a>底下的版權說明、說明、頁底的icon、Powered by…</h2><p>首先先移駕到你的theme裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
+<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的theme裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
 <p>然後搜尋<code>footer</code>，找到他的位置</p>
 <ol>
 <li>since：你這個網站開始的時間，在你的頁底就會是XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，你也可以不打，如果不打他就是會顯示今年</li>
