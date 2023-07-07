@@ -1,10 +1,11 @@
 ---
 title: "還沒做好\U0001F625，稍等一下\U0001F64F"
+lang: zh-TW
 hidden: true
 description: NexT-some-cool-tools
 sticky: false
 top: false
-abbrlink: 43211
+abbrlink: 43218
 date:
 tags:
 categories:

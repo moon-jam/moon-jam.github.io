@@ -14,7 +14,6 @@
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-abbrlink": "^2.2.1",
-    "hexo-auto-excerpt": "^1.1.0",
     "hexo-autonofollow": "^1.0.1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
@@ -22,6 +21,7 @@
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index-i18n": "^0.2.1",
     "hexo-generator-index-pin-top": "^0.2.2",
+    "hexo-generator-random": "^1.0.2",
     "hexo-generator-searchdb": "^1.4.1",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
@@ -39,6 +39,7 @@
     "live2d-widget-model-hibiki": "^1.0.5",
     "live2d-widget-model-hijiki": "^1.0.5",
     "live2d-widget-model-tororo": "^1.0.5",
-    "live2d-widget-model-wanko": "^1.0.5"
+    "live2d-widget-model-wanko": "^1.0.5",
+    "object-assign": "^4.1.1"
   }
 }

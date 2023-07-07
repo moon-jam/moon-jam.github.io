@@ -38,8 +38,8 @@ custom_file_path:
 # Schemes
 # scheme: Muse
 # scheme: Mist
-# scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+# scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -116,6 +116,7 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  隨意看看: /random/ || fa-solid fa-shuffle
   Switch Langague: /en/ || fa-solid fa-language
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
@@ -217,7 +218,7 @@ language_switcher: false
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
-  #since: 2021
+  since: 2023
 
   # Icon between year and copyright info.
   icon:
@@ -233,7 +234,7 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT
-  powered: false
+  powered:
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -252,12 +253,7 @@ footer:
 # ---------------------------------------------------------------
 
 # Use `description` in front-matter to specify post excerpt.
-excerpt_description: false
-
-# Hexo supports excerpts by adding tag.
-# You can automate this by using hexo-auto-excerpt plugin.
-# See: https://github.com/ashisherc/hexo-auto-excerpt
-excerpt_length: 200
+excerpt_description: true
 
 # Read more button
 # If true, the read more button will be displayed in excerpt section.
@@ -275,15 +271,7 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
-  symbols: true # 文章是否顯示字數統計
-  time: true # 文章是否顯示閱讀時間
-  total_symbols: true # 網頁底部是否顯示字數統計
-  total_time: true # 網頁底部是否顯示閱讀時間
-  exclude_codeblock: true # 排除程式碼字數統計
-  awl: 2 #平均文字長度，中文為 2, 英文為 5, 預設為 4
-  wpm: 275 #一分鐘閱讀字數，預設為 275
-  suffix: "mins."
-  separated_meta: true
+  separated_meta: true  # 要不要分行
   item_text_post: true
   item_text_total: true
 
@@ -596,7 +584,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # For more information: https://github.com/next-theme/pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/

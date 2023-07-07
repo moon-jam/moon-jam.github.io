@@ -8,9 +8,7 @@ categories:
   - 中文
   - 教學文
 abbrlink: 19590
-date: 2023-07-05 00:00:00
-hidden: true
-description: "利用 Hexo + NexT + Github Page 建立自己的 Blog"
+date: 2023-07-05
 keywords: Hexo, NexT, Github Page, Blog
 sticky: true
 top: true
@@ -19,9 +17,10 @@ top: true
 ## 前言
 
 我的Blog就是用Hexo、NexT、Github Page做出來的，而且不同其他架Blog的那種網站，做出來之後你的Blog後面會有一個github.io的後綴（就像[moon-jam.github.io](https://moon-jam.github.io)），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了
+<!--more-->
 ~~不過要是你想裝一些酷酷的東西，就有可能搞很久(最後還是有些沒用出來QAQ~~
 
-如果想要看詳細一點的教學我覺得六角學院的教學影片很棒，跟著做很快就好了，如果覺得我現在的Blog哪裡還可以修正，或是覺得我教學哪裡有問題歡迎在底下留言指教喔～
+如果想要看詳細一點的教學我覺得六角學院的教學影片很棒，跟著做很快就好了，如果覺得我現在的Blog哪裡還可以修正，或是覺得我教學哪裡有問題或是有講錯的歡迎在底下留言指教喔～
 教學開始嘍！
 注意事項：這個教學會需要用到vscode，如果不知道他是什麼或是跟他不熟的，建議先去爬爬文看怎麼用再來看這篇喔～
 
@@ -42,11 +41,11 @@ hexo s
 
 ## 連接Github
 
-首先先到github新開一個 Repository
-![Image](https://i.imgur.com/yadvxfF.png)
+首先先到github新開一個 Repository（這裡附上本人的[Repository](https://github.com/moon-jam/moon-jam.github.io)）
+![](https://i.imgur.com/yadvxfF.png)
 然後取名叫做**username**.github.io （username要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點  
 選public，然後其他都不要打勾，完成之後複製這一段
-![Image](https://i.imgur.com/XwrVZEQ.png)
+![](https://i.imgur.com/XwrVZEQ.png)
 然後接下來就要把資料夾跟Github連上，輸入以下這些東西
 
 ``` no
@@ -107,29 +106,50 @@ hexo d  //deploy 部署到github page
 
 然後如果要傳到github上，每次都要```git commit -m ""```、```git push```實在太累了，這邊我蠻推薦裝[vscode的插件](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-github)連到Github，可以直接一鍵上傳
 
+## Hexo 設定
+
+找到外層資料夾最底下的_config.yml，這邊就講有需要調整的，其他有興趣可以自己玩玩看
+![](https://i.imgur.com/fow2tPF.png)
+
+1. Site：  
+  －title就打你想為網站取的名字  
+  －subtitle會顯示在網站title的底下，可以留空不會  
+  －keyword可打可不打  
+  －author打你的想叫的名字，之後如果有地方會用到作者的資訊都會直接從這裡拿  
+  －language就選你想要的語言（繁體中文zh-TW，簡體中文zh-CN，香港zh-HK，英文en）  
+  －timezone就留空就好
+![Site](https://i.imgur.com/CLLrsqJ.png)
+2. URL：  
+    －url填自己的網域，如果你有自己的網域的話就填自己的（之後如果哪天有的話再個教學），所以就是填github page的網址  
+    －permalink是代表你文章的網址要是什麼，預設是年/月/日/文章標題，不過這裡我建議你該城:name/，你也可以用:/title這是代表用title當作網址，但如果是中文的話他會變亂碼，這樣對搜尋優化不好（原本用年月日也會因為層數太多所以讓演算法不喜歡），而且網址也會變比較難看，用:name/的話會用檔案名稱當作網址，只要你檔名取英文的就好了（也有插件是會自己生成一串數字當作網址，但這樣對搜尋優化應該也不太好)
+![剩下的兩個不用動他](https://i.imgur.com/vd9WIxo.png)
+3. 找到theme的地方，後面打上主題的資料夾名稱，詳細就看後面的吧
+
 ## 套上主題
 
-我是選擇[NexT](https://theme-next.js.org)，版型相當的好看，而且很多人用，要找資源也還算好找
-![image](https://user-images.githubusercontent.com/16272760/63487983-da41b080-c4df-11e9-951c-64883a8a5e9b.png)
+我是選擇[NexT](https://theme-next.js.org)，版型相當的好看，而且很多人用，要找資源也還算好找（[這裡](https://hexo.io/themes/)可以找其他主題喔）
+![](https://user-images.githubusercontent.com/16272760/63487983-da41b080-c4df-11e9-951c-64883a8a5e9b.png)
 
 ### 下載 NexT
 
 ``` no
-git clone https://github.com/theme-next/hexo-theme-next themes/next
+git clone https://github.com/theme-next/hexo-theme-next themes/NexT
 ```
 
-接著到到_config.yml找theme，並設成next
+接著到到最外層資料夾的_config.yml（不是你theme裡面的喔）找到theme的地方，並設成NexT
 
 ``` yml
-theme: next
+theme: NexT
 ```
+
+如果要下載別的主題可以點到進主題的github，並複製他的網址，然後改成```git clone 你想要的主題 themes/你想要的資料夾名稱```，然後把_config.yml中的theme，並設成你取的資料夾名稱
 
 再輸入```hexo s```，就看得到摟，部署到網站上就是在輸入上面那三條
 
 ### 修改NexT主題
 
-如果要改NexT的主題(就是上面看到的那四種)，可以到```theme/next/_config.yml```，修改裡面的```Scheme Settings```，把想要的取消註解，其他全部註解掉（像我就是使用Gemini）
-![Image](https://i.imgur.com/iXejwcC.png)
+如果要改NexT的主題(就是上面看到的那四種)，可以到```theme/NexT/_config.yml```，修改裡面的```Scheme Settings```，把想要的取消註解，其他全部註解掉（像我就是使用Pisces）
+![](https://i.imgur.com/iXejwcC.png)
 
 ## NexT調整
 

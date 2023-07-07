@@ -1,11 +1,12 @@
 ---
 title: "還沒做好\U0001F625，稍等一下\U0001F64F"
-# hidden: true
+lang: zh-TW
+hidden: true
 abbrlink: 43211
 date:
 tags:
 categories:
-description: "NexT-day-night-mode"
+description:
 ---
 
 火速趕稿中...

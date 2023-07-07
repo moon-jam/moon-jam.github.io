@@ -1,10 +1,11 @@
 ---
 title: 還沒做好😥，稍等一下🙏
+lang: zh-TW
 date: 
 tags:
 categories:
 hidden: true
-description: {{ title }}
+description:
 sticky: false
 top: false
 ---

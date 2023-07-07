@@ -1,11 +1,12 @@
 ---
 title: "還沒做好\U0001F625，稍等一下\U0001F64F"
+lang: zh-TW
 hidden: true
 abbrlink: 43216
 date:
 tags:
 categories:
-description: "NexT-sidebar-search"
+description:
 ---
 
 火速趕稿中...
