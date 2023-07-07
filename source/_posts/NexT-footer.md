@@ -1,32 +1,33 @@
 ---
-title: "還沒做好\U0001F625，稍等一下\U0001F64F"
+title: "Hexo-NexT 網頁頁底設計"
 hidden: true
 abbrlink: 43212
 date:
 tags:
 categories:
-description: "NexT-footer"
+description: "Hexo NexT footer"
 ---
 
-火速趕稿中...
+## 前言
 
-預計將在約 <span id="timeout">5</span> 秒後返回首頁。
+網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這偏要講的是頁底的部分，那總共會分成底下這幾個部分  
 
-如果你想看其他文章，你可以 **[點這裡](/)** 返回首頁。
+1. 底下的版權說明、說明、icon、Powered by...
+2. 字數統計、估計閱讀時間
+3. 閱覽人數
 
-<script>
-let countTime = 5;
+## 其他功能
 
-function count() {
-  document.getElementById('timeout').textContent = countTime;
-  countTime -= 1;
-  if(countTime === 0){
-    location.href = '/'; // 記得改成自己網址 Url
-  }
-  setTimeout(() => {
-    count();
-  }, 1000);
-}
+1. 側邊欄
 
-count();
-</script>
+    － [關於、標籤、分類、歸檔](/NexT-sidebar-about-tag-category-archives)  
+    － [搜尋](/NexT-sidebar-search)  
+    － [切換語言](/NexT-sidebar-switch-lang)  
+
+~~2. [頁底](/NexT-footer)~~  
+3. [utteranc留言板](/NexT-footer)  
+4. [Google Analytics統計網站資訊](/NexT-google-analytics)  
+5. [日/夜模式](/NexT-day-night-mode)  
+6. [live2d角色（就是那隻可愛的狗狗）](/NexT-live2d)  
+7. [SEO：搜尋引擎最佳化(Search Engine Optimization)](/SEO-Search-Engine-Optimization)  
+8. [剩下的一些小工具](/NexT-some-cool-tools)  

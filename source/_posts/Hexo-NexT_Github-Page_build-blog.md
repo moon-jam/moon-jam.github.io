@@ -9,11 +9,11 @@ categories:
   - 教學文
 abbrlink: 19590
 date: 2023-07-05 00:00:00
-# hidden: true
+hidden: true
 description: "利用 Hexo + NexT + Github Page 建立自己的 Blog"
 keywords: Hexo, NexT, Github Page, Blog
 sticky: true
-top: 10
+top: true
 ---
 
 ## 前言
@@ -146,8 +146,8 @@ theme: next
 4. [Google Analytics統計網站資訊](/NexT-google-analytics)
 5. [日/夜模式](/NexT-day-night-mode)
 6. [live2d角色（就是那隻可愛的狗狗）](/NexT-live2d)
-
-還有一些小小的東西就不列了，有興趣再到底下留言區問
+7. [SEO：搜尋引擎最佳化(Search Engine Optimization)](/SEO-Search-Engine-Optimization)
+8. [剩下的一些小工具](/NexT-some-cool-tools)
 
 ## 心得
 
