@@ -7,7 +7,6 @@ tags:
   - Hexo
   - NexT
 categories:
-  - 中文
   - 教學文
 description: 
 ---
