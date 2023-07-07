@@ -1,65 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo-NexT 網頁頁底配置</title>
-    <url>/NexT-footer/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底的部分，那總共會分成底下這幾個部分  </p>
-<span id="more"></span>
-<ol>
-<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
-<li><a href="(/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
-<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
-</ol>
-<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
-<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的theme裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
-<p>然後搜尋<code>footer</code>，找到他的位置</p>
-<ol>
-<li>since：你這個網站開始的時間，在你的頁底就會是XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，你也可以不打，如果不打他就是會顯示今年</li>
-<li>icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以在幾改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外animated就是他會不會在那裡”跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
-<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config去改喔）</li>
-</ol>
-<p><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們更清楚，才不是想曬我的三玖"></p>
-<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></table></figure>
-
-<p>接著在NexT內的_config隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></table></figure>
-
-<p>接著再到最外層資料夾的_config隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">&quot;mins.&quot;</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋<code>busuanzi_count</code>，然後把<code>enable</code>設<code>true</code>就完成了（如果有安裝live2d的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-about-tag-category-archives">關於、標籤、分類、歸檔</a><br> － <a href="/NexT-sidebar-search">搜尋</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a> ✅</p>
-</li>
-<li><p><a href="/NexT-footer">utteranc留言板</a>  </p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a>  </p>
-</li>
-<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a>  </p>
-</li>
-<li><p><a href="/NexT-live2d">live2d角色（就是那隻可愛的狗狗）</a>  </p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a>  </p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>中文</category>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
     <url>/Hexo-NexT_Github-Page_build-blog/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的Blog就是用Hexo、NexT、Github Page做出來的，而且不同其他架Blog的那種網站，做出來之後你的Blog後面會有一個github.io的後綴（就像<a href="https://moon-jam.github.io/">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了</p>
@@ -132,6 +73,65 @@
 <p>期間為了要有一些更酷的功能，所以又找了很多的擴充，然後遇到好多奇怪的狀況，debug了好久，然後還是有些做不出來，像是那個同一站內切換語言，我看有人做出來，想說應該有插件不會太難，結果我就用了三四個小時有時候切語言只有一半的東西切到，有時候切過去了切不回來，不然就是切過去之後沒有出先該出現的東西，後來實在用不好，所以才變成現在我分成中英兩個站點，然後分兩個地方更新，實在有點麻煩，而且如果要改設定還要改兩次，如果有人知道怎麼用的希望可以在底下跟我說🙏。其實本來還有動態背景跟酷酷的滑鼠爆炸特效，但感覺這樣網站看起來有點小亂，還是簡單一點比較好（枉費我浪費這麼多時間😠</p>
 <p>對了我有用一點點SEO優化，不知道哪天我的網站可以在google上被搜尋到。之後不知道會不會想要買一個自己的網域，感覺也很酷。</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄XD<br><a href="https://hexo.io/zh-tw/">Hexo官方網站</a><br><a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#%E3%80%90%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E3%80%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Hexo--GitHub-Pages-%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E8%AA%8C">【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌</a><br><a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)</a><br><a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">使用 Hexo 建置網站（上面影片的上課講義）</a><br><a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點舊有些可能要再查一下</a><br><a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo - NexT 主題篇 - 可以安裝的套件(他部落格裡面還有很多Hexo的教學)</a><br><a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a><br><a href="https://zsyyblog.com/">這個是用Butterfly做的，做的超猛</a><br><a href="https://siriusq.top/en/hexo-hext-8-language-switch.html">Hexo Next 8 Language Switch</a></p>
+]]></content>
+      <categories>
+        <category>中文</category>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 網頁頁底配置</title>
+    <url>/NexT-footer/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底的部分，那總共會分成底下這幾個部分  </p>
+<span id="more"></span>
+<ol>
+<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
+<li><a href="(/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
+<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
+</ol>
+<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
+<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的theme裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
+<p>然後搜尋<code>footer</code>，找到他的位置</p>
+<ol>
+<li>since：你這個網站開始的時間，在你的頁底就會是XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，你也可以不打，如果不打他就是會顯示今年</li>
+<li>icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以在幾改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外animated就是他會不會在那裡”跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
+<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config去改喔）</li>
+</ol>
+<p><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們更清楚，才不是想曬我的三玖"></p>
+<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></table></figure>
+
+<p>接著在NexT內的_config隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></table></figure>
+
+<p>接著再到最外層資料夾的_config隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">&quot;mins.&quot;</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋<code>busuanzi_count</code>，然後把<code>enable</code>設<code>true</code>就完成了（如果有安裝live2d的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-about-tag-category-archives">關於、標籤、分類、歸檔</a><br> － <a href="/NexT-sidebar-search">搜尋</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a> ✅</p>
+</li>
+<li><p><a href="/NexT-footer">utteranc留言板</a>  </p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a>  </p>
+</li>
+<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a>  </p>
+</li>
+<li><p><a href="/NexT-live2d">live2d角色（就是那隻可愛的狗狗）</a>  </p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a>  </p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>中文</category>
