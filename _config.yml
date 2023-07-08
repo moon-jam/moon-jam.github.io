@@ -121,7 +121,7 @@ live2d:
     width: 150
     height: 300
   mobile:
-    show: fasle
+    show: true
 
 nofollow:
   enable: true
