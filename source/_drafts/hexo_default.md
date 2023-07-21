@@ -27,6 +27,6 @@ categories:
 3. [utteranc留言板](/NexT-footer)
 4. [Google Analytics統計網站資訊](/NexT-google-analytics)
 5. [日/夜模式](/NexT-day-night-mode)
-6. [live2d角色（就是那隻可愛的狗狗）](/NexT-live2d)
+6. [live2d角色（就是網頁右下角那隻可愛的狗狗）](/NexT-live2d)
 7. [SEO：搜尋引擎最佳化(Search Engine Optimization)](/SEO-Search-Engine-Optimization)
 8. [剩下的一些小工具](/NexT-some-cool-tools)
