@@ -156,8 +156,7 @@ theme: NexT
 
 1. 側邊欄
 
-    － [關於、標籤、分類、歸檔](/NexT-sidebar-about-tag-category-archives)  
-    － [搜尋](/NexT-sidebar-search)  
+    － [基礎配置(關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)](/NexT-sidebar-basic)  
     － [切換語言](/NexT-sidebar-switch-lang)  
 
 2. [頁底](/NexT-footer)
