@@ -21,35 +21,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"moon-jam.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分">
+    <meta name="description" content="前言這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo-NexT 網頁頁底配置">
-<meta property="og:url" content="https://moon-jam.github.io/NexT-footer/index.html">
+<meta property="og:title" content="Hexo-NexT 側邊欄基礎配置">
+<meta property="og:url" content="https://moon-jam.github.io/NexT-sidebar-basic/index.html">
 <meta property="og:site_name" content="Moon Jam&#39;s Blog">
-<meta property="og:description" content="前言網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分">
+<meta property="og:description" content="前言這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/KG0lafJ.png">
-<meta property="og:image" content="https://i.imgur.com/DTKXyro.png">
-<meta property="og:image" content="https://i.imgur.com/QKMq7vc.png">
-<meta property="og:image" content="https://i.imgur.com/VteB7bj.png">
-<meta property="og:image" content="https://i.imgur.com/4QrLwvl.png">
-<meta property="article:published_time" content="2023-07-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-21T16:16:37.389Z">
+<meta property="og:image" content="https://i.imgur.com/Y27wMgQ.png">
+<meta property="og:image" content="https://i.imgur.com/AudEpQN.png">
+<meta property="article:published_time" content="2023-07-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-21T17:02:37.283Z">
 <meta property="article:author" content="Moon Jam">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/KG0lafJ.png">
+<meta name="twitter:image" content="https://i.imgur.com/Y27wMgQ.png">
 
 
-<link rel="canonical" href="https://moon-jam.github.io/NexT-footer/">
+<link rel="canonical" href="https://moon-jam.github.io/NexT-sidebar-basic/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://moon-jam.github.io/NexT-footer/","path":"NexT-footer/","title":"Hexo-NexT 網頁頁底配置"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://moon-jam.github.io/NexT-sidebar-basic/","path":"NexT-sidebar-basic/","title":"Hexo-NexT 側邊欄基礎配置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo-NexT 網頁頁底配置 | Moon Jam's Blog</title>
+<title>Hexo-NexT 側邊欄基礎配置 | Moon Jam's Blog</title>
   
 
 
@@ -147,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6"><span class="nav-number">2.</span> <span class="nav-text">版權說明、icon、Powered by…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93"><span class="nav-number">3.</span> <span class="nav-text">字數統計、估計閱讀時間</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8"><span class="nav-number">4.</span> <span class="nav-text">閱覽人數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">5.</span> <span class="nav-text">結語</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="nav-number">6.</span> <span class="nav-text">其他功能</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%96%BC%E3%80%81%E6%A8%99%E7%B1%A4%E3%80%81%E5%88%86%E9%A1%9E%E3%80%81%E6%AD%B8%E6%AA%94"><span class="nav-number">2.</span> <span class="nav-text">關於、標籤、分類、歸檔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E5%B0%8B"><span class="nav-number">3.</span> <span class="nav-text">搜尋</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A0%AD%E5%83%8F"><span class="nav-number">4.</span> <span class="nav-text">頭像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%8B%E4%BA%BA%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90"><span class="nav-number">5.</span> <span class="nav-text">個人相關連結</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">6.</span> <span class="nav-text">結語</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="nav-number">7.</span> <span class="nav-text">其他功能</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -210,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://moon-jam.github.io/NexT-footer/">
+    <link itemprop="mainEntityOfPage" href="https://moon-jam.github.io/NexT-sidebar-basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Panda_Me.png">
@@ -223,12 +220,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hexo-NexT 網頁頁底配置 | Moon Jam's Blog">
+      <meta itemprop="name" content="Hexo-NexT 側邊欄基礎配置 | Moon Jam's Blog">
       <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo-NexT 網頁頁底配置
+          Hexo-NexT 側邊欄基礎配置
         </h1>
 
         <div class="post-meta-container">
@@ -239,14 +236,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2023-07-07 00:00:00" itemprop="dateCreated datePublished" datetime="2023-07-07T00:00:00+08:00">2023-07-07</time>
+      <time title="創建時間：2023-07-15 00:00:00" itemprop="dateCreated datePublished" datetime="2023-07-15T00:00:00+08:00">2023-07-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-07-22 00:16:37" itemprop="dateModified" datetime="2023-07-22T00:16:37+08:00">2023-07-22</time>
+      <time title="修改時間：2023-07-22 01:02:37" itemprop="dateModified" datetime="2023-07-22T01:02:37+08:00">2023-07-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -272,7 +269,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>970</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -289,38 +286,52 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分  </p>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
 <span id="more"></span>
+
 <ol>
-<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
-<li><a href="/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
-<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
+<li><a href="/NexT-footer/#%E9%97%9C%E6%96%BC%E3%80%81%E6%A8%99%E7%B1%A4%E3%80%81%E5%88%86%E9%A1%9E%E3%80%81%E6%AD%B8%E6%AA%94">關於、標籤、分類、歸檔</a></li>
+<li><a href="/NexT-footer/#%E6%90%9C%E5%B0%8B">搜尋</a></li>
+<li><a href="/NexT-footer/#%E9%A0%AD%E5%83%8F">頭像</a></li>
+<li><a href="/NexT-footer/#%E5%80%8B%E4%BA%BA%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90">個人相關連結</a></li>
 </ol>
-<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
-<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的theme裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
-<p>然後找到<code>footer</code>的位置，應該會看到since、icon、copyright、powered、beian這些標題，接下來我會一一進行說明（beian是所謂的ICP備案，是中國對非營利網站的一些規定，詳見<a target="_blank" rel="external nofollow noopener noreferrer" href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）<br><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
-<ol>
-<li>since：你這個網站開始的時間，在你的頁底就會是XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
-<li>icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a target="_blank" rel="external nofollow noopener noreferrer" href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外animated就是他會不會在那裡”跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
-<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config去改喔）</li>
-<li>powered：這裡如果打true就會出現由 Powered by Hexo &amp; NexT的字樣，留空就是不會出現</li>
-</ol>
-<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></table></figure>
+<h2 id="關於、標籤、分類、歸檔"><a href="#關於、標籤、分類、歸檔" class="headerlink" title="關於、標籤、分類、歸檔"></a>關於、標籤、分類、歸檔</h2><p>首先要生成關於、標籤、分類這三個分頁（但歸檔不用，他預設就有了，我也覺得很奇怪為什麼其他不要預設就生成）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
 
-<p>接著在NexT內的_config隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></table></figure>
+<p>接著應該會發現在source裡面多出了三個資料夾<br><img data-src="https://i.imgur.com/Y27wMgQ.png" alt="生成的三個資料夾"><br>點進去後會發現一個叫做<code>index.html</code>的東西，點進去後輸入以下內容（xxx依照about、tags、categories哪個資料夾填入）</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;xxx&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;xxx&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 
-<p>接著再到最外層資料夾的_config隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">&quot;mins.&quot;</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></table></figure>
+<p>以about為例</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋<code>busuanzi_count</code>，然後把<code>enable</code>設<code>true</code>就完成了（如果有安裝live2d的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<p>另外，about裡面要放一些關於自己的一些事的話，就直接接續<code>---</code>，底下繼續撰寫即可，以我的about為例</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment">## 我是貓熊🐼</span></span><br><span class="line"></span><br><span class="line"><span class="string">這裡會紀錄貓熊的生活大小事</span></span><br></pre></td></tr></table></figure>
+
+<p>接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的theme主題的_config.yml</p>
+<p>找到menu，並將about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">頁底配置中更換icon</a>一樣，將後面的圖示替換即可）</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br></pre></td></tr></table></figure>
+
+<p>恭喜你這樣就完成第一步啦～應該可以在網站上看到這些東西了</p>
+<h2 id="搜尋"><a href="#搜尋" class="headerlink" title="搜尋"></a>搜尋</h2><p>首先安裝搜尋需要的插件</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
+
+<p>然後到你的theme主題的_config.yml，搜尋<code>local_search</code>，將<code>enable</code>，設為true，就完成嘍，超簡單的吧～</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="頭像"><a href="#頭像" class="headerlink" title="頭像"></a>頭像</h2><p>這個更簡單，在theme主題的_config.yml，搜尋<code>avatar</code>，然後將你想要的頭像放到theme主題中<code>/source/images</code></p>
+<p><img data-src="https://i.imgur.com/AudEpQN.png" alt="頭像檔案要存放的地方"></p>
+<p>然後將<code>url</code>後設定為<code>/images/image_name</code>，以我的頭像為例，其檔名叫做<code>Panda_Me.png</code>，而<code>rounded</code>代表是否要顯示在圓框內，<code>rotated</code>表示滑鼠移到頭像上時是否要旋轉</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/Panda_Me.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="個人相關連結"><a href="#個人相關連結" class="headerlink" title="個人相關連結"></a>個人相關連結</h2><p>接下來這是最輕鬆的，一樣在theme主題的_config.yml，然後搜尋<code>social</code>，在底下找你想要顯示的網站，取消註解，然後將你的網址打上去即可，以我的為例，我放了Github、Gmail、IG</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/moon-jam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">Gmail:</span> <span class="string">mailto:wu.messi.wu@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="comment">#Weibo: https://weibo.com/yourname || fab fa-weibo</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || fab fa-twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || fab fa-facebook</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || fab fa-youtube</span></span><br><span class="line">  <span class="attr">IG:</span> <span class="string">https://www.instagram.com/mooooonjam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || fab fa-skype</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>側邊欄的基礎功能都已經配置完畢，看起來已經跟一般的部落格看起來差不多了呢，是不是很簡單啊，如果有發現哪裡講錯或是有任何疑問，都歡迎在底下留言告訴我喔～</p>
 <h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
 <li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置(關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+<p> － 關於、標籤、分類、歸檔、搜尋 ✅<br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
 </li>
-<li><p>頁底 ✅</p>
+<li><p><a href="/NexT-footer">頁底</a></p>
 </li>
 <li><p><a href="/NexT-footer">utteranc留言板</a>  </p>
 </li>
@@ -352,14 +363,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/Hexo-NexT_Github-Page_build-blog/" rel="prev" title="利用 Hexo + NexT + Github Page 建立自己的 Blog">
-                  <i class="fa fa-chevron-left"></i> 利用 Hexo + NexT + Github Page 建立自己的 Blog
+                <a href="/NexT-footer/" rel="prev" title="Hexo-NexT 網頁頁底配置">
+                  <i class="fa fa-chevron-left"></i> Hexo-NexT 網頁頁底配置
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/NexT-sidebar-basic/" rel="next" title="Hexo-NexT 側邊欄基礎配置">
-                  Hexo-NexT 側邊欄基礎配置 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
