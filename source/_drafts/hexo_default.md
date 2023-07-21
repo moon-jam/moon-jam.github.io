@@ -3,7 +3,10 @@ title: "Hexo-NexT 配置"
 lang: zh-TW
 date:
 tags:
+  - Hexo
+  - NexT
 categories:
+  - 教學文
 ---
 
 ## 前言
@@ -13,6 +16,10 @@ categories:
 <!--more-->
 
 1. [](/)
+
+## 結語
+
+現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～
 
 ## 其他功能
 
