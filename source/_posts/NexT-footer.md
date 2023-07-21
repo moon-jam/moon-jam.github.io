@@ -83,7 +83,7 @@ symbols_count_time:
     － [搜尋](/NexT-sidebar-search)  
     － [切換語言](/NexT-sidebar-switch-lang)  
 
-2. [頁底](/NexT-footer) ✅
+2. 頁底 ✅
 3. [utteranc留言板](/NexT-footer)  
 4. [Google Analytics統計網站資訊](/NexT-google-analytics)  
 5. [日/夜模式](/NexT-day-night-mode)  
