@@ -16,10 +16,10 @@ categories:
 
 <!--more-->
 
-1. [關於、標籤、分類、歸檔](/NexT-footer/#關於、標籤、分類、歸檔)
-2. [搜尋](/NexT-footer/#搜尋)
-3. [頭像](/NexT-footer/#頭像)
-4. [個人相關連結](/NexT-footer/#個人相關連結)
+1. [關於、標籤、分類、歸檔](/NexT-sidebar-basic/#關於、標籤、分類、歸檔)
+2. [搜尋](/NexT-sidebar-basic/#搜尋)
+3. [頭像](/NexT-sidebar-basic/#頭像)
+4. [個人相關連結](/NexT-sidebar-basic/#個人相關連結)
 
 ## 關於、標籤、分類、歸檔
 
@@ -66,7 +66,7 @@ layout: "about"
 
 接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的theme主題的_config.yml
 
-找到menu，並將about、tags、categories，取消註解，如下（如果想改圖示的話就就跟[頁底配置中更換icon](/NexT-footer/#版權說明、icon、Powered-by…)一樣，將後面的圖示替換即可）
+找到menu，並將about、tags、categories，取消註解，如下（如果想改圖示的話就就跟[頁底配置中更換icon](/NexT-sidebar-basic/#版權說明、icon、Powered-by…)一樣，將後面的圖示替換即可）
 
 ``` yml
 menu:
