@@ -83,16 +83,65 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-NexT 側邊欄-切換語言</title>
+    <url>/NexT-sidebar-switch-lang/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>為了讓自己網站能夠接軌國際，加個切換語言的功能是必須的吧～</p>
+<span id="more"></span>
+
+<p>其實切換語言NexT有內建的功能，他的效果也還不錯，但是achieve不管怎樣都只能出現一個語言，因此最後就只能退而求其次，新做一個英文的網站並在側邊欄新增一個按鈕讓兩個網站可以互相切換，但這要注意一點，就是如果你兩個網站是放在同一個github帳號底下的話，pajx不能打開，因為都是在同一網域底下的，切換過去的時候因為pajx的特性，語言還是會停留在原本的，或是如果有大佬知道怎麼避免掉這種狀況的話，拜託在底下留言告訴我🙏</p>
+<ol>
+<li><a href="/NexT-sidebar-switch-lang/#%E6%9E%B6%E8%A8%AD%E4%B8%80%E5%80%8B%E6%96%B0%E7%9A%84%E8%8B%B1%E6%96%87%E7%B6%B2%E7%AB%99">架設一個新的英文網站</a></li>
+<li><a href="/NexT-sidebar-switch-lang/#%E5%81%B4%E9%82%8A%E6%AC%84%E6%96%B0%E5%A2%9E%E5%88%87%E6%8F%9B%E6%8C%89%E9%88%95">側邊欄新增切換按鈕</a></li>
+</ol>
+<h2 id="架設一個新的英文網站"><a href="#架設一個新的英文網站" class="headerlink" title="架設一個新的英文網站"></a>架設一個新的英文網站</h2><p>這個部分跟先前<a href="/Hexo-NexT_Github-Page_build-blog/">利用 Hexo + NexT + Github Page 建立自己的 Blog</a>完全一樣，要注意一下在最外層資料夾的_config.yml其中site內的language要改成en，網站才會變成英文的，還有記得branch要使用gh-pages，才能正常運作喔</p>
+<p><img data-src="https://i.imgur.com/DzQuENU.png" alt="language要改成en"></p>
+<h2 id="側邊欄新增切換按鈕"><a href="#側邊欄新增切換按鈕" class="headerlink" title="側邊欄新增切換按鈕"></a>側邊欄新增切換按鈕</h2><p>換成到themes內的_config.yml，這裡先講中文網站要如何配置<br>到menu，新增一個叫做Switch Language的選項（或是其他名字也可以），後面就打你另一個語言網站的名稱，最後一個圖示就看個人喜好要放什麼啦</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/en/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></table></figure>
+
+<p>英文網站的部分也一樣，只是網址記得要改成中文的就好了</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></table></figure>
+
+<p>然後當你要新增英文文章時就在英文的那份檔案寫，中文的就在原先的檔案內寫，如此一來就完成中英切換的網站了</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>切換語言就是這麼簡單，就是在發布不同語言時還要切資料夾有點麻煩，還有不能用pjax如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置(關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － 切換語言 ✅</p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-footer">utteranc留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-NexT 側邊欄基礎配置</title>
     <url>/NexT-sidebar-basic/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
 <span id="more"></span>
 
 <ol>
-<li><a href="/NexT-footer/#%E9%97%9C%E6%96%BC%E3%80%81%E6%A8%99%E7%B1%A4%E3%80%81%E5%88%86%E9%A1%9E%E3%80%81%E6%AD%B8%E6%AA%94">關於、標籤、分類、歸檔</a></li>
-<li><a href="/NexT-footer/#%E6%90%9C%E5%B0%8B">搜尋</a></li>
-<li><a href="/NexT-footer/#%E9%A0%AD%E5%83%8F">頭像</a></li>
-<li><a href="/NexT-footer/#%E5%80%8B%E4%BA%BA%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90">個人相關連結</a></li>
+<li><a href="/NexT-sidebar-basic/#%E9%97%9C%E6%96%BC%E3%80%81%E6%A8%99%E7%B1%A4%E3%80%81%E5%88%86%E9%A1%9E%E3%80%81%E6%AD%B8%E6%AA%94">關於、標籤、分類、歸檔</a></li>
+<li><a href="/NexT-sidebar-basic/#%E6%90%9C%E5%B0%8B">搜尋</a></li>
+<li><a href="/NexT-sidebar-basic/#%E9%A0%AD%E5%83%8F">頭像</a></li>
+<li><a href="/NexT-sidebar-basic/#%E5%80%8B%E4%BA%BA%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90">個人相關連結</a></li>
 </ol>
 <h2 id="關於、標籤、分類、歸檔"><a href="#關於、標籤、分類、歸檔" class="headerlink" title="關於、標籤、分類、歸檔"></a>關於、標籤、分類、歸檔</h2><p>首先要生成關於、標籤、分類這三個分頁（但歸檔不用，他預設就有了，我也覺得很奇怪為什麼其他不要預設就生成）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
@@ -107,7 +156,7 @@
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment">## 我是貓熊🐼</span></span><br><span class="line"></span><br><span class="line"><span class="string">這裡會紀錄貓熊的生活大小事</span></span><br></pre></td></tr></table></figure>
 
 <p>接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的theme主題的_config.yml</p>
-<p>找到menu，並將about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">頁底配置中更換icon</a>一樣，將後面的圖示替換即可）</p>
+<p>找到menu，並將about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-sidebar-basic/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">頁底配置中更換icon</a>一樣，將後面的圖示替換即可）</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br></pre></td></tr></table></figure>
 
 <p>恭喜你這樣就完成第一步啦～應該可以在網站上看到這些東西了</p>
