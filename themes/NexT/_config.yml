@@ -117,8 +117,7 @@ menu:
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   # 隨意看看: /random/ || fa fa-shuffle
-  # Switch test: /switch_lang/ || fa fa-language
-  Switch Language: https://moon-jam.github.io/en/ || fa fa-language
+  Switch Language: https://pa-7.github.io/2 || fa fa-language
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -590,7 +589,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # For more information: https://github.com/next-theme/pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
