@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://moon-jam.github.io/Hexo-NexT_custom_domain/</loc>
+    <lastmod>2023-08-13</lastmod>
+  </url>
+  <url>
     <loc>https://moon-jam.github.io/NexT-sidebar-switch-lang/</loc>
-    <lastmod>2023-07-31</lastmod>
+    <lastmod>2023-08-13</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.github.io/NexT-sidebar-basic/</loc>
-    <lastmod>2023-07-31</lastmod>
+    <lastmod>2023-08-13</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.github.io/NexT-footer/</loc>
-    <lastmod>2023-07-21</lastmod>
+    <lastmod>2023-08-13</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.github.io/Hexo-NexT_Github-Page_build-blog/</loc>
-    <lastmod>2023-07-21</lastmod>
+    <lastmod>2023-08-13</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.github.io/hello-world/</loc>
-    <lastmod>2023-07-11</lastmod>
+    <lastmod>2023-08-12</lastmod>
   </url>
 </urlset> 
