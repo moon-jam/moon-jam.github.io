@@ -10,7 +10,7 @@ abbrlink: 19590
 date: 2023-07-05
 keywords: Hexo, NexT, Github Page, Blog
 sticky: true
-top: true
+top: 2
 ---
 
 ## 前言
@@ -119,7 +119,7 @@ hexo d  //deploy 部署到github page
   －timezone就留空就好
 ![Site](https://i.imgur.com/CLLrsqJ.png)
 2. URL：  
-    －url填自己的網域，如果你有自己的網域的話就填自己的（之後如果哪天有的話再個教學），所以就是填github page的網址  
+    －url填自己的網域，如果你有自己的網域的話就填自己的（~~之後如果哪天有的話再個教學~~ 最後面有教學喔），所以就是填github page的網址  
     －permalink是代表你文章的網址要是什麼，預設是年/月/日/文章標題，不過這裡我建議你該城:name/，你也可以用:/title這是代表用title當作網址，但如果是中文的話他會變亂碼，這樣對搜尋優化不好（原本用年月日也會因為層數太多所以讓演算法不喜歡），而且網址也會變比較難看，用:name/的話會用檔案名稱當作網址，只要你檔名取英文的就好了（也有插件是會自己生成一串數字當作網址，但這樣對搜尋優化應該也不太好)
 ![剩下的兩個不用動他](https://i.imgur.com/vd9WIxo.png)
 3. 找到theme的地方，後面打上主題的資料夾名稱，詳細就看後面的吧
@@ -160,12 +160,13 @@ theme: NexT
     － [切換語言](/NexT-sidebar-switch-lang)  
 
 2. [頁底](/NexT-footer)
-3. [utteranc留言板](/NexT-footer)
+3. [utterances留言板](/NexT-utterances-comment-box)
 4. [Google Analytics統計網站資訊](/NexT-google-analytics)
 5. [日/夜模式](/NexT-day-night-mode)
 6. [live2d角色（就是網頁右下角那隻可愛的狗狗）](/NexT-live2d)
 7. [SEO：搜尋引擎最佳化(Search Engine Optimization)](/SEO-Search-Engine-Optimization)
 8. [剩下的一些小工具](/NexT-some-cool-tools)
+9. [自訂網域](/Hexo-NexT_custom_domain)
 
 ## 心得
 
@@ -174,6 +175,10 @@ theme: NexT
 期間為了要有一些更酷的功能，所以又找了很多的擴充，然後遇到好多奇怪的狀況，debug了好久，然後還是有些做不出來，像是那個同一站內切換語言，我看有人做出來，想說應該有插件不會太難，結果我就用了三四個小時有時候切語言只有一半的東西切到，有時候切過去了切不回來，不然就是切過去之後沒有出先該出現的東西，後來實在用不好，所以才變成現在我分成中英兩個站點，然後分兩個地方更新，實在有點麻煩，而且如果要改設定還要改兩次，如果有人知道怎麼用的希望可以在底下跟我說🙏。其實本來還有動態背景跟酷酷的滑鼠爆炸特效，但感覺這樣網站看起來有點小亂，還是簡單一點比較好（枉費我浪費這麼多時間😠
 
 對了我有用一點點SEO優化，不知道哪天我的網站可以在google上被搜尋到。之後不知道會不會想要買一個自己的網域，感覺也很酷。
+
+## 更新-自訂網域
+
+[麻煩幫我移到這邊看喔～](/Hexo-NexT_custom_domain/)
 
 ## 參考資料
 
