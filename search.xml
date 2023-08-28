@@ -86,6 +86,18 @@
       </tags>
   </entry>
   <entry>
+    <title>收藏筆記</title>
+    <url>/collection/</url>
+    <content><![CDATA[<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深&#x2F;淺水波－波速、波長、波高</a></p>
+]]></content>
+      <categories>
+        <category>熊貓文</category>
+      </categories>
+      <tags>
+        <tag>熊貓文</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-NexT 留言板utterances配置</title>
     <url>/NexT-utterances-comment-box/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>許多Blog都有自己的留言區，可以方便地與讀者交流（<del>只是我做了之後文章也沒有人看，所以也不會有交流的機會🥲</del>）我要教的是用utterances，另外還有其他像是Disqus或是GitHub Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相tag），最後只好就選utterances，不過他也還是不錯用的，支援markdown語法，有亮暗主題，也算很好了啦。</p>
