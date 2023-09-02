@@ -98,6 +98,49 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-NexT 深淺主題切換配置</title>
+    <url>/NexT-day-night-mode/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>現在不論是手機應用程式、網頁幾乎都有所謂深淺模式，先不論省不省電或是好不好看，有了切換的功能就是很酷，使用者可以依自己喜好挑選自己習慣的模式，這篇內容因為有點太簡單，所以我就只有一個章節了～</p>
+<span id="more"></span>
+
+<h2 id="教學開始～"><a href="#教學開始～" class="headerlink" title="教學開始～"></a>教學開始～</h2><p>這次用的套件是<a href="https://github.com/rqh656418510/hexo-next-darkmode">這個</a>，安裝的方式非常簡單，輸入下列指令就完成了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode</span><br></pre></td></tr></table></figure>
+
+<p>設置的方式則是到theme內的<code>_config.yml</code>，貼上以下指令就完成了</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Darkmode JS</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">bottom:</span> <span class="string">&#x27;64px&#x27;</span> <span class="comment"># 距離底端的距離</span></span><br><span class="line">  <span class="attr">right:</span> <span class="string">&#x27;unset&#x27;</span> <span class="comment"># 距離右邊的距離(unset就是只需要設定左邊，右邊會自己調整)</span></span><br><span class="line">  <span class="attr">left:</span> <span class="string">&#x27;32px&#x27;</span> <span class="comment"># 距離左邊的距離(unset就是只需要設定右邊，左邊會自己調整)</span></span><br><span class="line">  <span class="attr">time:</span> <span class="string">&#x27;0.5s&#x27;</span> <span class="comment"># 切換深淺模式的時間</span></span><br><span class="line">  <span class="attr">mixColor:</span> <span class="string">&#x27;transparent&#x27;</span> <span class="comment"># 這個建議不要用，雖然會出現酷酷的一個往外擴散的效果，可是他的顏色會跟原本的背景混再一起，有時候還會讓字不清楚，想玩的可以自己改改看</span></span><br><span class="line">  <span class="attr">backgroundColor:</span> <span class="string">&#x27;transparent&#x27;</span> <span class="comment">#背景顏色</span></span><br><span class="line">  <span class="attr">buttonColorDark:</span> <span class="string">&#x27;#100f2c&#x27;</span> <span class="comment"># 在淺色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">buttonColorLight:</span> <span class="string">&#x27;#fff&#x27;</span> <span class="comment"># 在深色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">isActivated:</span> <span class="literal">false</span> <span class="comment"># 這裡如果用true的話是可以自己改寫他的CSS，但我覺得應該沒有必要，詳細可以看github的內的介紹</span></span><br><span class="line">  <span class="attr">saveInCookies:</span> <span class="literal">true</span> <span class="comment"># 會儲存到Cookies內，下次來會依照上次你的設定切換到深淺模式</span></span><br><span class="line">  <span class="attr">label:</span> <span class="string">&#x27;🌓&#x27;</span> <span class="comment"># 可以改成自己像要的表情圖示</span></span><br><span class="line">  <span class="attr">autoMatchOsTheme:</span> <span class="literal">true</span> <span class="comment"># 自動切換到跟使用者裝置相同的深淺模式</span></span><br><span class="line">  <span class="attr">libUrl:</span> <span class="comment"># Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></table></figure>
+
+<p>如果想要設定固定的背景或按鈕顏色的話可以修改backgroundColor、buttonColorDark、buttonColorLight後的色碼，例如說<code>backgroundColor: &quot;#FFD9E6&quot;</code>，推薦給有少女心的各位</p>
+<p><img data-src="https://i.imgur.com/Yr5MMiF.png" alt="猛男粉紅💪"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>完成啦！深淺切換的功能很簡單吧～如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置(關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-footer">utteranc留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
+</li>
+<li><p>日&#x2F;夜模式 ✅</p>
+</li>
+<li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-NexT 留言板utterances配置</title>
     <url>/NexT-utterances-comment-box/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>許多Blog都有自己的留言區，可以方便地與讀者交流（<del>只是我做了之後文章也沒有人看，所以也不會有交流的機會🥲</del>）我要教的是用utterances，另外還有其他像是Disqus或是GitHub Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相tag），最後只好就選utterances，不過他也還是不錯用的，支援markdown語法，有亮暗主題，也算很好了啦。</p>
