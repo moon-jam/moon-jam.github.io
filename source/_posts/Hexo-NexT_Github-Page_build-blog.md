@@ -41,10 +41,10 @@ hexo s
 ## 連接Github
 
 首先先到github新開一個 Repository（這裡附上本人的[Repository](https://github.com/moon-jam/moon-jam.github.io)）
-![](https://i.imgur.com/yadvxfF.png)
-然後取名叫做**username**.github.io （username要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點  
+![到個人首頁新增一個Repository](https://i.imgur.com/yadvxfF.png)
+然後取名叫做**username**.github.io （username要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點）
 選public，然後其他都不要打勾，完成之後複製這一段
-![](https://i.imgur.com/XwrVZEQ.png)
+![把Repository的網址複製下來](https://i.imgur.com/XwrVZEQ.png)
 然後接下來就要把資料夾跟Github連上，輸入以下這些東西
 
 ``` no
@@ -108,7 +108,7 @@ hexo d  //deploy 部署到github page
 ## Hexo 設定
 
 找到外層資料夾最底下的_config.yml，這邊就講有需要調整的，其他有興趣可以自己玩玩看
-![](https://i.imgur.com/fow2tPF.png)
+![外層資料夾的_config.yml](https://i.imgur.com/fow2tPF.png)
 
 1. Site：  
   －title就打你想為網站取的名字  
@@ -127,7 +127,7 @@ hexo d  //deploy 部署到github page
 ## 套上主題
 
 我是選擇[NexT](https://theme-next.js.org)，版型相當的好看，而且很多人用，要找資源也還算好找（[這裡](https://hexo.io/themes/)可以找其他主題喔）
-![](https://user-images.githubusercontent.com/16272760/63487983-da41b080-c4df-11e9-951c-64883a8a5e9b.png)
+![NexT的主題](https://raw.githubusercontent.com/next-theme/theme-next-docs/v8.13.0/source/images/next-schemes-dark.png)
 
 ### 下載 NexT
 
@@ -148,7 +148,8 @@ theme: NexT
 ### 修改NexT主題
 
 如果要改NexT的主題(就是上面看到的那四種)，可以到```theme/NexT/_config.yml```，修改裡面的```Scheme Settings```，把想要的取消註解，其他全部註解掉（像我就是使用Pisces）
-![](https://i.imgur.com/iXejwcC.png)
+
+![選擇想要的NexT主題](https://i.imgur.com/iXejwcC.png)
 
 ## NexT調整
 

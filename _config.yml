@@ -140,3 +140,36 @@ symbols_count_time:
   awl: 2 #平均文字長度，中文為 2, 英文為 5, 預設為 4
   wpm: 275 #一分鐘閱讀字數，預設為 275
   suffix: "mins."
+
+filter_optimize:
+  enable: true
+  # static resource versioning
+  versioning: false
+  css:
+    # minify all css files
+    minify: true
+    excludes:
+    # use preload to load css elements dynamically
+    delivery:
+      - '@fortawesome/fontawesome-free'
+      - 'fonts.googleapis.com'
+    # make specific css content inline into the html page
+    inlines:
+      # support full path only
+      - css/main.css
+  js:
+    # minify all js files
+    minify: true
+    excludes:
+    # remove the comments in each of the js files
+    remove_comments: false
+  html:
+    # minify all html files
+    minify: true
+    excludes:
+  # set the priority of this plugin,
+  # lower means it will be executed first, default of Hexo is 10
+  priority: 12
+
+fireworks:
+  enable: false
