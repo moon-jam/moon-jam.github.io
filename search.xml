@@ -99,7 +99,7 @@
   </entry>
   <entry>
     <title>Hexo-NexT 深淺主題切換配置</title>
-    <url>/NexT-day-night-mode/</url>
+    <url>/NexT-dark-light-mode/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>現在不論是手機應用程式、網頁幾乎都有所謂深淺模式，先不論省不省電或是好不好看，有了切換的功能就是很酷，使用者可以依自己喜好挑選自己習慣的模式，這篇內容因為有點太簡單，所以我就只有一個章節了～</p>
 <span id="more"></span>
 
@@ -118,7 +118,7 @@
 </li>
 <li><p><a href="/NexT-footer">頁底</a></p>
 </li>
-<li><p><a href="/NexT-footer">utteranc留言板</a></p>
+<li><p><a href="/NexT-utterances-comment-box">utterances留言板</a></p>
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
 </li>
@@ -129,6 +129,8 @@
 <li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化(Search Engine Optimization)</a></p>
 </li>
 <li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
 </li>
 </ol>
 ]]></content>
@@ -166,7 +168,7 @@
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
 </li>
-<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a></p>
+<li><p><a href="/NexT-dark-light-mode">日&#x2F;夜模式</a>  </p>
 </li>
 <li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a></p>
 </li>
@@ -215,7 +217,7 @@
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
 </li>
-<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a></p>
+<li><p><a href="/NexT-dark-light-mode">日&#x2F;夜模式</a></p>
 </li>
 <li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a></p>
 </li>
@@ -269,7 +271,7 @@
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a></p>
 </li>
-<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a></p>
+<li><p><a href="/NexT-dark-light-mode">日&#x2F;夜模式</a>  </p>
 </li>
 <li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a></p>
 </li>
@@ -343,7 +345,7 @@
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a>  </p>
 </li>
-<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a>  </p>
+<li><p><a href="/NexT-dark-light-mode">日&#x2F;夜模式</a>  </p>
 </li>
 <li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
 </li>
@@ -403,7 +405,7 @@
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics統計網站資訊</a>  </p>
 </li>
-<li><p><a href="/NexT-day-night-mode">日&#x2F;夜模式</a>  </p>
+<li><p><a href="/NexT-dark-light-mode">日&#x2F;夜模式</a>  </p>
 </li>
 <li><p><a href="/NexT-live2d">live2d角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
 </li>
