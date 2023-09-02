@@ -3,6 +3,7 @@ title: About
 lang: zh-TW
 type: "about"
 layout: "about"
+comments: false
 ---
 
 ## 我是貓熊🐼
