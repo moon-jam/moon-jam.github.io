@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moon-jam.me/Hexo-NexT_Github-Page_build-blog/</loc>
+    
+    <lastmod>2023-09-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.me/NexT-utterances-comment-box/</loc>
     
     <lastmod>2023-09-02</lastmod>
@@ -56,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/Hexo-NexT_Github-Page_build-blog/</loc>
-    
-    <lastmod>2023-08-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://moon-jam.me/collection/</loc>
     
     <lastmod>2023-08-28</lastmod>
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/categories/index.html</loc>
+    <loc>https://moon-jam.me/tags/index.html</loc>
     
     <lastmod>2023-08-12</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/tags/index.html</loc>
+    <loc>https://moon-jam.me/categories/index.html</loc>
     
     <lastmod>2023-08-12</lastmod>
     
