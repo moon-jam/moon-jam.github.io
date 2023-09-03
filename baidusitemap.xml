@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://moon-jam.me/NexT-google-analytics/</loc>
+    <lastmod>2023-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://moon-jam.me/Hexo-NexT_custom_domain/</loc>
+    <lastmod>2023-09-03</lastmod>
+  </url>
+  <url>
     <loc>https://moon-jam.me/Hexo-NexT_Github-Page_build-blog/</loc>
     <lastmod>2023-09-02</lastmod>
   </url>
@@ -22,10 +30,6 @@
   </url>
   <url>
     <loc>https://moon-jam.me/NexT-dark-light-mode/</loc>
-    <lastmod>2023-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://moon-jam.me/Hexo-NexT_custom_domain/</loc>
     <lastmod>2023-09-02</lastmod>
   </url>
   <url>

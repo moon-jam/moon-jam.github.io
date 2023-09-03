@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moon-jam.me/NexT-google-analytics/</loc>
+    
+    <lastmod>2023-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://moon-jam.me/Hexo-NexT_custom_domain/</loc>
+    
+    <lastmod>2023-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.me/tags/index.html</loc>
     
     <lastmod>2023-09-02</lastmod>
@@ -83,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/Hexo-NexT_custom_domain/</loc>
-    
-    <lastmod>2023-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://moon-jam.me/collection/</loc>
     
     <lastmod>2023-08-28</lastmod>
@@ -121,7 +130,7 @@
 
   <url>
     <loc>https://moon-jam.me/</loc>
-    <lastmod>2023-09-02</lastmod>
+    <lastmod>2023-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -129,21 +138,21 @@
   
   <url>
     <loc>https://moon-jam.me/tags/Hexo/</loc>
-    <lastmod>2023-09-02</lastmod>
+    <lastmod>2023-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moon-jam.me/tags/NexT/</loc>
-    <lastmod>2023-09-02</lastmod>
+    <lastmod>2023-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moon-jam.me/tags/%E7%86%8A%E8%B2%93%E6%96%87/</loc>
-    <lastmod>2023-09-02</lastmod>
+    <lastmod>2023-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -152,14 +161,14 @@
   
   <url>
     <loc>https://moon-jam.me/categories/%E6%95%99%E5%AD%B8%E6%96%87/</loc>
-    <lastmod>2023-09-02</lastmod>
+    <lastmod>2023-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://moon-jam.me/categories/%E7%86%8A%E8%B2%93%E6%96%87/</loc>
-    <lastmod>2023-09-02</lastmod>
+    <lastmod>2023-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
