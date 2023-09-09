@@ -9,7 +9,7 @@ description: "Moon Jam's Blog"
 keywords: "Moon Jam"
 author: Moon Jam
 language: zh-TW
-timezone: ""
+timezone: "Asia/Taipei"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -129,7 +129,7 @@ nofollow:
   - tophat.top
 
 sitemap:
-	path: sitemap.xml
+  path: sitemap.xml
 
 symbols_count_time:
   symbols: true # 文章是否顯示字數統計
