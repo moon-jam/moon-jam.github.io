@@ -89,7 +89,8 @@
   <entry>
     <title>收藏筆記</title>
     <url>/collection/</url>
-    <content><![CDATA[<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
+    <content><![CDATA[<span id="more"></span>
+<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
 <h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p><a href="https://hexo.io/zh-tw/docs/tag-plugins.html">Tag Plugins</a><br><a href="https://zenreal.github.io/posts/44730">很多 NexT 功能介紹</a></p>
 ]]></content>
       <categories>
