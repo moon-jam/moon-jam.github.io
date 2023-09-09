@@ -1,6 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo-NexT 自訂網域</title>
+    <url>/Hexo-NexT_custom_domain/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本來想說預算不足，所以就沒有自己買網域，不過後來發現 <a href="https://education.github.com/pack/offers">Github 學生方案</a>中可以在 namecheap 上挑一個免費的網域（另外還有 name.com 也可以，也就是說你可以免費取得兩個網域，超棒的吧～）</p>
+<span id="more"></span>
+
+<ol>
+<li><a href="/Hexo-NexT_custom_domain/#%E7%94%B3%E8%AB%8B%E7%B6%B2%E5%9F%9F">申請網域</a></li>
+<li><a href="/Hexo-NexT_custom_domain/#%E9%80%A3%E7%B5%90Github">連結 Github</a></li>
+</ol>
+<h2 id="申請網域"><a href="#申請網域" class="headerlink" title="申請網域"></a>申請網域</h2><p>申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到 GitHub Student Developer Pack 裡面找到 namecheap（我覺得這個比 name.com 好用一點，尤其是 ssl 的認證，雖然在這裡是用不到就是了），最後連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。</p>
+<p><img data-src="https://i.imgur.com/rCrDTw2.png" alt="連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了"></p>
+<h2 id="連結Github"><a href="#連結Github" class="headerlink" title="連結Github"></a>連結 Github</h2><p>到 namecheap 的 domain list 中選取你剛剛申請好的網域</p>
+<p><img data-src="https://i.imgur.com/hyEUpiM.png" alt="到namecheap的domain list中選取你剛剛申請好的網域"></p>
+<p>點到裡面的 Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下 CNAME Record 的 Value 設成你的 github page 的網址即可</p>
+<p><img data-src="https://i.imgur.com/q0IAGja.png" alt="將CNAME Record的Value設成你的github page的網址"></p>
+<p>好的那在 namecheap 這邊已經設置完成，接下來就要到 Github 上了，到你的 repository（然後因為前面的學生方案還會發現你變成 github pro 了，酷吧），點設定，到 Pages，到 Custom domain 打上申請的網域，接下來他會跑認證，認證之後才可以把 Enforce HTTPS 打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～</p>
+<p><img data-src="https://i.imgur.com/3ozFoIX.png" alt="一張圖道盡千言萬語"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你有了自己的 Domain，<del>之後遇到人又多了個可以炫耀的東西了呢</del>，另外通過這個機會你也申請到了 Github Education，裡面有很多好用的工具還有教學，真的是撿到寶了，如果你還是高中生，趁這段時間妥善利用這些教學，你應該會變得很強的🛐🛐🛐</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p>自訂網域 ✅</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 網頁頁底配置</title>
+    <url>/NexT-footer/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分  </p>
+<span id="more"></span>
+<ol>
+<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
+<li><a href="/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
+<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
+</ol>
+<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
+<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的 theme 裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
+<p>然後找到 <code>footer</code> 的位置，應該會看到 since、icon、copyright、powered、beian 這些標題，接下來我會一一進行說明（beian 是所謂的 ICP 備案，是中國對非營利網站的一些規定，詳見<a href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）<br><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
+<ol>
+<li>since：你這個網站開始的時間，在你的頁底就會是 XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
+<li> icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外 animated 就是他會不會在那裡” 跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
+<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config 去改喔）</li>
+<li>powered：這裡如果打 true 就會出現由 Powered by Hexo &amp; NexT 的字樣，留空就是不會出現</li>
+</ol>
+<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著在 NexT 內的_config 隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著再到最外層資料夾的_config 隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">"mins."</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋 <code>busuanzi_count</code>，然後把 <code>enable</code> 設 <code>true</code> 就完成了（如果有安裝 live2d 的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p>頁底 ✅</p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
     <url>/Hexo-NexT_Github-Page_build-blog/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的 Blog 就是用 Hexo、NexT、Github Page 做出來的，而且不同其他架 Blog 的那種網站，做出來之後你的 Blog 後面會有一個 github.io 的後綴（就像 <a href="https://moon-jam.github.io/">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了</p>
@@ -87,15 +196,187 @@
       </tags>
   </entry>
   <entry>
-    <title>收藏筆記</title>
-    <url>/collection/</url>
-    <content><![CDATA[<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
+    <title>Hexo-NexT 側邊欄基礎配置</title>
+    <url>/NexT-sidebar-basic/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
+<span id="more"></span>
+
+<ol>
+<li><a href="/NexT-sidebar-basic/#%E9%97%9C%E6%96%BC%E3%80%81%E6%A8%99%E7%B1%A4%E3%80%81%E5%88%86%E9%A1%9E%E3%80%81%E6%AD%B8%E6%AA%94">關於、標籤、分類、歸檔</a></li>
+<li><a href="/NexT-sidebar-basic/#%E6%90%9C%E5%B0%8B">搜尋</a></li>
+<li><a href="/NexT-sidebar-basic/#%E9%A0%AD%E5%83%8F">頭像</a></li>
+<li><a href="/NexT-sidebar-basic/#%E5%80%8B%E4%BA%BA%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90">個人相關連結</a></li>
+</ol>
+<h2 id="關於、標籤、分類、歸檔"><a href="#關於、標籤、分類、歸檔" class="headerlink" title="關於、標籤、分類、歸檔"></a>關於、標籤、分類、歸檔</h2><p>首先要生成關於、標籤、分類這三個分頁（但歸檔不用，他預設就有了，我也覺得很奇怪為什麼其他不要預設就生成）</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">hexo new page about</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著應該會發現在 source 裡面多出了三個資料夾<br><img data-src="https://i.imgur.com/Y27wMgQ.png" alt="生成的三個資料夾"><br>點進去後會發現一個叫做 <code>index.html</code> 的東西，點進去後輸入以下內容（xxx 依照 about、tags、categories 哪個資料夾填入）</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>以 about 為例</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>另外，about 裡面要放一些關於自己的一些事的話，就直接接續 <code>---</code>，底下繼續撰寫即可，以我的 about 為例</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment">## 我是貓熊🐼</span></span><br><span class="line"></span><br><span class="line"><span class="string">這裡會紀錄貓熊的生活大小事</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的 theme 主題的_config.yml</p>
+<p>找到 menu，並將 about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-sidebar-basic/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">頁底配置中更換 icon</a> 一樣，將後面的圖示替換即可）</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>恭喜你這樣就完成第一步啦～應該可以在網站上看到這些東西了</p>
+<h2 id="搜尋"><a href="#搜尋" class="headerlink" title="搜尋"></a>搜尋</h2><p>首先安裝搜尋需要的插件</p>
+<figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然後到你的 theme 主題的_config.yml，搜尋 <code>local_search</code>，將 <code>enable</code>，設為 true，就完成嘍，超簡單的吧～</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="頭像"><a href="#頭像" class="headerlink" title="頭像"></a>頭像</h2><p>這個更簡單，在 theme 主題的_config.yml，搜尋 <code>avatar</code>，然後將你想要的頭像放到 theme 主題中 <code>/source/images</code></p>
+<p><img data-src="https://i.imgur.com/AudEpQN.png" alt="頭像檔案要存放的地方"></p>
+<p>然後將 <code>url</code> 後設定為 <code>/images/image_name</code>，以我的頭像為例，其檔名叫做 <code>Panda_Me.png</code>，而 <code>rounded</code> 代表是否要顯示在圓框內，<code>rotated</code> 表示滑鼠移到頭像上時是否要旋轉</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/Panda_Me.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="個人相關連結"><a href="#個人相關連結" class="headerlink" title="個人相關連結"></a>個人相關連結</h2><p>接下來這是最輕鬆的，一樣在 theme 主題的_config.yml，然後搜尋 <code>social</code>，在底下找你想要顯示的網站，取消註解，然後將你的網址打上去即可，以我的為例，我放了 Github、Gmail、IG</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/moon-jam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">Gmail:</span> <span class="string">mailto:wu.messi.wu@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="comment">#Weibo: https://weibo.com/yourname || fab fa-weibo</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || fab fa-twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || fab fa-facebook</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || fab fa-youtube</span></span><br><span class="line">  <span class="attr">IG:</span> <span class="string">https://www.instagram.com/mooooonjam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || fab fa-skype</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>側邊欄的基礎功能都已經配置完畢，看起來已經跟一般的部落格看起來差不多了呢，是不是很簡單啊，如果有發現哪裡講錯或是有任何疑問，都歡迎在底下留言告訴我喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － 關於、標籤、分類、歸檔、搜尋 ✅<br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>熊貓文</category>
+        <category>教學文</category>
       </categories>
       <tags>
-        <tag>熊貓文</tag>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT live 2d 配置</title>
+    <url>/NexT-live2d/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這次要做的就是網頁右下角那隻可愛的狗狗，可以幫你看家招攬客人，還可以跟他一起玩，可說是一舉數得<br><img data-src="https://i.imgur.com/cxJLFJn.png" alt="可愛的狗狗"></p>
+<span id="more"></span>
+
+<ol>
+<li><a href="/NexT-live2d/#%E5%AE%89%E8%A3%9Dlive-2d">安裝 live 2d</a></li>
+<li><a href="/%E5%AE%89%E8%A3%9Dlive-2d%E6%A8%A1%E5%9E%8B">安裝 live 2d 模型</a></li>
+</ol>
+<h2 id="安裝live-2d"><a href="#安裝live-2d" class="headerlink" title="安裝live 2d"></a>安裝 live 2d</h2><p>這次用的是這個<a href="https://github.com/xiazeyu/live2d-widget-models">模組</a>，執行下方指令就可以安裝了</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著在最外層的_config.yml 中加入以下程式碼（這個模組的作者是說放在 theme 裡面的_config.yml 也可以，不過我試過之後是沒辦法）</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-wanko</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="安裝live-2d模型"><a href="#安裝live-2d模型" class="headerlink" title="安裝live 2d模型"></a>安裝 live 2d 模型</h2><p>到了這裡應該已經有狗狗出現在你的網頁上面了，不過還有很多模型可以選擇，像是貓咪或是可愛的小女孩，可以從<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892#live2dwidgetmodelchitose_12">這裡</a>看到所有模型的預覽，不過我試過好以個之後還是覺得狗狗好可愛，或是也可以像我一樣中文的版面放狗，英文的版面放貓。</p>
+<p><img data-src="https://i.imgur.com/Bp0nf0U.png" alt="喵～"><br><img data-src="https://i.imgur.com/EpN4LqQ.png" alt="真香"></p>
+<p>那選好了想要的模型就可以來下載了，下面是所有模型的名稱，只要輸入 <code>npm install 模型名稱</code>就可以下載了，例如我上面的貓咪就是 <code>npm install live2d-widget-model-tororo</code>，如果是 live2d-widget-model-haru/01 或 live2d-widget-model-haru/02 的話就統一用 <code>npm install live2d-widget-model-haru</code></p>
+<figure class="highlight plaintext"><figcaption><span>模型名稱 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/01</span><br><span class="line">live2d-widget-model-haru/02</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安裝好後，到最外層的_config.yml 修改剛剛加入的程式碼，將下載好的模型名稱打在 model 的 use 後</p>
+<figure class="highlight yml"><figcaption><span>修改 model 中的 use</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line marked">    <span class="attr">use:</span> <span class="string">下載的模型名稱</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>修改後應該就可以看到選的 live 2d 角色出現在你的網頁上面了</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>多了個守護神在你的網站上了，真的超酷的，如果有發現問題或者我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
+</li>
+<li><p> live2d 角色（就是網頁右下角那隻可愛的狗狗）✅</p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 側邊欄 - 切換語言</title>
+    <url>/NexT-sidebar-switch-lang/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>為了讓自己網站能夠接軌國際，加個切換語言的功能是必須的吧～</p>
+<span id="more"></span>
+
+<p>其實切換語言 NexT 有內建的功能，他的效果也還不錯，但是 achieve 不管怎樣都只能出現一個語言，因此最後就只能退而求其次，新做一個英文的網站並在側邊欄新增一個按鈕讓兩個網站可以互相切換，但這要注意一點，就是如果你兩個網站是放在同一個 github 帳號底下的話，pajx 不能打開，因為都是在同一網域底下的，切換過去的時候因為 pajx 的特性，雖然內容會改成英文的，但語言還是會停留在原本的，<del>或是如果有大佬知道怎麼避免掉這種狀況的話，拜託在底下留言告訴我🙏</del>（我自己解決了！看看我下面的更新）</p>
+<ol>
+<li><a href="/NexT-sidebar-switch-lang/#%E6%9E%B6%E8%A8%AD%E4%B8%80%E5%80%8B%E6%96%B0%E7%9A%84%E8%8B%B1%E6%96%87%E7%B6%B2%E7%AB%99">架設一個新的英文網站</a></li>
+<li><a href="/NexT-sidebar-switch-lang/#%E5%81%B4%E9%82%8A%E6%AC%84%E6%96%B0%E5%A2%9E%E5%88%87%E6%8F%9B%E6%8C%89%E9%88%95">側邊欄新增切換按鈕</a></li>
+<li><a href="/NexT-sidebar-switch-lang/#%E6%9B%B4%E6%96%B0-%E8%A7%A3%E6%B1%BA%E4%BD%BF%E7%94%A8pjax%E7%84%A1%E6%B3%95%E5%88%87%E6%8F%9B%E5%95%8F%E9%A1%8C">更新 - 解決使用 pjax 無法切換問題</a></li>
+</ol>
+<h2 id="架設一個新的英文網站"><a href="#架設一個新的英文網站" class="headerlink" title="架設一個新的英文網站"></a>架設一個新的英文網站</h2><p>這個部分跟先前<a href="/Hexo-NexT_Github-Page_build-blog/">利用 Hexo + NexT + Github Page 建立自己的 Blog</a> 完全一樣，要注意一下在最外層資料夾的_config.yml 其中 site 內的 language 要改成 en，網站才會變成英文的，還有記得 branch 要使用 gh-pages，才能正常運作喔</p>
+<p><img data-src="https://i.imgur.com/DzQuENU.png" alt="language要改成en"></p>
+<h2 id="側邊欄新增切換按鈕"><a href="#側邊欄新增切換按鈕" class="headerlink" title="側邊欄新增切換按鈕"></a>側邊欄新增切換按鈕</h2><p>換成到 themes 內的_config.yml，這裡先講中文網站要如何配置<br>到 menu，新增一個叫做 Switch Language 的選項（或是其他名字也可以），後面就打你另一個語言網站的名稱，最後一個圖示就看個人喜好要放什麼啦</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/en/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>英文網站的部分也一樣，只是網址記得要改成中文的就好了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>然後當你要新增英文文章時就在英文的那份檔案寫，中文的就在原先的檔案內寫，如此一來就完成中英切換的網站了</p>
+<h2 id="更新-解決使用pjax無法切換問題"><a href="#更新-解決使用pjax無法切換問題" class="headerlink" title="更新 - 解決使用pjax無法切換問題"></a>更新 - 解決使用 pjax 無法切換問題</h2><p>其實很簡單，因為問題是 pjax 在同一個網域底下不會重新整理，所以如果我們只要讓他先導向另一個網域，然後再導回來，就可以解決了，那有什麼快速的方法呢，最直覺的就是縮網址了，這邊因為我怕一般網路上的縮網址可能會有實效性的問題，所以我就到 github 上找了一下，最後決定使用這個 <a href="https://github.com/nelsontky/gh-pages-url-shortener">gh-pages-url-shortener
+</a>，新開一個 github 帳號然後複製一個分支，自製縮網址就完成了，所以說現在 <a href="https://pa-7.github.io/1">https://pa-7.github.io/1</a> 就會導向我現在的這個中文網址，<a href="https://pa-7.github.io/2">https://pa-7.github.io/2</a> 則會到我英文的網站，這樣就這樣就能夠同時使用 pjax 並且避免語言沒有切換到的問題了</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>切換語言就是這麼簡單，就是在發布不同語言時還要切資料夾有點麻煩，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － 切換語言 ✅</p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
@@ -142,6 +423,19 @@
       <tags>
         <tag>Hexo</tag>
         <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>收藏筆記</title>
+    <url>/collection/</url>
+    <content><![CDATA[<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p><a href="https://hexo.io/zh-tw/docs/tag-plugins.html">Tag Plugins</a></p>
+]]></content>
+      <categories>
+        <category>熊貓文</category>
+      </categories>
+      <tags>
+        <tag>熊貓文</tag>
       </tags>
   </entry>
   <entry>
@@ -222,243 +516,6 @@
 <li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
 </li>
 <li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 自訂網域</title>
-    <url>/Hexo-NexT_custom_domain/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本來想說預算不足，所以就沒有自己買網域，不過後來發現 <a href="https://education.github.com/pack/offers">Github 學生方案</a>中可以在 namecheap 上挑一個免費的網域（另外還有 name.com 也可以，也就是說你可以免費取得兩個網域，超棒的吧～）</p>
-<span id="more"></span>
-
-<ol>
-<li><a href="/Hexo-NexT_custom_domain/#%E7%94%B3%E8%AB%8B%E7%B6%B2%E5%9F%9F">申請網域</a></li>
-<li><a href="/Hexo-NexT_custom_domain/#%E9%80%A3%E7%B5%90Github">連結 Github</a></li>
-</ol>
-<h2 id="申請網域"><a href="#申請網域" class="headerlink" title="申請網域"></a>申請網域</h2><p>申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到 GitHub Student Developer Pack 裡面找到 namecheap（我覺得這個比 name.com 好用一點，尤其是 ssl 的認證，雖然在這裡是用不到就是了），最後連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。</p>
-<p><img data-src="https://i.imgur.com/rCrDTw2.png" alt="連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了"></p>
-<h2 id="連結Github"><a href="#連結Github" class="headerlink" title="連結Github"></a>連結 Github</h2><p>到 namecheap 的 domain list 中選取你剛剛申請好的網域</p>
-<p><img data-src="https://i.imgur.com/hyEUpiM.png" alt="到namecheap的domain list中選取你剛剛申請好的網域"></p>
-<p>點到裡面的 Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下 CNAME Record 的 Value 設成你的 github page 的網址即可</p>
-<p><img data-src="https://i.imgur.com/q0IAGja.png" alt="將CNAME Record的Value設成你的github page的網址"></p>
-<p>好的那在 namecheap 這邊已經設置完成，接下來就要到 Github 上了，到你的 repository（然後因為前面的學生方案還會發現你變成 github pro 了，酷吧），點設定，到 Pages，到 Custom domain 打上申請的網域，接下來他會跑認證，認證之後才可以把 Enforce HTTPS 打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～</p>
-<p><img data-src="https://i.imgur.com/3ozFoIX.png" alt="一張圖道盡千言萬語"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你有了自己的 Domain，<del>之後遇到人又多了個可以炫耀的東西了呢</del>，另外通過這個機會你也申請到了 Github Education，裡面有很多好用的工具還有教學，真的是撿到寶了，如果你還是高中生，趁這段時間妥善利用這些教學，你應該會變得很強的🛐🛐🛐</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-<li><p>自訂網域 ✅</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 側邊欄 - 切換語言</title>
-    <url>/NexT-sidebar-switch-lang/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>為了讓自己網站能夠接軌國際，加個切換語言的功能是必須的吧～</p>
-<span id="more"></span>
-
-<p>其實切換語言 NexT 有內建的功能，他的效果也還不錯，但是 achieve 不管怎樣都只能出現一個語言，因此最後就只能退而求其次，新做一個英文的網站並在側邊欄新增一個按鈕讓兩個網站可以互相切換，但這要注意一點，就是如果你兩個網站是放在同一個 github 帳號底下的話，pajx 不能打開，因為都是在同一網域底下的，切換過去的時候因為 pajx 的特性，雖然內容會改成英文的，但語言還是會停留在原本的，<del>或是如果有大佬知道怎麼避免掉這種狀況的話，拜託在底下留言告訴我🙏</del>（我自己解決了！看看我下面的更新）</p>
-<ol>
-<li><a href="/NexT-sidebar-switch-lang/#%E6%9E%B6%E8%A8%AD%E4%B8%80%E5%80%8B%E6%96%B0%E7%9A%84%E8%8B%B1%E6%96%87%E7%B6%B2%E7%AB%99">架設一個新的英文網站</a></li>
-<li><a href="/NexT-sidebar-switch-lang/#%E5%81%B4%E9%82%8A%E6%AC%84%E6%96%B0%E5%A2%9E%E5%88%87%E6%8F%9B%E6%8C%89%E9%88%95">側邊欄新增切換按鈕</a></li>
-<li><a href="/NexT-sidebar-switch-lang/#%E6%9B%B4%E6%96%B0-%E8%A7%A3%E6%B1%BA%E4%BD%BF%E7%94%A8pjax%E7%84%A1%E6%B3%95%E5%88%87%E6%8F%9B%E5%95%8F%E9%A1%8C">更新 - 解決使用 pjax 無法切換問題</a></li>
-</ol>
-<h2 id="架設一個新的英文網站"><a href="#架設一個新的英文網站" class="headerlink" title="架設一個新的英文網站"></a>架設一個新的英文網站</h2><p>這個部分跟先前<a href="/Hexo-NexT_Github-Page_build-blog/">利用 Hexo + NexT + Github Page 建立自己的 Blog</a> 完全一樣，要注意一下在最外層資料夾的_config.yml 其中 site 內的 language 要改成 en，網站才會變成英文的，還有記得 branch 要使用 gh-pages，才能正常運作喔</p>
-<p><img data-src="https://i.imgur.com/DzQuENU.png" alt="language要改成en"></p>
-<h2 id="側邊欄新增切換按鈕"><a href="#側邊欄新增切換按鈕" class="headerlink" title="側邊欄新增切換按鈕"></a>側邊欄新增切換按鈕</h2><p>換成到 themes 內的_config.yml，這裡先講中文網站要如何配置<br>到 menu，新增一個叫做 Switch Language 的選項（或是其他名字也可以），後面就打你另一個語言網站的名稱，最後一個圖示就看個人喜好要放什麼啦</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/en/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>英文網站的部分也一樣，只是網址記得要改成中文的就好了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>然後當你要新增英文文章時就在英文的那份檔案寫，中文的就在原先的檔案內寫，如此一來就完成中英切換的網站了</p>
-<h2 id="更新-解決使用pjax無法切換問題"><a href="#更新-解決使用pjax無法切換問題" class="headerlink" title="更新 - 解決使用pjax無法切換問題"></a>更新 - 解決使用 pjax 無法切換問題</h2><p>其實很簡單，因為問題是 pjax 在同一個網域底下不會重新整理，所以如果我們只要讓他先導向另一個網域，然後再導回來，就可以解決了，那有什麼快速的方法呢，最直覺的就是縮網址了，這邊因為我怕一般網路上的縮網址可能會有實效性的問題，所以我就到 github 上找了一下，最後決定使用這個 <a href="https://github.com/nelsontky/gh-pages-url-shortener">gh-pages-url-shortener
-</a>，新開一個 github 帳號然後複製一個分支，自製縮網址就完成了，所以說現在 <a href="https://pa-7.github.io/1">https://pa-7.github.io/1</a> 就會導向我現在的這個中文網址，<a href="https://pa-7.github.io/2">https://pa-7.github.io/2</a> 則會到我英文的網站，這樣就這樣就能夠同時使用 pjax 並且避免語言沒有切換到的問題了</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>切換語言就是這麼簡單，就是在發布不同語言時還要切資料夾有點麻煩，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － 切換語言 ✅</p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 側邊欄基礎配置</title>
-    <url>/NexT-sidebar-basic/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
-<span id="more"></span>
-
-<ol>
-<li><a href="/NexT-sidebar-basic/#%E9%97%9C%E6%96%BC%E3%80%81%E6%A8%99%E7%B1%A4%E3%80%81%E5%88%86%E9%A1%9E%E3%80%81%E6%AD%B8%E6%AA%94">關於、標籤、分類、歸檔</a></li>
-<li><a href="/NexT-sidebar-basic/#%E6%90%9C%E5%B0%8B">搜尋</a></li>
-<li><a href="/NexT-sidebar-basic/#%E9%A0%AD%E5%83%8F">頭像</a></li>
-<li><a href="/NexT-sidebar-basic/#%E5%80%8B%E4%BA%BA%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90">個人相關連結</a></li>
-</ol>
-<h2 id="關於、標籤、分類、歸檔"><a href="#關於、標籤、分類、歸檔" class="headerlink" title="關於、標籤、分類、歸檔"></a>關於、標籤、分類、歸檔</h2><p>首先要生成關於、標籤、分類這三個分頁（但歸檔不用，他預設就有了，我也覺得很奇怪為什麼其他不要預設就生成）</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">hexo new page about</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></tbody></table></figure>
-
-<p>接著應該會發現在 source 裡面多出了三個資料夾<br><img data-src="https://i.imgur.com/Y27wMgQ.png" alt="生成的三個資料夾"><br>點進去後會發現一個叫做 <code>index.html</code> 的東西，點進去後輸入以下內容（xxx 依照 about、tags、categories 哪個資料夾填入）</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>以 about 為例</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>另外，about 裡面要放一些關於自己的一些事的話，就直接接續 <code>---</code>，底下繼續撰寫即可，以我的 about 為例</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment">## 我是貓熊🐼</span></span><br><span class="line"></span><br><span class="line"><span class="string">這裡會紀錄貓熊的生活大小事</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的 theme 主題的_config.yml</p>
-<p>找到 menu，並將 about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-sidebar-basic/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">頁底配置中更換 icon</a> 一樣，將後面的圖示替換即可）</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>恭喜你這樣就完成第一步啦～應該可以在網站上看到這些東西了</p>
-<h2 id="搜尋"><a href="#搜尋" class="headerlink" title="搜尋"></a>搜尋</h2><p>首先安裝搜尋需要的插件</p>
-<figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然後到你的 theme 主題的_config.yml，搜尋 <code>local_search</code>，將 <code>enable</code>，設為 true，就完成嘍，超簡單的吧～</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="頭像"><a href="#頭像" class="headerlink" title="頭像"></a>頭像</h2><p>這個更簡單，在 theme 主題的_config.yml，搜尋 <code>avatar</code>，然後將你想要的頭像放到 theme 主題中 <code>/source/images</code></p>
-<p><img data-src="https://i.imgur.com/AudEpQN.png" alt="頭像檔案要存放的地方"></p>
-<p>然後將 <code>url</code> 後設定為 <code>/images/image_name</code>，以我的頭像為例，其檔名叫做 <code>Panda_Me.png</code>，而 <code>rounded</code> 代表是否要顯示在圓框內，<code>rotated</code> 表示滑鼠移到頭像上時是否要旋轉</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/Panda_Me.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="個人相關連結"><a href="#個人相關連結" class="headerlink" title="個人相關連結"></a>個人相關連結</h2><p>接下來這是最輕鬆的，一樣在 theme 主題的_config.yml，然後搜尋 <code>social</code>，在底下找你想要顯示的網站，取消註解，然後將你的網址打上去即可，以我的為例，我放了 Github、Gmail、IG</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/moon-jam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">Gmail:</span> <span class="string">mailto:wu.messi.wu@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="comment">#Weibo: https://weibo.com/yourname || fab fa-weibo</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || fab fa-twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || fab fa-facebook</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || fab fa-youtube</span></span><br><span class="line">  <span class="attr">IG:</span> <span class="string">https://www.instagram.com/mooooonjam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || fab fa-skype</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>側邊欄的基礎功能都已經配置完畢，看起來已經跟一般的部落格看起來差不多了呢，是不是很簡單啊，如果有發現哪裡講錯或是有任何疑問，都歡迎在底下留言告訴我喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － 關於、標籤、分類、歸檔、搜尋 ✅<br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 網頁頁底配置</title>
-    <url>/NexT-footer/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分  </p>
-<span id="more"></span>
-<ol>
-<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
-<li><a href="/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
-<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
-</ol>
-<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
-<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的 theme 裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
-<p>然後找到 <code>footer</code> 的位置，應該會看到 since、icon、copyright、powered、beian 這些標題，接下來我會一一進行說明（beian 是所謂的 ICP 備案，是中國對非營利網站的一些規定，詳見<a href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）<br><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
-<ol>
-<li>since：你這個網站開始的時間，在你的頁底就會是 XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
-<li> icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外 animated 就是他會不會在那裡” 跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
-<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config 去改喔）</li>
-<li>powered：這裡如果打 true 就會出現由 Powered by Hexo &amp; NexT 的字樣，留空就是不會出現</li>
-</ol>
-<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></tbody></table></figure>
-
-<p>接著在 NexT 內的_config 隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>接著再到最外層資料夾的_config 隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">"mins."</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋 <code>busuanzi_count</code>，然後把 <code>enable</code> 設 <code>true</code> 就完成了（如果有安裝 live2d 的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p>頁底 ✅</p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </p>
 </li>
 <li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
 </li>
