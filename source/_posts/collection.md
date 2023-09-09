@@ -18,3 +18,4 @@ date: 2023-08-28 00:00:00
 ## hexo
 
 [Tag Plugins](https://hexo.io/zh-tw/docs/tag-plugins.html)
+[很多NexT功能介紹](https://zenreal.github.io/posts/44730)
