@@ -50,7 +50,7 @@ date: 2023-09-10
 
 另外一個方法就是到最外層資料夾中的`source`新建一個`_data`的資料夾，然後在裡面新增`styles.styl`這個檔案（也就是`source/data/styles.styl`，然後將剛剛上面的程式碼貼在裡面，最後到`theme/NexT(改成你的主題名稱)/_config.yml`將custom_file_path的最後一項`style: source/_data/styles.styl`的註解取消，就完成了
 
-![Image](https://i.imgur.com/ndD3yh1.png)
+![開啟custom_file_path設定](https://i.imgur.com/ndD3yh1.png)
 
 ## 結語
 
