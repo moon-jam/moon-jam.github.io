@@ -1,0 +1,84 @@
+//自定義NOTE
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+.alert-success {
+    color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-info {
+    color: #3a87ad;
+    background-color: #e2eaee;
+    border-color: #c5d5dd;
+}
+.alert-warning {
+    color: #c09853;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.alert-danger {
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+//自定義文字色塊
+span#inline-blue, span#inline-green, span#inline-purple, span#inline-yellow {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    vertical-align: baseline;
+    border-radius: 0;
+    white-space: nowrap;
+}
+span#inline-blue {
+    background-color: #2780e3;
+}
+span#inline-purple {
+    background-color: #9954bb;
+}
+span#inline-yellow {
+    background-color: #f0ad4e;
+}
+span#inline-green {
+    background-color: #5cb85c;
+}
+
+/*修改h2前面圖標*/
+.posts-expand .post-body h2:before{
+    content: "🔍";
+    margin-right: 16px;
+}
+
+/*修改h3前面圖標*/
+.posts-expand .post-body h3:before{
+    content: "📌";
+    margin-right: 16px;
+}
+
+.post-body .note {
+    border-radius: 10px;
+    color: black;
+}
+
+.post-body .note:not(.no-icon)::before {
+  font-size: 1.2em;
+  left: 0.4em;
+  position: absolute;
+  top: calc(50% - 1em);
+}
+
+// Custom styles.
+code {
+    color: #c7254e; //文字顏色
+    background: #f9f2f4; //底色
+    margin: 2px;
+}

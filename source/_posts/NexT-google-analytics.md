@@ -12,7 +12,7 @@ date: 2023-09-03
 
 ## 前言
 
-Google Analytics（後文簡稱為GA）是一個由Google所提供的網站流量統計服務，透過在網站中埋入GA追蹤碼，網站主們可以獲取進站流量的資料，包括來源、使用者、裝置、造訪路徑等，透過GA，可以更全面的了解品牌的受眾，進而為潛在客戶優化購買、造訪流程，提高轉單意願，對於網頁入門來說是非常推薦使用的工具。(截自[維基百科](https://zh.wikipedia.org/zh-tw/Google%E5%88%86%E6%9E%90))
+Google Analytics（後文簡稱為GA）是一個由Google所提供的網站流量統計服務，透過在網站中埋入GA追蹤碼，網站主們可以獲取進站流量的資料，包括來源、使用者、裝置、造訪路徑等，透過GA，可以更全面的了解品牌的受眾，進而為潛在客戶優化購買、造訪流程，提高轉單意願，對於網頁入門來說是非常推薦使用的工具。(摘自[維基百科](https://zh.wikipedia.org/zh-tw/Google%E5%88%86%E6%9E%90))
 <!--more-->
 不過這篇只會教你怎麼讓你的網頁與GA連結，詳細的操作可以看[google推出的免費課程](https://analytics.google.com/analytics/academy/course/6?hl=zh-tw)
 
