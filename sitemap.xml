@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moon-jam.me/NexT-some-cool-tools/</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.me/SEO-Search-Engine-Optimization/</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://moon-jam.me/collection/</loc>
     
     <lastmod>2023-09-10</lastmod>
     
@@ -14,15 +32,6 @@
     <loc>https://moon-jam.me/NexT-google-analytics/</loc>
     
     <lastmod>2023-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://moon-jam.me/collection/</loc>
-    
-    <lastmod>2023-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
