@@ -1,5 +1,5 @@
 ---
-title: Hexo-NexT SEO優化
+title: SEO配置(搜尋引擎最佳化)
 lang: zh-TW
 tags:
   - Hexo
