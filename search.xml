@@ -1,55 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo-NexT 自訂網域</title>
-    <url>/Hexo-NexT_custom_domain/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本來想說預算不足，所以就沒有自己買網域，不過後來發現 <a href="https://education.github.com/pack/offers">Github 學生方案</a>中可以在 namecheap 上挑一個免費的網域（另外還有 name.com 也可以，也就是說你可以免費取得兩個網域，超棒的吧～）</p>
-<span id="more"></span>
-
-<ol>
-<li><a href="/Hexo-NexT_custom_domain/#%E7%94%B3%E8%AB%8B%E7%B6%B2%E5%9F%9F">申請網域</a></li>
-<li><a href="/Hexo-NexT_custom_domain/#%E9%80%A3%E7%B5%90Github">連結 Github</a></li>
-</ol>
-<h2 id="申請網域"><a href="#申請網域" class="headerlink" title="申請網域"></a>申請網域</h2><p>申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到 GitHub Student Developer Pack 裡面找到 namecheap（我覺得這個比 name.com 好用一點，尤其是 ssl 的認證，雖然在這裡是用不到就是了），最後連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。</p>
-<p><img data-src="https://i.imgur.com/rCrDTw2.png" alt="連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了"></p>
-<h2 id="連結Github"><a href="#連結Github" class="headerlink" title="連結Github"></a>連結 Github</h2><p>到 namecheap 的 domain list 中選取你剛剛申請好的網域</p>
-<p><img data-src="https://i.imgur.com/hyEUpiM.png" alt="到namecheap的domain list中選取你剛剛申請好的網域"></p>
-<p>點到裡面的 Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下 CNAME Record 的 Value 設成你的 github page 的網址即可</p>
-<p><img data-src="https://i.imgur.com/q0IAGja.png" alt="將CNAME Record的Value設成你的github page的網址"></p>
-<p>好的那在 namecheap 這邊已經設置完成，接下來就要到 Github 上了，到你的 repository（然後因為前面的學生方案還會發現你變成 github pro 了，酷吧），點設定，到 Pages，到 Custom domain 打上申請的網域，接下來他會跑認證，認證之後才可以把 Enforce HTTPS 打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～</p>
-<p><img data-src="https://i.imgur.com/3ozFoIX.png" alt="一張圖道盡千言萬語"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你有了自己的 Domain，<del>之後遇到人又多了個可以炫耀的東西了呢</del>，另外通過這個機會你也申請到了 Github Education，裡面有很多好用的工具還有教學，真的是撿到寶了，如果你還是高中生，趁這段時間妥善利用這些教學，你應該會變得很強的🛐🛐🛐</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-<li><p>自訂網域 ✅</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
     <url>/Hexo-NexT_Github-Page_build-blog/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的 Blog 就是用 Hexo、NexT、Github Page 做出來的，而且不同其他架 Blog 的那種網站，做出來之後你的 Blog 後面會有一個 github.io 的後綴（就像 <a href="https://moon-jam.github.io/">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了</p>
@@ -136,83 +87,65 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo-NexT 網頁頁底配置</title>
-    <url>/NexT-footer/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分  </p>
+    <title>收藏筆記</title>
+    <url>/collection/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>博觀而約取，厚積而薄發</p>
+
+</blockquote>
 <span id="more"></span>
-<ol>
-<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
-<li><a href="/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
-<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
-</ol>
-<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
-<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的 theme 裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
-<p>然後找到 <code>footer</code> 的位置，應該會看到 since、icon、copyright、powered、beian 這些標題，接下來我會一一進行說明（beian 是所謂的 ICP 備案，是中國對非營利網站的一些規定，詳見<a href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）<br><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
-<ol>
-<li>since：你這個網站開始的時間，在你的頁底就會是 XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
-<li> icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外 animated 就是他會不會在那裡” 跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
-<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config 去改喔）</li>
-<li>powered：這裡如果打 true 就會出現由 Powered by Hexo &amp; NexT 的字樣，留空就是不會出現</li>
-</ol>
-<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></tbody></table></figure>
-
-<p>接著在 NexT 內的_config 隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>接著再到最外層資料夾的_config 隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">"mins."</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋 <code>busuanzi_count</code>，然後把 <code>enable</code> 設 <code>true</code> 就完成了（如果有安裝 live2d 的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p>頁底 ✅</p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
+<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p><a href="https://hexo.io/zh-tw/docs/tag-plugins.html">Tag Plugins</a><br><a href="https://zenreal.github.io/posts/44730">很多 NexT 功能介紹</a></p>
 ]]></content>
       <categories>
-        <category>教學文</category>
+        <category>熊貓文</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
+        <tag>熊貓文</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hexo-NexT 深淺主題切換配置</title>
-    <url>/NexT-dark-light-mode/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>現在不論是手機應用程式、網頁幾乎都有所謂深淺模式，先不論省不省電或是好不好看，有了切換的功能就是很酷，使用者可以依自己喜好挑選自己習慣的模式，這篇內容因為有點太簡單，所以我就只有一個章節了～</p>
+    <title>SEO 配置 (搜尋引擎最佳化)</title>
+    <url>/SEO-Search-Engine-Optimization/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>什麼是 SEO 呢？</p>
+<blockquote>
+<p>搜尋引擎最佳化（英語：search engine optimization，縮寫為 SEO）是透過了解搜尋引擎的運作規則來調整網站，以及提高目的網站在有關搜尋引擎內排名的方式。(摘自維基百科)</p>
+</blockquote>
+<p>SEO 優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓更多人看到的過程，接下來我會先從怎麼知道目前網頁的 SEO 狀況，再一一列舉優化的方法，如果只是想要知道如何能在 google 上搜尋到自己網頁的人可以直接看最後一項 <a href="/SEO-Search-Engine-Optimization/#google-search-console">google search console</a> 的使用方式。</p>
 <span id="more"></span>
 
-<h2 id="教學開始～"><a href="#教學開始～" class="headerlink" title="教學開始～"></a>教學開始～</h2><p>這次用的套件是<a href="https://github.com/rqh656418510/hexo-next-darkmode">這個</a>，安裝的方式非常簡單，輸入下列指令就完成了</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode</span><br></pre></td></tr></tbody></table></figure>
+<ol>
+<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E7%9B%AE%E5%89%8DSEO%E7%8B%80%E6%B3%81">網頁目前 SEO 狀況</a></li>
+<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E5%84%AA%E5%8C%96%E6%96%B9%E6%B3%95">網頁優化方法</a><br>  2.1. <a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E5%9D%80">網址</a><br>  2.2. <a href="/SEO-Search-Engine-Optimization/#%E6%96%B0%E5%A2%9Edescription">新增 description</a><br>  2.3. <a href="/SEO-Search-Engine-Optimization/#Nofollow">Nofollow</a><br>  2.4. <a href="/SEO-Search-Engine-Optimization/#sitemap">sitemap</a><br>  2.5. <a href="/SEO-Search-Engine-Optimization/#robots-txt">robots.txt</a><br>  2.6. <a href="/SEO-Search-Engine-Optimization/#Google-Search-Console">Google Search Console</a></li>
+</ol>
+<h2 id="網頁目前SEO狀況"><a href="#網頁目前SEO狀況" class="headerlink" title="網頁目前SEO狀況"></a>網頁目前 SEO 狀況</h2><p>要優化前當然要先看看自己的目前的狀況，可以到 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a>，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況<br><img data-src="https://i.imgur.com/vyUXRfU.png" alt="以我的網頁為例"><br>另外可以搜尋 <code>site:網域</code>，看看自己的網站是否有被收錄到 google 內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題<br><img data-src="https://i.imgur.com/kftLZgg.png" alt="搜尋site:網域"></p>
+<h2 id="網頁優化方法"><a href="#網頁優化方法" class="headerlink" title="網頁優化方法"></a>網頁優化方法</h2><h3 id="網址"><a href="#網址" class="headerlink" title="網址"></a>網址</h3><p>搜尋引擎不喜歡過長或是索引過多的網址 (例如說 <code>https://example.com/abc/def/ghi/jkl/mn</code>)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是 <code>success@SEO-Search-Engine-Optimization.md</code>，如果覺得這樣太麻煩的話可以使用 <a href="https://github.com/rozbo/hexo-abbrlink">abbrlink 插件</a><br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="把網址設定成檔案名稱"></p>
+<h3 id="新增description"><a href="#新增description" class="headerlink" title="新增description"></a>新增 description</h3><p>添加 description 可以讓使用者更快速了解你的文章在講什麼，所以對 SEO 也是很重要的部分，而我們需要分別在首頁和文章都個別設定相關的描述</p>
+<p><span id="inline-blue">首頁</span><br>到最外層的<code>_config.yml</code> 去修改 description<br><img data-src="https://i.imgur.com/ory8GYA.png" alt="修改最外層_config.yml的description"></p>
+<p><span id="inline-blue">文章</span><br>要新增文章的 description 有兩中方法，一個是在文章最上端的細節設定新增 <code>description: 你的description</code>，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作 description，作法很簡單，在前言的底下新增一行 <code>&lt;!--more--&gt;</code>，就完成了<br><img data-src="https://i.imgur.com/JKfxDSQ.png" alt="新增<!--more-->作為description"></p>
+<p>另外補充，可以在主題內的<code>_config.yml</code>，將 <code>read_more_btn</code> 設定為 <code>true</code>，如此一來在瀏覽你的網站時，就只會將文章中 description 的部分呈現出來，讓可讀性更高<br><img data-src="https://i.imgur.com/meLFbHF.png" alt="將read_more_btn設定為true"><br><img data-src="https://i.imgur.com/FoJcPqo.png" alt="在網頁就會出現閱讀全文的按鈕"></p>
+<h3 id="Nofollow"><a href="#Nofollow" class="headerlink" title="Nofollow"></a>Nofollow</h3><p>關於 nofollow 是什麼詳細可以看<a href="https://welly.tw/serp-rank-optimization/what-is-nofollow">這篇文章</a>，總之就是避免你的搜尋引擎權重值被別人分走，使用的是這個<a href="https://github.com/hexojs/hexo-filter-nofollow">插件</a>，如果沒有要設定什麼特別的東西的話，直接執行 <code>npm install hexo-filter-nofollow</code>，就完成了</p>
+<h3 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h3><p>sitemap 就是用來告訴搜尋引擎我這個網站有哪些網頁，方便搜尋引擎索引，要使用的插件是<a href="https://github.com/hexojs/hexo-generator-sitemap">這個</a>，執行 <code>npm install hexo-generator-sitemap</code> 下載插件<br>接著到最外層的<code>_config.yml</code>，添加以下程式碼就完成了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>設置的方式則是到 theme 內的<code>_config.yml</code>，貼上以下指令就完成了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Darkmode JS</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">bottom:</span> <span class="string">'64px'</span> <span class="comment"># 距離底端的距離</span></span><br><span class="line">  <span class="attr">right:</span> <span class="string">'unset'</span> <span class="comment"># 距離右邊的距離(unset就是只需要設定左邊，右邊會自己調整)</span></span><br><span class="line">  <span class="attr">left:</span> <span class="string">'32px'</span> <span class="comment"># 距離左邊的距離(unset就是只需要設定右邊，左邊會自己調整)</span></span><br><span class="line">  <span class="attr">time:</span> <span class="string">'0.5s'</span> <span class="comment"># 切換深淺模式的時間</span></span><br><span class="line">  <span class="attr">mixColor:</span> <span class="string">'transparent'</span> <span class="comment"># 這個建議不要用，雖然會出現酷酷的一個往外擴散的效果，可是他的顏色會跟原本的背景混再一起，有時候還會讓字不清楚，想玩的可以自己改改看</span></span><br><span class="line">  <span class="attr">backgroundColor:</span> <span class="string">'transparent'</span> <span class="comment">#背景顏色</span></span><br><span class="line">  <span class="attr">buttonColorDark:</span> <span class="string">'#100f2c'</span> <span class="comment"># 在淺色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">buttonColorLight:</span> <span class="string">'#fff'</span> <span class="comment"># 在深色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">isActivated:</span> <span class="literal">false</span> <span class="comment"># 這裡如果用true的話是可以自己改寫他的CSS，但我覺得應該沒有必要，詳細可以看github的內的介紹</span></span><br><span class="line">  <span class="attr">saveInCookies:</span> <span class="literal">true</span> <span class="comment"># 會儲存到Cookies內，下次來會依照上次你的設定切換到深淺模式</span></span><br><span class="line">  <span class="attr">label:</span> <span class="string">'🌓'</span> <span class="comment"># 可以改成自己像要的表情圖示</span></span><br><span class="line">  <span class="attr">autoMatchOsTheme:</span> <span class="literal">true</span> <span class="comment"># 自動切換到跟使用者裝置相同的深淺模式</span></span><br><span class="line">  <span class="attr">libUrl:</span> <span class="comment"># Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></tbody></table></figure>
+<p>可以試試看<code>你的網址/sitemap.xml</code>（如果是在本機跑的話應該就是 <code>localhost:4000/sitemap.xml</code>，有沒有出現東西，有的話就是成功了</p>
+<h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>到最外層資料夾中的 <code>source</code> 新增一個檔案 <code>robots.txt</code><br><img data-src="https://i.imgur.com/Lepvzrl.png" alt="新增robots.txt"><br>接下來再 <code>robots.txt</code> 內貼上以下內容，記得 Sitemap 後面要改成你自己的網址</p>
+<figure class="highlight plaintext"><figcaption><span>robots.txt</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/ </span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的網址/sitemap.xml</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
-<p>如果想要設定固定的背景或按鈕顏色的話可以修改 backgroundColor、buttonColorDark、buttonColorLight 後的色碼，例如說 <code>backgroundColor: "#FFD9E6"</code>，推薦給有少女心的各位</p>
-<p><img data-src="https://i.imgur.com/Yr5MMiF.png" alt="猛男粉紅💪"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>完成啦！深淺切換的功能很簡單吧～如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<p><span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，<code>*</code> 就是全部都可以<br><span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有 <code>Allow: /</code> 就代表全部都可以，後面那些都是保平安用的（xd<br><span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的<br><span id="inline-blue">Sitemap</span> 就是上面講到的 sitemap.xml</p>
+<h3 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h3><p>這個是最重要的一步，前面那些事讓你的 SEO 更好，但如果沒有這個你的網頁大概根本搜尋不到，進入 <a href="https://search.google.com/search-console/about">Google Search Console</a>，新增資源<br><img data-src="https://i.imgur.com/tw67jVX.png" alt="新增資源"></p>
+<p>如果是使用 github page 的就只能用右邊的那個，他會叫你把一個 html 檔放到你的網頁中，你就將它下載，然後儲存到 <code>themes/NexT(或你用其他主題)/source</code>，重新部署之後稍等一下應該就完成了</p>
+<p>如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的 TXT 紀錄複製下來，然後添加網域的 DNS 設定，我這裡是用 namecheap，各家的使用方式也都大同小異，新增 <code>TXT Record</code>，<code>Host</code> 設定 <code>@</code>，<code>Value</code> 設定剛剛複製的 TXT 紀錄，幾分鐘後就會通過驗證了</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/4XAblPy.png" alt="複製TXT紀錄"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/y9sKq0R.png" alt="DNS設定"></div></div></div>
+
+<p>進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明</p>
+<p><span id="inline-blue">搜尋網頁索引狀態</span><br>可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊<code>要求建立索引</code>，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上<br><img data-src="https://i.imgur.com/sifijQS.png" alt="搜尋網頁索引狀態"></p>
+<p><span id="inline-blue">檢查網頁索引狀態</span><br>這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態<br><img data-src="https://i.imgur.com/saKZCae.png" alt="檢查網頁索引狀態"></p>
+<p><span id="inline-blue">新增 Sitemap</span><br>在這個頁面就是用來把之前生成的 Sitemap 交給 google 看，讓他更清楚你的網頁們<br><img data-src="https://i.imgur.com/CrguGDg.png" alt="新增Sitemap"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你的網頁現在已經可以在 google 上被查詢上了，可以在使用 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a> 看看 SEO 的分數有沒有上升，也可以看他說你哪個地方不足去修正，分數應該就可以拿到幾乎 100 的分數了，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
 <h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
 <li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
 </li>
 <li><p><a href="/NexT-footer">頁底</a></p>
 </li>
@@ -220,57 +153,11 @@
 </li>
 <li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
 </li>
-<li><p>日 / 夜模式 ✅</p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在 Hexo-NexT 主題中配置 Google Analytics</title>
-    <url>/NexT-google-analytics/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Google Analytics（後文簡稱為 GA）是一個由 Google 所提供的網站流量統計服務，透過在網站中埋入 GA 追蹤碼，網站主們可以獲取進站流量的資料，包括來源、使用者、裝置、造訪路徑等，透過 GA，可以更全面的了解品牌的受眾，進而為潛在客戶優化購買、造訪流程，提高轉單意願，對於網頁入門來說是非常推薦使用的工具。(摘自<a href="https://zh.wikipedia.org/zh-tw/Google%E5%88%86%E6%9E%90">維基百科</a>)</p>
-<span id="more"></span>
-<p>不過這篇只會教你怎麼讓你的網頁與 GA 連結，詳細的操作可以看 <a href="https://analytics.google.com/analytics/academy/course/6?hl=zh-tw">google 推出的免費課程</a></p>
-<h2 id="教學開始！"><a href="#教學開始！" class="headerlink" title="教學開始！"></a>教學開始！</h2><p>首先到 <a href="https://analytics.google.com/">GA 的官網</a>註冊一個帳號，接著到管理建立帳戶、資源、最後切換到資料串流<br><img data-src="https://i.imgur.com/wdINP2I.png" alt="建立帳戶、資源、切換到資料串流"></p>
-<p>新增串流，選擇網頁<br><img data-src="https://i.imgur.com/7ZZQnoB.png" alt="新增串流"></p>
-<p>設定串流名稱、串流網址，他會自動生成 GA id（就是最後的評估 id），把他複製下來等等會用到<br><img data-src="https://i.imgur.com/XI7htXE.png" alt="設定資料並複製id"></p>
-<p>這次不去改_congif.yml 的內容，雖然說他裡面也有可以設定 GA 的地方，但不知道為什麼我試過之後沒辦法使用，這裡我們直接改他的 layout，首先到 theme-&gt;{your-theme-name}-&gt;layout-&gt;_layout.njk<br><img data-src="https://i.imgur.com/CVdViKM.png" alt="切換到_layout.njk"></p>
-<p>在 body 的上方插入以下程式碼，請務必將 ‘your-id’ 替換為剛剛複製的 id</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- <span class="title class_">Google</span> tag (gtag.<span class="property">js</span>) --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://www.googletagmanager.com/gtag/js?id=your-id"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">window</span>.<span class="property">dataLayer</span> = <span class="variable language_">window</span>.<span class="property">dataLayer</span> || [];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="keyword">function</span> <span class="title function_">gtag</span>(<span class="params"></span>){dataLayer.<span class="title function_">push</span>(<span class="variable language_">arguments</span>);}</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'js'</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'config'</span>, <span class="string">'your-id'</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
-
-<p><img data-src="https://i.imgur.com/4mtAFID.png" alt="將程式碼插入到body的上方"></p>
-<p>重啟網站（使用 <code>hexo s</code>）並重新載入網頁，然後前往 GA -&gt; 報表 -&gt; 即時，檢查是否有變化，有時可能需要等待一段時間才能看到數據更新。<br><img data-src="https://i.imgur.com/dZ0ZkQ6.png" alt="查看即時報表有沒有變化"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在，你可以使用 Google Analytics 來監控每日訪問你的網站的人數。如果流量足夠，你甚至可以考慮進行廣告投放。如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p> Google Analytics 統計網站資訊 ✅</p>
-</li>
 <li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
 </li>
 <li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
 </li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+<li><p>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</p>
 </li>
 <li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
 </li>
@@ -343,6 +230,97 @@
       </tags>
   </entry>
   <entry>
+    <title>如何在 Hexo-NexT 主題中配置 Google Analytics</title>
+    <url>/NexT-google-analytics/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Google Analytics（後文簡稱為 GA）是一個由 Google 所提供的網站流量統計服務，透過在網站中埋入 GA 追蹤碼，網站主們可以獲取進站流量的資料，包括來源、使用者、裝置、造訪路徑等，透過 GA，可以更全面的了解品牌的受眾，進而為潛在客戶優化購買、造訪流程，提高轉單意願，對於網頁入門來說是非常推薦使用的工具。(摘自<a href="https://zh.wikipedia.org/zh-tw/Google%E5%88%86%E6%9E%90">維基百科</a>)</p>
+<span id="more"></span>
+<p>不過這篇只會教你怎麼讓你的網頁與 GA 連結，詳細的操作可以看 <a href="https://analytics.google.com/analytics/academy/course/6?hl=zh-tw">google 推出的免費課程</a></p>
+<h2 id="教學開始！"><a href="#教學開始！" class="headerlink" title="教學開始！"></a>教學開始！</h2><p>首先到 <a href="https://analytics.google.com/">GA 的官網</a>註冊一個帳號，接著到管理建立帳戶、資源、最後切換到資料串流<br><img data-src="https://i.imgur.com/wdINP2I.png" alt="建立帳戶、資源、切換到資料串流"></p>
+<p>新增串流，選擇網頁<br><img data-src="https://i.imgur.com/7ZZQnoB.png" alt="新增串流"></p>
+<p>設定串流名稱、串流網址，他會自動生成 GA id（就是最後的評估 id），把他複製下來等等會用到<br><img data-src="https://i.imgur.com/XI7htXE.png" alt="設定資料並複製id"></p>
+<p>這次不去改_congif.yml 的內容，雖然說他裡面也有可以設定 GA 的地方，但不知道為什麼我試過之後沒辦法使用，這裡我們直接改他的 layout，首先到 theme-&gt;{your-theme-name}-&gt;layout-&gt;_layout.njk<br><img data-src="https://i.imgur.com/CVdViKM.png" alt="切換到_layout.njk"></p>
+<p>在 body 的上方插入以下程式碼，請務必將 ‘your-id’ 替換為剛剛複製的 id</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- <span class="title class_">Google</span> tag (gtag.<span class="property">js</span>) --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://www.googletagmanager.com/gtag/js?id=your-id"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">window</span>.<span class="property">dataLayer</span> = <span class="variable language_">window</span>.<span class="property">dataLayer</span> || [];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="keyword">function</span> <span class="title function_">gtag</span>(<span class="params"></span>){dataLayer.<span class="title function_">push</span>(<span class="variable language_">arguments</span>);}</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'js'</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'config'</span>, <span class="string">'your-id'</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://i.imgur.com/4mtAFID.png" alt="將程式碼插入到body的上方"></p>
+<p>重啟網站（使用 <code>hexo s</code>）並重新載入網頁，然後前往 GA -&gt; 報表 -&gt; 即時，檢查是否有變化，有時可能需要等待一段時間才能看到數據更新。<br><img data-src="https://i.imgur.com/dZ0ZkQ6.png" alt="查看即時報表有沒有變化"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在，你可以使用 Google Analytics 來監控每日訪問你的網站的人數。如果流量足夠，你甚至可以考慮進行廣告投放。如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p> Google Analytics 統計網站資訊 ✅</p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 深淺主題切換配置</title>
+    <url>/NexT-dark-light-mode/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>現在不論是手機應用程式、網頁幾乎都有所謂深淺模式，先不論省不省電或是好不好看，有了切換的功能就是很酷，使用者可以依自己喜好挑選自己習慣的模式，這篇內容因為有點太簡單，所以我就只有一個章節了～</p>
+<span id="more"></span>
+
+<h2 id="教學開始～"><a href="#教學開始～" class="headerlink" title="教學開始～"></a>教學開始～</h2><p>這次用的套件是<a href="https://github.com/rqh656418510/hexo-next-darkmode">這個</a>，安裝的方式非常簡單，輸入下列指令就完成了</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode</span><br></pre></td></tr></tbody></table></figure>
+
+<p>設置的方式則是到 theme 內的<code>_config.yml</code>，貼上以下指令就完成了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Darkmode JS</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">bottom:</span> <span class="string">'64px'</span> <span class="comment"># 距離底端的距離</span></span><br><span class="line">  <span class="attr">right:</span> <span class="string">'unset'</span> <span class="comment"># 距離右邊的距離(unset就是只需要設定左邊，右邊會自己調整)</span></span><br><span class="line">  <span class="attr">left:</span> <span class="string">'32px'</span> <span class="comment"># 距離左邊的距離(unset就是只需要設定右邊，左邊會自己調整)</span></span><br><span class="line">  <span class="attr">time:</span> <span class="string">'0.5s'</span> <span class="comment"># 切換深淺模式的時間</span></span><br><span class="line">  <span class="attr">mixColor:</span> <span class="string">'transparent'</span> <span class="comment"># 這個建議不要用，雖然會出現酷酷的一個往外擴散的效果，可是他的顏色會跟原本的背景混再一起，有時候還會讓字不清楚，想玩的可以自己改改看</span></span><br><span class="line">  <span class="attr">backgroundColor:</span> <span class="string">'transparent'</span> <span class="comment">#背景顏色</span></span><br><span class="line">  <span class="attr">buttonColorDark:</span> <span class="string">'#100f2c'</span> <span class="comment"># 在淺色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">buttonColorLight:</span> <span class="string">'#fff'</span> <span class="comment"># 在深色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">isActivated:</span> <span class="literal">false</span> <span class="comment"># 這裡如果用true的話是可以自己改寫他的CSS，但我覺得應該沒有必要，詳細可以看github的內的介紹</span></span><br><span class="line">  <span class="attr">saveInCookies:</span> <span class="literal">true</span> <span class="comment"># 會儲存到Cookies內，下次來會依照上次你的設定切換到深淺模式</span></span><br><span class="line">  <span class="attr">label:</span> <span class="string">'🌓'</span> <span class="comment"># 可以改成自己像要的表情圖示</span></span><br><span class="line">  <span class="attr">autoMatchOsTheme:</span> <span class="literal">true</span> <span class="comment"># 自動切換到跟使用者裝置相同的深淺模式</span></span><br><span class="line">  <span class="attr">libUrl:</span> <span class="comment"># Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果想要設定固定的背景或按鈕顏色的話可以修改 backgroundColor、buttonColorDark、buttonColorLight 後的色碼，例如說 <code>backgroundColor: "#FFD9E6"</code>，推薦給有少女心的各位</p>
+<p><img data-src="https://i.imgur.com/Yr5MMiF.png" alt="猛男粉紅💪"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>完成啦！深淺切換的功能很簡單吧～如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p>日 / 夜模式 ✅</p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-NexT 留言板 utterances 配置</title>
     <url>/NexT-utterances-comment-box/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>許多 Blog 都有自己的留言區，可以方便地與讀者交流（<del>只是我做了之後文章也沒有人看，所以也不會有交流的機會🥲</del>）我要教的是用 utterances，另外還有其他像是 Disqus 或是 GitHub Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相 tag），最後只好就選 utterances，不過他也還是不錯用的，支援 markdown 語法，有亮暗主題，也算很好了啦。</p>
@@ -377,6 +355,55 @@
 <li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
 </li>
 <li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 自訂網域</title>
+    <url>/Hexo-NexT_custom_domain/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本來想說預算不足，所以就沒有自己買網域，不過後來發現 <a href="https://education.github.com/pack/offers">Github 學生方案</a>中可以在 namecheap 上挑一個免費的網域（另外還有 name.com 也可以，也就是說你可以免費取得兩個網域，超棒的吧～）</p>
+<span id="more"></span>
+
+<ol>
+<li><a href="/Hexo-NexT_custom_domain/#%E7%94%B3%E8%AB%8B%E7%B6%B2%E5%9F%9F">申請網域</a></li>
+<li><a href="/Hexo-NexT_custom_domain/#%E9%80%A3%E7%B5%90Github">連結 Github</a></li>
+</ol>
+<h2 id="申請網域"><a href="#申請網域" class="headerlink" title="申請網域"></a>申請網域</h2><p>申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到 GitHub Student Developer Pack 裡面找到 namecheap（我覺得這個比 name.com 好用一點，尤其是 ssl 的認證，雖然在這裡是用不到就是了），最後連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。</p>
+<p><img data-src="https://i.imgur.com/rCrDTw2.png" alt="連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了"></p>
+<h2 id="連結Github"><a href="#連結Github" class="headerlink" title="連結Github"></a>連結 Github</h2><p>到 namecheap 的 domain list 中選取你剛剛申請好的網域</p>
+<p><img data-src="https://i.imgur.com/hyEUpiM.png" alt="到namecheap的domain list中選取你剛剛申請好的網域"></p>
+<p>點到裡面的 Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下 CNAME Record 的 Value 設成你的 github page 的網址即可</p>
+<p><img data-src="https://i.imgur.com/q0IAGja.png" alt="將CNAME Record的Value設成你的github page的網址"></p>
+<p>好的那在 namecheap 這邊已經設置完成，接下來就要到 Github 上了，到你的 repository（然後因為前面的學生方案還會發現你變成 github pro 了，酷吧），點設定，到 Pages，到 Custom domain 打上申請的網域，接下來他會跑認證，認證之後才可以把 Enforce HTTPS 打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～</p>
+<p><img data-src="https://i.imgur.com/3ozFoIX.png" alt="一張圖道盡千言萬語"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你有了自己的 Domain，<del>之後遇到人又多了個可以炫耀的東西了呢</del>，另外通過這個機會你也申請到了 Github Education，裡面有很多好用的工具還有教學，真的是撿到寶了，如果你還是高中生，趁這段時間妥善利用這些教學，你應該會變得很強的🛐🛐🛐</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p>自訂網域 ✅</p>
 </li>
 </ol>
 ]]></content>
@@ -443,93 +470,6 @@
       </tags>
   </entry>
   <entry>
-    <title>收藏筆記</title>
-    <url>/collection/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>博觀而約取，厚積而薄發</p>
-
-</blockquote>
-<span id="more"></span>
-<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p><a href="https://hexo.io/zh-tw/docs/tag-plugins.html">Tag Plugins</a><br><a href="https://zenreal.github.io/posts/44730">很多 NexT 功能介紹</a></p>
-]]></content>
-      <categories>
-        <category>熊貓文</category>
-      </categories>
-      <tags>
-        <tag>熊貓文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT SEO 優化</title>
-    <url>/SEO-Search-Engine-Optimization/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>什麼是 SEO 呢？</p>
-<blockquote>
-<p>搜尋引擎最佳化（英語：search engine optimization，縮寫為 SEO）是透過了解搜尋引擎的運作規則來調整網站，以及提高目的網站在有關搜尋引擎內排名的方式。(摘自維基百科)</p>
-</blockquote>
-<p>SEO 優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓更多人看到的過程，接下來我會先從怎麼知道目前網頁的 SEO 狀況，再一一列舉優化的方法，如果只是想要知道如何能在 google 上搜尋到自己網頁的人可以直接看最後一項 <a href="/SEO-Search-Engine-Optimization/#google-search-console">google search console</a> 的使用方式。</p>
-<span id="more"></span>
-
-<ol>
-<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E7%9B%AE%E5%89%8DSEO%E7%8B%80%E6%B3%81">網頁目前 SEO 狀況</a></li>
-<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E5%84%AA%E5%8C%96%E6%96%B9%E6%B3%95">網頁優化方法</a><br>  2.1. <a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E5%9D%80">網址</a><br>  2.2. <a href="/SEO-Search-Engine-Optimization/#%E6%96%B0%E5%A2%9Edescription">新增 description</a><br>  2.3. <a href="/SEO-Search-Engine-Optimization/#Nofollow">Nofollow</a><br>  2.4. <a href="/SEO-Search-Engine-Optimization/#sitemap">sitemap</a><br>  2.5. <a href="/SEO-Search-Engine-Optimization/#robots-txt">robots.txt</a><br>  2.6. <a href="/SEO-Search-Engine-Optimization/#Google-Search-Console">Google Search Console</a></li>
-</ol>
-<h2 id="網頁目前SEO狀況"><a href="#網頁目前SEO狀況" class="headerlink" title="網頁目前SEO狀況"></a>網頁目前 SEO 狀況</h2><p>要優化前當然要先看看自己的目前的狀況，可以到 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a>，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況<br><img data-src="https://i.imgur.com/vyUXRfU.png" alt="以我的網頁為例"><br>另外可以搜尋 <code>site:網域</code>，看看自己的網站是否有被收錄到 google 內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題<br><img data-src="https://i.imgur.com/kftLZgg.png" alt="搜尋site:網域"></p>
-<h2 id="網頁優化方法"><a href="#網頁優化方法" class="headerlink" title="網頁優化方法"></a>網頁優化方法</h2><h3 id="網址"><a href="#網址" class="headerlink" title="網址"></a>網址</h3><p>搜尋引擎不喜歡過長或是索引過多的網址 (例如說 <code>https://example.com/abc/def/ghi/jkl/mn</code>)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是 <code>success@SEO-Search-Engine-Optimization.md</code>，如果覺得這樣太麻煩的話可以使用 <a href="https://github.com/rozbo/hexo-abbrlink">abbrlink 插件</a><br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="把網址設定成檔案名稱"></p>
-<h3 id="新增description"><a href="#新增description" class="headerlink" title="新增description"></a>新增 description</h3><p>添加 description 可以讓使用者更快速了解你的文章在講什麼，所以對 SEO 也是很重要的部分，而我們需要分別在首頁和文章都個別設定相關的描述</p>
-<p><span id="inline-blue">首頁</span><br>到最外層的<code>_config.yml</code> 去修改 description<br><img data-src="https://i.imgur.com/ory8GYA.png" alt="修改最外層_config.yml的description"></p>
-<p><span id="inline-blue">文章</span><br>要新增文章的 description 有兩中方法，一個是在文章最上端的細節設定新增 <code>description: 你的description</code>，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作 description，作法很簡單，在前言的底下新增一行 <code>&lt;!--more--&gt;</code>，就完成了<br><img data-src="https://i.imgur.com/JKfxDSQ.png" alt="新增<!--more-->作為description"></p>
-<p>另外補充，可以在主題內的<code>_config.yml</code>，將 <code>read_more_btn</code> 設定為 <code>true</code>，如此一來在瀏覽你的網站時，就只會將文章中 description 的部分呈現出來，讓可讀性更高<br><img data-src="https://i.imgur.com/meLFbHF.png" alt="將read_more_btn設定為true"><br><img data-src="https://i.imgur.com/FoJcPqo.png" alt="在網頁就會出現閱讀全文的按鈕"></p>
-<h3 id="Nofollow"><a href="#Nofollow" class="headerlink" title="Nofollow"></a>Nofollow</h3><p>關於 nofollow 是什麼詳細可以看<a href="https://welly.tw/serp-rank-optimization/what-is-nofollow">這篇文章</a>，總之就是避免你的搜尋引擎權重值被別人分走，使用的是這個<a href="https://github.com/hexojs/hexo-filter-nofollow">插件</a>，如果沒有要設定什麼特別的東西的話，直接執行 <code>npm install hexo-filter-nofollow</code>，就完成了</p>
-<h3 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h3><p>sitemap 就是用來告訴搜尋引擎我這個網站有哪些網頁，方便搜尋引擎索引，要使用的插件是<a href="https://github.com/hexojs/hexo-generator-sitemap">這個</a>，執行 <code>npm install hexo-generator-sitemap</code> 下載插件<br>接著到最外層的<code>_config.yml</code>，添加以下程式碼就完成了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以試試看<code>你的網址/sitemap.xml</code>（如果是在本機跑的話應該就是 <code>localhost:4000/sitemap.xml</code>，有沒有出現東西，有的話就是成功了</p>
-<h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>到最外層資料夾中的 <code>source</code> 新增一個檔案 <code>robots.txt</code><br><img data-src="https://i.imgur.com/Lepvzrl.png" alt="新增robots.txt"><br>接下來再 <code>robots.txt</code> 內貼上以下內容，記得 Sitemap 後面要改成你自己的網址</p>
-<figure class="highlight plaintext"><figcaption><span>robots.txt</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/ </span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的網址/sitemap.xml</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p><span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，<code>*</code> 就是全部都可以<br><span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有 <code>Allow: /</code> 就代表全部都可以，後面那些都是保平安用的（xd<br><span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的<br><span id="inline-blue">Sitemap</span> 就是上面講到的 sitemap.xml</p>
-<h3 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h3><p>這個是最重要的一步，前面那些事讓你的 SEO 更好，但如果沒有這個你的網頁大概根本搜尋不到，進入 <a href="https://search.google.com/search-console/about">Google Search Console</a>，新增資源<br><img data-src="https://i.imgur.com/tw67jVX.png" alt="新增資源"></p>
-<p>如果是使用 github page 的就只能用右邊的那個，他會叫你把一個 html 檔放到你的網頁中，你就將它下載，然後儲存到 <code>themes/NexT(或你用其他主題)/source</code>，重新部署之後稍等一下應該就完成了</p>
-<p>如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的 TXT 紀錄複製下來，然後添加網域的 DNS 設定，我這裡是用 namecheap，各家的使用方式也都大同小異，新增 <code>TXT Record</code>，<code>Host</code> 設定 <code>@</code>，<code>Value</code> 設定剛剛複製的 TXT 紀錄，幾分鐘後就會通過驗證了</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/4XAblPy.png" alt="複製TXT紀錄"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/y9sKq0R.png" alt="DNS設定"></div></div></div>
-
-<p>進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明</p>
-<p><span id="inline-blue">搜尋網頁索引狀態</span><br>可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊<code>要求建立索引</code>，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上<br><img data-src="https://i.imgur.com/sifijQS.png" alt="搜尋網頁索引狀態"></p>
-<p><span id="inline-blue">檢查網頁索引狀態</span><br>這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態<br><img data-src="https://i.imgur.com/saKZCae.png" alt="檢查網頁索引狀態"></p>
-<p><span id="inline-blue">新增 Sitemap</span><br>在這個頁面就是用來把之前生成的 Sitemap 交給 google 看，讓他更清楚你的網頁們<br><img data-src="https://i.imgur.com/CrguGDg.png" alt="新增Sitemap"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你的網頁現在已經可以在 google 上被查詢上了，可以在使用 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a> 看看 SEO 的分數有沒有上升，也可以看他說你哪個地方不足去修正，分數應該就可以拿到幾乎 100 的分數了，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-NexT 側邊欄基礎配置</title>
     <url>/NexT-sidebar-basic/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
@@ -578,6 +518,66 @@
 <p> － 關於、標籤、分類、歸檔、搜尋 ✅<br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
 </li>
 <li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 網頁頁底配置</title>
+    <url>/NexT-footer/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分  </p>
+<span id="more"></span>
+<ol>
+<li><a href="/NexT-footer/#%E7%89%88%E6%AC%8A%E8%AA%AA%E6%98%8E%E3%80%81icon%E3%80%81Powered-by%E2%80%A6">版權說明、icon、Powered by…</a></li>
+<li><a href="/NexT-footer/#%E5%AD%97%E6%95%B8%E7%B5%B1%E8%A8%88%E3%80%81%E4%BC%B0%E8%A8%88%E9%96%B1%E8%AE%80%E6%99%82%E9%96%93">字數統計、估計閱讀時間</a></li>
+<li><a href="/NexT-footer/#%E9%96%B1%E8%A6%BD%E4%BA%BA%E6%95%B8">閱覽人數</a></li>
+</ol>
+<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
+<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的 theme 裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
+<p>然後找到 <code>footer</code> 的位置，應該會看到 since、icon、copyright、powered、beian 這些標題，接下來我會一一進行說明（beian 是所謂的 ICP 備案，是中國對非營利網站的一些規定，詳見<a href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）<br><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
+<ol>
+<li>since：你這個網站開始的時間，在你的頁底就會是 XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
+<li> icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外 animated 就是他會不會在那裡” 跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
+<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config 去改喔）</li>
+<li>powered：這裡如果打 true 就會出現由 Powered by Hexo &amp; NexT 的字樣，留空就是不會出現</li>
+</ol>
+<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著在 NexT 內的_config 隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>接著再到最外層資料夾的_config 隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">"mins."</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋 <code>busuanzi_count</code>，然後把 <code>enable</code> 設 <code>true</code> 就完成了（如果有安裝 live2d 的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
+</li>
+<li><p>頁底 ✅</p>
 </li>
 <li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </p>
 </li>
