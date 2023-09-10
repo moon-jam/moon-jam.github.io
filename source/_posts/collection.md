@@ -22,3 +22,12 @@ date: 2023-08-28 00:00:00
 
 [Tag Plugins](https://hexo.io/zh-tw/docs/tag-plugins.html)
 [很多NexT功能介紹](https://zenreal.github.io/posts/44730)
+[MarkDown 語法說明](https://markdown.tw)
+
+## 物理
+
+[高中物理線上學習網](https://sites.google.com/site/phyelearning/)\
+
+## 演算法
+
+[2023資訊之芽上課講義](https://www.csie.ntu.edu.tw/~sprout/algo2023/)
