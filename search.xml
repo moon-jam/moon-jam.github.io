@@ -107,6 +107,27 @@
       </tags>
   </entry>
   <entry>
+    <title>APCS 2017-0304-2 小群體</title>
+    <url>/zerojudge_c291/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=c291">題目網址</a></p>
+<p>Q 同學正在習程式， P 老師出了以下的題目讓他練習。<br>一群人在一起時經常會形成一個一個的小群體。假設有 N 個人，編號由 0 到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說 0 到 N-1 每個數字 都恰好出現一次。<br>本題的問題是：按照順序輸入每個人好友編號，計算出總共有幾小群體。</p>
+</div>
+<span id="more"></span>
+
+<div class="note info"><p>解題思路：<br>這題剛看完之後一開始想到用併查集 (Disjoint-set)，後來發現我想太多，我後來用 dfs 遍歷看會不會重複拜訪到就完成了。</p>
+<p>🌟可以看成是好幾顆聯通的節點，題目問的就是看說總共有幾群節點，因為有規定數字不會重複，所以當出現環（子孫接回祖先的時候），就代表這個群體結束了</p>
+</div>
+
+<figure class="highlight c++"><figcaption><span>APCS 2017-0304-2 小群體 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Max 50005</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> vis[Max];</span><br><span class="line"><span class="type">int</span> people[Max];</span><br><span class="line"><span class="type">int</span> group = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> i)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[i]) <span class="keyword">return</span>;</span><br><span class="line">    vis[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(vis[people[i]])</span><br><span class="line">        group++;</span><br><span class="line">    <span class="built_in">dfs</span>(people[i]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; n; i++) cin &gt;&gt; people[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; n; i++) <span class="built_in">dfs</span>(people[i]);</span><br><span class="line">    cout &lt;&lt; group &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-NexT 一些好用的酷東東</title>
     <url>/NexT-some-cool-tools/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在這篇中所講述的是一些可以沒有，但是有的話<strong>可能</strong>會很方便的酷東東</p>
