@@ -80,3 +80,5 @@ signed main(){
     return 0;
 }
 ```
+
+![AC的Submissions～](https://i.imgur.com/mBgS1b7.png)
