@@ -81,4 +81,4 @@ signed main(){
 }
 ```
 
-![AC的Submissions～](https://i.imgur.com/mBgS1b7.png)
+![AC的Submission～](https://i.imgur.com/mBgS1b7.png)

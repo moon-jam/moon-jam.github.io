@@ -56,4 +56,4 @@ signed main(){
 }
 ```
 
-![AC的Submissions～](https://i.imgur.com/EX8G4n9.png)
+![AC的Submission～](https://i.imgur.com/EX8G4n9.png)
