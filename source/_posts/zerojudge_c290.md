@@ -43,7 +43,6 @@ int main(){
     cout << abs(odd-even) << '\n';
     return 0;
 }
-
 ```
 
 ![AC的Submission～](https://i.imgur.com/vMzsXX4.png)
