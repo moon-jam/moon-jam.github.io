@@ -1,5 +1,5 @@
 ---
-title: 收藏筆記
+title: 資料文獻收藏分享
 lang: zh-TW
 categories:
   - 熊貓文
@@ -14,6 +14,9 @@ date: 2023-08-28 00:00:00
 博觀而約取，厚積而薄發
 {% endcq %}
 <!--more-->
+
+如果有任何想補充的相關資料都歡迎在留言區分享～
+
 ## 地科
 
 [深/淺水波－波速、波長、波高](https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3)
@@ -26,7 +29,7 @@ date: 2023-08-28 00:00:00
 
 ## 物理
 
-[高中物理線上學習網](https://sites.google.com/site/phyelearning/)\
+[高中物理線上學習網](https://sites.google.com/site/phyelearning/)
 
 ## 演算法
 
@@ -34,7 +37,7 @@ date: 2023-08-28 00:00:00
 
 ## 化學
 
-[高三上-選修化學(上)](https://youtube.com/playlist?list=PL1YnMgoqiBEp7ghBLlSR2w6jALPWOskMp&si=bHLHpyVBciilqvOw))
+[高三上-選修化學(上)](https://youtube.com/playlist?list=PL1YnMgoqiBEp7ghBLlSR2w6jALPWOskMp&si=bHLHpyVBciilqvOw)
 
 ## 數學
 
