@@ -107,7 +107,36 @@
       </tags>
   </entry>
   <entry>
-    <title>APCS 2017-0304-1 秘密差</title>
+    <title>APCS 線段覆蓋長度 (zerojudge b966)</title>
+    <url>/zerojudge_b966/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966">題目網址</a></p>
+<p>給定一維座標上一些線段，求這些線段所覆蓋的長度，注意，重疊的部分只能算一次。</p>
+<p>例如給定 4 個線段：(5, 6)、(1, 2)、(4, 8)、(7, 9)，如下圖，線段覆蓋長度為 6 。<br><img data-src="https://i.imgur.com/Oq742JS.png" alt="example"></p>
+</div>
+<span id="more"></span>
+
+<div class="note info"><p>解題思路：<br>如果直接開個陣列記錄每格格子走過了沒，最後再去檢查，但時間複雜度會是 O (NL) 會到 10^11 次方 (L 代表覆蓋範圍)，肯定會 TLE，改成用 priority queue 去存輸入，讓左界是由小到大排列，並紀錄目前右界最大值，就可以確定後續資料的左界不會比前面的大，並用 result 紀錄目前覆蓋的格子數，這樣只要判斷以下兩種狀況</p>
+<ol>
+<li>輸入的左界目前右界最大值還大：將 result 加上整段區間長度，並更新右界最大值為輸入的右界</li>
+<li>輸入的左界目前右界最大值小且輸入的右界也比前右界最大值大：將 result 加上輸入右界到目前最大值的範圍，並更新右界最大值為輸入的右界<br>（若輸入的左界目前右界最大值小且輸入的右界也比前右界最大值小，則目前這個區間都在目前已涵蓋的格子內）</li>
+</ol>
+<p>而如此一來就可以讓時間複雜度小至 O (N log N)，能夠在題目給定時間內完成</p>
+<p>🌟 可以搭配 pair 會比較方便</p>
+</div>
+
+<figure class="highlight c++"><figcaption><span>APCS 線段覆蓋長度 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> l first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> r second</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;pii, vector&lt;pii&gt;, greater&lt;pii&gt; &gt; pq;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, tmp1, tmp2; i&lt;n; i++)</span><br><span class="line">        cin &gt;&gt; tmp1 &gt;&gt; tmp2, pq.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(tmp1, tmp2));</span><br><span class="line">    <span class="type">int</span> max=pq.<span class="built_in">top</span>().l, result=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(!pq.<span class="built_in">empty</span>()) {</span><br><span class="line">        pii cur = pq.<span class="built_in">top</span>();</span><br><span class="line">        pq.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(cur.r&lt;=max) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(cur.first&lt;=max) result+=cur.r-max, max=cur.r;</span><br><span class="line">        <span class="keyword">else</span> result+=(cur.r-cur.l), max=cur.r;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; result &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://i.imgur.com/iXeRWtQ.png" alt="AC的Submission～"><br><img data-src="https://i.imgur.com/f5e2FHF.png" alt="zerojudge f855 測資加強版"></p>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APCS 2017-0304-1 秘密差 (zerojudge c290)</title>
     <url>/zerojudge_c290/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=c290">題目網址</a></p>
 <p>將一個十進位正整數的奇數位數的和稱為 A ，偶數位數的和稱為 B，則 A 與 B 的絕對差值 |A －B| 稱為這個正整數的秘密差。<br>例如： 263541 的秘密差是 |(6+5+1) － (2+3+4)|= 3 。<br>給定一個 十進位正整數 X，請找出 X 的秘密差。</p>
@@ -130,7 +159,7 @@
       </tags>
   </entry>
   <entry>
-    <title>APCS 矩陣轉換</title>
+    <title>APCS 矩陣轉換 (zerojudge b965)</title>
     <url>/zerojudge_b965/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b965">題目網址</a></p>
 <p>矩陣是將一群元素整齊的排列成一個矩形，在矩陣中的橫排稱為列 (row) ，直排稱為行 (column) ，其中以 Xij 來表示 矩陣 X 中的第 i 列第 j 行的元素。<br>我們可以對矩陣定義兩種操作如下：<br>　　翻轉：即第一列與最後一列交換、第二列與倒數第二列交換、… 依此類推。<br>　　旋轉：將矩陣以順時針方向轉 90 度。<br>一個 矩陣 A 可以經過一連串的旋轉與翻轉操作後，轉換成 新矩陣 B 。<br>給定 矩陣 B 和一連串的操作，請算出原始的 矩陣 A 。</p>
@@ -157,7 +186,7 @@
       </tags>
   </entry>
   <entry>
-    <title>APCS 2017-0304-2 小群體</title>
+    <title>APCS 2017-0304-2 小群體 (zerojudge c291)</title>
     <url>/zerojudge_c291/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=c291">題目網址</a></p>
 <p>Q 同學正在習程式， P 老師出了以下的題目讓他練習。<br>一群人在一起時經常會形成一個一個的小群體。假設有 N 個人，編號由 0 到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說 0 到 N-1 每個數字 都恰好出現一次。<br>本題的問題是：按照順序輸入每個人好友編號，計算出總共有幾小群體。</p>
@@ -177,55 +206,6 @@
       </categories>
       <tags>
         <tag>APCS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 一些好用的酷東東</title>
-    <url>/NexT-some-cool-tools/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在這篇中所講述的是一些可以沒有，但是有的話<strong>可能</strong>會很方便的酷東東</p>
-<span id="more"></span>
-
-<ol>
-<li><a href="/NexT-some-cool-tools/#vscode-imgur">vscode-imgur</a></li>
-<li><a href="/NexT-some-cool-tools/#%E9%96%B1%E8%AE%80%E6%9B%B4%E5%A4%9A%E6%8C%89%E9%88%95">閱讀更多按鈕</a></li>
-<li><a href="/NexT-some-cool-tools/#%E6%A8%99%E9%A1%8C%E5%89%8D%E7%9A%84%E5%9C%96%E7%A4%BA">標題前的圖示</a></li>
-</ol>
-<h2 id="vscode-imgur"><a href="#vscode-imgur" class="headerlink" title="vscode-imgur"></a>vscode-imgur</h2><p><img data-src="https://i.imgur.com/m8LaSvK.png" alt="vscode-imgur"><br><img data-src="https://i.imgur.com/jPm7V6t.gif" alt="實際執行"><br>就是要申請 API 讓 vscode 使用，詳細教學可以<a href="https://israynotarray.com/hexo/20201012/473855281/">看這邊</a></p>
-<h2 id="閱讀更多按鈕"><a href="#閱讀更多按鈕" class="headerlink" title="閱讀更多按鈕"></a>閱讀更多按鈕</h2><p>如果沒有這個的話在一開始首頁的地方全部文章都會是展開的，這樣對於要翻看有哪些內容就很不方便，網站整體觀感也會不好，因此可以新增一個閱讀更多的按鈕，設定每篇文章要顯示多少內容給使用者看，這個部分我有在 <a href="/SEO-Search-Engine-Optimization/#%E6%96%B0%E5%A2%9Edescription">SEO 優化的 description 中說明</a></p>
-<h2 id="標題前的圖示"><a href="#標題前的圖示" class="headerlink" title="標題前的圖示"></a>標題前的圖示</h2><p>這個有一個比較簡單的方法，在 <code>theme/NexT(改成你的主題名稱)/source/css/main.styl</code>，貼上以下程式碼，裡面的符號可以改成自己的</p>
-<figure class="highlight css"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/*修改h2前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"🔍"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*修改h3前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"📌"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>另外一個方法就是到最外層資料夾中的 <code>source</code> 新建一個<code>_data</code> 的資料夾，然後在裡面新增 <code>styles.styl</code> 這個檔案（也就是 <code>source/data/styles.styl</code>，然後將剛剛上面的程式碼貼在裡面，最後到 <code>theme/NexT(改成你的主題名稱)/_config.yml</code> 將 custom_file_path 的最後一項 <code>style: source/_data/styles.styl</code> 的註解取消，就完成了</p>
-<p><img data-src="https://i.imgur.com/ndD3yh1.png" alt="開啟custom_file_path設定"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
-</li>
-<li><p> 剩下的一些小工具 ✅</p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
@@ -284,6 +264,55 @@
 <li><p>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</p>
 </li>
 <li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 一些好用的酷東東</title>
+    <url>/NexT-some-cool-tools/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在這篇中所講述的是一些可以沒有，但是有的話<strong>可能</strong>會很方便的酷東東</p>
+<span id="more"></span>
+
+<ol>
+<li><a href="/NexT-some-cool-tools/#vscode-imgur">vscode-imgur</a></li>
+<li><a href="/NexT-some-cool-tools/#%E9%96%B1%E8%AE%80%E6%9B%B4%E5%A4%9A%E6%8C%89%E9%88%95">閱讀更多按鈕</a></li>
+<li><a href="/NexT-some-cool-tools/#%E6%A8%99%E9%A1%8C%E5%89%8D%E7%9A%84%E5%9C%96%E7%A4%BA">標題前的圖示</a></li>
+</ol>
+<h2 id="vscode-imgur"><a href="#vscode-imgur" class="headerlink" title="vscode-imgur"></a>vscode-imgur</h2><p><img data-src="https://i.imgur.com/m8LaSvK.png" alt="vscode-imgur"><br><img data-src="https://i.imgur.com/jPm7V6t.gif" alt="實際執行"><br>就是要申請 API 讓 vscode 使用，詳細教學可以<a href="https://israynotarray.com/hexo/20201012/473855281/">看這邊</a></p>
+<h2 id="閱讀更多按鈕"><a href="#閱讀更多按鈕" class="headerlink" title="閱讀更多按鈕"></a>閱讀更多按鈕</h2><p>如果沒有這個的話在一開始首頁的地方全部文章都會是展開的，這樣對於要翻看有哪些內容就很不方便，網站整體觀感也會不好，因此可以新增一個閱讀更多的按鈕，設定每篇文章要顯示多少內容給使用者看，這個部分我有在 <a href="/SEO-Search-Engine-Optimization/#%E6%96%B0%E5%A2%9Edescription">SEO 優化的 description 中說明</a></p>
+<h2 id="標題前的圖示"><a href="#標題前的圖示" class="headerlink" title="標題前的圖示"></a>標題前的圖示</h2><p>這個有一個比較簡單的方法，在 <code>theme/NexT(改成你的主題名稱)/source/css/main.styl</code>，貼上以下程式碼，裡面的符號可以改成自己的</p>
+<figure class="highlight css"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/*修改h2前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"🔍"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*修改h3前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"📌"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>另外一個方法就是到最外層資料夾中的 <code>source</code> 新建一個<code>_data</code> 的資料夾，然後在裡面新增 <code>styles.styl</code> 這個檔案（也就是 <code>source/data/styles.styl</code>，然後將剛剛上面的程式碼貼在裡面，最後到 <code>theme/NexT(改成你的主題名稱)/_config.yml</code> 將 custom_file_path 的最後一項 <code>style: source/_data/styles.styl</code> 的註解取消，就完成了</p>
+<p><img data-src="https://i.imgur.com/ndD3yh1.png" alt="開啟custom_file_path設定"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
+</li>
+<li><p> 剩下的一些小工具 ✅</p>
 </li>
 <li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
 </li>
