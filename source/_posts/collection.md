@@ -18,7 +18,7 @@ date: 2023-08-28 00:00:00
 
 [深/淺水波－波速、波長、波高](https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3)
 
-## hexo
+## Hexo
 
 [Tag Plugins](https://hexo.io/zh-tw/docs/tag-plugins.html)
 [很多NexT功能介紹](https://zenreal.github.io/posts/44730)
@@ -31,3 +31,12 @@ date: 2023-08-28 00:00:00
 ## 演算法
 
 [2023資訊之芽上課講義](https://www.csie.ntu.edu.tw/~sprout/algo2023/)
+
+## 化學
+
+[高三上-選修化學(上)](https://youtube.com/playlist?list=PL1YnMgoqiBEp7ghBLlSR2w6jALPWOskMp&si=bHLHpyVBciilqvOw))
+
+## 數學
+
+[線代啟示錄(很多線性代數的證明都講解得很仔細，很推)](https://ccjou.wordpress.com)
+[blackpenredpen頻道(主要是微積分跟極限，一樣很推)](https://www.youtube.com/@blackpenredpen/playlists)
