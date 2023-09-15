@@ -1,5 +1,5 @@
 ---
-title: APCS 2017-0304-2小群體
+title: APCS 2017-0304-2小群體 (zerojudge c291)
 lang: zh-TW
 tags:
   - APCS

@@ -1,12 +1,12 @@
 ---
-title: APCS 2017-0304-1秘密差
+title: APCS 2017-0304-1秘密差 (zerojudge c290)
 lang: zh-TW
 tags:
   - APCS
 categories:
   - 程式題解
 abbrlink: 5961
-date: 2023-09-15 00:00:00
+date: 2023-09-14 00:00:00
 ---
 
 {% note default %}
