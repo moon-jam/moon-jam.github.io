@@ -26,6 +26,7 @@ date: 2023-08-28 00:00:00
 [Tag Plugins](https://hexo.io/zh-tw/docs/tag-plugins.html)
 [很多NexT功能介紹](https://zenreal.github.io/posts/44730)
 [MarkDown 語法說明](https://markdown.tw)
+[latex化學式輸入語法](https://mhchem.github.io/MathJax-mhchem/)
 
 ## 物理
 

@@ -5,6 +5,7 @@ tags:
   - APCS
 categories:
   - 程式題解
+  - APCS
 abbrlink: 55864
 date: 2023-09-12 00:00:00
 ---

@@ -19,6 +19,7 @@ date: 2023-09-10
 1. [vscode-imgur](/NexT-some-cool-tools/#vscode-imgur)
 2. [閱讀更多按鈕](/NexT-some-cool-tools/#閱讀更多按鈕)
 3. [標題前的圖示](/NexT-some-cool-tools/#標題前的圖示)
+4. [MathJax](/NexT-some-cool-tools/#MathJax)
 
 ## vscode-imgur
 
@@ -51,6 +52,42 @@ date: 2023-09-10
 另外一個方法就是到最外層資料夾中的`source`新建一個`_data`的資料夾，然後在裡面新增`styles.styl`這個檔案（也就是`source/data/styles.styl`，然後將剛剛上面的程式碼貼在裡面，最後到`theme/NexT(改成你的主題名稱)/_config.yml`將custom_file_path的最後一項`style: source/_data/styles.styl`的註解取消，就完成了
 
 ![開啟custom_file_path設定](https://i.imgur.com/ndD3yh1.png)
+
+## MathJax
+
+這個部分篇幅比較長一點，所以我單獨又寫了一篇[講解](/Hexo-Next_MathJax)，效果就是像下面那樣，可以插入各種算式，甚至化學式也可以
+
+$$
+A = \begin{bmatrix}
+        a_{11}    & a_{12}    & ...    & a_{1n}\\
+        a_{21}    & a_{22}    & ...    & a_{2n}\\
+        a_{31}    & a_{22}    & ...    & a_{3n}\\
+        \vdots    & \vdots    & \ddots & \vdots\\
+        a_{n1}    & a_{n2}    & ... & a_{nn}\\
+    \end{bmatrix} , b = \begin{bmatrix}
+        b_{1}  \\
+        b_{2}  \\
+        b_{3}  \\
+        \vdots \\
+        b_{n}  \\
+    \end{bmatrix}
+$$
+
+$$
+\begin{aligned}
+a &= b + c \\
+  &= d + e + f + g \\
+  &= h + i
+\end{aligned}
+$$
+
+$$
+e=mc^2
+$$
+
+$$
+C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}
+$$
 
 ## 結語
 

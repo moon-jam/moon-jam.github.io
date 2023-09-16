@@ -5,6 +5,7 @@ tags:
   - APCS
 categories:
   - 程式題解
+  - APCS
 abbrlink: 5961
 date: 2023-09-14 00:00:00
 ---

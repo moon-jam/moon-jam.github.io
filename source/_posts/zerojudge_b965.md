@@ -5,6 +5,7 @@ tags:
   - APCS
 categories:
   - 程式題解
+  - APCS
 abbrlink: 28531
 date: 2023-09-13 00:00:00
 ---
