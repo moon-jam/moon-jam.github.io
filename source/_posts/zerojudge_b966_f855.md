@@ -33,7 +33,7 @@ mathjax: true
 🌟 可以搭配pair使用會比較方便
 {% endnote %}
 
-```c++ APCS 線段覆蓋長度 
+```c++ APCS 線段覆蓋長度
 #include <bits/stdc++.h>
 #define pii pair<int, int>
 #define l first
