@@ -4,7 +4,7 @@ language: node_js
 sudo: false
 # 設置node_js版本
 node_js:
-  - '20'
+  - '12'
 # 設置暫存區塊
 cache:
   apt: true
