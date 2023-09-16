@@ -3,8 +3,7 @@ language: node_js
 # 是否需要 sudo 權限
 sudo: false
 # 設置node_js版本
-node_js:
-  - '18'
+node_js: "stable"
 ## 安裝 Hexo-Cli
 before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
