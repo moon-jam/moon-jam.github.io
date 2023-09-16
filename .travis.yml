@@ -1,7 +1,7 @@
 # 設置系統語言環境
 language: node_js
 # 是否需要 sudo 權限
-sudo: false
+sudo: true
 # 設置node_js版本
 node_js: 16
 ## 安裝 Hexo-Cli
@@ -9,6 +9,7 @@ before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
   - npm install --no-progress
   - npm install hexo-word-counter
+  - sudo apt-
 
 # 清除緩存並執行編譯
 script:
