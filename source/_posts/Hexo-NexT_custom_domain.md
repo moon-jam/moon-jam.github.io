@@ -17,7 +17,7 @@ date:
 <!--more-->
 
 1. [申請網域](/Hexo-NexT_custom_domain/#申請網域)
-1. [連結Github](/Hexo-NexT_custom_domain/#連結Github)
+1. [連結Github](/Hexo-NexT_custom_domain/#連結github)
 
 ## 申請網域
 

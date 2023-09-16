@@ -19,14 +19,14 @@ SEO優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓�
 
 <!--more-->
 
-1. [網頁目前SEO狀況](/SEO-Search-Engine-Optimization/#網頁目前SEO狀況)
-2. [網頁優化方法](/SEO-Search-Engine-Optimization/#網頁優化方法)
-  2.1. [網址](/SEO-Search-Engine-Optimization/#網址)
-  2.2. [新增description](/SEO-Search-Engine-Optimization/#新增description)
-  2.3. [Nofollow](/SEO-Search-Engine-Optimization/#Nofollow)
-  2.4. [sitemap](/SEO-Search-Engine-Optimization/#sitemap)
-  2.5. [robots.txt](/SEO-Search-Engine-Optimization/#robots-txt)
-  2.6. [Google Search Console](/SEO-Search-Engine-Optimization/#Google-Search-Console)
+1. [網頁目前SEO狀況](/SEO-Search-Engine-Optimization/#網頁目前seo狀況)
+2. [網頁優化方法](/SEO-Search-Engine-Optimization/#網頁優化方法)  
+  2.1. [網址](/SEO-Search-Engine-Optimization/#網址)  
+  2.2. [新增description](/SEO-Search-Engine-Optimization/#新增description)  
+  2.3. [Nofollow](/SEO-Search-Engine-Optimization/#nofollow)  
+  2.4. [sitemap](/SEO-Search-Engine-Optimization/#sitemap)  
+  2.5. [robots.txt](/SEO-Search-Engine-Optimization/#robots.txt)  
+  2.6. [Google Search Console](/SEO-Search-Engine-Optimization/#google-search-console)  
 
 ## 網頁目前SEO狀況
 
@@ -93,10 +93,10 @@ Sitemap: https://你的網址/sitemap.xml
 
 ```
 
-<span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，`*`就是全部都可以
-<span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有`Allow: /`就代表全部都可以，後面那些都是保平安用的（xd
-<span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的
-<span id="inline-blue">Sitemap</span> 就是上面講到的sitemap.xml
+<span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，`*`就是全部都可以  
+<span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有`Allow: /`就代表全部都可以，後面那些都是保平安用的（xd  
+<span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的  
+<span id="inline-blue">Sitemap</span> 就是上面講到的sitemap.xml  
 
 ### Google Search Console
 

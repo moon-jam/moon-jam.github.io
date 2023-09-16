@@ -17,7 +17,7 @@ date: 2023-09-09
 <!--more-->
 
 1. [安裝live 2d](/NexT-live2d/#安裝live-2d)
-2. [安裝live 2d模型](/安裝live-2d模型)
+2. [安裝live 2d人物模型](/NexT-live2d/#安裝live-2d人物模型)
 
 ## 安裝live 2d
 
@@ -50,7 +50,7 @@ live2d:
     opacity: 0.7
 ```
 
-## 安裝live 2d模型
+## 安裝live 2d人物模型
 
 到了這裡應該已經有狗狗出現在你的網頁上面了，不過還有很多模型可以選擇，像是貓咪或是可愛的小女孩，可以從[這裡](https://blog.csdn.net/wang_123_zy/article/details/87181892#live2dwidgetmodelchitose_12)看到所有模型的預覽，不過我試過好以個之後還是覺得狗狗好可愛，或是也可以像我一樣中文的版面放狗，英文的版面放貓。
 

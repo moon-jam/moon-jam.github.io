@@ -18,7 +18,7 @@ mathjax: true
 
 <!--more-->
 
-1. [安裝](/Hexo-Next_MathJax/#安裝])
+1. [安裝](/Hexo-Next_MathJax/#安裝)
 2. [修改設定](/Hexo-Next_MathJax/#修改設定)
 3. [範例](/Hexo-Next_MathJax/#範例)
 
@@ -74,7 +74,7 @@ math:
     tags: ams
 ```
 
-這裡需要注意一件事，就是如果你之前的文章換行沒有做好，可能會出現跑版的狀況（就像我），如果這樣的話就看你要把舊的文章都在一開始設定`mathjax: false`，或是在這邊把`every_page`設定`false`，然後要食用mathjax設定成`mathjax: true`，這樣就不會有問題了
+這裡需要注意一件事，就是如果你之前的文章換行沒有做好，可能會出現跑版的狀況（就像我），需要重新手動調整，我試了很久，但真的找不到方法，另外還有一個就是
 
 ## 範例
 
