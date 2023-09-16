@@ -1,5 +1,5 @@
 ---
-title: 資料文獻收藏分享
+title: 資源收藏分享
 lang: zh-TW
 categories:
   - 熊貓文
