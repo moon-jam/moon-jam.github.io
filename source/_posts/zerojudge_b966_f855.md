@@ -8,6 +8,7 @@ categories:
   - APCS
 abbrlink: 51954
 date: 2023-09-15 00:00:00
+mathjax: true
 ---
 
 {% note default %}

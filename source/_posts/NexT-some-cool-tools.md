@@ -8,6 +8,7 @@ categories:
   - 教學文
 abbrlink: 6153
 date: 2023-09-10
+mathjax: true
 ---
 
 ## 前言

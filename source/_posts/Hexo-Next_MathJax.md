@@ -8,6 +8,7 @@ categories:
   - 教學文
 abbrlink: 12637
 date: 2023-09-16 00:00:00
+mathjax: true
 ---
 
 ## 前言
@@ -72,6 +73,8 @@ math:
     # Available values: none | ams | all
     tags: ams
 ```
+
+這裡需要注意一件事，就是如果你之前的文章換行沒有做好，可能會出現跑版的狀況（就像我），如果這樣的話就看你要把舊的文章都在一開始設定`mathjax: false`，或是在這邊把`every_page`設定`false`，然後要食用mathjax設定成`mathjax: true`，這樣就不會有問題了
 
 ## 範例
 

@@ -30,7 +30,9 @@ mathjax: true
 $$max(children\_max\_distance, max\_rank+second\_rank+1)$$
 
 （直觀想的話會以為該節點為根節點的樹直徑是第一深+第二深的層數+自己這個節點，但還要考慮到可能子樹中已經有更大直徑的狀況，還有只有一個節點、或本身就是葉子的狀況，但因為此時的second_rank或是max_rank、second_rank會是0，因此同樣會是max_rank+second_rank+1）
+
 該節點的最大層數就會是子樹的最大層數+1(而當本身是葉子時就是1，但因為此時max_rank是0，因此這個special case寫的時候不用也不用特別限制)
+
 另外我為了實作方便，我把max_distance獨立成一個變數，不跟dfs的遞迴寫在一起，這樣寫起來也比較簡單
 其他更詳細的實作細節可以看底下程式碼的註解
 
