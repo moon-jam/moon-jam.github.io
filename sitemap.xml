@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://moon-jam.me/NexT-some-cool-tools/</loc>
+    <loc>https://moon-jam.me/Hexo-Next_MathJax/</loc>
     
     <lastmod>2023-09-16</lastmod>
     
@@ -29,6 +29,24 @@
   </url>
   
   <url>
+    <loc>https://moon-jam.me/NexT-some-cool-tools/</loc>
+    
+    <lastmod>2023-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://moon-jam.me/zerojudge_b966_f855/</loc>
+    
+    <lastmod>2023-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.me/zerojudge_c291/</loc>
     
     <lastmod>2023-09-16</lastmod>
@@ -39,15 +57,6 @@
   
   <url>
     <loc>https://moon-jam.me/zerojudge_c290/</loc>
-    
-    <lastmod>2023-09-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://moon-jam.me/zerojudge_b966_f855/</loc>
     
     <lastmod>2023-09-16</lastmod>
     
@@ -261,6 +270,13 @@
   
   <url>
     <loc>https://moon-jam.me/categories/%E7%A8%8B%E5%BC%8F%E9%A1%8C%E8%A7%A3/</loc>
+    <lastmod>2023-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://moon-jam.me/categories/%E7%A8%8B%E5%BC%8F%E9%A1%8C%E8%A7%A3/APCS/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
