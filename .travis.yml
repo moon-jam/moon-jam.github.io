@@ -10,7 +10,7 @@ before_script:
   - npm install --no-progress
   - npm install hexo-word-counter
   - sudo apt-get update
-  - sudo apt-get -y pandoc 
+  - sudo apt-get pandoc 
 
 # 清除緩存並執行編譯
 script:
