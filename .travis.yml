@@ -9,7 +9,8 @@ before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
   - npm install --no-progress
   - npm install hexo-word-counter
-  - sudo apt-
+  - sudo apt-get update
+  - sudo apt-get -y pandoc
 
 # 清除緩存並執行編譯
 script:
