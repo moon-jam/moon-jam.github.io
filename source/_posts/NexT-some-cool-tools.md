@@ -20,7 +20,7 @@ mathjax: true
 1. [vscode-imgur](/NexT-some-cool-tools/#vscode-imgur)
 2. [閱讀更多按鈕](/NexT-some-cool-tools/#閱讀更多按鈕)
 3. [標題前的圖示](/NexT-some-cool-tools/#標題前的圖示)
-4. [MathJax](/NexT-some-cool-tools/#MathJax)
+4. [MathJax](/NexT-some-cool-tools/#mathjax)
 
 ## vscode-imgur
 

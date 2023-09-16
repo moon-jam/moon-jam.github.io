@@ -17,8 +17,8 @@ date: 2023-08-17 00:00:00
 
 <!--more-->
 
-1. [安裝](/NexT-utterances-comment-box/#安裝/)
-2. [文章中禁用留言區](/NexT-utterances-comment-box/#文章中禁用留言區/)
+1. [安裝](/NexT-utterances-comment-box/#安裝)
+2. [文章中禁用留言區](/NexT-utterances-comment-box/#文章中禁用留言區)
 
 ## 安裝
 
