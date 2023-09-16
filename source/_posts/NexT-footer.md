@@ -15,7 +15,7 @@ categories:
 網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分  
 <!--more-->
 
-1. [版權說明、icon、Powered by...](/NexT-footer/#/#版權說明iconpowered-by...)
+1. [版權說明、icon、Powered by...](/NexT-footer/#版權說明iconpowered-by...)
 2. [字數統計、估計閱讀時間](/NexT-footer/#字數統計估計閱讀時間)
 3. [閱覽人數](/NexT-footer/#閱覽人數)
 

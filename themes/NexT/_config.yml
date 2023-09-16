@@ -567,7 +567,7 @@ wavedrom:
 # ---------------------------------------------------------------
 
 math:
-  every_page: false
+  every_page: true
 
   mathjax:
     enable: true

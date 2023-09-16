@@ -16,7 +16,7 @@ categories:
 
 <!--more-->
 
-1. [關於、標籤、分類、歸檔](/NexT-sidebar-basic/#關於、標籤、分類、歸檔)
+1. [關於、標籤、分類、歸檔](/NexT-sidebar-basic/#關於標籤分類歸檔)
 2. [搜尋](/NexT-sidebar-basic/#搜尋)
 3. [頭像](/NexT-sidebar-basic/#頭像)
 4. [個人相關連結](/NexT-sidebar-basic/#個人相關連結)
