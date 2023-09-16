@@ -5,14 +5,13 @@ sudo: false
 # 設置node_js版本
 node_js:
   - '12'
-# 設置暫存區塊
-cache:
-  apt: true
-  directories:
-      - node_modules # 不經常變動的資料夾
 ## 安裝 Hexo-Cli
 before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
+
+install:
+  - npm install
+
 # 清除緩存並執行編譯
 script:
   - hexo clean
