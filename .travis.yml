@@ -10,7 +10,10 @@ before_script:
   - npm install --no-progress
   - npm install hexo-word-counter
   - sudo apt-get update
-  - sudo apt-get pandoc 
+  - sudo apt-get purge --auto-remove pandoc
+  - wget https://github.com/jgm/pandoc/releases/download/3.1.8/pandoc-3.1.8-1-amd64.deb
+  - sudo dpkg -i pandoc-3.1.8-1-amd64.deb
+  - pandoc -v
 
 # 清除緩存並執行編譯
 script:
