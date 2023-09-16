@@ -12,7 +12,7 @@ date: 2023-09-16 00:00:00
 
 ## 前言
 
-因為Hexo本身的markdown語法不能使用LaTeX進行數學式的編寫，需要額外安裝插件，也就是MathJax，基本上跟LaTex語法是一模一樣的。
+因為Hexo本身的markdown語法不能使用LaTeX進行數學式的編寫，需要額外安裝插件，也就是MathJax，基本上跟LaTeX語法是一模一樣的。
 另外，本篇幾乎皆取自[官方說明](https://theme-next.js.org/docs/third-party-services/math-equations#mjx-eqn%3Aeq_tag)，有興趣可以自行參閱，接下來我會根據以下三點，一一進行介紹。
 
 <!--more-->
