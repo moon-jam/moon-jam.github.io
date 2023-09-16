@@ -9,9 +9,6 @@ node_js:
 before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
 
-install:
-  - npm install
-
 # 清除緩存並執行編譯
 script:
   - hexo clean
