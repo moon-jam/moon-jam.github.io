@@ -10,10 +10,6 @@ cache:
   apt: true
   directories:
       - node_modules # 不經常變動的資料夾
-# 指定部落格分支，一般來講是 Master，這是在告知當這個分支有 commit 時候就執行部屬指令
-branches:
-  only:
-    - main
 ## 安裝 Hexo-Cli
 before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
