@@ -90,6 +90,15 @@ $$
 C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}
 $$
 
+## 文章編輯按鈕
+
+![修改主題中的_config.yml](https://i.imgur.com/72o7nFY.png)
+![實際狀況](https://i.imgur.com/EFMiCya.png)
+
+## Travis Ci 自動部署
+
+搭配上一項編輯按鈕食用，這邊先看[前輩寫的文章](https://israynotarray.com/hexo/20201009/3159624676/)，之後有時間我在重新寫一篇
+
 ## 結語
 
 這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～
