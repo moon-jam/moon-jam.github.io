@@ -3,12 +3,26 @@
   <entry>
     <title>利用 Hexo + NexT + Github Page 建立自己的 Blog</title>
     <url>/Hexo-NexT_Github-Page_build-blog/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的 Blog 就是用 Hexo、NexT、Github Page 做出來的，而且不同其他架 Blog 的那種網站，做出來之後你的 Blog 後面會有一個 github.io 的後綴（就像 <a href="https://moon-jam.github.io">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了<br><span id="more"></span><br><del>不過要是你想裝一些酷酷的東西，就有可能搞很久 (最後還是有些沒用出來 QAQ</del></p>
-<p>如果想要看詳細一點的教學我覺得六角學院的教學影片很棒，跟著做很快就好了，如果覺得我現在的 Blog 哪裡還可以修正，或是覺得我教學哪裡有問題或是有講錯的歡迎在底下留言指教喔～<br>教學開始嘍！<br>注意事項：這個教學會需要用到 vscode，如果不知道他是什麼或是跟他不熟的，建議先去爬爬文看怎麼用再來看這篇喔～</p>
-<h2 id="建構Hexo"><a href="#建構Hexo" class="headerlink" title="建構Hexo"></a>建構 Hexo</h2><p>需要先裝 <a href="https://nodejs.org/en">Node.js</a> 還有 <a href="https://git-scm.com/downloads">Git</a><br>然後從 vscode 開一個資料夾，並在 terminal 打下面這些</p>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>我的 Blog 就是用 Hexo、NexT、Github
+Page 做出來的，而且不同其他架 Blog 的那種網站，做出來之後你的 Blog 後面會有一個 github.io 的後綴（就像 <a href="https://moon-jam.github.io">moon-jam.github.io</a>），看起來就很厲害，趁昨天剛做完打第一篇教學文，這東東其實蠻簡單的，很快就有成品了
+<span id="more"></span>
+<del>不過要是你想裝一些酷酷的東西，就有可能搞很久 (最後還是有些沒用出來 QAQ</del></p>
+<p>如果想要看詳細一點的教學我覺得六角學院的教學影片很棒，跟著做很快就好了，如果覺得我現在的 Blog 哪裡還可以修正，或是覺得我教學哪裡有問題或是有講錯的歡迎在底下留言指教喔～
+教學開始嘍！
+注意事項：這個教學會需要用到 vscode，如果不知道他是什麼或是跟他不熟的，建議先去爬爬文看怎麼用再來看這篇喔～</p>
+<h2 id="建構hexo">建構 Hexo</h2>
+<p>需要先裝 <a href="https://nodejs.org/en">Node.js</a> 還有 <a href="https://git-scm.com/downloads">Git</a>
+然後從 vscode 開一個資料夾，並在 terminal 打下面這些</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog_folder_name  //要換成你自己的資料夾名稱</span><br><span class="line">cd blog_folder_path         //要換成你自己的資料夾路徑</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></tbody></table></figure>
 <p>然後就會看到你的網頁跑出來了</p>
-<h2 id="連接Github"><a href="#連接Github" class="headerlink" title="連接Github"></a>連接 Github</h2><p>首先先到 github 新開一個 Repository（這裡附上本人的 <a href="https://github.com/moon-jam/moon-jam.github.io">Repository</a>）<br><img data-src="https://i.imgur.com/yadvxfF.png" alt="到個人首頁新增一個Repository"><br>然後取名叫做 <strong>username</strong>.github.io （username 要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點）<br>選 public，然後其他都不要打勾，完成之後複製這一段<br><img data-src="https://i.imgur.com/XwrVZEQ.png" alt="把Repository的網址複製下來"><br>然後接下來就要把資料夾跟 Github 連上，輸入以下這些東西</p>
+<h2 id="連接github">連接 Github</h2>
+<p>首先先到 github 新開一個 Repository（這裡附上本人的 <a href="https://github.com/moon-jam/moon-jam.github.io">Repository</a>）
+<img data-src="https://i.imgur.com/yadvxfF.png" alt="到個人首頁新增一個Repository">
+然後取名叫做 <strong>username</strong>.github.io
+（username 要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點）
+選 public，然後其他都不要打勾，完成之後複製這一段 <img data-src="https://i.imgur.com/XwrVZEQ.png" alt="把Repository的網址複製下來">
+然後接下來就要把資料夾跟 Github 連上，輸入以下這些東西</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add.</span><br><span class="line">git commit -m "git init"</span><br><span class="line"></span><br><span class="line">git remote add origin Repository_url //Repository_url換成剛剛複製的那個</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></tbody></table></figure>
 <p>接著到最外層的資料夾應該會看到一個_config.yml，點進去，然後找到 deploy，並修改成下面這樣</p>
 <figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">Repository_url</span> <span class="string">//剛剛複製的那個</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></tbody></table></figure>
@@ -19,45 +33,729 @@
 <p>最後就可以部署到 github 上去了</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></tbody></table></figure>
 <p>完成之後你打開 username.github.io，應該就會看到你的網頁了🎉（Repository 名稱自己取的則是開啟 username.github.io/<strong>Repository_name</strong>）</p>
-<p>接下來就可以開始寫部落格了，接下來就來講應該如何新建一片文章，是用 markdown 語法編輯，如果不熟的可以自己去找找文章，網路上蠻多教學的  </p>
+<p>接下來就可以開始寫部落格了，接下來就來講應該如何新建一片文章，是用 markdown 語法編輯，如果不熟的可以自己去找找文章，網路上蠻多教學的</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo new title //會在source資料夾裡面產生一篇檔名叫做title的檔案，使用markdown語法編輯</span><br></pre></td></tr></tbody></table></figure>
 <p>完成之後就連打下面三行，就會發現你新的文章已經出現在網站上了 (如果還沒的話就在等一下，他可能還要一些時間，或者你可以在 terminal 打 <code>hexo s</code>，就可以在本地看到網站摟)</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">hexo cl //clean 刪掉之前的內容，不刪有時候也可以，但有可能會報錯</span><br><span class="line">hexo g  //generate 建立網站</span><br><span class="line">hexo d  //deploy 部署到github page</span><br></pre></td></tr></tbody></table></figure>
 <p>然後如果要傳到 github 上，每次都要 <code>git commit -m ""</code>、<code>git push</code> 實在太累了，這邊我蠻推薦裝 <a href="https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-github">vscode 的插件</a>連到 Github，可以直接一鍵上傳</p>
-<h2 id="Hexo-設定"><a href="#Hexo-設定" class="headerlink" title="Hexo 設定"></a>Hexo 設定</h2><p>找到外層資料夾最底下的_config.yml，這邊就講有需要調整的，其他有興趣可以自己玩玩看<br><img data-src="https://i.imgur.com/fow2tPF.png" alt="外層資料夾的_config.yml"></p>
-<ol>
-<li>Site：<br>－title 就打你想為網站取的名字<br>－subtitle 會顯示在網站 title 的底下，可以留空不會<br>－keyword 可打可不打<br>－author 打你的想叫的名字，之後如果有地方會用到作者的資訊都會直接從這裡拿<br>－language 就選你想要的語言（繁體中文 zh-TW，簡體中文 zh-CN，香港 zh-HK，英文 en）<br>－timezone 就留空就好<br><img data-src="https://i.imgur.com/CLLrsqJ.png" alt="Site"></li>
-<li>URL：<br> －url 填自己的網域，如果你有自己的網域的話就填自己的（<del>之後如果哪天有的話再個教學</del> 最後面有教學喔），所以就是填 github page 的網址<br> －permalink 是代表你文章的網址要是什麼，預設是年 / 月 / 日 / 文章標題，不過這裡我建議你該城:name/，你也可以用:/title 這是代表用 title 當作網址，但如果是中文的話他會變亂碼，這樣對搜尋優化不好（原本用年月日也會因為層數太多所以讓演算法不喜歡），而且網址也會變比較難看，用:name / 的話會用檔案名稱當作網址，只要你檔名取英文的就好了（也有插件是會自己生成一串數字當作網址，但這樣對搜尋優化應該也不太好)<br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="剩下的兩個不用動他"></li>
+<h2 id="hexo-設定">Hexo 設定</h2>
+<p>找到外層資料夾最底下的_config.yml，這邊就講有需要調整的，其他有興趣可以自己玩玩看
+<img data-src="https://i.imgur.com/fow2tPF.png" alt="外層資料夾的_config.yml"></p>
+<ol type="1">
+<li>Site：<br>
+－title 就打你想為網站取的名字<br>
+－subtitle 會顯示在網站 title 的底下，可以留空不會<br>
+－keyword 可打可不打<br>
+－author 打你的想叫的名字，之後如果有地方會用到作者的資訊都會直接從這裡拿<br>
+－language 就選你想要的語言（繁體中文 zh-TW，簡體中文 zh-CN，香港 zh-HK，英文 en）<br>
+－timezone 就留空就好 <img data-src="https://i.imgur.com/CLLrsqJ.png" alt="Site"></li>
+<li>URL：<br>
+－url 填自己的網域，如果你有自己的網域的話就填自己的（<del>之後如果哪天有的話再個教學</del>
+最後面有教學喔），所以就是填 github page 的網址<br>
+－permalink 是代表你文章的網址要是什麼，預設是年 / 月 / 日 / 文章標題，不過這裡我建議你該城:name/，你也可以用:/title 這是代表用 title 當作網址，但如果是中文的話他會變亂碼，這樣對搜尋優化不好（原本用年月日也會因為層數太多所以讓演算法不喜歡），而且網址也會變比較難看，用:name / 的話會用檔案名稱當作網址，只要你檔名取英文的就好了（也有插件是會自己生成一串數字當作網址，但這樣對搜尋優化應該也不太好)
+<img data-src="https://i.imgur.com/vd9WIxo.png" alt="剩下的兩個不用動他"></li>
 <li>找到 theme 的地方，後面打上主題的資料夾名稱，詳細就看後面的吧</li>
 </ol>
-<h2 id="套上主題"><a href="#套上主題" class="headerlink" title="套上主題"></a>套上主題</h2><p>我是選擇 <a href="https://theme-next.js.org">NexT</a>，版型相當的好看，而且很多人用，要找資源也還算好找（<a href="https://hexo.io/themes/">這裡</a>可以找其他主題喔）<br><img data-src="https://raw.githubusercontent.com/next-theme/theme-next-docs/v8.13.0/source/images/next-schemes-dark.png" alt="NexT的主題"></p>
-<h3 id="下載-NexT"><a href="#下載-NexT" class="headerlink" title="下載 NexT"></a>下載 NexT</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/NexT</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="套上主題">套上主題</h2>
+<p>我是選擇 <a href="https://theme-next.js.org">NexT</a>，版型相當的好看，而且很多人用，要找資源也還算好找（<a href="https://hexo.io/themes/">這裡</a>可以找其他主題喔） <img data-src="https://raw.githubusercontent.com/next-theme/theme-next-docs/v8.13.0/source/images/next-schemes-dark.png" alt="NexT的主題"></p>
+<h3 id="下載-next">下載 NexT</h3>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/NexT</span><br></pre></td></tr></tbody></table></figure>
 <p>接著到到最外層資料夾的_config.yml（不是你 theme 裡面的喔）找到 theme 的地方，並設成 NexT</p>
 <figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">NexT</span></span><br></pre></td></tr></tbody></table></figure>
 <p>如果要下載別的主題可以點到進主題的 github，並複製他的網址，然後改成 <code>git clone 你想要的主題 themes/你想要的資料夾名稱</code>，然後把_config.yml 中的 theme，並設成你取的資料夾名稱</p>
 <p>再輸入 <code>hexo s</code>，就看得到摟，部署到網站上就是在輸入上面那三條</p>
-<h3 id="修改NexT主題"><a href="#修改NexT主題" class="headerlink" title="修改NexT主題"></a>修改 NexT 主題</h3><p>如果要改 NexT 的主題 (就是上面看到的那四種)，可以到 <code>theme/NexT/_config.yml</code>，修改裡面的 <code>Scheme Settings</code>，把想要的取消註解，其他全部註解掉（像我就是使用 Pisces）</p>
-<p><img data-src="https://i.imgur.com/iXejwcC.png" alt="選擇想要的NexT主題"></p>
-<h2 id="NexT調整"><a href="#NexT調整" class="headerlink" title="NexT調整"></a>NexT 調整</h2><p>這邊我就列出我改的東西跟教學，有興趣的再移過去看摟  </p>
-<ol>
+<h3 id="修改next主題">修改 NexT 主題</h3>
+<p>如果要改 NexT 的主題 (就是上面看到的那四種)，可以到 <code>theme/NexT/_config.yml</code>，修改裡面的 <code>Scheme Settings</code>，把想要的取消註解，其他全部註解掉（像我就是使用 Pisces）</p>
+<figure>
+<img data-src="https://i.imgur.com/iXejwcC.png" alt="選擇想要的NexT主題">
+<figcaption aria-hidden="true">選擇想要的 NexT 主題</figcaption>
+</figure>
+<h2 id="next調整">NexT 調整</h2>
+<p>這邊我就列出我改的東西跟教學，有興趣的再移過去看摟</p>
+<ol type="1">
 <li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-day-night-mode">日 / 夜模式</a></li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-day-night-mode">日 / 夜模式</a></p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
 </ol>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這個 Blog 前前後後大概花了 10 個小時，大概有七成時間都是在找 bug🥲，不過成果還算滿意😀。</p>
+<h2 id="心得">心得</h2>
+<p>這個 Blog 前前後後大概花了 10 個小時，大概有七成時間都是在找 bug🥲，不過成果還算滿意😀。</p>
 <p>期間為了要有一些更酷的功能，所以又找了很多的擴充，然後遇到好多奇怪的狀況，debug 了好久，然後還是有些做不出來，像是那個同一站內切換語言，我看有人做出來，想說應該有插件不會太難，結果我就用了三四個小時有時候切語言只有一半的東西切到，有時候切過去了切不回來，不然就是切過去之後沒有出先該出現的東西，後來實在用不好，所以才變成現在我分成中英兩個站點，然後分兩個地方更新，實在有點麻煩，而且如果要改設定還要改兩次，如果有人知道怎麼用的希望可以在底下跟我說🙏。其實本來還有動態背景跟酷酷的滑鼠爆炸特效，但感覺這樣網站看起來有點小亂，還是簡單一點比較好（枉費我浪費這麼多時間😠</p>
 <p>對了我有用一點點 SEO 優化，不知道哪天我的網站可以在 google 上被搜尋到。之後不知道會不會想要買一個自己的網域，感覺也很酷。</p>
-<h2 id="更新-自訂網域"><a href="#更新-自訂網域" class="headerlink" title="更新-自訂網域"></a>更新 - 自訂網域</h2><p><a href="/Hexo-NexT_custom_domain/">麻煩幫我移到這邊看喔～</a></p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄 XD<br><a href="https://hexo.io/zh-tw/">Hexo 官方網站</a><br><a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#【學習筆記】如何使用-Hexo--GitHub-Pages-架設個人網誌">【學習筆記】如何使用 Hexo + GitHub Pages 架設個人網誌</a><br><a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格 (六角學院的教學，基本上就跟著做就完成了)</a><br><a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">使用 Hexo 建置網站（上面影片的上課講義）</a><br><a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點舊有些可能要再查一下</a><br><a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo - NexT 主題篇 - 可以安裝的套件 (他部落格裡面還有很多 Hexo 的教學)</a><br><a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在 Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a><br><a href="https://zsyyblog.com">這個是用 Butterfly 做的，做的超猛</a><br><a href="https://siriusq.top/en/hexo-hext-8-language-switch.html">Hexo Next 8 Language Switch</a></p>
+<h2 id="更新-自訂網域">更新 - 自訂網域</h2>
+<p><a href="/Hexo-NexT_custom_domain/">麻煩幫我移到這邊看喔～</a></p>
+<h2 id="參考資料">參考資料</h2>
+<p>這裡面蠻多是別人的部落格，然後就會被發現我跟他們長差不多，就東抄西抄 XD<br>
+<a href="https://hexo.io/zh-tw/">Hexo 官方網站</a><br>
+<a href="https://hackmd.io/@Heidi-Liu/note-hexo-github#【學習筆記】如何使用-Hexo--GitHub-Pages-架設個人網誌">【學習筆記】如何使用
+Hexo + GitHub Pages 架設個人網誌</a><br>
+<a href="https://youtu.be/jOJI9ekTzK8">使用 Hexo 建構個人化部落格
+(六角學院的教學，基本上就跟著做就完成了)</a><br>
+<a href="https://paper.dropbox.com/doc/Hexo--7zSMDUvNPffmjdilVv3AA">使用
+Hexo 建置網站（上面影片的上課講義）</a><br>
+<a href="https://blog.csdn.net/as480133937/article/details/100138838">中國的教學，還蠻詳細的但有點舊有些可能要再查一下</a><br>
+<a href="https://israynotarray.com/hexo/20201003/38607376/">試著學 Hexo
+- NexT 主題篇 - 可以安裝的套件 (他部落格裡面還有很多 Hexo 的教學)</a><br>
+<a href="https://nijialin.com/2021/05/15/hexo-utterances-comment/">在
+Hexo 的 Next 樣板中引入 utterances 的留言區 | GitHub Issue</a><br>
+<a href="https://zsyyblog.com">這個是用 Butterfly 做的，做的超猛</a><br>
+<a href="https://siriusq.top/en/hexo-hext-8-language-switch.html">Hexo
+Next 8 Language Switch</a></p>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 自訂網域</title>
+    <url>/Hexo-NexT_custom_domain/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>本來想說預算不足，所以就沒有自己買網域，不過後來發現 <a href="https://education.github.com/pack/offers">Github 學生方案</a>中可以在 namecheap 上挑一個免費的網域（另外還有 name.com 也可以，也就是說你可以免費取得兩個網域，超棒的吧～）</p>
+<span id="more"></span>
+<ol type="1">
+<li><a href="/Hexo-NexT_custom_domain/#申請網域">申請網域</a></li>
+<li><a href="/Hexo-NexT_custom_domain/#連結Github">連結 Github</a></li>
+</ol>
+<h2 id="申請網域">申請網域</h2>
+<p>申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到 GitHub
+Student Developer
+Pack 裡面找到 namecheap（我覺得這個比 name.com 好用一點，尤其是 ssl 的認證，雖然在這裡是用不到就是了），最後連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。</p>
+<figure>
+<img data-src="https://i.imgur.com/rCrDTw2.png" alt="連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了">
+<figcaption aria-hidden="true">連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了</figcaption>
+</figure>
+<h2 id="連結github">連結 Github</h2>
+<p>到 namecheap 的 domain list 中選取你剛剛申請好的網域</p>
+<figure>
+<img data-src="https://i.imgur.com/hyEUpiM.png" alt="到namecheap的domain list中選取你剛剛申請好的網域">
+<figcaption aria-hidden="true">到 namecheap 的 domain
+list 中選取你剛剛申請好的網域</figcaption>
+</figure>
+<p>點到裡面的 Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下 CNAME
+Record 的 Value 設成你的 github page 的網址即可</p>
+<figure>
+<img data-src="https://i.imgur.com/q0IAGja.png" alt="將CNAME Record的Value設成你的github page的網址">
+<figcaption aria-hidden="true">將 CNAME Record 的 Value 設成你的 github
+page 的網址</figcaption>
+</figure>
+<p>好的那在 namecheap 這邊已經設置完成，接下來就要到 Github 上了，到你的 repository（然後因為前面的學生方案還會發現你變成 github
+pro 了，酷吧），點設定，到 Pages，到 Custom
+domain 打上申請的網域，接下來他會跑認證，認證之後才可以把 Enforce
+HTTPS 打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～</p>
+<figure>
+<img data-src="https://i.imgur.com/3ozFoIX.png" alt="一張圖道盡千言萬語">
+<figcaption aria-hidden="true">一張圖道盡千言萬語</figcaption>
+</figure>
+<h2 id="結語">結語</h2>
+<p>恭喜你有了自己的 Domain，<del>之後遇到人又多了個可以炫耀的東西了呢</del>，另外通過這個機會你也申請到了 Github
+Education，裡面有很多好用的工具還有教學，真的是撿到寶了，如果你還是高中生，趁這段時間妥善利用這些教學，你應該會變得很強的🛐🛐🛐</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p>自訂網域 ✅</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 深淺主題切換配置</title>
+    <url>/NexT-dark-light-mode/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>現在不論是手機應用程式、網頁幾乎都有所謂深淺模式，先不論省不省電或是好不好看，有了切換的功能就是很酷，使用者可以依自己喜好挑選自己習慣的模式，這篇內容因為有點太簡單，所以我就只有一個章節了～</p>
+<span id="more"></span>
+<h2 id="教學開始">教學開始～</h2>
+<p>這次用的套件是<a href="https://github.com/rqh656418510/hexo-next-darkmode">這個</a>，安裝的方式非常簡單，輸入下列指令就完成了</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode</span><br></pre></td></tr></tbody></table></figure>
+<p>設置的方式則是到 theme 內的<code>_config.yml</code>，貼上以下指令就完成了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Darkmode JS</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">bottom:</span> <span class="string">'64px'</span> <span class="comment"># 距離底端的距離</span></span><br><span class="line">  <span class="attr">right:</span> <span class="string">'unset'</span> <span class="comment"># 距離右邊的距離(unset就是只需要設定左邊，右邊會自己調整)</span></span><br><span class="line">  <span class="attr">left:</span> <span class="string">'32px'</span> <span class="comment"># 距離左邊的距離(unset就是只需要設定右邊，左邊會自己調整)</span></span><br><span class="line">  <span class="attr">time:</span> <span class="string">'0.5s'</span> <span class="comment"># 切換深淺模式的時間</span></span><br><span class="line">  <span class="attr">mixColor:</span> <span class="string">'transparent'</span> <span class="comment"># 這個建議不要用，雖然會出現酷酷的一個往外擴散的效果，可是他的顏色會跟原本的背景混再一起，有時候還會讓字不清楚，想玩的可以自己改改看</span></span><br><span class="line">  <span class="attr">backgroundColor:</span> <span class="string">'transparent'</span> <span class="comment">#背景顏色</span></span><br><span class="line">  <span class="attr">buttonColorDark:</span> <span class="string">'#100f2c'</span> <span class="comment"># 在淺色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">buttonColorLight:</span> <span class="string">'#fff'</span> <span class="comment"># 在深色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">isActivated:</span> <span class="literal">false</span> <span class="comment"># 這裡如果用true的話是可以自己改寫他的CSS，但我覺得應該沒有必要，詳細可以看github的內的介紹</span></span><br><span class="line">  <span class="attr">saveInCookies:</span> <span class="literal">true</span> <span class="comment"># 會儲存到Cookies內，下次來會依照上次你的設定切換到深淺模式</span></span><br><span class="line">  <span class="attr">label:</span> <span class="string">'🌓'</span> <span class="comment"># 可以改成自己像要的表情圖示</span></span><br><span class="line">  <span class="attr">autoMatchOsTheme:</span> <span class="literal">true</span> <span class="comment"># 自動切換到跟使用者裝置相同的深淺模式</span></span><br><span class="line">  <span class="attr">libUrl:</span> <span class="comment"># Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></tbody></table></figure>
+<p>如果想要設定固定的背景或按鈕顏色的話可以修改 backgroundColor、buttonColorDark、buttonColorLight 後的色碼，例如說 <code>backgroundColor: "#FFD9E6"</code>，推薦給有少女心的各位</p>
+<figure>
+<img data-src="https://i.imgur.com/Yr5MMiF.png" alt="猛男粉紅💪">
+<figcaption aria-hidden="true">猛男粉紅💪</figcaption>
+</figure>
+<h2 id="結語">結語</h2>
+<p>完成啦！深淺切換的功能很簡單吧～如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p>日 / 夜模式 ✅</p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 網頁頁底配置</title>
+    <url>/NexT-footer/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分<br>
+<span id="more"></span> 1. <a href="/NexT-footer/#版權說明、icon、Powered-by…">版權說明、icon、Powered
+by...</a> 2. <a href="/NexT-footer/#字數統計、估計閱讀時間">字數統計、估計閱讀時間</a>
+3. <a href="/NexT-footer/#閱覽人數">閱覽人數</a></p>
+<p>完成後你的頁底就會變成像這樣嘍 <img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
+<h2 id="版權說明iconpowered-by...">版權說明、icon、Powered by...</h2>
+<p>首先先移駕到你的 theme 裡面主題的_config.yml <img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
+<p>然後找到 <code>footer</code> 的位置，應該會看到 since、icon、copyright、powered、beian 這些標題，接下來我會一一進行說明（beian 是所謂的 ICP 備案，是中國對非營利網站的一些規定，詳見<a href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）
+<img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
+<ol type="1">
+<li>since：你這個網站開始的時間，在你的頁底就會是 XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
+<li> icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外 animated 就是他會不會在那裡 "跳"!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去
+<img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
+<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config 去改喔）</li>
+<li>powered：這裡如果打 true 就會出現由 Powered by Hexo &amp;
+NexT 的字樣，留空就是不會出現</li>
+</ol>
+<h2 id="字數統計估計閱讀時間">字數統計、估計閱讀時間</h2>
+<p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></tbody></table></figure>
+<p>接著在 NexT 內的_config 隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></tbody></table></figure>
+<p>接著再到最外層資料夾的_config 隨便找個地方貼上這些</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">"mins."</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="閱覽人數">閱覽人數</h2>
+<p>搜尋 <code>busuanzi_count</code>，然後把 <code>enable</code> 設 <code>true</code> 就完成了（如果有安裝 live2d 的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法） <img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
+<h2 id="結語">結語</h2>
+<p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p>頁底 ✅</p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a><br>
+</p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a><br>
+</p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a><br>
+</p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a><br>
+</p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a><br>
+</p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a><br>
+</p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在 Hexo-NexT 主題中配置 Google Analytics</title>
+    <url>/NexT-google-analytics/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>Google
+Analytics（後文簡稱為 GA）是一個由 Google 所提供的網站流量統計服務，透過在網站中埋入 GA 追蹤碼，網站主們可以獲取進站流量的資料，包括來源、使用者、裝置、造訪路徑等，透過 GA，可以更全面的了解品牌的受眾，進而為潛在客戶優化購買、造訪流程，提高轉單意願，對於網頁入門來說是非常推薦使用的工具。(摘自<a href="https://zh.wikipedia.org/zh-tw/Google%E5%88%86%E6%9E%90">維基百科</a>)
+<span id="more"></span> 不過這篇只會教你怎麼讓你的網頁與 GA 連結，詳細的操作可以看 <a href="https://analytics.google.com/analytics/academy/course/6?hl=zh-tw">google 推出的免費課程</a></p>
+<h2 id="教學開始">教學開始！</h2>
+<p>首先到 <a href="https://analytics.google.com/">GA 的官網</a>註冊一個帳號，接著到管理建立帳戶、資源、最後切換到資料串流
+<img data-src="https://i.imgur.com/wdINP2I.png" alt="建立帳戶、資源、切換到資料串流"></p>
+<p>新增串流，選擇網頁 <img data-src="https://i.imgur.com/7ZZQnoB.png" alt="新增串流"></p>
+<p>設定串流名稱、串流網址，他會自動生成 GA
+id（就是最後的評估 id），把他複製下來等等會用到 <img data-src="https://i.imgur.com/XI7htXE.png" alt="設定資料並複製id"></p>
+<p>這次不去改_congif.yml 的內容，雖然說他裡面也有可以設定 GA 的地方，但不知道為什麼我試過之後沒辦法使用，這裡我們直接改他的 layout，首先到 theme-&gt;{your-theme-name}-&gt;layout-&gt;_layout.njk
+<img data-src="https://i.imgur.com/CVdViKM.png" alt="切換到_layout.njk"></p>
+<p>在 body 的上方插入以下程式碼，請務必將 'your-id' 替換為剛剛複製的 id</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- <span class="title class_">Google</span> tag (gtag.<span class="property">js</span>) --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://www.googletagmanager.com/gtag/js?id=your-id"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">window</span>.<span class="property">dataLayer</span> = <span class="variable language_">window</span>.<span class="property">dataLayer</span> || [];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="keyword">function</span> <span class="title function_">gtag</span>(<span class="params"></span>){dataLayer.<span class="title function_">push</span>(<span class="variable language_">arguments</span>);}</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'js'</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'config'</span>, <span class="string">'your-id'</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+<figure>
+<img data-src="https://i.imgur.com/4mtAFID.png" alt="將程式碼插入到body的上方">
+<figcaption aria-hidden="true">將程式碼插入到 body 的上方</figcaption>
+</figure>
+<p>重啟網站（使用 <code>hexo s</code>）並重新載入網頁，然後前往 GA -&gt;
+報表 -&gt;
+即時，檢查是否有變化，有時可能需要等待一段時間才能看到數據更新。 <img data-src="https://i.imgur.com/dZ0ZkQ6.png" alt="查看即時報表有沒有變化"></p>
+<h2 id="結語">結語</h2>
+<p>現在，你可以使用 Google
+Analytics 來監控每日訪問你的網站的人數。如果流量足夠，你甚至可以考慮進行廣告投放。如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p> Google Analytics 統計網站資訊 ✅</p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT live 2d 配置</title>
+    <url>/NexT-live2d/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>這次要做的就是網頁右下角那隻可愛的狗狗，可以幫你看家招攬客人，還可以跟他一起玩，可說是一舉數得
+<img data-src="https://i.imgur.com/cxJLFJn.png" alt="可愛的狗狗">
+<span id="more"></span></p>
+<ol type="1">
+<li><a href="/NexT-live2d/#安裝live-2d">安裝 live 2d</a></li>
+<li><a href="/安裝live-2d模型">安裝 live 2d 模型</a></li>
+</ol>
+<h2 id="安裝live-2d">安裝 live 2d</h2>
+<p>這次用的是這個<a href="https://github.com/xiazeyu/live2d-widget-models">模組</a>，執行下方指令就可以安裝了</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></tbody></table></figure>
+<p>接著在最外層的_config.yml 中加入以下程式碼（這個模組的作者是說放在 theme 裡面的_config.yml 也可以，不過我試過之後是沒辦法）</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-wanko</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="安裝live-2d模型">安裝 live 2d 模型</h2>
+<p>到了這裡應該已經有狗狗出現在你的網頁上面了，不過還有很多模型可以選擇，像是貓咪或是可愛的小女孩，可以從<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892#live2dwidgetmodelchitose_12">這裡</a>看到所有模型的預覽，不過我試過好以個之後還是覺得狗狗好可愛，或是也可以像我一樣中文的版面放狗，英文的版面放貓。</p>
+<p><img data-src="https://i.imgur.com/Bp0nf0U.png" alt="喵～"> <img data-src="https://i.imgur.com/EpN4LqQ.png" alt="真香"></p>
+<p>那選好了想要的模型就可以來下載了，下面是所有模型的名稱，只要輸入 <code>npm install 模型名稱</code>就可以下載了，例如我上面的貓咪就是 <code>npm install live2d-widget-model-tororo</code>，如果是 live2d-widget-model-haru/01 或 live2d-widget-model-haru/02 的話就統一用 <code>npm install live2d-widget-model-haru</code></p>
+<figure class="highlight plaintext"><figcaption><span>模型名稱 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/01</span><br><span class="line">live2d-widget-model-haru/02</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></tbody></table></figure>
+<p>安裝好後，到最外層的_config.yml 修改剛剛加入的程式碼，將下載好的模型名稱打在 model 的 use 後</p>
+<figure class="highlight yml"><figcaption><span>修改 model 中的 use</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line marked">    <span class="attr">use:</span> <span class="string">下載的模型名稱</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span></span><br></pre></td></tr></tbody></table></figure>
+<p>修改後應該就可以看到選的 live 2d 角色出現在你的網頁上面了</p>
+<h2 id="結語">結語</h2>
+<p>多了個守護神在你的網站上了，真的超酷的，如果有發現問題或者我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p></li>
+<li><p> live2d 角色（就是網頁右下角那隻可愛的狗狗）✅</p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 側邊欄基礎配置</title>
+    <url>/NexT-sidebar-basic/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail...）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
+<span id="more"></span>
+<ol type="1">
+<li><a href="/NexT-sidebar-basic/#關於、標籤、分類、歸檔">關於、標籤、分類、歸檔</a></li>
+<li><a href="/NexT-sidebar-basic/#搜尋">搜尋</a></li>
+<li><a href="/NexT-sidebar-basic/#頭像">頭像</a></li>
+<li><a href="/NexT-sidebar-basic/#個人相關連結">個人相關連結</a></li>
+</ol>
+<h2 id="關於標籤分類歸檔">關於、標籤、分類、歸檔</h2>
+<p>首先要生成關於、標籤、分類這三個分頁（但歸檔不用，他預設就有了，我也覺得很奇怪為什麼其他不要預設就生成）</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">hexo new page about</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></tbody></table></figure>
+<p>接著應該會發現在 source 裡面多出了三個資料夾 <img data-src="https://i.imgur.com/Y27wMgQ.png" alt="生成的三個資料夾">
+點進去後會發現一個叫做 <code>index.html</code> 的東西，點進去後輸入以下內容（xxx 依照 about、tags、categories 哪個資料夾填入）</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
+<p>以 about 為例</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
+<p>另外，about 裡面要放一些關於自己的一些事的話，就直接接續 <code>---</code>，底下繼續撰寫即可，以我的 about 為例</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment">## 我是貓熊🐼</span></span><br><span class="line"></span><br><span class="line"><span class="string">這裡會紀錄貓熊的生活大小事</span></span><br></pre></td></tr></tbody></table></figure>
+<p>接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的 theme 主題的_config.yml</p>
+<p>找到 menu，並將 about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-sidebar-basic/#版權說明、icon、Powered-by…">頁底配置中更換 icon</a> 一樣，將後面的圖示替換即可）</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br></pre></td></tr></tbody></table></figure>
+<p>恭喜你這樣就完成第一步啦～應該可以在網站上看到這些東西了</p>
+<h2 id="搜尋">搜尋</h2>
+<p>首先安裝搜尋需要的插件</p>
+<figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></tbody></table></figure>
+<p>然後到你的 theme 主題的_config.yml，搜尋 <code>local_search</code>，將 <code>enable</code>，設為 true，就完成嘍，超簡單的吧～</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="頭像">頭像</h2>
+<p>這個更簡單，在 theme 主題的_config.yml，搜尋 <code>avatar</code>，然後將你想要的頭像放到 theme 主題中 <code>/source/images</code></p>
+<figure>
+<img data-src="https://i.imgur.com/AudEpQN.png" alt="頭像檔案要存放的地方">
+<figcaption aria-hidden="true">頭像檔案要存放的地方</figcaption>
+</figure>
+<p>然後將 <code>url</code> 後設定為 <code>/images/image_name</code>，以我的頭像為例，其檔名叫做 <code>Panda_Me.png</code>，而 <code>rounded</code> 代表是否要顯示在圓框內，<code>rotated</code> 表示滑鼠移到頭像上時是否要旋轉</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/Panda_Me.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="個人相關連結">個人相關連結</h2>
+<p>接下來這是最輕鬆的，一樣在 theme 主題的_config.yml，然後搜尋 <code>social</code>，在底下找你想要顯示的網站，取消註解，然後將你的網址打上去即可，以我的為例，我放了 Github、Gmail、IG</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/moon-jam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">Gmail:</span> <span class="string">mailto:wu.messi.wu@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="comment">#Weibo: https://weibo.com/yourname || fab fa-weibo</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || fab fa-twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || fab fa-facebook</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || fab fa-youtube</span></span><br><span class="line">  <span class="attr">IG:</span> <span class="string">https://www.instagram.com/mooooonjam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || fab fa-skype</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="結語">結語</h2>
+<p>側邊欄的基礎功能都已經配置完畢，看起來已經跟一般的部落格看起來差不多了呢，是不是很簡單啊，如果有發現哪裡講錯或是有任何疑問，都歡迎在底下留言告訴我喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ 關於、標籤、分類、歸檔、搜尋 ✅ － <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a><br>
+</p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a><br>
+</p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a><br>
+</p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a><br>
+</p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a><br>
+</p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a><br>
+</p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 側邊欄 - 切換語言</title>
+    <url>/NexT-sidebar-switch-lang/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>為了讓自己網站能夠接軌國際，加個切換語言的功能是必須的吧～</p>
+<span id="more"></span>
+<p>其實切換語言 NexT 有內建的功能，他的效果也還不錯，但是 achieve 不管怎樣都只能出現一個語言，因此最後就只能退而求其次，新做一個英文的網站並在側邊欄新增一個按鈕讓兩個網站可以互相切換，但這要注意一點，就是如果你兩個網站是放在同一個 github 帳號底下的話，pajx 不能打開，因為都是在同一網域底下的，切換過去的時候因為 pajx 的特性，雖然內容會改成英文的，但語言還是會停留在原本的，<del>或是如果有大佬知道怎麼避免掉這種狀況的話，拜託在底下留言告訴我🙏</del>（我自己解決了！看看我下面的更新）</p>
+<ol type="1">
+<li><a href="/NexT-sidebar-switch-lang/#架設一個新的英文網站">架設一個新的英文網站</a></li>
+<li><a href="/NexT-sidebar-switch-lang/#側邊欄新增切換按鈕">側邊欄新增切換按鈕</a></li>
+<li><a href="/NexT-sidebar-switch-lang/#更新-解決使用pjax無法切換問題">更新 -
+解決使用 pjax 無法切換問題</a></li>
+</ol>
+<h2 id="架設一個新的英文網站">架設一個新的英文網站</h2>
+<p>這個部分跟先前<a href="/Hexo-NexT_Github-Page_build-blog/">利用 Hexo
++ NexT + Github Page 建立自己的
+Blog</a> 完全一樣，要注意一下在最外層資料夾的_config.yml 其中 site 內的 language 要改成 en，網站才會變成英文的，還有記得 branch 要使用 gh-pages，才能正常運作喔</p>
+<figure>
+<img data-src="https://i.imgur.com/DzQuENU.png" alt="language要改成en">
+<figcaption aria-hidden="true">language 要改成 en</figcaption>
+</figure>
+<h2 id="側邊欄新增切換按鈕">側邊欄新增切換按鈕</h2>
+<p>換成到 themes 內的_config.yml，這裡先講中文網站要如何配置
+到 menu，新增一個叫做 Switch
+Language 的選項（或是其他名字也可以），後面就打你另一個語言網站的名稱，最後一個圖示就看個人喜好要放什麼啦</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/en/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
+<p>英文網站的部分也一樣，只是網址記得要改成中文的就好了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然後當你要新增英文文章時就在英文的那份檔案寫，中文的就在原先的檔案內寫，如此一來就完成中英切換的網站了</p>
+<h2 id="更新---解決使用pjax無法切換問題">更新 -
+解決使用 pjax 無法切換問題</h2>
+<p>其實很簡單，因為問題是 pjax 在同一個網域底下不會重新整理，所以如果我們只要讓他先導向另一個網域，然後再導回來，就可以解決了，那有什麼快速的方法呢，最直覺的就是縮網址了，這邊因為我怕一般網路上的縮網址可能會有實效性的問題，所以我就到 github 上找了一下，最後決定使用這個 <a href="https://github.com/nelsontky/gh-pages-url-shortener">gh-pages-url-shortener</a>，新開一個 github 帳號然後複製一個分支，自製縮網址就完成了，所以說現在 <a href="https://pa-7.github.io/1">https://pa-7.github.io/1</a> 就會導向我現在的這個中文網址，<a href="https://pa-7.github.io/2">https://pa-7.github.io/2</a> 則會到我英文的網站，這樣就這樣就能夠同時使用 pjax 並且避免語言沒有切換到的問題了</p>
+<h2 id="結語">結語</h2>
+<p>切換語言就是這麼簡單，就是在發布不同語言時還要切資料夾有點麻煩，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ 切換語言 ✅</p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a><br>
+</p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 一些好用的酷東東</title>
+    <url>/NexT-some-cool-tools/</url>
+    <content><![CDATA[<p><span class="math display">\[\begin{equation} \label{eq2}
+\begin{aligned}
+a &amp;= b + c \\
+  &amp;= d + e + f + g \\
+  &amp;= h + i
+\end{aligned}
+\end{equation}\]</span></p>
+<p><span class="math display">\[x+1\over\sqrt{1-x^2}
+\tag{i}\label{eq_tag}\]</span></p>
+<p>quation <span class="math inline">\(\eqref{eq_tag}\)</span> use
+<code>\tag{}</code> instead of automatic numbering. <span class="math display">\[\begin{equation} \label{eq1}
+e=mc^2
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+\label{eq1}
+e=mc^2
+\end{equation}\]</span></p>
+<p>O(N^2)</p>
+<h2 id="前言">前言</h2>
+<p>在這篇中所講述的是一些可以沒有，但是有的話<strong>可能</strong>會很方便的酷東東</p>
+<span id="more"></span>
+<ol type="1">
+<li><a href="/NexT-some-cool-tools/#vscode-imgur">vscode-imgur</a></li>
+<li><a href="/NexT-some-cool-tools/#閱讀更多按鈕">閱讀更多按鈕</a></li>
+<li><a href="/NexT-some-cool-tools/#標題前的圖示">標題前的圖示</a></li>
+<li><a href="/NexT-some-cool-tools/#MathJax">MathJax</a></li>
+</ol>
+<h2 id="vscode-imgur">vscode-imgur</h2>
+<p><img data-src="https://i.imgur.com/m8LaSvK.png" alt="vscode-imgur"> <img data-src="https://i.imgur.com/jPm7V6t.gif" alt="實際執行">
+就是要申請 API 讓 vscode 使用，詳細教學可以<a href="https://israynotarray.com/hexo/20201012/473855281/">看這邊</a></p>
+<h2 id="閱讀更多按鈕">閱讀更多按鈕</h2>
+<p>如果沒有這個的話在一開始首頁的地方全部文章都會是展開的，這樣對於要翻看有哪些內容就很不方便，網站整體觀感也會不好，因此可以新增一個閱讀更多的按鈕，設定每篇文章要顯示多少內容給使用者看，這個部分我有在 <a href="/SEO-Search-Engine-Optimization/#新增description">SEO 優化的 description 中說明</a></p>
+<h2 id="標題前的圖示">標題前的圖示</h2>
+<p>這個有一個比較簡單的方法，在 <code>theme/NexT(改成你的主題名稱)/source/css/main.styl</code>，貼上以下程式碼，裡面的符號可以改成自己的</p>
+<figure class="highlight css"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/*修改h2前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"🔍"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*修改h3前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"📌"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>另外一個方法就是到最外層資料夾中的 <code>source</code> 新建一個<code>_data</code> 的資料夾，然後在裡面新增 <code>styles.styl</code> 這個檔案（也就是 <code>source/data/styles.styl</code>，然後將剛剛上面的程式碼貼在裡面，最後到 <code>theme/NexT(改成你的主題名稱)/_config.yml</code> 將 custom_file_path 的最後一項 <code>style: source/_data/styles.styl</code> 的註解取消，就完成了</p>
+<figure>
+<img data-src="https://i.imgur.com/ndD3yh1.png" alt="開啟custom_file_path設定">
+<figcaption aria-hidden="true">開啟 custom_file_path 設定</figcaption>
+</figure>
+<h2 id="mathjax">MathJax</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></tbody></table></figure>
+<p><span class="math display">\[
+A = \begin{bmatrix}
+        a_{11}    &amp; a_{12}    &amp; ...    &amp; a_{1n}\\
+        a_{21}    &amp; a_{22}    &amp; ...    &amp; a_{2n}\\
+        a_{31}    &amp; a_{22}    &amp; ...    &amp; a_{3n}\\
+        \vdots    &amp; \vdots    &amp; \ddots &amp; \vdots\\
+        a_{n1}    &amp; a_{n2}    &amp; ... &amp; a_{nn}\\
+    \end{bmatrix} , b = \begin{bmatrix}
+        b_{1}  \\
+        b_{2}  \\
+        b_{3}  \\
+        \vdots \\
+        b_{n}  \\
+    \end{bmatrix}
+\]</span></p>
+<h2 id="結語">結語</h2>
+<p>這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p> 剩下的一些小工具 ✅</p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 留言板 utterances 配置</title>
+    <url>/NexT-utterances-comment-box/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>許多 Blog 都有自己的留言區，可以方便地與讀者交流（<del>只是我做了之後文章也沒有人看，所以也不會有交流的機會🥲</del>）我要教的是用 utterances，另外還有其他像是 Disqus 或是 GitHub
+Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相 tag），最後只好就選 utterances，不過他也還是不錯用的，支援 markdown 語法，有亮暗主題，也算很好了啦。</p>
+<span id="more"></span>
+<ol type="1">
+<li><a href="/NexT-utterances-comment-box/#安裝/">安裝</a></li>
+<li><a href="/NexT-utterances-comment-box/#文章中禁用留言區/">文章中禁用留言區</a></li>
+</ol>
+<h2 id="安裝">安裝</h2>
+<p>先簡單說一下原理，他的留言板就是用 github 的 issue 功能，用你文章的路徑、網址或是標題當作 issue 的 Title，然後把留言的內容當作是 issue 的回覆，所以留言的人就必須要有 github 帳號才能使用</p>
+<p>解說完畢，實作上很簡單，就是來到主題底下的_config.yml 裡將這些改一改，主題你可以自己全部都試試看，他很好心全部都列出來了，repo 要改成你自己的喔，要不然就會跑來我的 issue 了（x
+<img data-src="https://i.imgur.com/J98nMDR.png" alt="Image"></p>
+<p>接著到你的隨便一篇文章底下去看，就會發現留言區還是沒出現，因為還要再裝一個 <a href="https://github.com/apps/utterances">utterances</a>，點擊安裝選擇 github
+page 的 repo 然後在點擊安裝就完成了</p>
+<figure>
+<img data-src="https://i.imgur.com/dancpB7.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h2 id="結語">結語</h2>
+<p>可以自己先試試看發個留言（<del>要不然可能他從此都不會被用到</del>），確認都可以用之後，恭喜你就完成留言板嘍！如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<figure>
+<img data-src="https://i.imgur.com/nGHOBS4.png" alt="TEST😵‍💫">
+<figcaption aria-hidden="true">TEST😵‍💫</figcaption>
+</figure>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p> utterances 留言板 ✅</p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a><br>
+</p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SEO 配置 (搜尋引擎最佳化)</title>
+    <url>/SEO-Search-Engine-Optimization/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>什麼是 SEO 呢？ &gt; 搜尋引擎最佳化（英語：search engine
+optimization，縮寫為 SEO）是透過了解搜尋引擎的運作規則來調整網站，以及提高目的網站在有關搜尋引擎內排名的方式。(摘自維基百科)</p>
+<p>SEO 優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓更多人看到的過程，接下來我會先從怎麼知道目前網頁的 SEO 狀況，再一一列舉優化的方法，如果只是想要知道如何能在 google 上搜尋到自己網頁的人可以直接看最後一項 <a href="/SEO-Search-Engine-Optimization/#google-search-console">google
+search console</a> 的使用方式。</p>
+<span id="more"></span>
+<ol type="1">
+<li><a href="/SEO-Search-Engine-Optimization/#網頁目前SEO狀況">網頁目前 SEO 狀況</a></li>
+<li><a href="/SEO-Search-Engine-Optimization/#網頁優化方法">網頁優化方法</a>
+2.1. <a href="/SEO-Search-Engine-Optimization/#網址">網址</a> 2.2. <a href="/SEO-Search-Engine-Optimization/#新增description">新增 description</a>
+2.3. <a href="/SEO-Search-Engine-Optimization/#Nofollow">Nofollow</a>
+2.4. <a href="/SEO-Search-Engine-Optimization/#sitemap">sitemap</a> 2.5.
+<a href="/SEO-Search-Engine-Optimization/#robots-txt">robots.txt</a>
+2.6. <a href="/SEO-Search-Engine-Optimization/#Google-Search-Console">Google
+Search Console</a></li>
+</ol>
+<h2 id="網頁目前seo狀況">網頁目前 SEO 狀況</h2>
+<p>要優化前當然要先看看自己的目前的狀況，可以到 <a href="https://pagespeed.web.dev">PageSpeed
+Insights</a>，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況 <img data-src="https://i.imgur.com/vyUXRfU.png" alt="以我的網頁為例">
+另外可以搜尋 <code>site:網域</code>，看看自己的網站是否有被收錄到 google 內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題
+<img data-src="https://i.imgur.com/kftLZgg.png" alt="搜尋site:網域"></p>
+<h2 id="網頁優化方法">網頁優化方法</h2>
+<h3 id="網址">網址</h3>
+<p>搜尋引擎不喜歡過長或是索引過多的網址 (例如說 <code>https://example.com/abc/def/ghi/jkl/mn</code>)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是 <code>success@SEO-Search-Engine-Optimization.md</code>，如果覺得這樣太麻煩的話可以使用 <a href="https://github.com/rozbo/hexo-abbrlink">abbrlink 插件</a> <img data-src="https://i.imgur.com/vd9WIxo.png" alt="把網址設定成檔案名稱"></p>
+<h3 id="新增description">新增 description</h3>
+<p>添加 description 可以讓使用者更快速了解你的文章在講什麼，所以對 SEO 也是很重要的部分，而我們需要分別在首頁和文章都個別設定相關的描述</p>
+<p><span id="inline-blue">首頁</span>
+到最外層的<code>_config.yml</code> 去修改 description <img data-src="https://i.imgur.com/ory8GYA.png" alt="修改最外層_config.yml的description"></p>
+<p><span id="inline-blue">文章</span>
+要新增文章的 description 有兩中方法，一個是在文章最上端的細節設定新增 <code>description: 你的description</code>，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作 description，作法很簡單，在前言的底下新增一行 <code>&lt;!--more--&gt;</code>，就完成了
+<img data-src="https://i.imgur.com/JKfxDSQ.png" alt="新增作為description"></p>
+<p>另外補充，可以在主題內的<code>_config.yml</code>，將 <code>read_more_btn</code> 設定為 <code>true</code>，如此一來在瀏覽你的網站時，就只會將文章中 description 的部分呈現出來，讓可讀性更高
+<img data-src="https://i.imgur.com/meLFbHF.png" alt="將read_more_btn設定為true"> <img data-src="https://i.imgur.com/FoJcPqo.png" alt="在網頁就會出現閱讀全文的按鈕"></p>
+<h3 id="nofollow">Nofollow</h3>
+<p>關於 nofollow 是什麼詳細可以看<a href="https://welly.tw/serp-rank-optimization/what-is-nofollow">這篇文章</a>，總之就是避免你的搜尋引擎權重值被別人分走，使用的是這個<a href="https://github.com/hexojs/hexo-filter-nofollow">插件</a>，如果沒有要設定什麼特別的東西的話，直接執行 <code>npm install hexo-filter-nofollow</code>，就完成了</p>
+<h3 id="sitemap">sitemap</h3>
+<p>sitemap 就是用來告訴搜尋引擎我這個網站有哪些網頁，方便搜尋引擎索引，要使用的插件是<a href="https://github.com/hexojs/hexo-generator-sitemap">這個</a>，執行 <code>npm install hexo-generator-sitemap</code> 下載插件
+接著到最外層的<code>_config.yml</code>，添加以下程式碼就完成了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
+<p>可以試試看<code>你的網址/sitemap.xml</code>（如果是在本機跑的話應該就是 <code>localhost:4000/sitemap.xml</code>，有沒有出現東西，有的話就是成功了</p>
+<h3 id="robots.txt">robots.txt</h3>
+<p>到最外層資料夾中的 <code>source</code> 新增一個檔案 <code>robots.txt</code>
+<img data-src="https://i.imgur.com/Lepvzrl.png" alt="新增robots.txt">
+接下來再 <code>robots.txt</code> 內貼上以下內容，記得 Sitemap 後面要改成你自己的網址</p>
+<figure class="highlight plaintext"><figcaption><span>robots.txt</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/ </span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的網址/sitemap.xml</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p><span id="inline-blue">User-agent</span>
+是代表要讓哪些搜尋引擎抓取你的網頁，<code>*</code> 就是全部都可以 <span id="inline-blue">Allow</span>
+這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有 <code>Allow: /</code> 就代表全部都可以，後面那些都是保平安用的（xd
+<span id="inline-blue">Disallow</span>
+這裡就是避免搜尋引擎抓到你的字體、程式之類的 <span id="inline-blue">Sitemap</span> 就是上面講到的 sitemap.xml</p>
+<h3 id="google-search-console">Google Search Console</h3>
+<p>這個是最重要的一步，前面那些事讓你的 SEO 更好，但如果沒有這個你的網頁大概根本搜尋不到，進入 <a href="https://search.google.com/search-console/about">Google Search
+Console</a>，新增資源 <img data-src="https://i.imgur.com/tw67jVX.png" alt="新增資源"></p>
+<p>如果是使用 github
+page 的就只能用右邊的那個，他會叫你把一個 html 檔放到你的網頁中，你就將它下載，然後儲存到 <code>themes/NexT(或你用其他主題)/source</code>，重新部署之後稍等一下應該就完成了</p>
+<p>如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的 TXT 紀錄複製下來，然後添加網域的 DNS 設定，我這裡是用 namecheap，各家的使用方式也都大同小異，新增 <code>TXT Record</code>，<code>Host</code> 設定 <code>@</code>，<code>Value</code> 設定剛剛複製的 TXT 紀錄，幾分鐘後就會通過驗證了
+</p><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/4XAblPy.png" alt="複製TXT紀錄"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/y9sKq0R.png" alt="DNS設定"></div></div></div><p></p>
+<p>進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明</p>
+<p><span id="inline-blue">搜尋網頁索引狀態</span>
+可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊<code>要求建立索引</code>，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上
+<img data-src="https://i.imgur.com/sifijQS.png" alt="搜尋網頁索引狀態"></p>
+<p><span id="inline-blue">檢查網頁索引狀態</span>
+這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態
+<img data-src="https://i.imgur.com/saKZCae.png" alt="檢查網頁索引狀態"></p>
+<p><span id="inline-blue">新增 Sitemap</span>
+在這個頁面就是用來把之前生成的 Sitemap 交給 google 看，讓他更清楚你的網頁們
+<img data-src="https://i.imgur.com/CrguGDg.png" alt="新增Sitemap"></p>
+<h2 id="結語">結語</h2>
+<p>恭喜你的網頁現在已經可以在 google 上被查詢上了，可以在使用 <a href="https://pagespeed.web.dev">PageSpeed
+Insights</a> 看看 SEO 的分數有沒有上升，也可以看他說你哪個地方不足去修正，分數應該就可以拿到幾乎 100 的分數了，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能">其他功能</h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
 ]]></content>
       <categories>
         <category>教學文</category>
@@ -76,12 +774,20 @@
 </blockquote>
 <span id="more"></span>
 <p>如果有任何想補充的相關資料都歡迎在留言區分享～</p>
-<h2 id="地科"><a href="#地科" class="headerlink" title="地科"></a>地科</h2><p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><a href="https://hexo.io/zh-tw/docs/tag-plugins.html">Tag Plugins</a><br><a href="https://zenreal.github.io/posts/44730">很多 NexT 功能介紹</a><br><a href="https://markdown.tw">MarkDown 語法說明</a></p>
-<h2 id="物理"><a href="#物理" class="headerlink" title="物理"></a>物理</h2><p><a href="https://sites.google.com/site/phyelearning/">高中物理線上學習網</a></p>
-<h2 id="演算法"><a href="#演算法" class="headerlink" title="演算法"></a>演算法</h2><p><a href="https://www.csie.ntu.edu.tw/~sprout/algo2023/">2023 資訊之芽上課講義</a></p>
-<h2 id="化學"><a href="#化學" class="headerlink" title="化學"></a>化學</h2><p><a href="https://youtube.com/playlist?list=PL1YnMgoqiBEp7ghBLlSR2w6jALPWOskMp&amp;si=bHLHpyVBciilqvOw">高三上 - 選修化學 (上)</a></p>
-<h2 id="數學"><a href="#數學" class="headerlink" title="數學"></a>數學</h2><p><a href="https://ccjou.wordpress.com">線代啟示錄 (很多線性代數的證明都講解得很仔細，很推)</a><br><a href="https://www.youtube.com/@blackpenredpen/playlists">blackpenredpen 頻道 (主要是微積分跟極限，一樣很推)</a></p>
+<h2 id="地科">地科</h2>
+<p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a></p>
+<h2 id="hexo">Hexo</h2>
+<p><a href="https://hexo.io/zh-tw/docs/tag-plugins.html">Tag Plugins</a>
+<pangu> </pangu><a href="https://zenreal.github.io/posts/44730">很多 NexT 功能介紹</a> <pangu> </pangu><a href="https://markdown.tw">MarkDown 語法說明</a></p>
+<h2 id="物理">物理</h2>
+<p><a href="https://sites.google.com/site/phyelearning/">高中物理線上學習網</a></p>
+<h2 id="演算法">演算法</h2>
+<p><a href="https://www.csie.ntu.edu.tw/~sprout/algo2023/">2023 資訊之芽上課講義</a></p>
+<h2 id="化學">化學</h2>
+<p><a href="https://youtube.com/playlist?list=PL1YnMgoqiBEp7ghBLlSR2w6jALPWOskMp&amp;si=bHLHpyVBciilqvOw">高三上 - 選修化學 (上)</a></p>
+<h2 id="數學">數學</h2>
+<p><a href="https://ccjou.wordpress.com">線代啟示錄 (很多線性代數的證明都講解得很仔細，很推)</a>
+<a href="https://www.youtube.com/@blackpenredpen/playlists">blackpenredpen 頻道 (主要是微積分跟極限，一樣很推)</a></p>
 ]]></content>
       <categories>
         <category>熊貓文</category>
@@ -91,16 +797,114 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<h2 id="我的網站做好啦">我的網站做好啦～～</h2>
+<p>花了應該快十小時，好累 😮‍💨<br>
+<span id="more"></span> 看到好多厲害的人都有自己的
+Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del>
+之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ 還差 favicon
+跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
+<h2 id="更新-202378">更新 2023/7/8</h2>
+<p>我來放頭像跟 favicon 嘍～因為不會畫畫，所以學了 stable
+diffusion，不過我電腦很爛，一張 512*512 的圖就要快一分鐘，但至少結果看起來還不錯，開心開心～
+<img data-src="/images/Panda_Me.png" alt="頭像"> <img data-src="/images/favicon_180.png" alt="Favicon"></p>
+<h2 id="再更新-2023813">再更新 2023/8/13</h2>
+<p>我有自己的網域啦 <a href="https://moon-jam.me">https://moon-jam.me</a>，結果這個月更新只有一點點，嗚嗚嗚，本來想說最少每週三更的，但真的太忙了，而且我有點小偷懶🫠，但考慮到要讀書的關係，到有大學之前可能都得這樣佛系更新🥲🥲🥲</p>
+]]></content>
+      <categories>
+        <category>熊貓文</category>
+      </categories>
+      <tags>
+        <tag>熊貓文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APCS 矩陣轉換 (zerojudge b965)</title>
+    <url>/zerojudge_b965/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b965">題目網址</a></p>
+<p>矩陣是將一群元素整齊的排列成一個矩形，在矩陣中的橫排稱為列 (row)
+，直排稱為行 (column) ，其中以 Xij 來表示 矩陣 X 中的第 i 列第 j
+行的元素。 我們可以對矩陣定義兩種操作如下：
+　　翻轉：即第一列與最後一列交換、第二列與倒數第二列交換、… 依此類推。
+　　旋轉：將矩陣以順時針方向轉 90 度。 一個 矩陣 A
+可以經過一連串的旋轉與翻轉操作後，轉換成 新矩陣 B 。 給定 矩陣 B
+和一連串的操作，請算出原始的 矩陣 A 。</p>
+</div>
+<span id="more"></span>
+<div class="note info"><p>解題思路：
+這題題目測資範圍 R,C,M 都小於 10，如果直接做的話複雜度應該就是 O (RCM)（就是按照題目的意思把輸入的矩陣反著操作），限制 2s 應該是可以順利通關</p>
+<p>🌟因為是要從 B 推回原先的矩陣，因此需要將輸入指令倒著走一次（例如原本是 A 矩陣翻轉、翻轉、順時針旋轉 90 度得到 B 矩陣，就要將 B 矩陣逆時針旋轉 90 度、翻轉、翻轉，才能變成原先的 A 矩陣），因此現在問題就只剩下如何完成翻轉和逆時針旋轉 90 度了
+1.
+翻轉：這邊是指上下翻轉，因此較為簡單，只要將第 i 列第 j 行的元素跟第 (c-i) 列第 j 行的元素交換即可，且其中 i 跟 (c-i) 會在一半的地方交會，且在 c 是奇數時 (c+1)/2 的那行可以不做任何操作，因此讓 i 從 0~c/2 執行過一次即可
+2.
+逆時針旋轉 90 度：這個稍微難一點，可以想做事將左上角固定，逆時針旋轉 90 度，如此一來可以發現就是將 (i,j) 位置的元素移動到 (r-j-1,i)
+<img data-src="https://i.imgur.com/nLZVb9U.png" alt="逆時針旋轉90度示意圖"></p>
+</div>
+<figure class="highlight c++"><figcaption><span>b965. 第 2 題 矩陣轉換 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> arr[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line"><span class="type">int</span> c,r,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">turn</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> tmp[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;c; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = r<span class="number">-1</span>; j&gt;=<span class="number">0</span>; j--)</span><br><span class="line">            tmp[r<span class="number">-1</span>-j][i]=arr[i][j];</span><br><span class="line">    <span class="built_in">swap</span>(c,r);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; c; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++)</span><br><span class="line">            arr[i][j] = tmp[i][j];</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;c/<span class="number">2</span>; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++)</span><br><span class="line">            <span class="built_in">swap</span>(arr[i][j], arr[c<span class="number">-1</span>-i][j]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; c &gt;&gt; r &gt;&gt; m){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; c; i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++)</span><br><span class="line">                cin &gt;&gt; arr[i][j];</span><br><span class="line">        <span class="type">bool</span> cmd[<span class="number">11</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;m; i++) cin &gt;&gt; cmd[i];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = m<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--){</span><br><span class="line">            <span class="keyword">if</span>(cmd[i]) <span class="built_in">reverse</span>();</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">turn</span>();</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; c &lt;&lt; <span class="string">' '</span> &lt;&lt; r &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; c; i++){</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++){</span><br><span class="line">                cout &lt;&lt; arr[i][j];</span><br><span class="line">                <span class="keyword">if</span>(j&lt;r<span class="number">-1</span>) cout &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">            }</span><br><span class="line">            cout &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure>
+<img data-src="https://i.imgur.com/mBgS1b7.png" alt="AC的Submission～">
+<figcaption aria-hidden="true">AC 的 Submission～</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APCS 線段覆蓋長度 (zerojudge b966/f855)</title>
+    <url>/zerojudge_b966_f855/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966">題目網址</a> (<a href="https://zerojudge.tw/ShowProblem?problemid=f855">測資加強版</a>)</p>
+<p>給定一維座標上一些線段，求這些線段所覆蓋的長度，注意，重疊的部分只能算一次。
+例如給定 4 個線段 (5, 6)、(1, 2)、(4, 8)、(7,
+9)，如下圖，線段覆蓋長度為 6 (包含 1～2、4～9)。 <img data-src="https://i.imgur.com/Oq742JS.png" alt="覆蓋了12、49共6個格子"></p>
+</div>
+<span id="more"></span>
+<div class="note info"><p>解題思路：
+如果直接開個陣列記錄每格格子走過了沒，最後再去檢查，但時間複雜度會是 O (NL) 會到 10^11 次方 (L 代表座標範圍)，肯定會 TLE，改成用 priority
+queue（Heap）去存輸入，讓左界是由小到大排列（或者可以一開始用陣列儲存之後再 sort，時間複雜度一樣不變是 O (N
+log
+N)），並紀錄目前右界最大值，就可以確定後續資料的左界不會比前面的小，並用 result 紀錄目前覆蓋的格子數，這樣只要判斷以下兩種狀況</p>
+<ol type="1">
+<li>輸入的左界目前右界最大值還大：將 result 加上整段區間長度，並更新右界最大值為輸入的右界</li>
+<li>輸入的左界目前右界最大值小且輸入的右界也比前右界最大值大：將 result 加上輸入右界到目前最大值的範圍，並更新右界最大值為輸入的右界
+（若輸入的左界目前右界最大值小且輸入的右界也比前右界最大值小，則目前這個區間都在目前已涵蓋的格子內）</li>
+</ol>
+<p>而如此一來就可以讓時間複雜度小至 O (N log
+N)，能夠在題目給定時間內完成</p>
+<p>🌟 可以搭配 pair 使用會比較方便</p>
+</div>
+<figure class="highlight c++"><figcaption><span>APCS 線段覆蓋長度 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> l first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> r second</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;pii, vector&lt;pii&gt;, greater&lt;pii&gt; &gt; pq;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, tmp1, tmp2; i&lt;n; i++)</span><br><span class="line">        cin &gt;&gt; tmp1 &gt;&gt; tmp2, pq.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(tmp1, tmp2));</span><br><span class="line">    <span class="type">int</span> max=pq.<span class="built_in">top</span>().l, result=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(!pq.<span class="built_in">empty</span>()) {</span><br><span class="line">        pii cur = pq.<span class="built_in">top</span>();</span><br><span class="line">        pq.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(cur.r&lt;=max) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(cur.first&lt;=max) result+=cur.r-max, max=cur.r;</span><br><span class="line">        <span class="keyword">else</span> result+=(cur.r-cur.l), max=cur.r;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; result &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="https://i.imgur.com/iXeRWtQ.png" alt="AC的Submission～">
+<img data-src="https://i.imgur.com/f5e2FHF.png" alt="zerojudge f855 測資加強版"></p>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>APCS 血緣關係 (zerojudge b967)</title>
     <url>/zerojudge_b967/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b967">題目網址</a></p>
 </div>
 <span id="more"></span>
-<p>$dis(p_i,p_j) = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$<br></p><div class="note info"><p>解題思路：<br>這題是要求所謂的 <mark class="label warning">樹直徑</mark>（整個祖譜就可以看成是一顆樹，要求相距最遠就是樹直徑了），</p>
-<p>🌟 如果確定時間複雜度是 O (n) 但還是 TLE 的話，有可能是你沒加上輸入輸出優化 <code>ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);</code>，但這題好像有點刁鑽，所以可能還需要再快一些才會過，像是我後來就發現不能夠 memset，因為不用每次都把整個陣列初始化，有要用到的再設回 0 就好了，另外也有人講到可以把 cin/cout 全部改成 printf/scanf 會更快，不過我是把 memset 改掉之後就成功 AC 了，或者你可以試試看多丟幾次，我丟上去 AC 的程式執行時間有差到快一秒的，可以多試幾次。</p>
+<p><span class="math inline">\(dis(p_i,p_j) =
+\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}\)</span> </p><div class="note info"><p>解題思路： 這題是要求所謂的
+<mark class="label warning">樹直徑</mark>（整個祖譜就可以看成是一顆樹，要求相距最遠就是樹直徑了），</p>
+<p>🌟 如果確定時間複雜度是 O (n)
+但還是 TLE 的話，有可能是你沒加上輸入輸出優化 <code>ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);</code>，但這題好像有點刁鑽，所以可能還需要再快一些才會過，像是我後來就發現不能夠 memset，因為不用每次都把整個陣列初始化，有要用到的再設回 0 就好了，另外也有人講到可以把 cin/cout 全部改成 printf/scanf 會更快，不過我是把 memset 改掉之後就成功 AC 了，或者你可以試試看多丟幾次，我丟上去 AC 的程式執行時間有差到快一秒的，可以多試幾次。</p>
 </div><p></p>
 <figure class="highlight c++"><figcaption><span>APCS 血緣關係 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Max 100001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; edge[Max];</span><br><span class="line"><span class="type">bool</span> vis[Max];</span><br><span class="line"><span class="type">int</span> max_dis=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> node)</span></span>{</span><br><span class="line">    <span class="comment">//我定義的dis是節點個數，因此在最後輸出時需要-1</span></span><br><span class="line">    <span class="comment">//小孩要回傳他到自己最深的層數，母親記錄子代最大血緣距離（小孩最大的前兩個相加）、自己到最深的距離(最深距離+1)</span></span><br><span class="line">    <span class="comment">//並拿去跟max_dis取max，終端條件是沒有小孩的節點，回傳0</span></span><br><span class="line">    <span class="keyword">if</span>(vis[node]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    vis[node]=<span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> child_max_rank=<span class="number">0</span>, child_second_max_rank=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> child : edge[node]){</span><br><span class="line">        <span class="type">int</span> rank=<span class="built_in">dfs</span>(child);</span><br><span class="line">        <span class="keyword">if</span>(rank&gt;child_max_rank) child_second_max_rank=child_max_rank,child_max_rank=rank;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(rank&gt;child_second_max_rank) child_second_max_rank=rank;</span><br><span class="line">    }</span><br><span class="line">    max_dis = <span class="built_in">max</span>(max_dis,child_max_rank+child_second_max_rank+<span class="number">1</span>);</span><br><span class="line">    <span class="comment">// cout &lt;&lt; node &lt;&lt; ' '&lt;&lt; child_max_rank &lt;&lt; ' ' &lt;&lt; child_second_max_rank &lt;&lt; ' ' &lt;&lt; max_dis &lt;&lt; '\n';</span></span><br><span class="line">    <span class="keyword">return</span> child_max_rank+<span class="number">1</span>; <span class="comment">//加上自己到子代的那層</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; n){</span><br><span class="line">        max_dis=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++) edge[i].<span class="built_in">clear</span>(), vis[i]=<span class="number">0</span>; <span class="comment">//因為節點事是0~n所以是&lt;n而不是&lt;n-1</span></span><br><span class="line">        <span class="comment">// memset(vis, 0, sizeof(vis)); 這裡用memset會TLE，應該就是說不用每次都把100001個都改掉</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>, tmp1, tmp2; i&lt;n<span class="number">-1</span>; i++)</span><br><span class="line">            cin&gt;&gt;tmp1&gt;&gt;tmp2, edge[tmp1].<span class="built_in">push_back</span>(tmp2), edge[tmp2].<span class="built_in">push_back</span>(tmp1);</span><br><span class="line">            <span class="comment">//雖然題目聽起來是有向圖，但為了後續dfs遍歷整棵樹，這邊就用無向圖紀錄，之後再定向即可</span></span><br><span class="line">        <span class="built_in">dfs</span>(<span class="number">0</span>);</span><br><span class="line">        cout &lt;&lt; max_dis<span class="number">-1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/mj7e6IY.png" alt="AC的Submission～"></p>
+<figure>
+<img data-src="https://i.imgur.com/mj7e6IY.png" alt="AC的Submission～">
+<figcaption aria-hidden="true">AC 的 Submission～</figcaption>
+</figure>
 ]]></content>
       <categories>
         <category>程式題解</category>
@@ -111,66 +915,23 @@
       </tags>
   </entry>
   <entry>
-    <title>APCS 線段覆蓋長度 (zerojudge b966/f855)</title>
-    <url>/zerojudge_b966_f855/</url>
-    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966">題目網址</a> (<a href="https://zerojudge.tw/ShowProblem?problemid=f855">測資加強版</a>)</p>
-<p>給定一維座標上一些線段，求這些線段所覆蓋的長度，注意，重疊的部分只能算一次。<br>例如給定 4 個線段 (5, 6)、(1, 2)、(4, 8)、(7, 9)，如下圖，線段覆蓋長度為 6 (包含 1～2、4～9)。<br><img data-src="https://i.imgur.com/Oq742JS.png" alt="覆蓋了1~2、4~9共6個格子"></p>
-</div>
-<span id="more"></span>
-<div class="note info"><p>解題思路：<br>如果直接開個陣列記錄每格格子走過了沒，最後再去檢查，但時間複雜度會是 O (NL) 會到 10^11 次方 (L 代表座標範圍)，肯定會 TLE，改成用 priority queue（Heap）去存輸入，讓左界是由小到大排列（或者可以一開始用陣列儲存之後再 sort，時間複雜度一樣不變是 O (N log N)），並紀錄目前右界最大值，就可以確定後續資料的左界不會比前面的小，並用 result 紀錄目前覆蓋的格子數，這樣只要判斷以下兩種狀況</p>
-<ol>
-<li>輸入的左界目前右界最大值還大：將 result 加上整段區間長度，並更新右界最大值為輸入的右界</li>
-<li>輸入的左界目前右界最大值小且輸入的右界也比前右界最大值大：將 result 加上輸入右界到目前最大值的範圍，並更新右界最大值為輸入的右界<br>（若輸入的左界目前右界最大值小且輸入的右界也比前右界最大值小，則目前這個區間都在目前已涵蓋的格子內）</li>
-</ol>
-<p>而如此一來就可以讓時間複雜度小至 O (N log N)，能夠在題目給定時間內完成</p>
-<p>🌟 可以搭配 pair 使用會比較方便</p>
-</div>
-<figure class="highlight c++"><figcaption><span>APCS 線段覆蓋長度 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> l first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> r second</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;pii, vector&lt;pii&gt;, greater&lt;pii&gt; &gt; pq;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, tmp1, tmp2; i&lt;n; i++)</span><br><span class="line">        cin &gt;&gt; tmp1 &gt;&gt; tmp2, pq.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(tmp1, tmp2));</span><br><span class="line">    <span class="type">int</span> max=pq.<span class="built_in">top</span>().l, result=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(!pq.<span class="built_in">empty</span>()) {</span><br><span class="line">        pii cur = pq.<span class="built_in">top</span>();</span><br><span class="line">        pq.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(cur.r&lt;=max) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(cur.first&lt;=max) result+=cur.r-max, max=cur.r;</span><br><span class="line">        <span class="keyword">else</span> result+=(cur.r-cur.l), max=cur.r;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; result &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/iXeRWtQ.png" alt="AC的Submission～"><br><img data-src="https://i.imgur.com/f5e2FHF.png" alt="zerojudge f855 測資加強版"></p>
-]]></content>
-      <categories>
-        <category>程式題解</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>APCS 2017-0304-1 秘密差 (zerojudge c290)</title>
     <url>/zerojudge_c290/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=c290">題目網址</a></p>
-<p>將一個十進位正整數的奇數位數的和稱為 A ，偶數位數的和稱為 B，則 A 與 B 的絕對差值 |A －B| 稱為這個正整數的秘密差。<br>例如： 263541 的秘密差是 |(6+5+1) － (2+3+4)|= 3 。<br>給定一個 十進位正整數 X，請找出 X 的秘密差。</p>
+<p>將一個十進位正整數的奇數位數的和稱為 A
+，偶數位數的和稱為 B，則 A 與 B 的絕對差值 |A －B| 稱為這個正整數的秘密差。
+例如： 263541 的秘密差是 |(6+5+1) － (2+3+4)|= 3 。 給定一個
+十進位正整數 X，請找出 X 的秘密差。</p>
 </div>
 <span id="more"></span>
-<div class="note info"><p>解題思路：<br>就直接做，不用什麼特別的技巧</p>
+<div class="note info"><p>解題思路： 就直接做，不用什麼特別的技巧</p>
 <p>🌟用 string 讀輸入，方便讀取奇位數跟偶位數的值</p>
 </div>
 <figure class="highlight c++"><figcaption><span>APCS 2017-0304-1 秘密差 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    string input;</span><br><span class="line">    cin &gt;&gt; input;</span><br><span class="line">    <span class="type">int</span> odd = <span class="number">0</span>, even = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; input[i]; i++){</span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">2</span>) even += input[i]-<span class="string">'0'</span>;</span><br><span class="line">        <span class="keyword">else</span> odd += input[i]-<span class="string">'0'</span>;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; <span class="built_in">abs</span>(odd-even) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/vMzsXX4.png" alt="AC的Submission～"></p>
-]]></content>
-      <categories>
-        <category>程式題解</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>APCS 矩陣轉換 (zerojudge b965)</title>
-    <url>/zerojudge_b965/</url>
-    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=b965">題目網址</a></p>
-<p>矩陣是將一群元素整齊的排列成一個矩形，在矩陣中的橫排稱為列 (row) ，直排稱為行 (column) ，其中以 Xij 來表示 矩陣 X 中的第 i 列第 j 行的元素。<br>我們可以對矩陣定義兩種操作如下：<br>　　翻轉：即第一列與最後一列交換、第二列與倒數第二列交換、… 依此類推。<br>　　旋轉：將矩陣以順時針方向轉 90 度。<br>一個 矩陣 A 可以經過一連串的旋轉與翻轉操作後，轉換成 新矩陣 B 。<br>給定 矩陣 B 和一連串的操作，請算出原始的 矩陣 A 。</p>
-</div>
-<span id="more"></span>
-<div class="note info"><p>解題思路：<br>這題題目測資範圍 R,C,M 都小於 10，如果直接做的話複雜度應該就是 O (RCM)（就是按照題目的意思把輸入的矩陣反著操作），限制 2s 應該是可以順利通關</p>
-<p>🌟因為是要從 B 推回原先的矩陣，因此需要將輸入指令倒著走一次（例如原本是 A 矩陣翻轉、翻轉、順時針旋轉 90 度得到 B 矩陣，就要將 B 矩陣逆時針旋轉 90 度、翻轉、翻轉，才能變成原先的 A 矩陣），因此現在問題就只剩下如何完成翻轉和逆時針旋轉 90 度了</p>
-<ol>
-<li>翻轉：這邊是指上下翻轉，因此較為簡單，只要將第 i 列第 j 行的元素跟第 (c-i) 列第 j 行的元素交換即可，且其中 i 跟 (c-i) 會在一半的地方交會，且在 c 是奇數時 (c+1)/2 的那行可以不做任何操作，因此讓 i 從 0~c/2 執行過一次即可</li>
-<li>逆時針旋轉 90 度：這個稍微難一點，可以想做事將左上角固定，逆時針旋轉 90 度，如此一來可以發現就是將 (i,j) 位置的元素移動到 (r-j-1,i)<br><img data-src="https://i.imgur.com/nLZVb9U.png" alt="逆時針旋轉90度示意圖"></li>
-</ol>
-</div>
-<figure class="highlight c++"><figcaption><span>b965. 第 2 題 矩陣轉換 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> arr[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line"><span class="type">int</span> c,r,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">turn</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> tmp[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;c; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = r<span class="number">-1</span>; j&gt;=<span class="number">0</span>; j--)</span><br><span class="line">            tmp[r<span class="number">-1</span>-j][i]=arr[i][j];</span><br><span class="line">    <span class="built_in">swap</span>(c,r);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; c; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++)</span><br><span class="line">            arr[i][j] = tmp[i][j];</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;c/<span class="number">2</span>; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++)</span><br><span class="line">            <span class="built_in">swap</span>(arr[i][j], arr[c<span class="number">-1</span>-i][j]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; c &gt;&gt; r &gt;&gt; m){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; c; i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++)</span><br><span class="line">                cin &gt;&gt; arr[i][j];</span><br><span class="line">        <span class="type">bool</span> cmd[<span class="number">11</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;m; i++) cin &gt;&gt; cmd[i];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = m<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--){</span><br><span class="line">            <span class="keyword">if</span>(cmd[i]) <span class="built_in">reverse</span>();</span><br><span class="line">            <span class="keyword">else</span> <span class="built_in">turn</span>();</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; c &lt;&lt; <span class="string">' '</span> &lt;&lt; r &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; c; i++){</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j&lt;r; j++){</span><br><span class="line">                cout &lt;&lt; arr[i][j];</span><br><span class="line">                <span class="keyword">if</span>(j&lt;r<span class="number">-1</span>) cout &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">            }</span><br><span class="line">            cout &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/mBgS1b7.png" alt="AC的Submission～"></p>
+<figure>
+<img data-src="https://i.imgur.com/vMzsXX4.png" alt="AC的Submission～">
+<figcaption aria-hidden="true">AC 的 Submission～</figcaption>
+</figure>
 ]]></content>
       <categories>
         <category>程式題解</category>
@@ -183,501 +944,29 @@
     <title>APCS 2017-0304-2 小群體 (zerojudge c291)</title>
     <url>/zerojudge_c291/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=c291">題目網址</a></p>
-<p>Q 同學正在習程式， P 老師出了以下的題目讓他練習。<br>一群人在一起時經常會形成一個一個的小群體。假設有 N 個人，編號由 0 到 N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友）， 在本題中，每個人的好友編號絕對不會重複，也就是說 0 到 N-1 每個數字 都恰好出現一次。<br>本題的問題是：按照順序輸入每個人好友編號，計算出總共有幾小群體。</p>
+<p>Q 同學正在習程式， P 老師出了以下的題目讓他練習。
+一群人在一起時經常會形成一個一個的小群體。假設有 N 個人，編號由 0 到
+N-1，每個人都寫下他最好朋友的編號（最好朋友有可能是他自己的編號，如果他自己沒有其他好友），
+在本題中，每個人的好友編號絕對不會重複，也就是說 0 到 N-1 每個數字
+都恰好出現一次。
+本題的問題是：按照順序輸入每個人好友編號，計算出總共有幾小群體。</p>
 </div>
 <span id="more"></span>
-<div class="note info"><p>解題思路：<br>這題剛看完之後一開始想到用併查集 (Disjoint-set)，後來發現我想太多，我後來用 dfs 遍歷看會不會重複拜訪到就完成了。</p>
+<div class="note info"><p>解題思路：
+這題剛看完之後一開始想到用併查集 (Disjoint-set)，後來發現我想太多，我後來用 dfs 遍歷看會不會重複拜訪到就完成了。</p>
 <p>🌟可以看成是好幾顆聯通的節點，題目問的就是看說總共有幾群節點，因為有規定數字不會重複，所以當出現環（子孫接回祖先的時候），就代表這個群體結束了</p>
 </div>
 <figure class="highlight c++"><figcaption><span>APCS 2017-0304-2 小群體 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Max 50005</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> vis[Max];</span><br><span class="line"><span class="type">int</span> people[Max];</span><br><span class="line"><span class="type">int</span> group = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> i)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[i]) <span class="keyword">return</span>;</span><br><span class="line">    vis[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(vis[people[i]])</span><br><span class="line">        group++;</span><br><span class="line">    <span class="built_in">dfs</span>(people[i]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; n; i++) cin &gt;&gt; people[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt; n; i++) <span class="built_in">dfs</span>(people[i]);</span><br><span class="line">    cout &lt;&lt; group &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/EX8G4n9.png" alt="AC的Submission～"></p>
+<figure>
+<img data-src="https://i.imgur.com/EX8G4n9.png" alt="AC的Submission～">
+<figcaption aria-hidden="true">AC 的 Submission～</figcaption>
+</figure>
 ]]></content>
       <categories>
         <category>程式題解</category>
       </categories>
       <tags>
         <tag>APCS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 一些好用的酷東東</title>
-    <url>/NexT-some-cool-tools/</url>
-    <content><![CDATA[<script type="math/tex; mode=display">\begin{equation} \label{eq2}
-\begin{aligned}
-a &= b + c \\
-  &= d + e + f + g \\
-  &= h + i
-\end{aligned}
-\end{equation}</script><script type="math/tex; mode=display">x+1\over\sqrt{1-x^2} \tag{i}\label{eq_tag}</script><p>quation $\eqref{eq_tag}$ use <code>\tag{}</code> instead of automatic numbering.</p>
-<script type="math/tex; mode=display">\begin{equation} \label{eq1}
-e=mc^2
-\end{equation}</script><script type="math/tex; mode=display">\begin{equation} \label{eq1}
-e=mc^2
-\end{equation}</script><p>O(N^2)</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在這篇中所講述的是一些可以沒有，但是有的話<strong>可能</strong>會很方便的酷東東</p>
-<span id="more"></span>
-<ol>
-<li><a href="/NexT-some-cool-tools/#vscode-imgur">vscode-imgur</a></li>
-<li><a href="/NexT-some-cool-tools/#閱讀更多按鈕">閱讀更多按鈕</a></li>
-<li><a href="/NexT-some-cool-tools/#標題前的圖示">標題前的圖示</a></li>
-<li><a href="/NexT-some-cool-tools/#MathJax">MathJax</a></li>
-</ol>
-<h2 id="vscode-imgur"><a href="#vscode-imgur" class="headerlink" title="vscode-imgur"></a>vscode-imgur</h2><p><img data-src="https://i.imgur.com/m8LaSvK.png" alt="vscode-imgur"><br><img data-src="https://i.imgur.com/jPm7V6t.gif" alt="實際執行"><br>就是要申請 API 讓 vscode 使用，詳細教學可以<a href="https://israynotarray.com/hexo/20201012/473855281/">看這邊</a></p>
-<h2 id="閱讀更多按鈕"><a href="#閱讀更多按鈕" class="headerlink" title="閱讀更多按鈕"></a>閱讀更多按鈕</h2><p>如果沒有這個的話在一開始首頁的地方全部文章都會是展開的，這樣對於要翻看有哪些內容就很不方便，網站整體觀感也會不好，因此可以新增一個閱讀更多的按鈕，設定每篇文章要顯示多少內容給使用者看，這個部分我有在 <a href="/SEO-Search-Engine-Optimization/#新增description">SEO 優化的 description 中說明</a></p>
-<h2 id="標題前的圖示"><a href="#標題前的圖示" class="headerlink" title="標題前的圖示"></a>標題前的圖示</h2><p>這個有一個比較簡單的方法，在 <code>theme/NexT(改成你的主題名稱)/source/css/main.styl</code>，貼上以下程式碼，裡面的符號可以改成自己的</p>
-<figure class="highlight css"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/*修改h2前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"🔍"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*修改h3前面圖標*/</span></span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>{</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"📌"</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">16px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>另外一個方法就是到最外層資料夾中的 <code>source</code> 新建一個<code>_data</code> 的資料夾，然後在裡面新增 <code>styles.styl</code> 這個檔案（也就是 <code>source/data/styles.styl</code>，然後將剛剛上面的程式碼貼在裡面，最後到 <code>theme/NexT(改成你的主題名稱)/_config.yml</code> 將 custom_file_path 的最後一項 <code>style: source/_data/styles.styl</code> 的註解取消，就完成了</p>
-<p><img data-src="https://i.imgur.com/ndD3yh1.png" alt="開啟custom_file_path設定"></p>
-<h2 id="MathJax"><a href="#MathJax" class="headerlink" title="MathJax"></a>MathJax</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></tbody></table></figure>
-<script type="math/tex; mode=display">
-A = \begin{bmatrix}
-        a_{11}    & a_{12}    & ...    & a_{1n}\\
-        a_{21}    & a_{22}    & ...    & a_{2n}\\
-        a_{31}    & a_{22}    & ...    & a_{3n}\\
-        \vdots    & \vdots    & \ddots & \vdots\\
-        a_{n1}    & a_{n2}    & ... & a_{nn}\\
-    \end{bmatrix} , b = \begin{bmatrix}
-        b_{1}  \\
-        b_{2}  \\
-        b_{3}  \\
-        \vdots \\
-        b_{n}  \\
-    \end{bmatrix}</script><h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a></li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li> 剩下的一些小工具 ✅</li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SEO 配置 (搜尋引擎最佳化)</title>
-    <url>/SEO-Search-Engine-Optimization/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>什麼是 SEO 呢？</p>
-<blockquote>
-<p>搜尋引擎最佳化（英語：search engine optimization，縮寫為 SEO）是透過了解搜尋引擎的運作規則來調整網站，以及提高目的網站在有關搜尋引擎內排名的方式。(摘自維基百科)</p>
-</blockquote>
-<p>SEO 優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓更多人看到的過程，接下來我會先從怎麼知道目前網頁的 SEO 狀況，再一一列舉優化的方法，如果只是想要知道如何能在 google 上搜尋到自己網頁的人可以直接看最後一項 <a href="/SEO-Search-Engine-Optimization/#google-search-console">google search console</a> 的使用方式。</p>
-<span id="more"></span>
-<ol>
-<li><a href="/SEO-Search-Engine-Optimization/#網頁目前SEO狀況">網頁目前 SEO 狀況</a></li>
-<li><a href="/SEO-Search-Engine-Optimization/#網頁優化方法">網頁優化方法</a><br>2.1. <a href="/SEO-Search-Engine-Optimization/#網址">網址</a><br>2.2. <a href="/SEO-Search-Engine-Optimization/#新增description">新增 description</a><br>2.3. <a href="/SEO-Search-Engine-Optimization/#Nofollow">Nofollow</a><br>2.4. <a href="/SEO-Search-Engine-Optimization/#sitemap">sitemap</a><br>2.5. <a href="/SEO-Search-Engine-Optimization/#robots-txt">robots.txt</a><br>2.6. <a href="/SEO-Search-Engine-Optimization/#Google-Search-Console">Google Search Console</a></li>
-</ol>
-<h2 id="網頁目前SEO狀況"><a href="#網頁目前SEO狀況" class="headerlink" title="網頁目前SEO狀況"></a>網頁目前 SEO 狀況</h2><p>要優化前當然要先看看自己的目前的狀況，可以到 <a href="https://pagespeed.web.dev">PageSpeed Insights</a>，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況<br><img data-src="https://i.imgur.com/vyUXRfU.png" alt="以我的網頁為例"><br>另外可以搜尋 <code>site:網域</code>，看看自己的網站是否有被收錄到 google 內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題<br><img data-src="https://i.imgur.com/kftLZgg.png" alt="搜尋site:網域"></p>
-<h2 id="網頁優化方法"><a href="#網頁優化方法" class="headerlink" title="網頁優化方法"></a>網頁優化方法</h2><h3 id="網址"><a href="#網址" class="headerlink" title="網址"></a>網址</h3><p>搜尋引擎不喜歡過長或是索引過多的網址 (例如說 <code>https://example.com/abc/def/ghi/jkl/mn</code>)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是 <code>success@SEO-Search-Engine-Optimization.md</code>，如果覺得這樣太麻煩的話可以使用 <a href="https://github.com/rozbo/hexo-abbrlink">abbrlink 插件</a><br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="把網址設定成檔案名稱"></p>
-<h3 id="新增description"><a href="#新增description" class="headerlink" title="新增description"></a>新增 description</h3><p>添加 description 可以讓使用者更快速了解你的文章在講什麼，所以對 SEO 也是很重要的部分，而我們需要分別在首頁和文章都個別設定相關的描述</p>
-<p><span id="inline-blue">首頁</span><br>到最外層的<code>_config.yml</code> 去修改 description<br><img data-src="https://i.imgur.com/ory8GYA.png" alt="修改最外層_config.yml的description"></p>
-<p><span id="inline-blue">文章</span><br>要新增文章的 description 有兩中方法，一個是在文章最上端的細節設定新增 <code>description: 你的description</code>，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作 description，作法很簡單，在前言的底下新增一行 <code>&lt;!--more--&gt;</code>，就完成了<br><img data-src="https://i.imgur.com/JKfxDSQ.png" alt="新增<!--more-->作為description"></p>
-<p>另外補充，可以在主題內的<code>_config.yml</code>，將 <code>read_more_btn</code> 設定為 <code>true</code>，如此一來在瀏覽你的網站時，就只會將文章中 description 的部分呈現出來，讓可讀性更高<br><img data-src="https://i.imgur.com/meLFbHF.png" alt="將read_more_btn設定為true"><br><img data-src="https://i.imgur.com/FoJcPqo.png" alt="在網頁就會出現閱讀全文的按鈕"></p>
-<h3 id="Nofollow"><a href="#Nofollow" class="headerlink" title="Nofollow"></a>Nofollow</h3><p>關於 nofollow 是什麼詳細可以看<a href="https://welly.tw/serp-rank-optimization/what-is-nofollow">這篇文章</a>，總之就是避免你的搜尋引擎權重值被別人分走，使用的是這個<a href="https://github.com/hexojs/hexo-filter-nofollow">插件</a>，如果沒有要設定什麼特別的東西的話，直接執行 <code>npm install hexo-filter-nofollow</code>，就完成了</p>
-<h3 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h3><p>sitemap 就是用來告訴搜尋引擎我這個網站有哪些網頁，方便搜尋引擎索引，要使用的插件是<a href="https://github.com/hexojs/hexo-generator-sitemap">這個</a>，執行 <code>npm install hexo-generator-sitemap</code> 下載插件<br>接著到最外層的<code>_config.yml</code>，添加以下程式碼就完成了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
-<p>可以試試看<code>你的網址/sitemap.xml</code>（如果是在本機跑的話應該就是 <code>localhost:4000/sitemap.xml</code>，有沒有出現東西，有的話就是成功了</p>
-<h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>到最外層資料夾中的 <code>source</code> 新增一個檔案 <code>robots.txt</code><br><img data-src="https://i.imgur.com/Lepvzrl.png" alt="新增robots.txt"><br>接下來再 <code>robots.txt</code> 內貼上以下內容，記得 Sitemap 後面要改成你自己的網址</p>
-<figure class="highlight plaintext"><figcaption><span>robots.txt</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/ </span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的網址/sitemap.xml</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p><span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，<code>*</code> 就是全部都可以<br><span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有 <code>Allow: /</code> 就代表全部都可以，後面那些都是保平安用的（xd<br><span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的<br><span id="inline-blue">Sitemap</span> 就是上面講到的 sitemap.xml</p>
-<h3 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h3><p>這個是最重要的一步，前面那些事讓你的 SEO 更好，但如果沒有這個你的網頁大概根本搜尋不到，進入 <a href="https://search.google.com/search-console/about">Google Search Console</a>，新增資源<br><img data-src="https://i.imgur.com/tw67jVX.png" alt="新增資源"></p>
-<p>如果是使用 github page 的就只能用右邊的那個，他會叫你把一個 html 檔放到你的網頁中，你就將它下載，然後儲存到 <code>themes/NexT(或你用其他主題)/source</code>，重新部署之後稍等一下應該就完成了</p>
-<p>如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的 TXT 紀錄複製下來，然後添加網域的 DNS 設定，我這裡是用 namecheap，各家的使用方式也都大同小異，新增 <code>TXT Record</code>，<code>Host</code> 設定 <code>@</code>，<code>Value</code> 設定剛剛複製的 TXT 紀錄，幾分鐘後就會通過驗證了<br></p><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/4XAblPy.png" alt="複製TXT紀錄"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/y9sKq0R.png" alt="DNS設定"></div></div></div><p></p>
-<p>進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明</p>
-<p><span id="inline-blue">搜尋網頁索引狀態</span><br>可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊<code>要求建立索引</code>，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上<br><img data-src="https://i.imgur.com/sifijQS.png" alt="搜尋網頁索引狀態"></p>
-<p><span id="inline-blue">檢查網頁索引狀態</span><br>這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態<br><img data-src="https://i.imgur.com/saKZCae.png" alt="檢查網頁索引狀態"></p>
-<p><span id="inline-blue">新增 Sitemap</span><br>在這個頁面就是用來把之前生成的 Sitemap 交給 google 看，讓他更清楚你的網頁們<br><img data-src="https://i.imgur.com/CrguGDg.png" alt="新增Sitemap"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你的網頁現在已經可以在 google 上被查詢上了，可以在使用 <a href="https://pagespeed.web.dev">PageSpeed Insights</a> 看看 SEO 的分數有沒有上升，也可以看他說你哪個地方不足去修正，分數應該就可以拿到幾乎 100 的分數了，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a></li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT live 2d 配置</title>
-    <url>/NexT-live2d/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這次要做的就是網頁右下角那隻可愛的狗狗，可以幫你看家招攬客人，還可以跟他一起玩，可說是一舉數得<br><img data-src="https://i.imgur.com/cxJLFJn.png" alt="可愛的狗狗"><br><span id="more"></span></p>
-<ol>
-<li><a href="/NexT-live2d/#安裝live-2d">安裝 live 2d</a></li>
-<li><a href="/安裝live-2d模型">安裝 live 2d 模型</a></li>
-</ol>
-<h2 id="安裝live-2d"><a href="#安裝live-2d" class="headerlink" title="安裝live 2d"></a>安裝 live 2d</h2><p>這次用的是這個<a href="https://github.com/xiazeyu/live2d-widget-models">模組</a>，執行下方指令就可以安裝了</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></tbody></table></figure>
-<p>接著在最外層的_config.yml 中加入以下程式碼（這個模組的作者是說放在 theme 裡面的_config.yml 也可以，不過我試過之後是沒辦法）</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-wanko</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="安裝live-2d模型"><a href="#安裝live-2d模型" class="headerlink" title="安裝live 2d模型"></a>安裝 live 2d 模型</h2><p>到了這裡應該已經有狗狗出現在你的網頁上面了，不過還有很多模型可以選擇，像是貓咪或是可愛的小女孩，可以從<a href="https://blog.csdn.net/wang_123_zy/article/details/87181892#live2dwidgetmodelchitose_12">這裡</a>看到所有模型的預覽，不過我試過好以個之後還是覺得狗狗好可愛，或是也可以像我一樣中文的版面放狗，英文的版面放貓。</p>
-<p><img data-src="https://i.imgur.com/Bp0nf0U.png" alt="喵～"><br><img data-src="https://i.imgur.com/EpN4LqQ.png" alt="真香"></p>
-<p>那選好了想要的模型就可以來下載了，下面是所有模型的名稱，只要輸入 <code>npm install 模型名稱</code>就可以下載了，例如我上面的貓咪就是 <code>npm install live2d-widget-model-tororo</code>，如果是 live2d-widget-model-haru/01 或 live2d-widget-model-haru/02 的話就統一用 <code>npm install live2d-widget-model-haru</code></p>
-<figure class="highlight plaintext"><figcaption><span>模型名稱 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/01</span><br><span class="line">live2d-widget-model-haru/02</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></tbody></table></figure>
-<p>安裝好後，到最外層的_config.yml 修改剛剛加入的程式碼，將下載好的模型名稱打在 model 的 use 後</p>
-<figure class="highlight yml"><figcaption><span>修改 model 中的 use</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">log:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line marked">    <span class="attr">use:</span> <span class="string">下載的模型名稱</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span></span><br></pre></td></tr></tbody></table></figure>
-<p>修改後應該就可以看到選的 live 2d 角色出現在你的網頁上面了</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>多了個守護神在你的網站上了，真的超酷的，如果有發現問題或者我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a></li>
-<li> live2d 角色（就是網頁右下角那隻可愛的狗狗）✅</li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在 Hexo-NexT 主題中配置 Google Analytics</title>
-    <url>/NexT-google-analytics/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Google Analytics（後文簡稱為 GA）是一個由 Google 所提供的網站流量統計服務，透過在網站中埋入 GA 追蹤碼，網站主們可以獲取進站流量的資料，包括來源、使用者、裝置、造訪路徑等，透過 GA，可以更全面的了解品牌的受眾，進而為潛在客戶優化購買、造訪流程，提高轉單意願，對於網頁入門來說是非常推薦使用的工具。(摘自<a href="https://zh.wikipedia.org/zh-tw/Google%E5%88%86%E6%9E%90">維基百科</a>)<br><span id="more"></span><br>不過這篇只會教你怎麼讓你的網頁與 GA 連結，詳細的操作可以看 <a href="https://analytics.google.com/analytics/academy/course/6?hl=zh-tw">google 推出的免費課程</a></p>
-<h2 id="教學開始！"><a href="#教學開始！" class="headerlink" title="教學開始！"></a>教學開始！</h2><p>首先到 <a href="https://analytics.google.com/">GA 的官網</a>註冊一個帳號，接著到管理建立帳戶、資源、最後切換到資料串流<br><img data-src="https://i.imgur.com/wdINP2I.png" alt="建立帳戶、資源、切換到資料串流"></p>
-<p>新增串流，選擇網頁<br><img data-src="https://i.imgur.com/7ZZQnoB.png" alt="新增串流"></p>
-<p>設定串流名稱、串流網址，他會自動生成 GA id（就是最後的評估 id），把他複製下來等等會用到<br><img data-src="https://i.imgur.com/XI7htXE.png" alt="設定資料並複製id"></p>
-<p>這次不去改_congif.yml 的內容，雖然說他裡面也有可以設定 GA 的地方，但不知道為什麼我試過之後沒辦法使用，這裡我們直接改他的 layout，首先到 theme-&gt;{your-theme-name}-&gt;layout-&gt;_layout.njk<br><img data-src="https://i.imgur.com/CVdViKM.png" alt="切換到_layout.njk"></p>
-<p>在 body 的上方插入以下程式碼，請務必將 ‘your-id’ 替換為剛剛複製的 id</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- <span class="title class_">Google</span> tag (gtag.<span class="property">js</span>) --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://www.googletagmanager.com/gtag/js?id=your-id"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">window</span>.<span class="property">dataLayer</span> = <span class="variable language_">window</span>.<span class="property">dataLayer</span> || [];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="keyword">function</span> <span class="title function_">gtag</span>(<span class="params"></span>){dataLayer.<span class="title function_">push</span>(<span class="variable language_">arguments</span>);}</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'js'</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">gtag</span>(<span class="string">'config'</span>, <span class="string">'your-id'</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/4mtAFID.png" alt="將程式碼插入到body的上方"></p>
-<p>重啟網站（使用 <code>hexo s</code>）並重新載入網頁，然後前往 GA -&gt; 報表 -&gt; 即時，檢查是否有變化，有時可能需要等待一段時間才能看到數據更新。<br><img data-src="https://i.imgur.com/dZ0ZkQ6.png" alt="查看即時報表有沒有變化"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在，你可以使用 Google Analytics 來監控每日訪問你的網站的人數。如果流量足夠，你甚至可以考慮進行廣告投放。如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li> Google Analytics 統計網站資訊 ✅</li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a></li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 深淺主題切換配置</title>
-    <url>/NexT-dark-light-mode/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>現在不論是手機應用程式、網頁幾乎都有所謂深淺模式，先不論省不省電或是好不好看，有了切換的功能就是很酷，使用者可以依自己喜好挑選自己習慣的模式，這篇內容因為有點太簡單，所以我就只有一個章節了～</p>
-<span id="more"></span>
-<h2 id="教學開始～"><a href="#教學開始～" class="headerlink" title="教學開始～"></a>教學開始～</h2><p>這次用的套件是<a href="https://github.com/rqh656418510/hexo-next-darkmode">這個</a>，安裝的方式非常簡單，輸入下列指令就完成了</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode</span><br></pre></td></tr></tbody></table></figure>
-<p>設置的方式則是到 theme 內的<code>_config.yml</code>，貼上以下指令就完成了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Darkmode JS</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">bottom:</span> <span class="string">'64px'</span> <span class="comment"># 距離底端的距離</span></span><br><span class="line">  <span class="attr">right:</span> <span class="string">'unset'</span> <span class="comment"># 距離右邊的距離(unset就是只需要設定左邊，右邊會自己調整)</span></span><br><span class="line">  <span class="attr">left:</span> <span class="string">'32px'</span> <span class="comment"># 距離左邊的距離(unset就是只需要設定右邊，左邊會自己調整)</span></span><br><span class="line">  <span class="attr">time:</span> <span class="string">'0.5s'</span> <span class="comment"># 切換深淺模式的時間</span></span><br><span class="line">  <span class="attr">mixColor:</span> <span class="string">'transparent'</span> <span class="comment"># 這個建議不要用，雖然會出現酷酷的一個往外擴散的效果，可是他的顏色會跟原本的背景混再一起，有時候還會讓字不清楚，想玩的可以自己改改看</span></span><br><span class="line">  <span class="attr">backgroundColor:</span> <span class="string">'transparent'</span> <span class="comment">#背景顏色</span></span><br><span class="line">  <span class="attr">buttonColorDark:</span> <span class="string">'#100f2c'</span> <span class="comment"># 在淺色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">buttonColorLight:</span> <span class="string">'#fff'</span> <span class="comment"># 在深色模式的時候按鈕的顏色</span></span><br><span class="line">  <span class="attr">isActivated:</span> <span class="literal">false</span> <span class="comment"># 這裡如果用true的話是可以自己改寫他的CSS，但我覺得應該沒有必要，詳細可以看github的內的介紹</span></span><br><span class="line">  <span class="attr">saveInCookies:</span> <span class="literal">true</span> <span class="comment"># 會儲存到Cookies內，下次來會依照上次你的設定切換到深淺模式</span></span><br><span class="line">  <span class="attr">label:</span> <span class="string">'🌓'</span> <span class="comment"># 可以改成自己像要的表情圖示</span></span><br><span class="line">  <span class="attr">autoMatchOsTheme:</span> <span class="literal">true</span> <span class="comment"># 自動切換到跟使用者裝置相同的深淺模式</span></span><br><span class="line">  <span class="attr">libUrl:</span> <span class="comment"># Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></tbody></table></figure>
-<p>如果想要設定固定的背景或按鈕顏色的話可以修改 backgroundColor、buttonColorDark、buttonColorLight 後的色碼，例如說 <code>backgroundColor: "#FFD9E6"</code>，推薦給有少女心的各位</p>
-<p><img data-src="https://i.imgur.com/Yr5MMiF.png" alt="猛男粉紅💪"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>完成啦！深淺切換的功能很簡單吧～如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li>日 / 夜模式 ✅</li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 留言板 utterances 配置</title>
-    <url>/NexT-utterances-comment-box/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>許多 Blog 都有自己的留言區，可以方便地與讀者交流（<del>只是我做了之後文章也沒有人看，所以也不會有交流的機會🥲</del>）我要教的是用 utterances，另外還有其他像是 Disqus 或是 GitHub Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相 tag），最後只好就選 utterances，不過他也還是不錯用的，支援 markdown 語法，有亮暗主題，也算很好了啦。</p>
-<span id="more"></span>
-<ol>
-<li><a href="/NexT-utterances-comment-box/#安裝/">安裝</a></li>
-<li><a href="/NexT-utterances-comment-box/#文章中禁用留言區/">文章中禁用留言區</a></li>
-</ol>
-<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>先簡單說一下原理，他的留言板就是用 github 的 issue 功能，用你文章的路徑、網址或是標題當作 issue 的 Title，然後把留言的內容當作是 issue 的回覆，所以留言的人就必須要有 github 帳號才能使用</p>
-<p>解說完畢，實作上很簡單，就是來到主題底下的_config.yml 裡將這些改一改，主題你可以自己全部都試試看，他很好心全部都列出來了，repo 要改成你自己的喔，要不然就會跑來我的 issue 了（x<br><img data-src="https://i.imgur.com/J98nMDR.png" alt="Image"></p>
-<p>接著到你的隨便一篇文章底下去看，就會發現留言區還是沒出現，因為還要再裝一個 <a href="https://github.com/apps/utterances">utterances</a>，點擊安裝選擇 github page 的 repo 然後在點擊安裝就完成了</p>
-<p><img data-src="https://i.imgur.com/dancpB7.png" alt="Image"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>可以自己先試試看發個留言（<del>要不然可能他從此都不會被用到</del>），確認都可以用之後，恭喜你就完成留言板嘍！如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<p><img data-src="https://i.imgur.com/nGHOBS4.png" alt="TEST😵‍💫"></p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li> utterances 留言板 ✅</li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 自訂網域</title>
-    <url>/Hexo-NexT_custom_domain/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本來想說預算不足，所以就沒有自己買網域，不過後來發現 <a href="https://education.github.com/pack/offers">Github 學生方案</a>中可以在 namecheap 上挑一個免費的網域（另外還有 name.com 也可以，也就是說你可以免費取得兩個網域，超棒的吧～）</p>
-<span id="more"></span>
-<ol>
-<li><a href="/Hexo-NexT_custom_domain/#申請網域">申請網域</a></li>
-<li><a href="/Hexo-NexT_custom_domain/#連結Github">連結 Github</a></li>
-</ol>
-<h2 id="申請網域"><a href="#申請網域" class="headerlink" title="申請網域"></a>申請網域</h2><p>申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到 GitHub Student Developer Pack 裡面找到 namecheap（我覺得這個比 name.com 好用一點，尤其是 ssl 的認證，雖然在這裡是用不到就是了），最後連結 github 帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。</p>
-<p><img data-src="https://i.imgur.com/rCrDTw2.png" alt="連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了"></p>
-<h2 id="連結Github"><a href="#連結Github" class="headerlink" title="連結Github"></a>連結 Github</h2><p>到 namecheap 的 domain list 中選取你剛剛申請好的網域</p>
-<p><img data-src="https://i.imgur.com/hyEUpiM.png" alt="到namecheap的domain list中選取你剛剛申請好的網域"></p>
-<p>點到裡面的 Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下 CNAME Record 的 Value 設成你的 github page 的網址即可</p>
-<p><img data-src="https://i.imgur.com/q0IAGja.png" alt="將CNAME Record的Value設成你的github page的網址"></p>
-<p>好的那在 namecheap 這邊已經設置完成，接下來就要到 Github 上了，到你的 repository（然後因為前面的學生方案還會發現你變成 github pro 了，酷吧），點設定，到 Pages，到 Custom domain 打上申請的網域，接下來他會跑認證，認證之後才可以把 Enforce HTTPS 打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～</p>
-<p><img data-src="https://i.imgur.com/3ozFoIX.png" alt="一張圖道盡千言萬語"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你有了自己的 Domain，<del>之後遇到人又多了個可以炫耀的東西了呢</del>，另外通過這個機會你也申請到了 Github Education，裡面有很多好用的工具還有教學，真的是撿到寶了，如果你還是高中生，趁這段時間妥善利用這些教學，你應該會變得很強的🛐🛐🛐</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a></li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li>自訂網域 ✅</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 側邊欄 - 切換語言</title>
-    <url>/NexT-sidebar-switch-lang/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>為了讓自己網站能夠接軌國際，加個切換語言的功能是必須的吧～</p>
-<span id="more"></span>
-<p>其實切換語言 NexT 有內建的功能，他的效果也還不錯，但是 achieve 不管怎樣都只能出現一個語言，因此最後就只能退而求其次，新做一個英文的網站並在側邊欄新增一個按鈕讓兩個網站可以互相切換，但這要注意一點，就是如果你兩個網站是放在同一個 github 帳號底下的話，pajx 不能打開，因為都是在同一網域底下的，切換過去的時候因為 pajx 的特性，雖然內容會改成英文的，但語言還是會停留在原本的，<del>或是如果有大佬知道怎麼避免掉這種狀況的話，拜託在底下留言告訴我🙏</del>（我自己解決了！看看我下面的更新）</p>
-<ol>
-<li><a href="/NexT-sidebar-switch-lang/#架設一個新的英文網站">架設一個新的英文網站</a></li>
-<li><a href="/NexT-sidebar-switch-lang/#側邊欄新增切換按鈕">側邊欄新增切換按鈕</a></li>
-<li><a href="/NexT-sidebar-switch-lang/#更新-解決使用pjax無法切換問題">更新 - 解決使用 pjax 無法切換問題</a></li>
-</ol>
-<h2 id="架設一個新的英文網站"><a href="#架設一個新的英文網站" class="headerlink" title="架設一個新的英文網站"></a>架設一個新的英文網站</h2><p>這個部分跟先前<a href="/Hexo-NexT_Github-Page_build-blog/">利用 Hexo + NexT + Github Page 建立自己的 Blog</a> 完全一樣，要注意一下在最外層資料夾的_config.yml 其中 site 內的 language 要改成 en，網站才會變成英文的，還有記得 branch 要使用 gh-pages，才能正常運作喔</p>
-<p><img data-src="https://i.imgur.com/DzQuENU.png" alt="language要改成en"></p>
-<h2 id="側邊欄新增切換按鈕"><a href="#側邊欄新增切換按鈕" class="headerlink" title="側邊欄新增切換按鈕"></a>側邊欄新增切換按鈕</h2><p>換成到 themes 內的_config.yml，這裡先講中文網站要如何配置<br>到 menu，新增一個叫做 Switch Language 的選項（或是其他名字也可以），後面就打你另一個語言網站的名稱，最後一個圖示就看個人喜好要放什麼啦</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/en/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
-<p>英文網站的部分也一樣，只是網址記得要改成中文的就好了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">Switch Language:</span> <span class="string">https://moon-jam.github.io/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-language</span></span><br></pre></td></tr></tbody></table></figure>
-<p>然後當你要新增英文文章時就在英文的那份檔案寫，中文的就在原先的檔案內寫，如此一來就完成中英切換的網站了</p>
-<h2 id="更新-解決使用pjax無法切換問題"><a href="#更新-解決使用pjax無法切換問題" class="headerlink" title="更新 - 解決使用pjax無法切換問題"></a>更新 - 解決使用 pjax 無法切換問題</h2><p>其實很簡單，因為問題是 pjax 在同一個網域底下不會重新整理，所以如果我們只要讓他先導向另一個網域，然後再導回來，就可以解決了，那有什麼快速的方法呢，最直覺的就是縮網址了，這邊因為我怕一般網路上的縮網址可能會有實效性的問題，所以我就到 github 上找了一下，最後決定使用這個 <a href="https://github.com/nelsontky/gh-pages-url-shortener">gh-pages-url-shortener
-</a>，新開一個 github 帳號然後複製一個分支，自製縮網址就完成了，所以說現在 <a href="https://pa-7.github.io/1">https://pa-7.github.io/1</a> 就會導向我現在的這個中文網址，<a href="https://pa-7.github.io/2">https://pa-7.github.io/2</a> 則會到我英文的網站，這樣就這樣就能夠同時使用 pjax 並且避免語言沒有切換到的問題了</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>切換語言就是這麼簡單，就是在發布不同語言時還要切資料夾有點麻煩，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － 切換語言 ✅</p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a></li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a></li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 側邊欄基礎配置</title>
-    <url>/NexT-sidebar-basic/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇要介紹的是側邊欄的基礎配置會包含關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結（IG、Gmail…）這些功能，另外本網誌的側邊欄有新增切換語言的功能，有興趣可以看看。</p>
-<span id="more"></span>
-<ol>
-<li><a href="/NexT-sidebar-basic/#關於、標籤、分類、歸檔">關於、標籤、分類、歸檔</a></li>
-<li><a href="/NexT-sidebar-basic/#搜尋">搜尋</a></li>
-<li><a href="/NexT-sidebar-basic/#頭像">頭像</a></li>
-<li><a href="/NexT-sidebar-basic/#個人相關連結">個人相關連結</a></li>
-</ol>
-<h2 id="關於、標籤、分類、歸檔"><a href="#關於、標籤、分類、歸檔" class="headerlink" title="關於、標籤、分類、歸檔"></a>關於、標籤、分類、歸檔</h2><p>首先要生成關於、標籤、分類這三個分頁（但歸檔不用，他預設就有了，我也覺得很奇怪為什麼其他不要預設就生成）</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">hexo new page about</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></tbody></table></figure>
-<p>接著應該會發現在 source 裡面多出了三個資料夾<br><img data-src="https://i.imgur.com/Y27wMgQ.png" alt="生成的三個資料夾"><br>點進去後會發現一個叫做 <code>index.html</code> 的東西，點進去後輸入以下內容（xxx 依照 about、tags、categories 哪個資料夾填入）</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"xxx"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
-<p>以 about 為例</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
-<p>另外，about 裡面要放一些關於自己的一些事的話，就直接接續 <code>---</code>，底下繼續撰寫即可，以我的 about 為例</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"about"</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">"about"</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment">## 我是貓熊🐼</span></span><br><span class="line"></span><br><span class="line"><span class="string">這裡會紀錄貓熊的生活大小事</span></span><br></pre></td></tr></tbody></table></figure>
-<p>接著要讓側邊欄顯示關於、標籤、分類、歸檔這些字樣給使用者選用，移駕到你的 theme 主題的_config.yml</p>
-<p>找到 menu，並將 about、tags、categories，取消註解，如下（如果想改圖示的話就就跟<a href="/NexT-sidebar-basic/#版權說明、icon、Powered-by…">頁底配置中更換 icon</a> 一樣，將後面的圖示替換即可）</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br></pre></td></tr></tbody></table></figure>
-<p>恭喜你這樣就完成第一步啦～應該可以在網站上看到這些東西了</p>
-<h2 id="搜尋"><a href="#搜尋" class="headerlink" title="搜尋"></a>搜尋</h2><p>首先安裝搜尋需要的插件</p>
-<figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></tbody></table></figure>
-<p>然後到你的 theme 主題的_config.yml，搜尋 <code>local_search</code>，將 <code>enable</code>，設為 true，就完成嘍，超簡單的吧～</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="頭像"><a href="#頭像" class="headerlink" title="頭像"></a>頭像</h2><p>這個更簡單，在 theme 主題的_config.yml，搜尋 <code>avatar</code>，然後將你想要的頭像放到 theme 主題中 <code>/source/images</code></p>
-<p><img data-src="https://i.imgur.com/AudEpQN.png" alt="頭像檔案要存放的地方"></p>
-<p>然後將 <code>url</code> 後設定為 <code>/images/image_name</code>，以我的頭像為例，其檔名叫做 <code>Panda_Me.png</code>，而 <code>rounded</code> 代表是否要顯示在圓框內，<code>rotated</code> 表示滑鼠移到頭像上時是否要旋轉</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/Panda_Me.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="個人相關連結"><a href="#個人相關連結" class="headerlink" title="個人相關連結"></a>個人相關連結</h2><p>接下來這是最輕鬆的，一樣在 theme 主題的_config.yml，然後搜尋 <code>social</code>，在底下找你想要顯示的網站，取消註解，然後將你的網址打上去即可，以我的為例，我放了 Github、Gmail、IG</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/moon-jam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">Gmail:</span> <span class="string">mailto:wu.messi.wu@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="comment">#Weibo: https://weibo.com/yourname || fab fa-weibo</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || fab fa-twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || fab fa-facebook</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || fab fa-youtube</span></span><br><span class="line">  <span class="attr">IG:</span> <span class="string">https://www.instagram.com/mooooonjam</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || fab fa-skype</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>側邊欄的基礎功能都已經配置完畢，看起來已經跟一般的部落格看起來差不多了呢，是不是很簡單啊，如果有發現哪裡講錯或是有任何疑問，都歡迎在底下留言告訴我喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － 關於、標籤、分類、歸檔、搜尋 ✅<br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-NexT 網頁頁底配置</title>
-    <url>/NexT-footer/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網站現在基本的都有了，接下來就是來新增一些酷酷的東西了，這篇要講的是頁底，總共會分成底下這幾個部分<br><span id="more"></span></p>
-<ol>
-<li><a href="/NexT-footer/#版權說明、icon、Powered-by…">版權說明、icon、Powered by…</a></li>
-<li><a href="/NexT-footer/#字數統計、估計閱讀時間">字數統計、估計閱讀時間</a></li>
-<li><a href="/NexT-footer/#閱覽人數">閱覽人數</a></li>
-</ol>
-<p>完成後你的頁底就會變成像這樣嘍<br><img data-src="https://i.imgur.com/KG0lafJ.png" alt="完成後的頁底"></p>
-<h2 id="版權說明、icon、Powered-by…"><a href="#版權說明、icon、Powered-by…" class="headerlink" title="版權說明、icon、Powered by…"></a>版權說明、icon、Powered by…</h2><p>首先先移駕到你的 theme 裡面主題的_config.yml<br><img data-src="https://i.imgur.com/DTKXyro.png" alt="我的主題名稱是叫做NexT所以就是這裡，如果你的主題名稱你叫做其他名字就一樣點到那裡面的_config.yml，"></p>
-<p>然後找到 <code>footer</code> 的位置，應該會看到 since、icon、copyright、powered、beian 這些標題，接下來我會一一進行說明（beian 是所謂的 ICP 備案，是中國對非營利網站的一些規定，詳見<a href="https://zh.wikipedia.org/zh-tw/%E9%9D%9E%E7%BB%8F%E8%90%A5%E6%80%A7%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88">這邊</a>，不會影響中國大陸以外地區的網站，所以我就沒有用了，如果要用的話就單純是把你的資訊個別填到裡面去就會出現）<br><img data-src="https://i.imgur.com/QKMq7vc.png" alt="我只是想讓你們看得更清楚，才不是想曬我的三玖"></p>
-<ol>
-<li>since：你這個網站開始的時間，在你的頁底就會是 XXXX~XXXX，但如果你寫的就是今年他就只會顯示今年的年份，也可以不打，那就是會顯示今年</li>
-<li> icon：這個就是在底下會看到的可愛圖示，預設是愛心，也可以再改成想要的圖案，如果想要改成自己想要的可以到<a href="https://fontawesome.com/icons">這個網站</a>找找看，然後把另外 animated 就是他會不會在那裡” 跳”!?（自己試試看就知道了），最後一個就顏色，可以自己去查色碼填到裡面去<br><img data-src="https://i.imgur.com/VteB7bj.png" alt="像是我是用這個爪子，就把我框起來那個地方複製到name後面(但有些圖案顯示不出來，可以試試看其他樣式的，但如果都不行就只能換一個了，如果有大佬知道怎麼用的話歡迎在底下留言～)"></li>
-<li>copyright：這個就是他為在圖示後面看要不要出現你的名字（名字的設定可以到最外層資料夾的_config 去改喔）</li>
-<li>powered：這裡如果打 true 就會出現由 Powered by Hexo &amp; NexT 的字樣，留空就是不會出現</li>
-</ol>
-<h2 id="字數統計、估計閱讀時間"><a href="#字數統計、估計閱讀時間" class="headerlink" title="字數統計、估計閱讀時間"></a>字數統計、估計閱讀時間</h2><p>我們要使用的是<a href="https://github.com/next-theme/hexo-word-counter">這個</a>插件，首先下載</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></tbody></table></figure>
-<p>接著在 NexT 內的_config 隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示時要不要分行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 在文章要不要用文字說明(但我設true跟false都一樣有文字)</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment"># 在頁底要不要有文字說明</span></span><br></pre></td></tr></tbody></table></figure>
-<p>接著再到最外層資料夾的_config 隨便找個地方貼上這些</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 在文章顯示總共有多少字</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>  <span class="comment"># 在文章顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment"># 在頁底顯示總共有多少字</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>  <span class="comment"># 在頁底顯示總共需多少時間</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">true</span>  <span class="comment"># 是否排除程式碼字數</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment">#平均文字長度，中文為 2, 英文為 5, 預設為 4</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span>  <span class="comment"># 可以閱讀多少字每分鐘</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">"mins."</span> <span class="comment"># 時間的後綴</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="閱覽人數"><a href="#閱覽人數" class="headerlink" title="閱覽人數"></a>閱覽人數</h2><p>搜尋 <code>busuanzi_count</code>，然後把 <code>enable</code> 設 <code>true</code> 就完成了（如果有安裝 live2d 的會有問題，請到<a href="/NexT-live2d">這邊</a>來看解決辦法）<br><img data-src="https://i.imgur.com/4QrLwvl.png" alt="三玖真棒"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>現在你的頁底是不是變得更好看了呢？如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a>  </p>
-</li>
-<li><p>頁底 ✅</p>
-</li>
-<li><a href="/NexT-utterances-comment-box">utterances 留言板</a>  </li>
-<li><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a>  </li>
-<li><a href="/NexT-dark-light-mode">日 / 夜模式</a>  </li>
-<li><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a>  </li>
-<li><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a>  </li>
-<li><a href="/NexT-some-cool-tools">剩下的一些小工具</a>  </li>
-<li><a href="/Hexo-NexT_custom_domain">自訂網域</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<h2 id="我的網站做好啦～～"><a href="#我的網站做好啦～～" class="headerlink" title="我的網站做好啦～～"></a>我的網站做好啦～～</h2><p>花了應該快十小時，好累 😮‍💨<br><span id="more"></span><br>看到好多厲害的人都有自己的 Blog，所以就也做了一個，<del>看來現在我也跟他們一樣厲害了呢</del><br>之後有空應該會竟量寫些東西，讓這邊看起來猛猛ㄉ<br>還差 favicon 跟我的頭像都還沒有，之後有了再到這邊放一下好了</p>
-<h2 id="更新-2023-7-8"><a href="#更新-2023-7-8" class="headerlink" title="更新 2023/7/8"></a>更新 2023/7/8</h2><p>我來放頭像跟 favicon 嘍～因為不會畫畫，所以學了 stable diffusion，不過我電腦很爛，一張 512*512 的圖就要快一分鐘，但至少結果看起來還不錯，開心開心～<br><img data-src="/images/Panda_Me.png" alt="頭像"><br><img data-src="/images/favicon_180.png" alt="Favicon"></p>
-<h2 id="再更新-2023-8-13"><a href="#再更新-2023-8-13" class="headerlink" title="再更新 2023/8/13"></a>再更新 2023/8/13</h2><p>我有自己的網域啦 <a href="https://moon-jam.me">https://moon-jam.me</a>，結果這個月更新只有一點點，嗚嗚嗚，本來想說最少每週三更的，但真的太忙了，而且我有點小偷懶🫠，但考慮到要讀書的關係，到有大學之前可能都得這樣佛系更新🥲🥲🥲</p>
-]]></content>
-      <categories>
-        <category>熊貓文</category>
-      </categories>
-      <tags>
-        <tag>熊貓文</tag>
       </tags>
   </entry>
 </search>
