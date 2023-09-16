@@ -8,6 +8,7 @@ node_js: 16
 before_script:
   - npm install hexo-cli -g  # 安裝 Hexo 環境
   - npm install --no-progress
+  - npm install hexo-word-counter
 
 # 清除緩存並執行編譯
 script:
