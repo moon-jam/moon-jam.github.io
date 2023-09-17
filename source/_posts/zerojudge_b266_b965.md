@@ -1,5 +1,5 @@
 ---
-title: APCS 矩陣轉換 (zerojudge b965)
+title: APCS 矩陣轉換 (zerojudge b266/b965)
 lang: zh-TW
 tags:
   - APCS
@@ -11,7 +11,7 @@ date: 2023-09-13 00:00:00
 ---
 
 {% note default %}
-[題目網址](https://zerojudge.tw/ShowProblem?problemid=b965)
+[題目網址](https://zerojudge.tw/ShowProblem?problemid=b266)(多筆測資版(https://zerojudge.tw/ShowProblem?problemid=b965))
 
 矩陣是將一群元素整齊的排列成一個矩形，在矩陣中的橫排稱為列 (row) ，直排稱為行 (column) ，其中以 Xij 來表示 矩陣X 中的第 i 列第 j 行的元素。
 我們可以對矩陣定義兩種操作如下：  
@@ -31,6 +31,8 @@ date: 2023-09-13 00:00:00
 1. 翻轉：這邊是指上下翻轉，因此較為簡單，只要將第i列第j行的元素跟第(c-i)列第j行的元素交換即可，且其中i跟(c-i)會在一半的地方交會，且在c是奇數時(c+1)/2的那行可以不做任何操作，因此讓i從0~c/2執行過一次即可
 2. 逆時針旋轉90度：這個稍微難一點，可以想做事將左上角固定，逆時針旋轉90度，如此一來可以發現就是將(i,j)位置的元素移動到(r-j-1,i)
 ![逆時針旋轉90度示意圖](https://i.imgur.com/nLZVb9U.png)
+
+✏️多筆測資就只要把一開始的輸入包在while裡就好了
 {% endnote %}
 
 ```c++ b965. 第 2 題 矩陣轉換
