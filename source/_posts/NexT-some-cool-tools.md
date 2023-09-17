@@ -99,6 +99,11 @@ $$
 
 搭配上一項編輯按鈕食用，這邊先看[前輩寫的文章](https://israynotarray.com/hexo/20201009/3159624676/)，之後有時間我在重新寫一篇
 
+## npm套件自動更新
+
+不知道你有沒有在生成網頁的時候出現npm套件的問題(可能就是在執行`hexo clean` `hexo g` `hexo d` `hexo s`時)，如下圖，在經過多次測試之後發現大部分都是因為版本有問題，後來我發現了一個[檢查套件版本的工具](https://github.com/raineorshine/npm-check-updates)，自動檢查哪些版本過舊並升級，大多數狀況在升級後就沒事了
+![我hexo-optimize出問題](https://i.imgur.com/BovidcP.png)
+
 ## 結語
 
 這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～
