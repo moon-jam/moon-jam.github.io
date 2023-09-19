@@ -17,11 +17,6 @@ mathjax: true
 
 <!--more-->
 
-1. [vscode-imgur](/NexT-some-cool-tools/#vscode-imgur)
-2. [閱讀更多按鈕](/NexT-some-cool-tools/#閱讀更多按鈕)
-3. [標題前的圖示](/NexT-some-cool-tools/#標題前的圖示)
-4. [MathJax](/NexT-some-cool-tools/#mathjax)
-
 ## vscode-imgur
 
 ![vscode-imgur](https://i.imgur.com/m8LaSvK.png)
@@ -103,6 +98,17 @@ $$
 
 不知道你有沒有在生成網頁的時候出現npm套件的問題(可能就是在執行`hexo clean` `hexo g` `hexo d` `hexo s`時)，如下圖，在經過多次測試之後發現大部分都是因為版本有問題，後來我發現了一個[檢查套件版本的工具](https://github.com/raineorshine/npm-check-updates)，自動檢查哪些版本過舊並升級，大多數狀況在升級後就沒事了
 ![我hexo-optimize出問題](https://i.imgur.com/BovidcP.png)
+
+## Hexo PDF預覽
+
+可以在網頁裡展示PDF，[hexo-pdf](https://github.com/superalsrk/hexo-pdf)
+記得要把主題內的pdf設成`true`
+![把主題內的pdf設成true](https://i.imgur.com/EMpal5Z.png)
+然後如果想讓每個頁面出現的pdf不一樣大可以用以下程式碼
+
+``` html
+<embed src="ooxx.pdf" width=100% height="自己設" type="application/pdf">
+```
 
 ## 結語
 
