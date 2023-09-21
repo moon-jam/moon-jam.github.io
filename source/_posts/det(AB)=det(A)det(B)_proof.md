@@ -6,7 +6,7 @@ categories:
   - 數學
 abbrlink: 5
 date: 2023-09-19 00:00:00
-title: 矩陣性質之$\det(AB) = \det(A) \cdot \det(B)$證明
+title: 矩陣性質之$\det(AB) = \det(A) \det(B)$證明
 lang: zh-TW
 mathjax: true
 ---
