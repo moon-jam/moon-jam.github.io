@@ -6,7 +6,8 @@ tags:
 categories:
   - 程式題解
   - APCS
-date: 2023-09-29
+abbrlink: 32441
+date: 2023-09-29 00:00:00
 ---
 
 {% note default %}
