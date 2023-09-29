@@ -195,6 +195,43 @@ K 壘打時，場上球員（擊球員和跑壘員）會前進 K
       </tags>
   </entry>
   <entry>
+    <title>APCS 磁軌移動序列 (zerojudge k733)</title>
+    <url>/zerojudge_k733/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=k733">題目網址</a></p>
+<p>你拿到一個磁帶和一串指令。磁帶上的指針初始位置為 10，我們將其表示為
+T10。指令是一個由多個 T 和 loop
+指令組成的字串，每個指令都會影響指針的移動。</p>
+<p>T 指令的格式為 Txx，其中 xx
+是兩位數的整數（10~99），代表指針從當前位置移動到 xx 所指示的位置。</p>
+<p>除了 T 指令外，還有一個 loop 指令結構，其格式為 Lx...E，其中 x
+是一位數的整數（1~9）。loop 指令允許重複執行一系列指令。loop
+指令的開始標記為 Lx，結束標記為 E，指令序列位於這兩個標記之間。loop
+指令可以嵌套，也就是說，一個 loop 指令的內部可以包含其他的 loop
+指令。保證所有 loop 指令內一定會有至少一個 T 指令。</p>
+<p>請寫一個程式，根據給定的指令串，計算指針總共移動的距離。</p>
+<p>範例： 給定指令串：T10T15T23T23T22T22T44 指針總共移動的距離為：5 + 8
++ 0 + 1 + 0 + 22 = 36</p>
+</div>
+<span id="more"></span>
+<div class="note info"><p>解題思路：
+感覺起來這題有點像是有括號的四則運算，T 之間就是加法和減法，L 跟 E 之間是括號，L 後面的數字就是乘法，不過實作上要注意的比較多，像是當 L 在當第一個的時候，L 跟 E 中間的部分應該怎麼與前後串連起來，要是一個不小心，就會跟 AC 失之交臂。</p>
+<p>🌟可以先把字串指令轉換成方便處理的格式，再用陣列或資料結構處理會比較方便</p>
+</div>
+<figure class="highlight c++"><figcaption><span>APCS 磁軌移動序列 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> piii pair<span class="string">&lt;int,pair&lt;int,int&gt;</span> &gt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sum first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> first_num second.first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> last_num second.second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> out(s,f,l) make_pair(s,make_pair(f,l))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">queue&lt;<span class="type">int</span>&gt; in;</span><br><span class="line"><span class="type">char</span> S[<span class="number">100006</span>];</span><br><span class="line"></span><br><span class="line"><span class="function">piii <span class="title">get_dis</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> dis=<span class="number">0</span>, last = in.<span class="built_in">front</span>(), _first = in.<span class="built_in">front</span>();</span><br><span class="line">    <span class="keyword">while</span>(in.<span class="built_in">front</span>()!=<span class="number">-1</span>){</span><br><span class="line">        <span class="type">int</span> cur = in.<span class="built_in">front</span>();</span><br><span class="line">        in.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(cur &gt;= <span class="number">10</span>) dis+=<span class="built_in">abs</span>(cur-last), last=cur;</span><br><span class="line">        <span class="keyword">else</span>{</span><br><span class="line">            <span class="type">int</span> time=cur;</span><br><span class="line">            piii inside=<span class="built_in">get_dis</span>();</span><br><span class="line">            dis+=time*inside.sum+(time<span class="number">-1</span>)*<span class="built_in">abs</span>(inside.first_num-inside.last_num);</span><br><span class="line">            <span class="keyword">if</span>(_first&lt;<span class="number">10</span>) _first=inside.first_num;</span><br><span class="line">            <span class="keyword">else</span> dis+=<span class="built_in">abs</span>(last-inside.first_num);</span><br><span class="line">            last = inside.last_num;</span><br><span class="line">        }</span><br><span class="line">    }in.<span class="built_in">pop</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">out</span>(dis, _first, last);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin &gt;&gt; S;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; S[i]; i++){</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">'T'</span>) in.<span class="built_in">push</span>((S[i+<span class="number">1</span>]-<span class="string">'0'</span>)*<span class="number">10</span>+(S[i+<span class="number">2</span>]-<span class="string">'0'</span>)),i+=<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">'L'</span>) in.<span class="built_in">push</span>((S[i+<span class="number">1</span>]-<span class="string">'0'</span>)),i+=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">'E'</span>) in.<span class="built_in">push</span>(<span class="number">-1</span>);</span><br><span class="line">    }in.<span class="built_in">push</span>(<span class="number">-1</span>);</span><br><span class="line">    piii res = <span class="built_in">get_dis</span>();</span><br><span class="line">    cout &lt;&lt; res.sum + <span class="built_in">abs</span>(<span class="number">10</span> - res.first_num) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure>
+<img data-src="https://i.imgur.com/upxnMfO.png" alt="AC的Submission～">
+<figcaption aria-hidden="true">AC 的 Submission～</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+        <category>APCS</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>APCS 美食博覽會 (zerojudge g278)</title>
     <url>/zerojudge_g278/</url>
     <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=g278">題目網址</a></p>
