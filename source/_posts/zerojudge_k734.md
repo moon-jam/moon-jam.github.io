@@ -6,7 +6,7 @@ tags:
 categories:
   - 程式題解
   - APCS
-date: 2023-10-07
+date: 2023-10-06
 mathjax: true
 ---
 
