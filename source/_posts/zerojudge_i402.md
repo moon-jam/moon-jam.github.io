@@ -38,8 +38,7 @@ $$dp[i][j]=max(a[i]*b[j], dp[i+1][j+1], pre[i+1][j+1]+a[i]*b[j])$$
 ❗️ $dp[0][0]$不一定會是整個陣列的最大值，因為$n、m$可能不一樣大，$dp[i][j]$的定義是$a[i]$與$b[j]$，往後直到其中一個底端的區間內任意$r$值最大內積，因此若其中一個先碰到了底端，但事實上另一個陣列跟其他段內積會更大的話，就會使得$dp[0][0]$不是最大值，因此較簡單的方法是在做狀態轉移時，將用一個變數紀錄$dp[i][j]$的最大值。
 {% endnote %}
 
-```c++ 
-//https://zerojudge.tw/ShowProblem?problemid=i402
+```c++ APCS內積
 #include <bits/stdc++.h>
 #define Max(a,b,c) max(a,max(b,c))
 using namespace std;
