@@ -20,6 +20,7 @@ date: 2023-08-28 00:00:00
 ## 地科
 
 [深/淺水波－波速、波長、波高](https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3)
+[學測地科複習](https://www.youtube.com/playlist?list=PLKJhYfqCgNXj8TMC2tVPVKn0A9vWf1q_m)
 
 ## Hexo
 
