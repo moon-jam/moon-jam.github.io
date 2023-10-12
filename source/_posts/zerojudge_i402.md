@@ -20,7 +20,8 @@ $A_1, A_2, \dots, A_n$和$B_1, B_2, \dots, B_m$
 內積的定義如下：  
 假設從 $A$ 陣列選擇了一段長度為 $r$ 的子陣列 $A_{i}, A_{i+1}, A_{i+2}, \dots, A_{i+r-1}$，  
 並在 $B$ 陣列選擇了一段長度為 $r$ 的子陣列 $B_{j}, B_{j+1}, B_{j+2}, \dots, B_{j+r-1}$，  
-這兩個子陣列的內積就是$A_i \times B_j + A_{i+1} \times B_{j+1} + A_{i+2} \times B_{j+2} + \dots + A_{i+r-1} \times B_{j+r-1}$  
+這兩個子陣列的內積就是  
+$$A_i \times B_j + A_{i+1} \times B_{j+1} + A_{i+2} \times B_{j+2} + \dots + A_{i+r-1} \times B_{j+r-1}$$  
 或可以簡單寫成$\sum_{k=0}^{r-1} A_{i+k} \times B_{j+k}$  
 {% endnote %}
 <!--more-->
