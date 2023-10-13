@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://moon-jam.me/zerojudge_f582/</loc>
+    <lastmod>2023-10-13</lastmod>
+  </url>
+  <url>
     <loc>https://moon-jam.me/zerojudge_f314/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
@@ -93,11 +97,11 @@
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/NexT-live2d/</loc>
+    <loc>https://moon-jam.me/NexT-google-analytics/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/NexT-google-analytics/</loc>
+    <loc>https://moon-jam.me/NexT-live2d/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
@@ -117,11 +121,11 @@
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/Hexo-Next_MathJax/</loc>
+    <loc>https://moon-jam.me/NexT-dark-light-mode/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/NexT-dark-light-mode/</loc>
+    <loc>https://moon-jam.me/Hexo-Next_MathJax/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
 </urlset> 
