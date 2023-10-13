@@ -11,7 +11,8 @@ date: 2023-10-07
 ---
 
 {% note default %}
-[題目網址](https://zerojudge.tw/ShowProblem?problemid=i402)  
+[題目網址](https://zerojudge.tw/ShowProblem?problemid=i402)
+
 你有兩個數組分別為 $n$ 和 $m$ 的長度：  
 $A_1, A_2, \dots, A_n$和$B_1, B_2, \dots, B_m$  
 你可以自由決定是否要鏡射 $A, B$ 陣列(reverse)，也可以自由決定一個正整數 $r$。  
