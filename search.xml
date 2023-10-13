@@ -164,8 +164,8 @@ Plugins</a><br>
 <img data-src="https://i.imgur.com/KtX6lgN.png" alt="病毒族譜"></p>
 </div>
 <span id="more"></span>
-<div class="note info"><p>解題思路：
-這題我是用 DP 寫，並使用 DFS 從根遍歷整棵樹，在過程完成狀態轉移。
+<div class="note info"><p>解題思路：<br>
+這題我是用 DP 寫，並使用 DFS 從根遍歷整棵樹，在過程完成狀態轉移。<br>
 在寫這題的時候，最困難的應該就是要想怎麼定義狀態還有狀態轉移如何在<span class="math inline"> \(O(1)\)</span> 內做出來，而首先按照題目可知，不同位置的字元，無論在哪個點都不受影響，而當該點的某個位置為 @時，其有機會是 A、U、C、G 任意一個，因此不妨定義<span class="math inline"> \(dp[i][j][k]\)</span> 代表第<span class="math inline"> \(i\)</span> 個陣列的第<span class="math inline"> \(j\)</span> 個字元為<span class="math inline"> \(k\)</span> 時的單點至葉子最小距離 (A, U, C,
 G 分別對應到<span class="math inline"> \(k = 1, 2, 3,
 4\)</span>)，而當第<span class="math inline"> \(i\)</span> 個陣列的第<span class="math inline"> \(j\)</span> 個字元已經被定義時 (也就是不為 @時) 就將其餘的點設為極大值，而在狀態轉移時，就會是他各個小孩在四種狀態的值加上與他的距離 (就是看小孩當前狀態是否跟父母一樣，一樣距離就是 0 不一樣就是 1) 的最小值，以數學式表達如下：(其中<span class="math inline"> \(child\)</span> 代表第<span class="math inline"> \(i\)</span> 個陣列的小孩個數，<span class="math inline">\(child_p\)</span> 代表第<span class="math inline"> \(i\)</span> 個陣列第<span class="math inline"> \(p\)</span> 的小孩) <span class="math display">\[dp[i][j][k] = \sum_{p=1}^{child}
