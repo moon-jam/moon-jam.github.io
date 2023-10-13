@@ -266,9 +266,10 @@ n\)</span> 大小的的陣列，每一格是一個介於 -100 與 100
 A_{i+r-1}\)</span>，<br>
 並在 <span class="math inline">\(B\)</span> 陣列選擇了一段長度為 <span class="math inline">\(r\)</span> 的子陣列 <span class="math inline">\(B_{j}, B_{j+1}, B_{j+2}, \dots,
 B_{j+r-1}\)</span>，<br>
-這兩個子陣列的內積就是<span class="math inline"> \(A_i \times B_j +
-A_{i+1} \times B_{j+1} + A_{i+2} \times B_{j+2} + \dots + A_{i+r-1}
-\times B_{j+r-1}\)</span><br>
+這兩個子陣列的內積就是<br>
+<span class="math display">\[A_i \times B_j + A_{i+1} \times B_{j+1} +
+A_{i+2} \times B_{j+2} + \dots + A_{i+r-1} \times
+B_{j+r-1}\]</span><br>
 或可以簡單寫成<span class="math inline"> \(\sum_{k=0}^{r-1} A_{i+k}
 \times B_{j+k}\)</span></p>
 </div>
