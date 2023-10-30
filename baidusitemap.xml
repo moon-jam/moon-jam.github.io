@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://moon-jam.me/zerojudge_f582/</loc>
+    <loc>https://moon-jam.me/segment_tree/</loc>
+    <lastmod>2023-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://moon-jam.me/graph/</loc>
+    <lastmod>2023-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://moon-jam.me/zerojudge_c297/</loc>
     <lastmod>2023-10-13</lastmod>
   </url>
   <url>
@@ -10,7 +18,11 @@
   </url>
   <url>
     <loc>https://moon-jam.me/zerojudge_f314/</loc>
-    <lastmod>2023-10-09</lastmod>
+    <lastmod>2023-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://moon-jam.me/zerojudge_f582/</loc>
+    <lastmod>2023-10-13</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.me/zerojudge_e465/</loc>
@@ -49,10 +61,6 @@
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/zerojudge_c297/</loc>
-    <lastmod>2023-10-09</lastmod>
-  </url>
-  <url>
     <loc>https://moon-jam.me/hello-world/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
@@ -65,11 +73,11 @@
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/zerojudge_c290/</loc>
+    <loc>https://moon-jam.me/zerojudge_b967/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
-    <loc>https://moon-jam.me/zerojudge_b967/</loc>
+    <loc>https://moon-jam.me/zerojudge_c290/</loc>
     <lastmod>2023-10-09</lastmod>
   </url>
   <url>
