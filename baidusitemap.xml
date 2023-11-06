@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://moon-jam.me/thspc2023/</loc>
+    <lastmod>2023-11-06</lastmod>
+  </url>
+  <url>
     <loc>https://moon-jam.me/segment_tree/</loc>
-    <lastmod>2023-10-29</lastmod>
+    <lastmod>2023-11-05</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.me/graph/</loc>
-    <lastmod>2023-10-29</lastmod>
+    <lastmod>2023-11-05</lastmod>
   </url>
   <url>
     <loc>https://moon-jam.me/zerojudge_f582/</loc>

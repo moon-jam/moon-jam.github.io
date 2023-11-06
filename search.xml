@@ -155,9 +155,47 @@ Plugins</a><br>
       </tags>
   </entry>
   <entry>
+    <title>臺北市資訊學科能力競賽 2023</title>
+    <url>/thspc2023/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>第一次打北市賽，也是最後一次，雖然說好像進步空間還很大（好像還可以再多個 100 分，不過這樣也頂多三等獎 ww），從今年三月上資芽算法班第一次接觸演算法，不過我應該是高三開學才開始在練題目，然後校內賽完開始培訓才開始練比賽（個人感覺練題目跟練比賽好像不太一樣，通常練題目習慣應該就是要拿滿分解，但競賽是要快速得到你所能得到的最大分數，這也跟我沒少拿了差不多 100 分有關 QQ）。</p>
+<h2 id="pa-100100">pA 100/100</h2>
+<p>這題有點像約瑟夫但每個人有<span class="math inline"> \(K\)</span> 條命，然後每次經過<span class="math inline"> \(N\)</span> 個人，但好像師大伺服器比較快？時限 2 秒，我想說先用 linked
+list 試試看複雜度<span class="math inline"> \(O(NSK)\)</span>(<span class="math inline">\(N&lt;10000, S&lt;500,
+k&lt;6\)</span>)，然後就 AC 了！（好像有人<span class="math inline"> \(N^2
+K\)</span> 過了，師大測資 XD），賽後才知道好像用線段樹可以有<span class="math inline"> \(O(NK log
+N)\)</span>，寫法大概應該就是我之前寫的那題 <a href="https://moon-jam.me/zerojudge_c296/">APCS-2016-1029-3 定時 K
+彈</a></p>
+<h2 id="pb-17100">pB 17/100</h2>
+<p>我 de 了一個半小時的 bug 結果只有 17 分🥲，大燒雞。<br>
+題目是說有兩類保健食品，各 n、m 個，然後接下來會說哪些不能一起用，問說能一起用的最大保健食品數，我一開始是把不能一起的連在一起做最大匹配，最後再輸出全部剪去最大匹配的數量，不知道哪裡有問題，只有第一子題對，後面都 WA，感覺應該是我少判了什麼（其實我在這題之前根本沒寫過最大匹配的題目 www），但因為可能剛好第一子題沒有戳到所以就過了🤔</p>
+<h2 id="pc-100100">pC 100/100</h2>
+<p>這應該是這次最水的，我有點忘了題目是什麼，但我好像是用有點用雙指針的方法，然後我用 map 存某個東西，最後複雜度是<span class="math inline"> \(O(N log N)\)</span>，這題好像 10 分鐘我就寫完了</p>
+<h2 id="pd-0100">pD 0/100</h2>
+<p>區間眾數，不過我不會，我想說用線段樹撈子題（結果賽後別人講才知道用前綴和就能撈了🙃，資結中毒），然後我把邏輯判斷的 <code>&amp;&amp;</code> 打成 <code>,</code>，超級笨然後我花了 5 分鐘找 bug 結果找不到，然後就結束了...</p>
+<h2 id="pe-0100-沒看到">pE 0/100 （沒看到）</h2>
+<h2 id="pf-0100-沒看到">pF 0/100 （沒看到）</h2>
+<h2 id="總結">總結</h2>
+<p>策略錯誤🫠，雖然好像常常總是有人講說要先看完所有題敘按順序寫，不過我總是想說我就按順序看，要是我有想法我就直接做一做，反正如果說我看完發現其他更簡單的，前面次簡單的題目我也一定能做出來，還能省下重複讀題的時間，結果就是大燒雞🐓，聽說第六題好像挺簡單的，真的好可惜。</p>
+<p>另外這次題目真的有比較簡單，比賽前我們模的每場都還簡單，也很明顯出現了四個破台，然後我只有佳作🥲，不過已經還可以了啦。半年前接觸演算法，兩個月前開始練題目，而且同時還有特選在忙，從 FRC 斜槓來競程玩，這經驗也是挺有趣的，之後應該也會繼續打比賽，但都是之後的事了。</p>
+<p>最後成績：<br>
+總分 217/600<br>
+rank 45</p>
+]]></content>
+      <categories>
+        <category>比賽</category>
+      </categories>
+      <tags>
+        <tag>比賽</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>圖論（c++）</title>
     <url>/graph/</url>
-    <content><![CDATA[<h2 id="拓樸排序">拓樸排序</h2>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>這邊會放一些圖論的演算法，主要是為了方便自己以後複習，也希望能夠幫助到其他人，如果有任何問題歡迎在下方留言，我會盡快回覆。</p>
+<span id="more"></span>
+<h2 id="拓樸排序">拓樸排序</h2>
 <figure class="highlight c++"><figcaption><span>拓樸排序 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1E5</span> + <span class="number">5</span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; edge[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Topological_sort</span><span class="params">(<span class="type">int</span> V)</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="type">int</span> enter_deg[N];</span><br><span class="line">    <span class="built_in">memset</span>(enter_deg, <span class="number">0</span>, <span class="built_in">sizeof</span>(enter_deg));</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; V; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> cur : edge[i])</span><br><span class="line">            enter_deg[cur]++;</span><br><span class="line">    priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;, greater&lt;<span class="type">int</span>&gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;V; i++)</span><br><span class="line">        <span class="keyword">if</span>(enter_deg[i]==<span class="number">0</span>)</span><br><span class="line">            q.<span class="built_in">push</span>(i);</span><br><span class="line">    <span class="keyword">while</span>(!q.<span class="built_in">empty</span>()){</span><br><span class="line">        <span class="type">int</span> cur = q.<span class="built_in">top</span>(); q.<span class="built_in">pop</span>();</span><br><span class="line">        res.<span class="built_in">eb</span>(cur);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> ch : edge[cur]){</span><br><span class="line">            <span class="keyword">if</span>(--enter_deg[ch] == <span class="number">0</span>)</span><br><span class="line">                q.<span class="built_in">push</span>(ch);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> is_dag=<span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;V; i++)</span><br><span class="line">        <span class="keyword">if</span>(enter_deg[i]!=<span class="number">0</span>)</span><br><span class="line">            is_dag=<span class="literal">false</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="最小生成">最小生成🌲</h2>
 <p><a href="https://zerojudge.tw/ShowProblem?problemid=a129">zerojudge
@@ -219,7 +257,10 @@ a874</a></p>
   <entry>
     <title>線段樹練習</title>
     <url>/segment_tree/</url>
-    <content><![CDATA[<h2 id="區間詢問單點修改">區間詢問單點修改</h2>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>因為要能力競賽了，但我有點對他不熟，所以就來練習一下，順便做個紀錄。</p>
+<span id="more"></span>
+<h2 id="區間詢問單點修改">區間詢問單點修改</h2>
 <p><a href="https://neoj.sprout.tw/problem/80/">neoj80 RMQ 問題</a></p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1E6</span> + <span class="number">6</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> arr[N], seg[N*<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> idx)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(r==l+<span class="number">1</span>){ </span><br><span class="line">        seg[idx] = arr[l];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">build</span>(l, mid, idx*<span class="number">2</span>+<span class="number">1</span>), <span class="built_in">build</span>(mid, r, idx*<span class="number">2</span>+<span class="number">2</span>);</span><br><span class="line">    seg[idx] = <span class="built_in">min</span>(seg[idx*<span class="number">2</span>+<span class="number">1</span>], seg[idx*<span class="number">2</span>+<span class="number">2</span>]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> ql, <span class="type">int</span> qr, <span class="type">int</span> idx)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(ql==l &amp;&amp; qr==r) <span class="keyword">return</span> seg[idx];</span><br><span class="line">    <span class="type">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(ql&gt;=mid) <span class="keyword">return</span> <span class="built_in">query</span>(mid, r, ql, qr, idx*<span class="number">2</span>+<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(qr&lt;=mid) <span class="keyword">return</span> <span class="built_in">query</span>(l, mid, ql, qr, idx*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">min</span>(<span class="built_in">query</span>(l,mid, ql, mid, idx*<span class="number">2</span>+<span class="number">1</span>), <span class="built_in">query</span>(mid,r, mid, qr, idx*<span class="number">2</span>+<span class="number">2</span>));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> chg_place, <span class="type">int</span> chg_data, <span class="type">int</span> idx)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(r==l+<span class="number">1</span> &amp;&amp; l==chg_place) { </span><br><span class="line">        seg[idx]=chg_data;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(chg_place&gt;=mid) <span class="built_in">modify</span>(mid, r, chg_place, chg_data, idx*<span class="number">2</span>+<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">modify</span>(l, mid, chg_place, chg_data, idx*<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">    seg[idx] = <span class="built_in">min</span>(seg[idx*<span class="number">2</span>+<span class="number">1</span>], seg[idx*<span class="number">2</span>+<span class="number">2</span>]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="comment">// ios::sync_with_stdio(0);</span></span><br><span class="line">    <span class="comment">// cin.tie(0), cout.tie(0);</span></span><br><span class="line">    <span class="type">int</span> n, t;</span><br><span class="line">    cin &gt;&gt;t&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>; i&lt; n; i++) cin &gt;&gt; arr[i];</span><br><span class="line">    <span class="built_in">build</span>(<span class="number">0</span>,n,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(t--){</span><br><span class="line">        <span class="type">int</span> cmd, x, y;</span><br><span class="line">        cin &gt;&gt; cmd &gt;&gt; x &gt;&gt;y;</span><br><span class="line">        <span class="keyword">if</span>(cmd == <span class="number">1</span>) cout &lt;&lt; <span class="built_in">query</span>(<span class="number">0</span>, n, x, y+<span class="number">1</span>,<span class="number">0</span>) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="keyword">if</span>(cmd == <span class="number">2</span>) <span class="built_in">modify</span>(<span class="number">0</span>, n, x, y,<span class="number">0</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="區間修改區間詢問---lazy-tag">區間修改區間詢問 - lazy tag</h2>
@@ -637,8 +678,8 @@ n
         <category>數學</category>
       </categories>
       <tags>
-        <tag>線性代數</tag>
         <tag>證明</tag>
+        <tag>線性代數</tag>
       </tags>
   </entry>
   <entry>
