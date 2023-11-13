@@ -155,6 +155,139 @@ Plugins</a><br>
       </tags>
   </entry>
   <entry>
+    <title>Gray Code (CSES 2205)</title>
+    <url>/CSES_2205/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://cses.fi/problemset/task/2205/">題目網址</a></p>
+<p>A Gray code is a list of all <span class="math inline">\(2^n\)</span>
+bit strings of length <span class="math inline">\(n\)</span>, where any
+two successive strings differ in exactly one bit (i.e., their Hamming
+distance is one). Your task is to create a Gray code for a given length
+<span class="math inline">\(n\)</span>.</p>
+</div>
+<span id="more"></span>
+<div class="note info"><p>解題思路：
+這題實作上非常簡單，但就是在想解題的過程很有趣，我想到一種一定是解的作法，有遞迴的感覺，底下舉個例子：<br>
+<span class="math inline">\(n=1\)</span>:<br>
+0<br>
+1</p>
+<p><span class="math inline">\(n=2\)</span>:<br>
+00<br>
+01<br>
+11<br>
+10</p>
+<p><span class="math inline">\(n=3\)</span>:<br>
+000<br>
+001<br>
+011<br>
+010<br>
+110<br>
+111<br>
+101<br>
+100</p>
+<p>會發現<span class="math inline"> \(n\)</span> 的 Gray Code 就是在<span class="math inline"> \(n-1\)</span> 的 Gray Code 前面加上 0，再把<span class="math inline"> \(n-1\)</span> 的 Gray
+Code 反過來加上 1，這樣就能保證相鄰的兩個字串只有一個 bit 不同，而且也能保證所有的字串都會出現，所以就是一定是解，但只知道這樣其實在實作上會有點麻煩，會需要紀錄之前的 Gray
+Code，其實可以發現每一位之間是有規律的，以最右邊的一位為例，必定會是 011001100110...，第二位就是 0011110000111100...，第<span class="math inline"> \(i\)</span> 為的間格會是<span class="math inline"> \(2^i\)</span>，那就可以一位位分析應該擺 0 或 1，但再仔細觀察一下，這樣的關係，恰好會是兩位之間 XOR=1 的間格，以第一位為例：<br>
+無論數字多大，位元的第一和第二位都會是如下規律：<br>
+00<br>
+01<br>
+10<br>
+11<br>
+00<br>
+01<br>
+10<br>
+11<br>
+00<br>
+...<br>
+兩位間 XOR 關係後恰巧會是：011001100110...</p>
+<p>而若是第二位： 無論數字多大，位元的前三位都會是如下規律： 000<br>
+001<br>
+011<br>
+010<br>
+110<br>
+111<br>
+101<br>
+100<br>
+000<br>
+...<br>
+第二三位間 XOR 關係後恰巧會是：0011110000111100...<br>
+以此類推，最後一位就看目前有沒有過半，過半前是 0，過半後是 1，就能輕鬆秒殺這題了。</p>
+</div>
+<figure class="highlight c++"><figcaption><span>Gray Code</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for(int i = a; i&lt;=b; i++ )</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for(int i = a; i&gt;=b; i-- )</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a)=max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a)=min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">0</span>, (<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>){</span><br><span class="line">        cout &lt;&lt; (i&gt;&gt;(n<span class="number">-1</span>));</span><br><span class="line">        <span class="built_in">rev</span>(j, n<span class="number">-2</span>, <span class="number">0</span>)</span><br><span class="line">            cout &lt;&lt; (((i&gt;&gt;j)&amp;<span class="number">1</span>) ^ ((i&gt;&gt;(j+<span class="number">1</span>))&amp;<span class="number">1</span>));</span><br><span class="line">        cout &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+        <category>CSES</category>
+      </categories>
+      <tags>
+        <tag>CSES</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APCS 先加後乘與函數 (zerojudge j607)</title>
+    <url>/zerojudge_j607/</url>
+    <content><![CDATA[<div class="note default"><p><a href="https://zerojudge.tw/ShowProblem?problemid=j607">題目網址</a></p>
+<p>給一個運算式，運算式的內容由數字、+、* 和<span class="math inline"> \(f()\)</span> 某個函式<span class="math inline"> \(f()\)</span> 所組成，除了函式<span class="math inline"> \(f()\)</span> 以外不會有額外的括號。請將此運算式依照先加後乘的方式運算。</p>
+<p>函式<span class="math inline"> \(f()\)</span> 定義為從這個不定長度的參數<span class="math inline"> \(x_1, x_2, x_3, x_4,
+...\)</span> 中的最大值扣掉最小值。例如 <span class="math inline">\(f(3,6,2)=6-2=4\)</span>，<span class="math inline">\(f(3)=0\)</span>。</p>
+</div>
+<span id="more"></span>
+<div class="note info"><p>解題思路：<br>
+遇到 + 就直接加上去 遇到 * 先把後面做好 遇到 f
+把到) 之前的每個數字記錄下來最後再比較</p>
+<p>🌟可以一開始把<code>)</code> 的位置存起來，複雜度就可以是很漂亮的<span class="math inline"> \(O(N)\)</span>，不過不用也沒關係，這題長度不超過 500，所以可以邊做邊找，複雜度到<span class="math inline"> \(O(N^2)\)</span> 也沒什麼差，向我寫的程式就是邊做邊找的。</p>
+</div>
+<figure class="highlight c++"><figcaption><span>APCS 先加後乘與函數 </span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">string in;</span><br><span class="line"><span class="type">int</span> len;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遇到+ 就直接加上去</span></span><br><span class="line"><span class="comment">// 遇到* 先把後面做好</span></span><br><span class="line"><span class="comment">// 遇到f 把到)之前的每個數字記錄下來最後再比較</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">calculate</span><span class="params">(<span class="type">int</span> idx, <span class="type">int</span> sum)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(idx&gt;=len || in[idx]==<span class="string">','</span> || in[idx]==<span class="string">')'</span>) <span class="keyword">return</span> sum;</span><br><span class="line">    <span class="keyword">if</span>(in[idx] == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="built_in">calculate</span>(idx+<span class="number">1</span>, sum);</span><br><span class="line">    <span class="keyword">if</span>(in[idx] == <span class="string">'*'</span>) <span class="keyword">return</span> sum*<span class="built_in">calculate</span>(idx+<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>(in[idx] == <span class="string">'f'</span>){</span><br><span class="line">        <span class="type">int</span> end_idx = idx, left_num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(in[end_idx]!=<span class="string">')'</span> || left_num&gt;<span class="number">0</span>) <span class="comment">//可在一開始建好每個函數結尾位置，複雜度可縮短至O(N)</span></span><br><span class="line">            end_idx++, left_num+=(in[end_idx]==<span class="string">'('</span>)-(in[end_idx]==<span class="string">')'</span>); </span><br><span class="line">        <span class="type">int</span> Min = <span class="number">100004</span>, Max = <span class="number">-1</span>;</span><br><span class="line">        idx++; <span class="comment">// '(' 的位置</span></span><br><span class="line">        <span class="keyword">while</span>(in[idx] != <span class="string">')'</span>){</span><br><span class="line">            idx++;</span><br><span class="line">            <span class="type">int</span> cur = <span class="built_in">calculate</span>(idx, <span class="number">0</span>);</span><br><span class="line">            Min = <span class="built_in">min</span>(Min, cur);</span><br><span class="line">            Max = <span class="built_in">max</span>(Max, cur);</span><br><span class="line">            <span class="keyword">while</span>(in[idx]!=<span class="string">','</span> &amp;&amp; idx&lt;end_idx) </span><br><span class="line">                idx++, left_num+=(in[idx]==<span class="string">'('</span>)-(in[idx]==<span class="string">')'</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">calculate</span>(idx+<span class="number">1</span>,sum+(Max-Min));</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(in[idx]&gt;=<span class="string">'0'</span> &amp;&amp; in[idx]&lt;=<span class="string">'9'</span>){</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; add;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>, pos=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(in[idx]&gt;=<span class="string">'0'</span> &amp;&amp; in[idx]&lt;=<span class="string">'9'</span>) add.<span class="built_in">push_back</span>(in[idx++]-<span class="string">'0'</span>), pos*=<span class="number">10</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i : add) pos/=<span class="number">10</span>, res+=i*pos;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">calculate</span>(idx,sum+res);</span><br><span class="line">    } <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin &gt;&gt; in;</span><br><span class="line">    in = <span class="string">"+"</span> + in;</span><br><span class="line">    len = in.<span class="built_in">size</span>();</span><br><span class="line">    cout &lt;&lt; <span class="built_in">calculate</span>(<span class="number">0</span>, <span class="number">0</span>) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>PS：這題我上個月就寫了，但好像後來忘記丟上來 XD</p>
+<figure>
+<img data-src="https://i.imgur.com/gr5St9d.png" alt="AC的Submission～">
+<figcaption aria-hidden="true">AC 的 Submission～</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>程式題解</category>
+        <category>APCS</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>臺北市資訊學科能力競賽 2023</title>
+    <url>/thspc2023/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>第一次打北市賽，也是最後一次，雖然說好像進步空間還很大（好像還可以再多個 100 分，不過這樣也頂多三等獎 ww），從今年三月上資芽算法班第一次接觸演算法，不過我應該是高三開學才開始在練題目，然後校內賽完開始培訓才開始練比賽（個人感覺練題目跟練比賽好像不太一樣，通常練題目習慣應該就是要拿滿分解，但競賽是要快速得到你所能得到的最大分數，這也跟我沒少拿了差不多 100 分有關 QQ）。
+<span id="more"></span></p>
+<h2 id="pa-100100">pA 100/100</h2>
+<p>這題有點像約瑟夫但每個人有<span class="math inline"> \(K\)</span> 條命，然後每次經過<span class="math inline"> \(N\)</span> 個人，但好像師大伺服器比較快？時限 2 秒，我想說先用 linked
+list 試試看複雜度<span class="math inline"> \(O(NSK)\)</span>(<span class="math inline">\(N&lt;10000, S&lt;500,
+k&lt;6\)</span>)，然後就 AC 了！（好像有人<span class="math inline"> \(N^2
+K\)</span> 過了，師大測資 XD），賽後才知道好像用線段樹可以有<span class="math inline"> \(O(NK log
+N)\)</span>，寫法大概應該就是我之前寫的那題 <a href="https://moon-jam.me/zerojudge_c296/">APCS-2016-1029-3 定時 K
+彈</a></p>
+<h2 id="pb-17100">pB 17/100</h2>
+<p>我 de 了一個半小時的 bug 結果只有 17 分🥲，大燒雞。<br>
+題目是說有兩類保健食品，各 n、m 個，然後接下來會說哪些不能一起用，問說能一起用的最大保健食品數，我一開始是把不能一起的連在一起做最大匹配，最後再輸出全部剪去最大匹配的數量，不知道哪裡有問題，只有第一子題對，後面都 WA，感覺應該是我少判了什麼（其實我在這題之前根本沒寫過最大匹配的題目 www），但因為可能剛好第一子題沒有戳到所以就過了🤔</p>
+<h2 id="pc-100100">pC 100/100</h2>
+<p>這應該是這次最水的，我有點忘了題目是什麼，但我好像是用有點用雙指針的方法，然後我用 map 存某個東西，最後複雜度是<span class="math inline"> \(O(N log N)\)</span>，這題好像 10 分鐘我就寫完了</p>
+<h2 id="pd-0100">pD 0/100</h2>
+<p>區間眾數，不過我不會，我想說用線段樹撈子題（結果賽後別人講才知道用前綴和就能撈了🙃，資結中毒），然後我把邏輯判斷的 <code>&amp;&amp;</code> 打成 <code>,</code>，超級笨然後我花了 10 分鐘找 bug 結果找不到，然後就結束了...</p>
+<h2 id="pe-0100-沒看到">pE 0/100 （沒看到）</h2>
+<h2 id="pf-0100-沒看到">pF 0/100 （沒看到）</h2>
+<h2 id="總結">總結</h2>
+<p>策略錯誤🫠，雖然好像常常總是有人講說要先看完所有題敘按順序寫，不過我總是想說我就按順序看，要是我有想法我就直接做一做，反正如果說我看完發現其他更簡單的，前面次簡單的題目我也一定能做出來，還能省下重複讀題的時間，結果就是大燒雞🐓，聽說第六題好像挺簡單的，真的好可惜。</p>
+<p>另外這次題目真的有比較簡單，比賽前我們模的每場都還簡單，也很明顯出現了四個破台，然後我只有佳作🥲，不過已經還可以了啦。半年前接觸演算法，兩個月前開始練題目，而且同時還有特選在忙，從 FRC 斜槓來競程玩，這經驗也是挺有趣的，之後應該也會繼續打比賽，但都是之後的事了。</p>
+<p>最後成績：<br>
+總分 217/600<br>
+rank 45</p>
+]]></content>
+      <categories>
+        <category>比賽</category>
+      </categories>
+      <tags>
+        <tag>比賽</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>圖論（c++）</title>
     <url>/graph/</url>
     <content><![CDATA[<h2 id="前言">前言</h2>
