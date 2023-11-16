@@ -6,7 +6,8 @@ tags:
 categories:
   - 程式題解
   - APCS
-date: 2023-11-07
+abbrlink: 18438
+date: 2023-11-07 00:00:00
 ---
 
 {% note default %}
@@ -80,6 +81,6 @@ signed main(){
 }
 ```
 
-附註：這題我上個月就寫完了，但好像忘記丟上來XD
+PS：這題我上個月就寫了，但好像後來忘記丟上來XD
 
 ![AC的Submission～](https://i.imgur.com/gr5St9d.png)
