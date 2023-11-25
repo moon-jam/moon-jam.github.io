@@ -170,3 +170,9 @@ signed main(){
     return 0;
 }
 ```
+
+## Elevator Rides ([題解](/CSES_2205))
+
+```c++ Elevator Rides
+
+```
