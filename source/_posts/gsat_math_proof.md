@@ -37,8 +37,30 @@ mathjax: true
 
 ## 指、對數
 
-好像也沒有🫠
 ![Image](https://i.imgur.com/rHIobyh.png)
+
+1. 指數不等式：  
+   - $a^x>a^y$，$x>y$，$a>1$  
+   - $a^x>a^y$，$x<y$，$0<a<1$  
+   - $a^x<a^y$，$x>y$，$0<a<1$  
+   - $a^x<a^y$，$x<y$，$a>1$
+2. 對數不等式：  
+   - $log_ax>log_ay$，$x>y$，$a>1$  
+   - $log_ax>log_ay$，$x<y$，$0<a<1$  
+   - $log_ax<log_ay$，$x>y$，$0<a<1$  
+   - $log_ax<log_ay$，$x<y$，$a>1$
+3. 對數性質：  
+   - $log_a1=0$  
+   - $log_aa=1$  
+   - $log_ab=\frac{1}{log_ba}$  
+   - $log_ab=\frac{log_cb}{log_ca}$  
+   - $log_ab=log_ac*log_cb$  
+   - $log_ab=log_ac+log_cb$  
+   - $log_ab=log_ax*log_bx$  
+   - $log_ab=\frac{log_ax}{log_bx}$  
+   - $log_ax^m=mlog_ax$  
+
+證明待補🫠
 
 ## 點&直線
 
@@ -191,7 +213,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
    - $\sum_{i=1}^{n} \frac{1}{i(i+2)}$ $= \frac{1}{2}\sum_{i=1}^{n} (\frac{1}{i}-\frac{1}{(i+2)})$ $= \frac{1}{2}-\frac{1}{2(n+1)}-\frac{1}{2(n+2)}$
    - $\sum_{i=1}^{n} \frac{1}{i(i+1)(i+2)}$ $= \frac{1}{2}\sum_{i=1}^{n} (\frac{1}{i(i+1)}-\frac{1}{(i+1)(i+2)})$ $= \frac{1}{2}(\frac{1}{2}-\frac{1}{2(n+1)}-\frac{1}{2(n+2)})$
 
-證明嘛...之後有空再補🫠
+證明待補🫠
 
 ## 計數原理
 
@@ -322,7 +344,9 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 12. 相關係數：$r=\frac{s_{xy}}{s_xs_y}=$ $\frac{s_{xy}}{\sqrt{\sum_{i=1}^{n} (x_i-\bar{x})^2 \cdot \sum_{i=1}^{n} (y_i-\bar{y})^2}}$  
     - 一標準化數據的相關係數：$r=\frac{\sum_{i=1}^{n} x^z_iy^z_i}{n}$  
 13. 最小平方法 - 回歸直線： $y-\bar{y}=\frac{s_{xy}}{s_x^2}(x-\bar{x})$
- 
+
+證明待補🫠  
+
 ## 參考文獻
 
 1. 臺北市立成功高級中學數學科教學研究團隊(2021)。高中數學演習 第一冊，臺北市立成功高級中學。
