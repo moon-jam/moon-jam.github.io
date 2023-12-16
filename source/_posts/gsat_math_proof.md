@@ -8,9 +8,8 @@ tags:
 categories:
   - 數學
 abbrlink: 30138
-date: 2023-10-30 00:00:00
+date: 2023-12-16 00:00:00
 lang:
-hidden: true
 mathjax: true
 ---
 
