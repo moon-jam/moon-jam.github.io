@@ -10,6 +10,7 @@ categories:
 abbrlink: 30138
 date: 2023-12-16 00:00:00
 lang:
+hidden: true
 mathjax: true
 ---
 
@@ -59,7 +60,7 @@ mathjax: true
    - $log_ab=log_ax*log_bx$  
    - $log_ab=\frac{log_ax}{log_bx}$  
    - $log_ax^m=mlog_ax$  
-   - $log_ab\cdot log_bc\cdot log_cd\cdot ...\cdot log_nx=log_ax$
+   - $log_ab\cdot log_bc\cdot log_cd\cdot ...\cdot log_nx$ $=log_ax$
    - $a^{log_bc}=c^{log_ba}$
 
 證明待補🫠
@@ -98,14 +99,14 @@ $$|k\vec{n}| = |k||\vec{n}| = \frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}} = d(P, L)$$
 
 ### 角平分線(點到直線距離類推)
 
-平面上有$P(x_0,y_0), L_1:A_1x+B_1y+C_1=0, L_2:A_2x+B_2y+C_2=0$，其中$P$點在$L_1$、$L_2$的角平分線上，即$P$點到$L_1$、$L_2$的距離相等，則$d(P,L_1)=d(P,L_2)$  
+平面上有$P(x_0,y_0),$ $ L_1:A_1x+B_1y+C_1=0,$ $ L_2:A_2x+B_2y+C_2=0$，其中$P$點在$L_1$、$L_2$的角平分線上，即$P$點到$L_1$、$L_2$的距離相等，則$d(P,L_1)=d(P,L_2)$  
 故$\frac{|A_1x_0+B_1y_0+C_1|}{\sqrt{A_1^2+B_1^2}}=\frac{|A_2x_0+B_2y_0+C_2|}{\sqrt{A_2^2+B_2^2}}$  
 則$\frac{A_1x_0+B_1y_0+C_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{A_2x_0+B_2y_0+C_2}{\sqrt{A_2^2+B_2^2}}$  
 則$P$點所在直線為：$\frac{A_1x+B_1y+C_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{A_2x+B_2y+C_2}{\sqrt{A_2^2+B_2^2}}$
 
 ### 兩直線夾角
 
-平面上有$L_1:A_1x+B_1y+C_1=0, L_2:A_2x+B_2y+C_2=0$，兩直線夾角為$\theta$，其中$0\leq\theta\leq\pi$
+平面上有$L_1:A_1x+B_1y+C_1=0,$ $ L_2:A_2x+B_2y+C_2=0$，兩直線夾角為$\theta$，其中$0\leq\theta\leq\pi$
 
 1. 用內積：$\cos\theta=\pm\frac{A_1A_2+B_1B_2}{\sqrt{A_1^2+B_1^2}\sqrt{A_2^2+B_2^2}}$  
    兩直線法向量分別為$\vec{n_1}=(A_1,B_1)$、$\vec{n_2}=(A_2,B_2)$，則$\cos\theta=\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}||\vec{n_2}|}$，另一角為$\pi-\theta$
@@ -185,7 +186,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 2. 兩函數圖形是否可經由平移求得(類泰勒展開)：  
    有二多項式函數$f(x)=a_0+a_1x+a_2x^2+...+a_nx^n$、$g(x)=b_0+b_1x+b_2x^2+...+b_nx^n$  
    若$f(x)$、$g(x)$圖形可經由平移求得，則滿足：  
-   $f'(k)=g'(k), f''(k)=g''(k), ..., f^{(n)}(k)=g^{(n)}(k)$，其中k滿足$f^{(n-1)}(k)=g^{(n-1)}(k)$
+   $f'(k)=g'(k),$ $ f''(k)$ $=g''(k), ..., f^{(n)}(k)$ $=g^{(n)}(k)$，其中k滿足$f^{(n-1)}(k)=g^{(n-1)}(k)$
 
 ## 數列與級數
 
@@ -384,20 +385,20 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 5. 餘弦定理：$a^2=b^2+c^2-2bc\cos A$  
 6. 海龍公式：$S=\sqrt{p(p-a)(p-b)(p-c)}$，其中$p=\frac{a+b+c}{2}$  
 7. 和角公式：  
-   - $\sin(A+B)=\sin A\cos B+\cos A\sin B$  
-   - $\cos(A+B)=\cos A\cos B-\sin A\sin B$  
-   - $\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}$  
-   - $\sin(A-B)=\sin A\cos B-\cos A\sin B$  
-   - $\cos(A-B)=\cos A\cos B+\sin A\sin B$  
-   - $\tan(A-B)=\frac{\tan A-\tan B}{1+\tan A\tan B}$  
+   - $\sin(A+B)$ $=\sin A\cos B+\cos A\sin B$  
+   - $\cos(A+B)$ $=\cos A\cos B-\sin A\sin B$  
+   - $\tan(A+B)$ $=\frac{\tan A+\tan B}{1-\tan A\tan B}$  
+   - $\sin(A-B)$ $=\sin A\cos B-\cos A\sin B$  
+   - $\cos(A-B)$ $=\cos A\cos B+\sin A\sin B$  
+   - $\tan(A-B)$ $=\frac{\tan A-\tan B}{1+\tan A\tan B}$  
 8. 倍角公式：  
    - $\sin2A=2\sin A\cos A$  
-   - $\cos2A=\cos^2A-\sin^2A=2\cos^2A-1=1-2\sin^2A$  
+   - $\cos2A$ $=\cos^2A-\sin^2A$ $=2\cos^2A-1$ $=1-2\sin^2A$  
    - $\tan2A=\frac{2\tan A}{1-\tan^2A}$  
 9. 半角公式：  
    - $\sin\frac{A}{2}=\pm\sqrt{\frac{1-\cos A}{2}}$  
    - $\cos\frac{A}{2}=\pm\sqrt{\frac{1+\cos A}{2}}$  
-   - $\tan\frac{A}{2}=\pm\sqrt{\frac{1-\cos A}{1+\cos A}}=\frac{\sin A}{1+\cos A}=\frac{1-\cos A}{\sin A}$  
+   - $\tan\frac{A}{2}$ $=\pm\sqrt{\frac{1-\cos A}{1+\cos A}}$ $=\frac{\sin A}{1+\cos A}$ $=\frac{1-\cos A}{\sin A}$  
 10. 正餘弦疊合(和角公式逆推)：  
     - 將函數$y=a\sin x + b\cos x$化為$y=R\sin(x+\alpha)$的形式  
       $R=\sqrt{a^2+b^2}$  
@@ -449,13 +450,13 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 2. 向量的線性組合：若$\vec{a}$、$\vec{b}$為兩不平行向量，則平面上任意向量$\vec{c}$均可表示為$k_1\vec{a}+k_2\vec{b}$的形式，$k_1,k_2\in\mathbb{R}$  
 3. 向量長度：$|\vec{a}|=\sqrt{a_1^2+a_2^2+...+a_n^2}$  
 4. 向量內積：$\vec{a}\cdot\vec{b}$ $=a_1b_1+a_2b_2+...+a_nb_n$ $=|\vec{a}||\vec{b}|\cos\theta$，其中$\theta$為兩向量夾角  
-5. 三角形中的向量內積：  
+5. $\triangle ABC$中的向量內積：  
    - $\vec{AB}\cdot\vec{AC}=\frac{|\vec{AB}|^2+|\vec{AC}|^2-|\vec{BC}|^2}{2}$ (by 餘弦定理)  
-   - $\triangle ABC$的垂心$H$滿足$\vec{AB}\cdot\vec{AH}=\vec{AC}\cdot\vec{AH}=\vec{AB}\cdot\vec{AC}=\frac{|\vec{AB}|^2+|\vec{AC}|^2-|\vec{BC}|^2}{2}$
+   - $\triangle ABC$的垂心$H$滿足$\vec{AB}\cdot\vec{AH}$ $=\vec{AC}\cdot\vec{AH}$ $=\vec{AB}\cdot\vec{AC}$ $=\frac{|\vec{AB}|^2+|\vec{AC}|^2-|\vec{BC}|^2}{2}$
 6. 柯西不等式：$|\vec{a}\cdot\vec{b}|\leq|\vec{a}||\vec{b}|$，當且僅當$\vec{a}$、$\vec{b}$共線時等號成立  
 7. 行列式：
    - 二階行列式：$\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc$
-   - 三階行列式：$\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}=aei+bfg+cdh-ceg-bdi-afh$
+   - 三階行列式：$\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}$ $=aei+bfg+cdh$ $-ceg-bdi-afh$
 8. 向量外積：$\vec{a}\times\vec{b}=(\begin{vmatrix}a_2&a_3\\b_2&b_3\end{vmatrix},\begin{vmatrix}a_3&a_1\\b_3&b_1\end{vmatrix},\begin{vmatrix}a_1&a_2\\b_1&b_2\end{vmatrix})$ $=|\vec{a}||\vec{b}|\sin\theta\vec{n}$，其中$\theta$為兩向量夾角，$\vec{n}$為兩向量所在平面的法向量  
    - $\vec{a}\times\vec{b}$的方向：右手定則，將右手食指指向$\vec{a}$，中指指向$\vec{b}$，則拇指所指方向即為$\vec{a}\times\vec{b}$的方向  
    - 特別地，在二維空間中，可視為$z$軸為$0$的三維空間，則$\vec{a}\times\vec{b}$ $=(0,0,a_1b_2-a_2b_1)$ $=|\vec{a}||\vec{b}|\sin\theta\vec{n}$，則此時此二方向向量的$z$軸分量即為其「有號面積」。  
@@ -483,14 +484,17 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
     ![1點在邊上](https://i.imgur.com/C8xbI1T.png)
     ![3點在邊上](https://i.imgur.com/OxRJGjs.png)
     {% endgp %}
-19. 平面四邊形定理：平面四邊形$ABCD$滿足$\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2=\overline{AC}^2+\overline{BD}^2$
+19. 平面四邊形定理：平面四邊形$ABCD$滿足$\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2$ $=\overline{AC}^2+\overline{BD}^2$
 20. 矩陣：$m\times n$矩陣$A$為$m$列$n$行的數字陣列，記為$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}$
 21. 零矩陣：$m\times n$零矩陣$O$為$m$列$n$行的數字陣列，記為$O_{m\times n}=\begin{bmatrix}0&0&...&0\\0&0&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&0\end{bmatrix}$
 22. 單位方陣：$n$階單位方陣$I$為$n$列$n$行的數字陣列，記為$I_n=\begin{bmatrix}1&0&...&0\\0&1&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&1\end{bmatrix}$
 23. 轉置矩陣：$m\times n$矩陣$A$的轉置矩陣$A^T$為$n$列$m$行的數字陣列，記為$A^T=\begin{bmatrix}a_{11}&a_{21}&...&a_{m1}\\a_{12}&a_{22}&...&a_{m2}\\\vdots&\vdots&\ddots&\vdots\\a_{1n}&a_{2n}&...&a_{mn}\end{bmatrix}$
 24. 矩陣運算：  
-    - 矩陣加法：$\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&b_{12}&...&b_{1n}\\b_{21}&b_{22}&...&b_{2n}\\\vdots&\vdots&\ddots&\vdots\\b_{m1}&b_{m2}&...&b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21}+b_{21}&a_{22}+b_{22}&...&a_{2n}+b_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}+b_{m1}&a_{m2}+b_{m2}&...&a_{mn}+b_{mn}\end{bmatrix}$  
-    - 矩陣乘法：$\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}\begin{bmatrix}b_{11}&b_{12}&...&b_{1p}\\b_{21}&b_{22}&...&b_{2p}\\\vdots&\vdots&\ddots&\vdots\\b_{n1}&b_{n2}&...&b_{np}\end{bmatrix}=\begin{bmatrix}c_{11}&c_{12}&...&c_{1p}\\c_{21}&c_{22}&...&c_{2p}\\\vdots&\vdots&\ddots&\vdots\\c_{m1}&c_{m2}&...&c_{mp}\end{bmatrix}$，其中$c_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+...+a_{in}b_{nj}$  
+    - 矩陣加法：  
+      $$\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&b_{12}&...&b_{1n}\\b_{21}&b_{22}&...&b_{2n}\\\vdots&\vdots&\ddots&\vdots\\b_{m1}&b_{m2}&...&b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21}+b_{21}&a_{22}+b_{22}&...&a_{2n}+b_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}+b_{m1}&a_{m2}+b_{m2}&...&a_{mn}+b_{mn}\end{bmatrix}$$  
+    - 矩陣乘法：  
+      $$\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}\begin{bmatrix}b_{11}&b_{12}&...&b_{1p}\\b_{21}&b_{22}&...&b_{2p}\\\vdots&\vdots&\ddots&\vdots\\b_{n1}&b_{n2}&...&b_{np}\end{bmatrix}=\begin{bmatrix}c_{11}&c_{12}&...&c_{1p}\\c_{21}&c_{22}&...&c_{2p}\\\vdots&\vdots&\ddots&\vdots\\c_{m1}&c_{m2}&...&c_{mp}\end{bmatrix}$$  
+      其中$c_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+...+a_{in}b_{nj}$  
     ~~簡單來說就是這樣~~  
     ![弱肉強食 燒肉定食](https://megapx-assets.dcard.tw/images/f7b31b04-8274-4c74-9a4c-73248c55bf31/1280.jpeg)
     - 注意：
@@ -503,18 +507,22 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 25. 轉移矩陣：
     - 當一方陣滿足$[p_ij]$滿足$\sum_{i=1}^{n} p_{ij}=1$，且$0\leq p_{ij}\leq1$，則稱此方陣為轉移矩陣
     - 代表意義：當某現象有$n$種狀態，且各狀態間轉移機率固定時，可將各狀態寫成一矩陣，其中從第$i$狀態轉移到第$j$狀態的機率為$p_{ij}$
-    - 若將各狀態初始機率寫成一行矩陣$X_0=\begin{bmatrix}a_1\\a_2\\\vdots\\a_n\end{bmatrix}$，則經過一次後各狀態機率為$X_1=\begin{bmatrix}a_1p_{11}+a_2p_{21}+...+a_np_{n1}\\a_1p_{12}+a_2p_{22}+...+a_np_{n2}\\\vdots\\a_1p_{1n}+a_2p_{2n}+...+a_np_{nn}\end{bmatrix}=X_0P$，則經過$k$次後各狀態機率為$X_k=X_0P^k$
+    - 若將各狀態初始機率寫成一行矩陣$X_0=\begin{bmatrix}a_1\\a_2\\\vdots\\a_n\end{bmatrix}$，則經過一次後各狀態機率為$X_1$ $=\begin{bmatrix}a_1p_{11}+a_2p_{21}+...+a_np_{n1}\\a_1p_{12}+a_2p_{22}+...+a_np_{n2}\\\vdots\\a_1p_{1n}+a_2p_{2n}+...+a_np_{nn}\end{bmatrix}$ $=X_0P$，則經過$k$次後各狀態機率為$X_k=X_0P^k$
     - 若該現象有一穩定狀態，則$X_k$會趨近於一穩定狀態，即$X_k$會趨近於一矩陣$X$，其中$X$滿足$X=XP$，則$X$為一轉移矩陣的穩定狀態
 26. 高斯約當法：  
-    方程組$\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}$  
-    其中$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&...&a_{nn}\end{bmatrix}$為其係數矩陣，加上常數項後為增廣矩陣$[A|b]=\begin{bmatrix}
+    方程組$\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}$
+
+    其中$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&...&a_{nn}\end{bmatrix}$為其係數矩陣
+
+    加上常數項後為增廣矩陣$[A|b]=\begin{bmatrix}
     \begin{array}{cccc|c}
     a_{11}&a_{12}&...&a_{1n}&b_1\\
     a_{21}&a_{22}&...&a_{2n}&b_2\\
     \vdots&\vdots&\ddots&\vdots&\vdots\\
     a_{n1}&a_{n2}&...&a_{nn}&b_n
     \end{array}
-    \end{bmatrix}$  
+    \end{bmatrix}$
+
     將增廣矩陣利用列運算將$[A|b]$化為上三角矩陣$[U|c]=\begin{bmatrix}
       \begin{array}{cccc|c}
       b_{11}&b_{12}&...&b_{1n}&c_1\\
@@ -522,7 +530,8 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
       \vdots&\vdots&\ddots&\vdots&\vdots\\
       0&0&...&b_{nn}&c_n
       \end{array}
-      \end{bmatrix}$  
+      \end{bmatrix}$
+
     將對每列除以該列最左邊的非零行首元素，得到$[U'|c']=\begin{bmatrix}
       \begin{array}{cccc|c}
       1&\frac{b_{12}}{b_{11}}&...&\frac{b_{1n}}{b_{11}}&\frac{c_1}{b_{11}}\\
@@ -530,7 +539,8 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
       \vdots&\vdots&\ddots&\vdots&\vdots\\
       0&0&...&1&\frac{c_n}{b_{nn}}
       \end{array}
-      \end{bmatrix}$  
+      \end{bmatrix}$
+
     最後將$[U'|c']$利用列運算將其化為$[I|d]=\begin{bmatrix}
       \begin{array}{cccc|c}
       1&0&...&0&d_1\\
@@ -542,9 +552,11 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
     若該方程組無解，則$[U|c]$中有一列為$[0,0,...,0|b]$，則$b\neq0$  
     若該方程式有無限多組解，則$[U|c]$中有一列為$[0,0,...,0|0]$
 27. 克拉瑪公式：  
-    方程組$\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}$  
-    其中$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&...&a_{nn}\end{bmatrix}$，$A_i$為將$A$的第$i$行替換為$b_1,b_2,...,b_n$後所得矩陣  
-    若$det(A)\neq0$，則$x_1=\frac{det(A_1)}{det(A)},x_2=\frac{det(A_2)}{det(A)},...,x_n=\frac{det(A_n)}{det(A)}$
+    方程組$\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}$
+
+    其中$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&...&a_{nn}\end{bmatrix}$，$A_i$為將$A$的第$i$行替換為$b_1,b_2,...,b_n$後所得矩陣
+
+    若$det(A)\neq0$，則$x_1=\frac{det(A_1)}{det(A)}$ $,x_2=\frac{det(A_2)}{det(A)},...,$ $x_n=\frac{det(A_n)}{det(A)}$
 28. $A^{-1}=\frac{\mathrm{adj}(A)}{\det(A)}$
     - 二階矩陣：$A=\begin{bmatrix}a&b\\c&d\end{bmatrix}$，$A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$
 29. 若$A,P$為$n$階矩陣，$P$為可逆矩陣，則$(P^{-1}AP)^k=P^{-1}A^kP$
@@ -565,7 +577,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 5. 平面$E_1$、$E_2$夾角：$\cos\theta=\pm\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}||\vec{n_2}|}$，其中$\vec{n_1}$、$\vec{n_2}$為平面$E_1$、$E_2$的法向量
 6. 點到平面距離：$d=\frac{|\vec{n}\cdot\vec{OP}|}{|\vec{n}|}$，其中$\vec{n}$為平面法向量，$\vec{OP}$為平面上一點到此平面上一點的向量
 7. 平面$E_1$、$E_2$交於一線，則平面$E_1$、$E_2$之角平分面為$\frac{a_1x+b_1y+c_1z+d_1}{\\sqrt{a_1^2+b_1^2+c_1^2}}=\pm\frac{a_2x+b_2y+c_2z+d_2}{\sqrt{a_2^2+b_2^2+c_2^2}}$
-8. 平面系平面$E_1$、$E_2$交於一線，則平面：$a(a_1x+b_1y+c_1z+d_1)+b(a_2x+b_2y+c_2z+d_2)=0$，與$E_1$、$E_2$共線
+8. 平面系平面$E_1$、$E_2$交於一線，則平面：$a(a_1x+b_1y+c_1z+d_1)+$ $b(a_2x+b_2y+c_2z+d_2)=0$，與$E_1$、$E_2$共線
 
 證明待補🫠
 
