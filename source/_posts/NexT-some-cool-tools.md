@@ -110,6 +110,18 @@ $$
 <embed src="ooxx.pdf" width=100% height="自己設" type="application/pdf">
 ```
 
+## NexT Group Picture
+
+使用指令
+
+```markdown
+{% gp [number]-[layout] %}
+{% endgp %}
+```
+
+![layout](https://theme-next.js.org/images/group-picture-1.png)
+![layout](https://theme-next.js.org/images/group-picture-2.png)
+
 ## 結語
 
 這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～
