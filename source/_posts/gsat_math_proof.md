@@ -495,7 +495,8 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 12. 平面中三直線$a_1x+b_1y+c_1=0$、$a_2x+b_2y+c_2=0$、$a_3x+b_3y+c_3=0$交於一點，則$\begin{vmatrix}a_1&b_1&c_1\\a_2&b_2&c_2\\a_3&b_3&c_3\end{vmatrix}=0$
 13. 三向量共平面：$\vec{a}\cdot(\vec{b}\times\vec{c})=0$
 14. 分點公式：假設平面上有兩點$A$、$B$，有一點$P$在直線$\overleftrightarrow{AB}$上，其中$\overline{AP}:\overline{PB}=m:n$，則對任意一點$O$，恆有$\overrightarrow{OP}=\frac{n}{m+n}\overrightarrow{OA}+\frac{m}{m+n}\overrightarrow{OB}$
-15. 三分點公式：假設平面上有三點$A$、$B$、$C$，有一點$P$使得$\triangle BCP : \triangle CAP : \triangle ABP = m:n:p$（面積比），則對任意一點$O$，恆有$\overrightarrow{OP}$ $=\frac{m}{m+n+p}\overrightarrow{OA}+\frac{n}{m+n+p}\overrightarrow{OB}+\frac{p}{m+n+p}\overrightarrow{OC}$
+15. 三分點公式：假設平面上有三點$A$、$B$、$C$，有一點$P$使得$\triangle BCP : \triangle CAP : \triangle ABP = m:n:p$（面積比），則對任意一點$O$，恆有  
+    $$\overrightarrow{OP}=\frac{m}{m+n+p}\overrightarrow{OA}+\frac{n}{m+n+p}\overrightarrow{OB}+\frac{p}{m+n+p}\overrightarrow{OC}$$
 16. 重心公式：假設平面上有三點$A$、$B$、$C$，其重心$G$滿足：  
     - $\overrightarrow{OG}=\frac{1}{3}(\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC})$，其中$O$為任意一點  
     - $\overrightarrow{GA}+\overrightarrow{GB}+\overrightarrow{GC}=\vec{0}$  
