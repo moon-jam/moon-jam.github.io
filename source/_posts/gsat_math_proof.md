@@ -19,7 +19,28 @@ mathjax: true
 要是有發現我寫錯的話拜託留言告訴我一下，~~或者你想幫我改，歡迎來[Pull Request](https://github.com/moon-jam/moon-jam.github.io/pulls)~~  
 <!--more-->
 🔔建議使用電腦或平板觀看，才能獲得更好的閱讀體驗  
-✨側邊欄有目錄，點擊即可跳轉╰(*°▽°*)╯  
+✨側邊欄有目錄，點擊即可跳轉╰(*°▽°*)╯
+{% details mode:close 要是用手機的話這邊也有目錄 %}
+
+1. [前言](/gsat_math_proof/#前言)
+2. [實數](/gsat_math_proof/#實數)
+3. [絕對值](/gsat_math_proof/#絕對值)
+4. [指、對數](/gsat_math_proof/#指、對數)
+5. [點 & 線 (平面)](/gsat_math_proof/#點 & 線 (平面))
+6. [圓](/gsat_math_proof/#圓)
+7. [多項式](/gsat_math_proof/#多項式)
+8. [數列與級數](/gsat_math_proof/#數列與級數)
+9. [計數原理](/gsat_math_proof/#計數原理)
+10. [排列](/gsat_math_proof/#排列)
+11. [組合](/gsat_math_proof/#組合)
+12. [機率 (古典機率、條件機率)& 期望值](/gsat_math_proof/#機率 (古典機率、條件機率)& 期望值)
+13. [數據分析](/gsat_math_proof/#數據分析)
+14. [三角函數](/gsat_math_proof/#三角函數)
+15. [向量 & 行列式 & 矩陣 (線性代數)](/gsat_math_proof/#向量 & 行列式 & 矩陣 (線性代數))
+16. [空間](/gsat_math_proof/#空間)
+17. [參考文獻](/gsat_math_proof/#參考文獻)
+18. [心得](/gsat_math_proof/#心得)
+{% enddetails %}  
 
 ## 實數
 
@@ -61,7 +82,7 @@ mathjax: true
    - $log_ab\cdot log_bc\cdot log_cd\cdot ...\cdot log_nx$ $=log_ax$
    - $a^{log_bc}=c^{log_ba}$
 
-證明待補🫠
+這應該不用證明吧，太簡單了😉
 
 ## 點&線(平面)
 
@@ -104,9 +125,12 @@ $$|k\vec{n}| = |k||\vec{n}| = \frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}} = d(P, L)$$
 則$\frac{A_1x_0+B_1y_0+C_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{A_2x_0+B_2y_0+C_2}{\sqrt{A_2^2+B_2^2}}$  
 則$P$點所在直線為：$\frac{A_1x+B_1y+C_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{A_2x+B_2y+C_2}{\sqrt{A_2^2+B_2^2}}$
 
+另解：利用直線系，確定兩條直線方向向量一樣長，然後直接相加，若兩方向向量夾角為銳角則相加為銳角角平分線，相減則為鈍角，反之則相加為鈍角相減為銳角，例子如下圖：
+![角平分線](https://i.imgur.com/CUyBjhW.png)
+
 ### 兩直線夾角
 
-平面上有$L_1:A_1x+B_1y+C_1=0,$ $ L_2:A_2x+B_2y+C_2=0$，兩直線夾角為$\theta$，其中$0\leq\theta\leq\pi$
+平面上有$L_1:A_1x+B_1y+C_1=0,$ $L_2:A_2x+B_2y+C_2=0$，兩直線夾角為$\theta$，其中$0\leq\theta\leq\pi$
 
 1. 用內積：$\cos\theta=\pm\frac{A_1A_2+B_1B_2}{\sqrt{A_1^2+B_1^2}\sqrt{A_2^2+B_2^2}}$  
    兩直線法向量分別為$\vec{n_1}=(A_1,B_1)$、$\vec{n_2}=(A_2,B_2)$，則$\cos\theta=\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}||\vec{n_2}|}$，另一角為$\pi-\theta$
@@ -165,7 +189,7 @@ $f(x)=y_1+\sum_{i=1}^{n-1} a_i \prod_{j=1}^{i} (x-x_j)$
 給定$n$個點$(x_1,y_1),(x_2,y_2),...,(x_n,y_n)$，其中$x_i$兩兩不同，則存在一多項式$f(x)$如下，滿足$f(x_i)=y_i$  
 $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 
-詳細解說請參考[牛頓插值多項式：拉格朗日怎麼說？](https://math.ntnu.edu.tw/~horng/letter/hpm15010.pdf)
+詳細解說請參考[牛頓插值多項式：拉格朗日怎麼說？](https://math.ntnu.edu.tw/~horng/letter/hpm15010.pdf)
 
 ### 多項式函數圖形
 
@@ -229,8 +253,8 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
    - $\sum_{i=1}^{n} i(i+1)$ $= \frac{n(n+1)(n+2)}{3}$
    - $\sum_{i=1}^{n} i(i+1)(i+2)$ $= \frac{n(n+1)(n+2)(n+3)}{4}$
    - $\sum_{i=1}^{n} \frac{1}{i(i+1)}$ $= \sum_{i=1}^{n} (\frac{1}{i}-\frac{1}{i+1})$ $= 1-\frac{1}{n+1}$
-   - $\sum_{i=1}^{n} \frac{1}{i(i+2)}$ $= \frac{1}{2}\sum_{i=1}^{n} (\frac{1}{i}-\frac{1}{(i+2)})$ $= \frac{1}{2}-\frac{1}{2(n+1)}-\frac{1}{2(n+2)}$
-   - $\sum_{i=1}^{n} \frac{1}{i(i+1)(i+2)}$ $= \frac{1}{2}\sum_{i=1}^{n} (\frac{1}{i(i+1)}-\frac{1}{(i+1)(i+2)})$ $= \frac{1}{2}(\frac{1}{2}-\frac{1}{2(n+1)}-\frac{1}{2(n+2)})$
+   - $\sum_{i=1}^{n} \frac{1}{i(i+2)}$ $= \frac{1}{2}\sum_{i=1}^{n} (\frac{1}{i}-\frac{1}{i+2})$ $= \frac{1}{2}(\frac{3}{2}-\frac{1}{n+1}-\frac{1}{n+2})$
+   - $\sum_{i=1}^{n} \frac{1}{i(i+1)(i+2)}$ $= \frac{1}{2}\sum_{i=1}^{n} (\frac{1}{i(i+1)}-\frac{1}{(i+1)(i+2)})$ $= \frac{1}{2}(\frac{1}{2}-\frac{1}{(n+1)(n+2)})$
 
 證明待補🫠
 
@@ -364,7 +388,13 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
     - 一標準化數據的相關係數：$r=\frac{\sum_{i=1}^{n} x^z_iy^z_i}{n}$  
 13. 最小平方法 - 回歸直線： $y-\bar{y}=\frac{s_{xy}}{s_x^2}(x-\bar{x})$
 
-證明待補🫠  
+### 證明
+
+1. $|r| \leq 0$  
+   $柯希不等式:$ $\frac{(a_1b_1+a_2b_2+...+a_nb_n)}{\sqrt{(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)}} \leq 0$  
+   令$a_i=x_i-\bar{x}$，$b_i=y_i-\bar{y}$，則  
+   $r=\frac{s_{xy}}{s_xs_y}=$ $\frac{\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i-\bar{x})^2 \cdot \sum_{i=1}^{n} (y_i-\bar{y})^2}}$ $=$ $\frac{\sum_{i=1}^{n} a_ib_i}{\sqrt{\sum_{i=1}^{n} a_i^2 \cdot \sum_{i=1}^{n} b_i^2}}$ $\leq 0$
+2. 
 
 ## 三角函數
 
@@ -414,22 +444,22 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
     - 將向量$(x,y)$逆時針旋轉$\theta$角度後得到向量$(x',y')$，則  
       $x'=x\cos\theta-y\sin\theta$  
       $y'=x\sin\theta+y\cos\theta$  
-    - 以矩陣表示：$\begin{bmatrix}x'\\y'\end{bmatrix}=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}$
+    - 以矩陣表示：$\begin{bmatrix}x'\\ y'\end{bmatrix}=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}\begin{bmatrix}x\\ y\end{bmatrix}$
 13. 鏡射矩陣：  
     - 將向量$(x,y)$以過原點斜率與原點$x$軸夾角為$\theta$的直線鏡射後得到向量$(x',y')$，則  
       $x'=x\cos2\theta+y\sin2\theta$  
       $y'=x\sin2\theta-y\cos2\theta$
-    - 以矩陣表示：$\begin{bmatrix}x'\\y'\end{bmatrix}=\begin{bmatrix}\cos2\theta&\sin2\theta\\\sin2\theta&-\cos2\theta\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}$
+    - 以矩陣表示：$\begin{bmatrix}x'\\ y'\end{bmatrix}=\begin{bmatrix}\cos2\theta&\sin2\theta\\\sin2\theta&-\cos2\theta\end{bmatrix}\begin{bmatrix}x\\ y\end{bmatrix}$
 14. 伸縮矩陣：  
     - 將向量$(x,y)$以$x$軸方向伸縮$k$倍、$y$軸方向伸縮$k$倍後得到向量$(x',y')$，則  
       $x'=kx$  
       $y'=ky$
-    - 以矩陣表示：$\begin{bmatrix}x'\\y'\end{bmatrix}=\begin{bmatrix}k&0\\0&k\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}$
+    - 以矩陣表示：$\begin{bmatrix}x'\\ y'\end{bmatrix}=\begin{bmatrix}k&0\\0&k\end{bmatrix}\begin{bmatrix}x\\ y\end{bmatrix}$
 15. 推移矩陣：  
     - 將向量$(x,y)$以$x$軸方向平移$y$座標的$a$倍、$y$軸方向平移$x$座標的$b$倍後得到向量$(x',y')$，則  
       $x'=x+ay$  
       $y'=y+bx$
-    - 以矩陣表示：$\begin{bmatrix}x'\\y'\end{bmatrix}=\begin{bmatrix}1&a\\b&1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}$
+    - 以矩陣表示：$\begin{bmatrix}x'\\ y'\end{bmatrix}=\begin{bmatrix}1&a\\b&1\end{bmatrix}\begin{bmatrix}x\\ y\end{bmatrix}$
 16. 線性變換後三角形面積：  
     - 將三角形$ABC$以線性變換$T$變換後得到三角形$A'B'C'$，則  
       $S_{A'B'C'}=|det(T)|S_{ABC}$
@@ -466,30 +496,31 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 12. 平面中三直線$a_1x+b_1y+c_1=0$、$a_2x+b_2y+c_2=0$、$a_3x+b_3y+c_3=0$交於一點，則$\begin{vmatrix}a_1&b_1&c_1\\a_2&b_2&c_2\\a_3&b_3&c_3\end{vmatrix}=0$
 13. 三向量共平面：$\vec{a}\cdot(\vec{b}\times\vec{c})=0$
 14. 分點公式：假設平面上有兩點$A$、$B$，有一點$P$在直線$\overleftrightarrow{AB}$上，其中$\overline{AP}:\overline{PB}=m:n$，則對任意一點$O$，恆有$\overrightarrow{OP}=\frac{n}{m+n}\overrightarrow{OA}+\frac{m}{m+n}\overrightarrow{OB}$
-15. 重心公式：假設平面上有三點$A$、$B$、$C$，其重心$G$滿足：  
+15. 三分點公式：假設平面上有三點$A$、$B$、$C$，有一點$P$使得$\triangle BCP : \triangle CAP : \triangle ABP = m:n:p$（面積比），則對任意一點$O$，恆有$\overrightarrow{OP}$ $=\frac{m}{m+n+p}\overrightarrow{OA}+\frac{n}{m+n+p}\overrightarrow{OB}+\frac{p}{m+n+p}\overrightarrow{OC}$
+16. 重心公式：假設平面上有三點$A$、$B$、$C$，其重心$G$滿足：  
     - $\overrightarrow{OG}=\frac{1}{3}(\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC})$，其中$O$為任意一點  
     - $\overrightarrow{GA}+\overrightarrow{GB}+\overrightarrow{GC}=\vec{0}$  
-16. 內心公式：假設平面上有三點$A$、$B$、$C$，其內心$I$滿足：  
+17. 內心公式：假設平面上有三點$A$、$B$、$C$，其內心$I$滿足：  
     - $\overrightarrow{OI}=\frac{a\overrightarrow{OA}+b\overrightarrow{OB}+c\overrightarrow{OC}}{a+b+c}$，其中$a,b,c$為三角形$ABC$三邊長，$O$為任意一點
     - $a \cdot \overrightarrow{IA}+b \cdot \overrightarrow{IB}+c \cdot \overrightarrow{IC}=\vec{0}$
-17. 孟式定理：$\triangle ABC$中，若有$D, E, F$在$\overleftrightarrow{BC}, \overleftrightarrow{CA}, \overleftrightarrow{AB}$上(0點或2點在邊上)：  
+18. 孟式定理：$\triangle ABC$中，若有$D, E, F$在$\overleftrightarrow{BC}, \overleftrightarrow{CA}, \overleftrightarrow{AB}$上(0點或2點在邊上)：  
     $D, E, F$三點共線的必要條件為$\frac{\overline{BD}}{\overline{DC}}\cdot\frac{\overline{CE}}{\overline{EA}}\cdot\frac{\overline{AF}}{\overline{FB}}=1$  
     {% gp 2-2 %}
     ![0點在邊上](https://i.imgur.com/G0xEsuv.png)
     ![2點在邊上](https://i.imgur.com/uoUv2uO.png)
     {% endgp %}
-18. 賽瓦定理：$\triangle ABC$中，若有$D, E, F$在$\overleftrightarrow{BC}, \overleftrightarrow{CA}, \overleftrightarrow{AB}$上(1點或3點在邊上)：  
+19. 賽瓦定理：$\triangle ABC$中，若有$D, E, F$在$\overleftrightarrow{BC}, \overleftrightarrow{CA}, \overleftrightarrow{AB}$上(1點或3點在邊上)：  
     $\overline{AD}, \overline{BE}, \overline{CF}$三線交於一點的必要條件為$\frac{\overline{BD}}{\overline{DC}}\cdot\frac{\overline{CE}}{\overline{EA}}\cdot\frac{\overline{AF}}{\overline{FB}}=1$  
     {% gp 2-2 %}
     ![1點在邊上](https://i.imgur.com/C8xbI1T.png)
     ![3點在邊上](https://i.imgur.com/OxRJGjs.png)
     {% endgp %}
-19. 平面四邊形定理：平面四邊形$ABCD$滿足$\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2$ $=\overline{AC}^2+\overline{BD}^2$
-20. 矩陣：$m\times n$矩陣$A$為$m$列$n$行的數字陣列，記為$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}$
-21. 零矩陣：$m\times n$零矩陣$O$為$m$列$n$行的數字陣列，記為$O_{m\times n}=\begin{bmatrix}0&0&...&0\\0&0&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&0\end{bmatrix}$
-22. 單位方陣：$n$階單位方陣$I$為$n$列$n$行的數字陣列，記為$I_n=\begin{bmatrix}1&0&...&0\\0&1&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&1\end{bmatrix}$
-23. 轉置矩陣：$m\times n$矩陣$A$的轉置矩陣$A^T$為$n$列$m$行的數字陣列，記為$A^T=\begin{bmatrix}a_{11}&a_{21}&...&a_{m1}\\a_{12}&a_{22}&...&a_{m2}\\\vdots&\vdots&\ddots&\vdots\\a_{1n}&a_{2n}&...&a_{mn}\end{bmatrix}$
-24. 矩陣運算：  
+20. 平面四邊形定理：平面四邊形$ABCD$滿足$\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2$ $=\overline{AC}^2+\overline{BD}^2$
+21. 矩陣：$m\times n$矩陣$A$為$m$列$n$行的數字陣列，記為$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}$
+22. 零矩陣：$m\times n$零矩陣$O$為$m$列$n$行的數字陣列，記為$O_{m\times n}=\begin{bmatrix}0&0&...&0\\0&0&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&0\end{bmatrix}$
+23. 單位方陣：$n$階單位方陣$I$為$n$列$n$行的數字陣列，記為$I_n=\begin{bmatrix}1&0&...&0\\0&1&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&1\end{bmatrix}$
+24. 轉置矩陣：$m\times n$矩陣$A$的轉置矩陣$A^T$為$n$列$m$行的數字陣列，記為$A^T=\begin{bmatrix}a_{11}&a_{21}&...&a_{m1}\\a_{12}&a_{22}&...&a_{m2}\\\vdots&\vdots&\ddots&\vdots\\a_{1n}&a_{2n}&...&a_{mn}\end{bmatrix}$
+25. 矩陣運算：  
     - 矩陣加法：  
       $$\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}+\begin{bmatrix}b_{11}&b_{12}&...&b_{1n}\\b_{21}&b_{22}&...&b_{2n}\\\vdots&\vdots&\ddots&\vdots\\b_{m1}&b_{m2}&...&b_{mn}\end{bmatrix}=\begin{bmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21}+b_{21}&a_{22}+b_{22}&...&a_{2n}+b_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}+b_{m1}&a_{m2}+b_{m2}&...&a_{mn}+b_{mn}\end{bmatrix}$$  
     - 矩陣乘法：  
@@ -504,12 +535,12 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
       - 矩陣乘法不滿足消去律，即$AB=AC$不一定表示$B=C$
       - 當矩陣$A$為$m$列$n$行，矩陣$B$為$n$列$p$行時，$AB$為$m$列$p$行
       - 當矩陣$A$、$B$不為零矩陣時，$AB$不一定不為零矩陣
-25. 轉移矩陣：
+26. 轉移矩陣：
     - 當一方陣滿足$[p_ij]$滿足$\sum_{i=1}^{n} p_{ij}=1$，且$0\leq p_{ij}\leq1$，則稱此方陣為轉移矩陣
     - 代表意義：當某現象有$n$種狀態，且各狀態間轉移機率固定時，可將各狀態寫成一矩陣，其中從第$i$狀態轉移到第$j$狀態的機率為$p_{ij}$
     - 若將各狀態初始機率寫成一行矩陣$X_0=\begin{bmatrix}a_1\\a_2\\\vdots\\a_n\end{bmatrix}$，則經過一次後各狀態機率為$X_1$ $=\begin{bmatrix}a_1p_{11}+a_2p_{21}+...+a_np_{n1}\\a_1p_{12}+a_2p_{22}+...+a_np_{n2}\\\vdots\\a_1p_{1n}+a_2p_{2n}+...+a_np_{nn}\end{bmatrix}$ $=X_0P$，則經過$k$次後各狀態機率為$X_k=X_0P^k$
     - 若該現象有一穩定狀態，則$X_k$會趨近於一穩定狀態，即$X_k$會趨近於一矩陣$X$，其中$X$滿足$X=XP$，則$X$為一轉移矩陣的穩定狀態
-26. 高斯約當法：  
+27. 高斯約當法：  
     方程組$\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}$
 
     其中$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&...&a_{nn}\end{bmatrix}$為其係數矩陣
@@ -551,16 +582,16 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
       \end{bmatrix}$  
     若該方程組無解，則$[U|c]$中有一列為$[0,0,...,0|b]$，則$b\neq0$  
     若該方程式有無限多組解，則$[U|c]$中有一列為$[0,0,...,0|0]$
-27. 克拉瑪公式：  
+28. 克拉瑪公式：  
     方程組$\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}$
 
     其中$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&...&a_{nn}\end{bmatrix}$，$A_i$為將$A$的第$i$行替換為$b_1,b_2,...,b_n$後所得矩陣
 
     若$det(A)\neq0$，則$x_1=\frac{det(A_1)}{det(A)}$ $,x_2=\frac{det(A_2)}{det(A)},...,$ $x_n=\frac{det(A_n)}{det(A)}$
-28. $A^{-1}=\frac{\mathrm{adj}(A)}{\det(A)}$
+29. $A^{-1}=\frac{\mathrm{adj}(A)}{\det(A)}$
     - 二階矩陣：$A=\begin{bmatrix}a&b\\c&d\end{bmatrix}$，$A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$
-29. 若$A,P$為$n$階矩陣，$P$為可逆矩陣，則$(P^{-1}AP)^k=P^{-1}A^kP$
-30. $det(AB)=det(A)det(B)$，其中$A, B \in \mathbb{R}^{n\times n}$，這有[證明](/det(AB)=det(A)det(B)_proof)
+30. 若$A,P$為$n$階矩陣，$P$為可逆矩陣，則$(P^{-1}AP)^k=P^{-1}A^kP$
+31. $det(AB)=det(A)det(B)$，其中$A, B \in \mathbb{R}^{n\times n}$，這有[證明](/det(AB)=det(A)det(B)_proof)
 
 證明待補🫠  
 
