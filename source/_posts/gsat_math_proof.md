@@ -394,7 +394,6 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
    $柯希不等式:$ $\frac{(a_1b_1+a_2b_2+...+a_nb_n)}{\sqrt{(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)}} \leq 0$  
    令$a_i=x_i-\bar{x}$，$b_i=y_i-\bar{y}$，則  
    $r=\frac{s_{xy}}{s_xs_y}=$ $\frac{\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i-\bar{x})^2 \cdot \sum_{i=1}^{n} (y_i-\bar{y})^2}}$ $=$ $\frac{\sum_{i=1}^{n} a_ib_i}{\sqrt{\sum_{i=1}^{n} a_i^2 \cdot \sum_{i=1}^{n} b_i^2}}$ $\leq 0$
-2. 
 
 ## 三角函數
 
@@ -514,7 +513,8 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
     {% gp 2-2 %}
     ![1點在邊上](https://i.imgur.com/C8xbI1T.png)
     ![3點在邊上](https://i.imgur.com/OxRJGjs.png)
-    {% endgp %}
+    {% endgp %}  
+    (孟式定理跟賽瓦定理的證明這個老師講得很清楚，[影片連結](https://youtu.be/LQvsZfUY9Ek))
 20. 平面四邊形定理：平面四邊形$ABCD$滿足$\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2$ $=\overline{AC}^2+\overline{BD}^2$
 21. 矩陣：$m\times n$矩陣$A$為$m$列$n$行的數字陣列，記為$A=\begin{bmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{bmatrix}$
 22. 零矩陣：$m\times n$零矩陣$O$為$m$列$n$行的數字陣列，記為$O_{m\times n}=\begin{bmatrix}0&0&...&0\\0&0&...&0\\\vdots&\vdots&\ddots&\vdots\\0&0&...&0\end{bmatrix}$
