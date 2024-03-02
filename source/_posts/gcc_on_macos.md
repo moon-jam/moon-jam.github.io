@@ -1,5 +1,5 @@
 ---
-title: MacOS 使用 <bits/extc++.h> 標頭檔 (以VSCode為例)
+title: MacOS 使用 &lt;bits/extc++.h&gt; 標頭檔 (以VSCode為例)
 tags:
   - c++
   - MacOS
