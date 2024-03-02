@@ -75,7 +75,7 @@ signed main(){
     }
     return 0;
 }
-``` 
+```
 
 ## 區間修改區間詢問 - lazy tag
 
