@@ -50,6 +50,9 @@ ls /opt/homebrew/bin/gcc*  # Apple Silicon Mac
 確定了 GCC 的確切版本號（例如 gcc-11），可以使用該版本號的 GCC 編譯您的程式碼。 例如，如果 GCC 版本是 11，則執行：
 
 ```bash
+g++-11 example.cpp -o Example
+
+# 如果你想使用特定版本的c++編譯（例如c++11），可以執行
 g++-11 example.cpp -o example -std=c++11
 ```
 
