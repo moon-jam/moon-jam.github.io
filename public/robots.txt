@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Allow: /archives/
-Allow: /categories/
-Allow: /tags/ 
-Disallow: /vendors/
-Disallow: /fonts/
-Disallow: /fancybox/
-Sitemap: https://moon-jam.github.io/sitemap.xml
