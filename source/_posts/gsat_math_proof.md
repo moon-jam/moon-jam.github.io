@@ -393,10 +393,10 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 
 ### 證明
 
-1. $|r| \leq 0$  
-   $柯希不等式:$ $\frac{(a_1b_1+a_2b_2+...+a_nb_n)}{\sqrt{(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)}} \leq 0$  
+1. $|r| \leq 1$  
+   $柯希不等式:$ $\frac{(a_1b_1+a_2b_2+...+a_nb_n)}{\sqrt{(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)}} \leq 1$  
    令$a_i=x_i-\bar{x}$，$b_i=y_i-\bar{y}$，則  
-   $r=\frac{s_{xy}}{s_xs_y}=$ $\frac{\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i-\bar{x})^2 \cdot \sum_{i=1}^{n} (y_i-\bar{y})^2}}$ $=$ $\frac{\sum_{i=1}^{n} a_ib_i}{\sqrt{\sum_{i=1}^{n} a_i^2 \cdot \sum_{i=1}^{n} b_i^2}}$ $\leq 0$
+   $r=\frac{s_{xy}}{s_xs_y}=$ $\frac{\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i-\bar{x})^2 \cdot \sum_{i=1}^{n} (y_i-\bar{y})^2}}$ $=$ $\frac{\sum_{i=1}^{n} a_ib_i}{\sqrt{\sum_{i=1}^{n} a_i^2 \cdot \sum_{i=1}^{n} b_i^2}}$ $\leq 1$
 
 ## 三角函數
 

@@ -36,6 +36,7 @@ date: 2023-08-28 00:00:00
 ## 演算法
 
 [2023資訊之芽上課講義](https://www.csie.ntu.edu.tw/~sprout/algo2023/)  
+[Master Theorem 證明](https://www.luogu.com/article/w3avh1ku)
 
 ## 化學
 
