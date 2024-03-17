@@ -12,6 +12,8 @@ date: 2024-03-16
 
 ## CSES Range Queries
 
+CSES Range Queries 的 AC 程式碼
+
 <!--more-->
 
 [CSES Problem Set](https://cses.fi/problemset/)  

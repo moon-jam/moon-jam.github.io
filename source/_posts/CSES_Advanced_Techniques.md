@@ -13,7 +13,7 @@ hidden: true
 
 ## CSES Advanced Techniques
 
-CSES  Problem 的 AC 程式碼
+CSES Advanced Techniques 的 AC 程式碼
 
 <!--more-->
 

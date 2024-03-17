@@ -13,7 +13,7 @@ hidden: true
 
 ## CSES Dynamic Programming
 
-CSES  Problem 的 AC 程式碼
+CSES Dynamic Programming 的 AC 程式碼
 
 <!--more-->
 

@@ -13,7 +13,7 @@ hidden: true
 
 ## CSES Geometry
 
-CSES Geometry Problem 的 AC 程式碼
+CSES Geometry 的 AC 程式碼
 
 <!--more-->
 

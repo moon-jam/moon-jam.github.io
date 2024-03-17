@@ -13,7 +13,7 @@ hidden: true
 
 ## CSES Graph Algorithms
 
-CSES Graph Algorithms Problem 的 AC 程式碼
+CSES Graph Algorithms 的 AC 程式碼
 
 <!--more-->
 

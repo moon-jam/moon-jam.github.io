@@ -12,7 +12,7 @@ date: 2024-03-16
 
 ## CSES Sorting and Searching
 
-CSES Sorting and Searching Problem 的 AC 程式碼
+CSES Sorting and Searching 的 AC 程式碼
 
 <!--more-->
 

@@ -10,7 +10,6 @@ abbrlink: 19590
 date: 2023-07-05
 keywords: Hexo, NexT, Github Page, Blog
 sticky: true
-top: 2
 ---
 
 ## 前言
