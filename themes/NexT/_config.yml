@@ -543,15 +543,15 @@ pdf:
 
 # Mermaid tag
 mermaid:
-  enable: false
+  enable: true
   # Available themes: default | dark | forest | neutral
   theme:
-    light: default
-    dark: dark
+    light: neutral
+    dark: neutral
 
 # WaveDrom tag
 wavedrom:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
@@ -653,7 +653,7 @@ pace:
   # All available themes:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
-  theme: minimal
+  theme: barber-shop
 
 # Generate a ribbon in your website with HTML5 canvas.
 # For more information: https://github.com/hustcc/ribbon.js

@@ -173,7 +173,7 @@ $f(x)=(ax-b)q(x)+f(\frac{b}{a})$
 ### 因式定理
 
 $a_1, a_2, ..., a_n$為相異實數且$f(a_1)=f(a_2)=...=f(a_n)=0$  
-$\iff (x-a_1)(x-a_2)...(x-a_n)|f(x)$
+$\iff$ $(x-a_1)(x-a_2)...(x-a_n)|f(x)$
 
 ### 牛頓差值多項式
 
@@ -481,7 +481,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
    - $\vec{0}$：零向量  
 2. 向量的線性組合：若$\vec{a}$、$\vec{b}$為兩不平行向量，則平面上任意向量$\vec{c}$均可表示為$k_1\vec{a}+k_2\vec{b}$的形式，$k_1,k_2\in\mathbb{R}$  
 3. 向量長度：$|\vec{a}|=\sqrt{a_1^2+a_2^2+...+a_n^2}$  
-4. 向量內積：$\vec{a}\cdot\vec{b}$ $=a_1b_1+a_2b_2+...+a_nb_n$ $=|\vec{a}||\vec{b}|\cos\theta$，其中$\theta$為兩向量夾角  
+4. 向量內積：$\vec{a}\cdot\vec{b}=$ $a_1b_1+a_2b_2+...+a_nb_n$ $=|\vec{a}||\vec{b}|\cos\theta$，其中$\theta$為兩向量夾角  
 5. $\triangle ABC$中的向量內積：  
    - $\vec{AB}\cdot\vec{AC}=\frac{|\vec{AB}|^2+|\vec{AC}|^2-|\vec{BC}|^2}{2}$ (by 餘弦定理)  
    - $\triangle ABC$的垂心$H$滿足$\vec{AB}\cdot\vec{AH}$ $=\vec{AC}\cdot\vec{AH}$ $=\vec{AB}\cdot\vec{AC}$ $=\frac{|\vec{AB}|^2+|\vec{AC}|^2-|\vec{BC}|^2}{2}$
@@ -489,9 +489,11 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 7. 行列式：
    - 二階行列式：$\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc$
    - 三階行列式：$\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}$ $=aei+bfg+cdh$ $-ceg-bdi-afh$
-8. 向量外積：$\vec{a}\times\vec{b}=(\begin{vmatrix}a_2&a_3\\b_2&b_3\end{vmatrix},\begin{vmatrix}a_3&a_1\\b_3&b_1\end{vmatrix},\begin{vmatrix}a_1&a_2\\b_1&b_2\end{vmatrix})$ $=|\vec{a}||\vec{b}|\sin\theta\vec{n}$，其中$\theta$為兩向量夾角，$\vec{n}$為兩向量所在平面的法向量  
+8. 向量外積：$\vec{a}\times\vec{b}=(\begin{vmatrix}a_2&a_3\\b_2&b_3\end{vmatrix},\begin{vmatrix}a_3&a_1\\b_3&b_1\end{vmatrix},\begin{vmatrix}a_1&a_2\\b_1&b_2\end{vmatrix})$ $=|\vec{a}||\vec{b}|\sin\theta \; \vec{n}$，其中$\theta$為兩向量夾角，$\vec{n}$為兩向量所在平面的法向量  
    - $\vec{a}\times\vec{b}$的方向：右手定則，將右手食指指向$\vec{a}$，中指指向$\vec{b}$，則拇指所指方向即為$\vec{a}\times\vec{b}$的方向  
-   - 特別地，在二維空間中，可視為$z$軸為$0$的三維空間，則$\vec{a}\times\vec{b}$ $=(0,0,a_1b_2-a_2b_1)$ $=|\vec{a}||\vec{b}|\sin\theta\vec{n}$，則此時此二方向向量的$z$軸分量即為其「有號面積」。  
+   - 特別地，在二維空間中，可視為$z$軸為$0$的三維空間，則  
+   $$\vec{a}\times\vec{b}=(0,0,a_1b_2-a_2b_1)=|\vec{a}||\vec{b}|\sin\theta \; \vec{n}$$
+   則此時此二方向向量的$z$軸分量即為其「有號面積」。  
 9. 平面中$n$邊形面積，其中$P_0,P_1,...,P+{n-1},P_n=P_0$為頂點：$S=\frac{1}{2}\sum_{i=0}^n-1 \vec{P_i} \times \vec{P_{i+1}}$
 10. 平行六面體的有號體積：$V=\vec{a}\cdot(\vec{b}\times\vec{c})=\begin{vmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{vmatrix}$
 11. 空間中三向量所張出的四面體有號體積：$V=\frac{1}{6}\vec{a}\cdot(\vec{b}\times\vec{c})=\frac{1}{6}\begin{vmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{vmatrix}$

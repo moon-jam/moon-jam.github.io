@@ -37,6 +37,7 @@ date: 2023-08-28 00:00:00
 
 [2023資訊之芽上課講義](https://www.csie.ntu.edu.tw/~sprout/algo2023/)  
 [Master Theorem 證明](https://www.luogu.com/article/w3avh1ku)
+[關於P, NP, CoNP, NP-complete, NP-hard 問題](https://ycc.idv.tw/algorithm-complexity-theory.html)
 
 ## 化學
 
