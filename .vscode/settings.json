@@ -1,3 +1,10 @@
 {
     "cph.general.saveLocation": ""
+
+    "files.exclude": {
+        "**/node_modules": false
+    },
+    "search.exclude": {
+        "**/node_modules": false
+    }
 }

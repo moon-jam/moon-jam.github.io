@@ -85,10 +85,11 @@ npm un hexo-renderer-pandoc
 npm i hexo-renderer-pandoc
 ```
 
-這裡需要注意一件事，hexo-renderer-pandoc和原先的hexo-renderer-marked是兩個不同的渲染器（應該是這樣翻吧），所以說生成的結果會與原先不同，目前我遇到的問題就是如果之前的文章換行是直接按Enter的話，生成出來的會沒有成功換行，需要重新手動調整在每行後面多加兩個空格。另外還有一個就是文章標題的網址會跑掉（例如說header 123原先生成的網址會是`https://example.com/myarticle/#header-123`，但用這個渲染出來的會是`https://example.com/myarticle/#header123`）。最後還有對使用比較有影響的就是標題最後面的迴紋針符號也會不見（headerlink），於是我到github上開issue求救，然後就有厲害的大神告訴我怎麼做了>_<  
+這裡需要注意一件事，hexo-renderer-pandoc和原先的hexo-renderer-marked是兩個不同的渲染器（應該是這樣翻吧），所以說生成的結果會與原先不同，目前我遇到的問題就是如果之前的文章換行是直接按Enter的話，生成出來的會沒有成功換行，需要重新手動調整在每行後面多加兩個空格。另外還有一個就是文章標題的網址會跑掉（例如說header 123原先生成的網址會是`https://example.com/myarticle/#header-123`，但用這個渲染出來的會是`https://example.com/myarticle/#header123`）。最後還有對使用比較有影響的就是標題最後面的迴紋針符號也會不見（headerlink），於是我到github上開[issue求救](https://github.com/hexojs/hexo-renderer-pandoc/issues/59)，然後就有厲害的大神告訴我怎麼做了>_<  
 ![就是這個會不見](https://i.imgur.com/lF0174l.png)
 ![熱心大神的解答](https://i.imgur.com/8HK3ZMw.png)
-總之，就是到`themes/Your-Theme-Name/script`開一個`javascript腳本`，然後把底下的東西貼進去
+
+{% details mode:close ~~總之，就是到`themes/Your-Theme-Name/script`開一個`javascript腳本`，然後把底下的東西貼進去~~ %}
 
 ``` javascript
 // FILE: scripts/fix-header-link.js
@@ -114,6 +115,41 @@ hexo.extend.filter.register('after_post_render', (data) => {
   return data;
 });
 ```
+
+{% enddetails %}
+
+後來其中一個作者說用正則表達式不太好，建議用 Pandoc filter，然後隔了超久之後我就自己改了一個出來了。
+
+- 在`./source/_data`下新增一個`header-link-filter.lua`檔案，內容如下
+
+```lua
+-- header-link-filter.lua
+function Header(el)
+    -- Create a link
+    local link = pandoc.Link("", "#" .. el.identifier, "", pandoc.Attr("", {"headerlink"}))
+  
+    -- Insert the link into the header content
+    table.insert(el.content, pandoc.Space())
+    table.insert(el.content, link)
+  
+    return el
+```
+
+- 在`./_config.yml`最後新增以下內容
+
+```yml
+pandoc:
+  args:
+    - "-f"
+    - "markdown"
+    - "-t"
+    - "html"
+    - "--mathjax"
+    - '--lua-filter'
+    - './source/_data/header-link-filter.lua'
+```
+
+然後應該就完成了～
 
 {% endnote %}
 

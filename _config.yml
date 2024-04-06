@@ -175,3 +175,13 @@ filter_optimize:
 
 fireworks:
   enable: false
+
+pandoc:
+  args:
+    - "-f"
+    - "markdown"
+    - "-t"
+    - "html"
+    - "--mathjax"
+    - '--lua-filter'
+    - './source/_data/header-link-filter.lua'
