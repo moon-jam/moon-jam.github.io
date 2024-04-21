@@ -1,6 +1,5 @@
-/* global NexT, CONFIG, mermaid */
-
 document.addEventListener('page:loaded', () => {
+  console.log('The page has been loaded.');
   const mermaidElements = document.querySelectorAll('.mermaid');
   if (mermaidElements.length) {
     NexT.utils.getScript(CONFIG.mermaid.js, {
@@ -20,7 +19,7 @@ document.addEventListener('page:loaded', () => {
         }
       });
       mermaid.initialize({
-        theme    : CONFIG.darkmode && window.matchMedia('(prefers-color-scheme: dark)').matches ? CONFIG.mermaid.theme.dark : CONFIG.mermaid.theme.light,
+        theme    : document.body.classList.contains("darkmode--activated") ? CONFIG.mermaid.theme.dark : CONFIG.mermaid.theme.light,
         logLevel : 4,
         flowchart: { curve: 'linear' },
         gantt    : { axisFormat: '%m/%d/%Y' },

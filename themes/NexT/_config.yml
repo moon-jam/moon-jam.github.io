@@ -546,8 +546,8 @@ mermaid:
   enable: true
   # Available themes: default | dark | forest | neutral
   theme:
-    light: neutral
-    dark: neutral
+    light: default
+    dark: dark
 
 # WaveDrom tag
 wavedrom:

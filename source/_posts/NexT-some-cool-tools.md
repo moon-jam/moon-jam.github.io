@@ -122,6 +122,77 @@ $$
 ![layout](https://theme-next.js.org/images/group-picture-1.png)
 ![layout](https://theme-next.js.org/images/group-picture-2.png)
 
+## 繪製圖表
+
+教學在[這邊](./NexT_chart)  
+可以畫出像下面各種的表格
+
+```mermaid
+gantt
+dateFormat  YYYY-MM-DD
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+
+```mermaid
+classDiagram
+Class01 <|-- AveryLongClass : Cool
+<<interface>> Class01
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  <<service>>
+  int id
+  size()
+}
+```
+
+```mermaid
+pie
+"Dogs" : 386
+"Cats" : 85
+"Rats" : 15
+```
+
+或是可以畫時序圖（wavedrom）
+
+{% wavedrom %}
+{ signal: [
+  { name: "clk",         wave: "p.....|..." },
+  { name: "Data",        wave: "x.345x|=.x", data: ["head", "body", "tail", "data"] },
+  { name: "Request",     wave: "0.1..0|1.0" },
+  {},
+  { name: "Acknowledge", wave: "1.....|01." }
+]}
+{% endwavedrom %}
+
+{% wavedrom %}
+{ signal: [
+  { name: 'A', wave: '01........0....',  node: '.a........j' },
+  { name: 'B', wave: '0.1.......0.1..',  node: '..b.......i' },
+  { name: 'C', wave: '0..1....0...1..',  node: '...c....h..' },
+  { name: 'D', wave: '0...1..0.....1.',  node: '....d..g...' },
+  { name: 'E', wave: '0....10.......1',  node: '.....ef....' }
+  ],
+  edge: [
+    'a~b t1', 'c-~a t2', 'c-~>d time 3', 'd~-e',
+    'e~>f', 'f->g', 'g-~>h', 'h~>i some text', 'h~->j'
+  ],
+  config:{skin:'lowkey'}
+}
+{% endwavedrom %}
+
 ## 結語
 
 這些酷酷的工具是不是也挺方便的呢？如果有問題或者發現我還有什麼酷酷的功能沒有講到，歡迎大家到底下留言區跟我討論喔～
