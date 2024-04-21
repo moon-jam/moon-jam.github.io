@@ -90,7 +90,7 @@ CoNP, NP-complete, NP-hard 問題</a></p>
 <p>這邊就整理了一些常見的題型，以及解題的方法。</p>
 <span id="more"></span>
 <h2 id="特性">特性 <a href="#特性" class="headerlink"></a></h2>
-<p>各個聯通塊中必定<code>恰有</code>一個環，且從該張圖的任意一點都必定能夠拜訪到該環</p>
+<p>各個聯通塊中必定<code>恰有</code>一個環 (鴿籠原理)，且從該張圖的任意一點都必定能夠拜訪到該環</p>
 <h2 id="常見問題">常見問題 <a href="#常見問題" class="headerlink"></a></h2>
 <h3 id="找從當前點往後k點是什麼">找從當前點往後 k 點是什麼 <a href="#找從當前點往後k點是什麼" class="headerlink"></a></h3>
 <p><span id="inline-blue">倍增法</span><br>
@@ -1795,8 +1795,8 @@ a874</a></p>
         <category>圖論</category>
       </categories>
       <tags>
-        <tag>圖論</tag>
         <tag>演算法</tag>
+        <tag>圖論</tag>
       </tags>
   </entry>
   <entry>
@@ -2169,8 +2169,8 @@ k&lt;N\]</span><br>
         <category>APCS</category>
       </categories>
       <tags>
-        <tag>APCS</tag>
         <tag>線段樹</tag>
+        <tag>APCS</tag>
         <tag>約瑟夫問題</tag>
       </tags>
   </entry>
