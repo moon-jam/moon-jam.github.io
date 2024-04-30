@@ -98,23 +98,23 @@ lang:
 - 溶於水
 - 通式：$C_nH_{2n+2}O$
 - 與鈉、鉀金屬反應：H被還原成氫氣（乙醇->乙醛鈉+氫氣）
-- 鹵化：$R-OH+HX\rarr R-X + H_2O$
+- 鹵化：$R-OH+HX\rightarrow R-X + H_2O$
 - 脫水：
-  - 170~180度：形成烯（$C_2H_5OH\rarr C_2H_4$）
-  - 130~140度：形成醚（$C_2H_5OH\rarr C_2H_5OC_2H_5$）
+  - 170~180度：形成烯（$C_2H_5OH\rightarrow C_2H_4$）
+  - 130~140度：形成醚（$C_2H_5OH\rightarrow C_2H_5OC_2H_5$）
 - 氧化：
-  - 一級（二鉻酸鉀一步一步、過錳酸鉀直接變酸）：醇$\rarr$醛$\rarr$酸（如果是甲酸還可以繼續氧化變$CO_2$）
-  - 二級：醇$\rarr$酮
+  - 一級（二鉻酸鉀一步一步、過錳酸鉀直接變酸）：醇$\rightarrow$醛$\rightarrow$酸（如果是甲酸還可以繼續氧化變$CO_2$）
+  - 二級：醇$\rightarrow$酮
   - 三級：不能氧化
 
 ### 酚
 
 - 微溶水
 - 弱酸（可溶於強鹼，不溶於弱鹼（碳酸氫鈉aq））
-- 製備：苯$\rarr$被氯魯化$\rarr$氫氧化鈉aq、高溫高壓$\rarr$酸性下$\rarr$完成
+- 製備：苯$\rightarrow$被氯魯化$\rightarrow$氫氧化鈉aq、高溫高壓$\rightarrow$酸性下$\rightarrow$完成
 - 與鈉、鉀金屬反應：H被還原成氫氣
 - 製作成阿斯匹靈（見酯）
-- 檢驗：會與$Fe^{3+}$離子形成紫色錯合物$\rarr$使用$FeCl_3$檢驗酚
+- 檢驗：會與$Fe^{3+}$離子形成紫色錯合物$\rightarrow$使用$FeCl_3$檢驗酚
 
 ## 醚基 R-O-R'
 
@@ -140,7 +140,7 @@ lang:
 ## 羧基 O=C-OH （羧酸）
 
 - 通式：$C_nH_{2n}O_2$
-- 製備：醇$\rarr$醛$\rarr$酸
+- 製備：醇$\rightarrow$醛$\rightarrow$酸
 - 溶於水
 - 與活性金屬反應（Zn、Fe即可）：解離出$H^+$生氫氣
 - 酸鹼中和
@@ -167,9 +167,9 @@ lang:
 ## 胺 N
 
 - 製備
-  - 烷先鹵化，鹵烷與氨做取代反應成為一級胺（$C_2H_6+Cl_2\rarr C_2H_5Cl+HCl$、$C_2H_5Cl+NH_3\rarr C_2H_5NH_2$ ）
-  - 鹵烷與一級胺做取代反應成為二級胺（$C_2H_5Cl+C_2H_5NH_2\rarr (C_2H_5)_2NH+HCl$ ）
-  - 苯$\rarr$(硝化)硝基苯($NO_2$接苯）$\rarr$(還原$H_2/Pt$）苯胺
+  - 烷先鹵化，鹵烷與氨做取代反應成為一級胺（$C_2H_6+Cl_2\rightarrow C_2H_5Cl+HCl$、$C_2H_5Cl+NH_3\rightarrow C_2H_5NH_2$ ）
+  - 鹵烷與一級胺做取代反應成為二級胺（$C_2H_5Cl+C_2H_5NH_2\rightarrow (C_2H_5)_2NH+HCl$ ）
+  - 苯$\rightarrow$(硝化)硝基苯($NO_2$接苯）$\rightarrow$(還原$H_2/Pt$）苯胺
 - 溶於水
 - 會臭
 - 弱鹼性（因此酸化形成銨鹽）
