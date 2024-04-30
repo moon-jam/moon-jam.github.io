@@ -232,8 +232,8 @@ C_2H_5Cl+HCl\)</span>、<span class="math inline">\(C_2H_5Cl+NH_3\rightarrow C_2
         <category>化學</category>
       </categories>
       <tags>
-        <tag>有機化學</tag>
         <tag>高中</tag>
+        <tag>有機化學</tag>
       </tags>
   </entry>
   <entry>
@@ -325,6 +325,154 @@ II 比較難)，這樣才會有循序漸進的感覺</p>
       </categories>
       <tags>
         <tag>演算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT 畫出漂亮的圖表 (Mermaid)</title>
+    <url>/NexT-chart/</url>
+    <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>常常想要畫一些圖表但總是要去用其他的工具畫完然後再把圖片貼上，這樣很麻煩，所以這邊就來介紹一下怎麼在 NexT 中畫出漂亮的圖表
+<span id="more"></span></p>
+<p><span id="inline-yellow">注意</span><br>
+用 mermaid 可以畫出各種你想表達複雜的圖，但可能不會是你想像中的樣子
+例如說你想畫出這種圖：<br>
+<img data-src="https://i.imgur.com/uld0lyH.png" alt="想像中的"><br>
+但你會畫出這種：</p>
+<pre><code class="highlight mermaid">flowchart LR
+    a--&gt;b--&gt;c
+    d--&gt;e--&gt;f
+    c--&gt;d</code></pre>
+<p>或是這樣：</p>
+<pre><code class="highlight mermaid">flowchart LR
+    subgraph x[" "]
+        direction TB
+        subgraph Z[" "]
+        direction LR
+            A --&gt; B
+            B --&gt; C
+        end
+
+        subgraph ZA[" "]
+        direction RL
+            D--&gt;E
+            E--&gt;F
+        end
+
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+        Z ~~~ ZA
+    end
+        Z --&gt; ZA</code></pre>
+<p>Mermaid 的重點是把各種關係自動生成圖表，</p>
+<h2 id="能畫出哪些圖表">能畫出哪些圖表 <a href="#能畫出哪些圖表" class="headerlink"></a></h2>
+<ol type="1">
+<li>Flowchart（流程圖）</li>
+<li>Pie chart diagrams (圓餅圖)</li>
+<li>XY Chart (長條圖＆折線圖)</li>
+<li>Mindmap (心智圖)</li>
+<li>Timeline (時間軸)</li>
+<li>Gantt diagrams (甘特圖)</li>
+<li>Sequence Diagram（時序圖）</li>
+<li>Class diagrams（類別圖）</li>
+<li>Block Diagrams (區塊圖)</li>
+<li>State diagrams（狀態圖）</li>
+<li>Entity Relationship Diagrams（實體關係圖）</li>
+<li>User Journey Diagram（使用者旅程圖）</li>
+<li>Quadrant Chart (四象限圖)</li>
+<li>Requirement Diagram (需求圖)</li>
+<li>Gitgraph diagrams</li>
+<li>ZenUML</li>
+</ol>
+<h2 id="如何使用">如何使用 <a href="#如何使用" class="headerlink"></a></h2>
+<h3 id="環境設置">環境設置 <a href="#環境設置" class="headerlink"></a></h3>
+<p>首先要先配置一下環境，到<code>./themes/NexT/_config.yml</code> 中找到 <code>mermaid</code> 的配置並改成以下程式碼</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Mermaid tag</span></span><br><span class="line"><span class="attr">mermaid:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Available themes: default | dark | forest | neutral</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">default</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">dark</span></span><br></pre></td></tr></tbody></table></figure>
+<p>然後這邊他有叫你設定在亮暗模式下的主題，這邊我設定的是 <code>default</code> 和 <code>dark</code>，你也可以試試看其他的，但是，<strong>如果你跟我你樣是可以切換亮暗模式的話，會發現不會隨著背景切換而改變</strong></p>
+<p><span id="inline-blue">解決切換亮暗的問題</span><br>
+修改 <code>themes/NexT/source/js/third-party/tags/mermaid.js</code> 中的程式碼，修改判定亮暗模式的部分<br>
+<code>CONFIG.darkmode &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches</code>
+<span class="math inline">\(\rightarrow\)</span>
+<code>document.body.classList.contains("darkmode--activated")</code></p>
+<figure class="highlight javascript"><figcaption><span>themes/NexT/source/js/third-party/tags/mermaid.js</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">'page:loaded'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  <span class="keyword">const</span> mermaidElements = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">'.mermaid'</span>);</span><br><span class="line">  <span class="keyword">if</span> (mermaidElements.<span class="property">length</span>) {</span><br><span class="line">    <span class="title class_">NexT</span>.<span class="property">utils</span>.<span class="title function_">getScript</span>(<span class="variable constant_">CONFIG</span>.<span class="property">mermaid</span>.<span class="property">js</span>, {</span><br><span class="line">      <span class="attr">condition</span>: <span class="variable language_">window</span>.<span class="property">mermaid</span></span><br><span class="line">    }).<span class="title function_">then</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">      mermaidElements.<span class="title function_">forEach</span>(<span class="function"><span class="params">element</span> =&gt;</span> {</span><br><span class="line">        <span class="keyword">const</span> newElement = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">'div'</span>);</span><br><span class="line">        newElement.<span class="property">innerHTML</span> = element.<span class="property">innerHTML</span>;</span><br><span class="line">        newElement.<span class="property">className</span> = element.<span class="property">className</span>;</span><br><span class="line">        <span class="keyword">const</span> parent = element.<span class="property">parentNode</span>;</span><br><span class="line">        <span class="comment">// Fix issue #347</span></span><br><span class="line">        <span class="comment">// Support mermaid inside backtick code block</span></span><br><span class="line">        <span class="keyword">if</span> (parent.<span class="title function_">matches</span>(<span class="string">'pre'</span>)) {</span><br><span class="line">          parent.<span class="property">parentNode</span>.<span class="title function_">replaceChild</span>(newElement, parent);</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">          parent.<span class="title function_">replaceChild</span>(newElement, element);</span><br><span class="line">        }</span><br><span class="line">      });</span><br><span class="line">      mermaid.<span class="title function_">initialize</span>({</span><br><span class="line">        theme    : <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">classList</span>.<span class="title function_">contains</span>(<span class="string">"darkmode--activated"</span>) ? <span class="variable constant_">CONFIG</span>.<span class="property">mermaid</span>.<span class="property">theme</span>.<span class="property">dark</span> : <span class="variable constant_">CONFIG</span>.<span class="property">mermaid</span>.<span class="property">theme</span>.<span class="property">light</span>,</span><br><span class="line">        logLevel : <span class="number">4</span>,</span><br><span class="line">        <span class="attr">flowchart</span>: { <span class="attr">curve</span>: <span class="string">'linear'</span> },</span><br><span class="line">        gantt    : { <span class="attr">axisFormat</span>: <span class="string">'%m/%d/%Y'</span> },</span><br><span class="line">        sequence : { <span class="attr">actorMargin</span>: <span class="number">50</span> }</span><br><span class="line">      });</span><br><span class="line">      mermaid.<span class="title function_">run</span>();</span><br><span class="line">    });</span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>不過這樣子的話，要改頁面會需要重整，我還想不到怎麼辦法即時切換，如果有人知道的話可以告訴我～</p>
+<h3 id="插入文本方式">插入文本方式 <a href="#插入文本方式" class="headerlink"></a></h3>
+<p>在文本中插入</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">```mermaid</span></span><br><span class="line"><span class="code">type</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></tbody></table></figure>
+<p>或是</p>
+<figure class="highlight jinja"><table><tbody><tr><td class="code"><pre><span class="line"><span class="template-tag">{% <span class="name">mermaid</span> type %}</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">{% <span class="name">endmermaid</span> %}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>type 的部分後面會講到，這邊要注意的是如果是放在 codeblock 中的話，會需要到<code>_config.yml</code> 中的 <code>highlight</code> 中移除 <code>mermaid</code>，這樣子才能正確顯示 (因為我覺得用 codeblock 用 markdown 檢視的時候才會自動生成)</p>
+<figure class="highlight yml"><figcaption><span>Hexo config file</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">exclude_languages:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mermaid</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="flowchart-流程圖">Flowchart (流程圖) <a href="#flowchart-流程圖" class="headerlink"></a></h3>
+<blockquote>
+<p>type: flowchart<br>
+由數個節點（幾何形狀）和邊（箭頭或現）組成</p>
+</blockquote>
+<pre><code class="highlight mermaid">flowchart LR
+  A[This is the text in the box]--&gt;B
+  B--&gt;D[ ]
+  D--&gt;C
+  style D opacity:0</code></pre>
+<h4 id="箭頭指向">箭頭指向 <a href="#箭頭指向" class="headerlink"></a></h4>
+<ul>
+<li>TB / TD：Top to bottom</li>
+<li>BT：Bottom to top</li>
+<li>RL：Right to left</li>
+<li>LR：Left to right</li>
+</ul>
+<p>後問待補：可以到<a href="https://mermaid.js.org/intro/">官網</a>查看</p>
+<h3 id="pie-chart-diagrams-圓餅圖">Pie chart diagrams (圓餅圖) <a href="#pie-chart-diagrams-圓餅圖" class="headerlink"></a></h3>
+<h3 id="xy-chart-長條圖折線圖">XY Chart (長條圖＆折線圖) <a href="#xy-chart-長條圖折線圖" class="headerlink"></a></h3>
+<h3 id="mindmap-心智圖">Mindmap (心智圖) <a href="#mindmap-心智圖" class="headerlink"></a></h3>
+<h3 id="timeline-時間軸">Timeline (時間軸) <a href="#timeline-時間軸" class="headerlink"></a></h3>
+<h3 id="gantt-diagrams-甘特圖">Gantt diagrams (甘特圖) <a href="#gantt-diagrams-甘特圖" class="headerlink"></a></h3>
+<h3 id="sequence-diagram時序圖">Sequence Diagram（時序圖） <a href="#sequence-diagram時序圖" class="headerlink"></a></h3>
+<h3 id="class-diagrams類別圖">Class diagrams（類別圖） <a href="#class-diagrams類別圖" class="headerlink"></a></h3>
+<h3 id="block-diagrams-區塊圖">Block Diagrams (區塊圖) <a href="#block-diagrams-區塊圖" class="headerlink"></a></h3>
+<h3 id="state-diagrams狀態圖">State diagrams（狀態圖） <a href="#state-diagrams狀態圖" class="headerlink"></a></h3>
+<h3 id="entity-relationship-diagrams實體關係圖">Entity Relationship
+Diagrams（實體關係圖） <a href="#entity-relationship-diagrams實體關係圖" class="headerlink"></a></h3>
+<h3 id="user-journey-diagram使用者旅程圖">User Journey
+Diagram（使用者旅程圖） <a href="#user-journey-diagram使用者旅程圖" class="headerlink"></a></h3>
+<h3 id="quadrant-chart-四象限圖">Quadrant Chart (四象限圖) <a href="#quadrant-chart-四象限圖" class="headerlink"></a></h3>
+<h3 id="requirement-diagram-需求圖">Requirement Diagram (需求圖) <a href="#requirement-diagram-需求圖" class="headerlink"></a></h3>
+<h3 id="gitgraph-diagrams">Gitgraph diagrams <a href="#gitgraph-diagrams" class="headerlink"></a></h3>
+<h3 id="zenuml">ZenUML <a href="#zenuml" class="headerlink"></a></h3>
+<h2 id="補充---畫數位時序圖wavedrom">補充 - 畫數位時序圖（wavedrom） <a href="#補充---畫數位時序圖wavedrom" class="headerlink"></a></h2>
+<p>這個先不講，之後有空再補 (主要是我也不太清楚他怎麼用 xd)。然後他和 Mermaid 一使用會造成字體大小會打架，如果想知道的話可以看看<a href="https://theme-next.js.org/docs/tag-plugins/wavedrom">官方文件</a>，或是<a href="https://wavedrom.com/tutorial.html">語法教學</a></p>
+<h2 id="結語">結語 <a href="#結語" class="headerlink"></a></h2>
+<!-- 好誒，表格做出來了～  
+如果想看更多用法可以到[官網](https://mermaid.js.org/intro/)查看 -->
+<h2 id="其他功能">其他功能 <a href="#其他功能" class="headerlink"></a></h2>
+<ol type="1">
+<li><p>側邊欄</p>
+<p>－ <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a>
+－ <a href="/NexT-sidebar-switch-lang">切換語言</a></p></li>
+<li><p><a href="/NexT-footer">頁底</a></p></li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p></li>
+<li><p><a href="/NexT-google-analytics">Google
+Analytics 統計網站資訊</a></p></li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p></li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p></li>
+<li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine
+Optimization)</a></p></li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p></li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+        <tag>未完成</tag>
       </tags>
   </entry>
   <entry>
@@ -1680,8 +1828,8 @@ a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}&amp;b_n \end{array}
       </categories>
       <tags>
         <tag>證明</tag>
-        <tag>高中</tag>
         <tag>數學</tag>
+        <tag>高中</tag>
         <tag>學測</tag>
       </tags>
   </entry>

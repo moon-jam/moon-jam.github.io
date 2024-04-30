@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moon-jam.me/NexT-chart/</loc>
+    
+    <lastmod>2024-04-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.me/high_school_organic_chemistry_note/</loc>
     
     <lastmod>2024-04-30</lastmod>
@@ -479,13 +488,6 @@
 
   
   <url>
-    <loc>https://moon-jam.me/tags/%E6%88%90%E5%A4%A7%E9%82%80%E8%AB%8B%E8%B3%BD/</loc>
-    <lastmod>2024-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://moon-jam.me/tags/CSES/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -507,6 +509,13 @@
   </url>
   
   <url>
+    <loc>https://moon-jam.me/tags/%E6%88%90%E5%A4%A7%E9%82%80%E8%AB%8B%E8%B3%BD/</loc>
+    <lastmod>2024-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://moon-jam.me/tags/Hexo/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -515,6 +524,13 @@
   
   <url>
     <loc>https://moon-jam.me/tags/NexT/</loc>
+    <lastmod>2024-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://moon-jam.me/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -577,7 +593,7 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/tags/%E6%9C%89%E6%A9%9F%E5%8C%96%E5%AD%B8/</loc>
+    <loc>https://moon-jam.me/tags/%E6%95%B8%E5%AD%B8/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -591,14 +607,14 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/tags/%E6%95%B8%E5%AD%B8/</loc>
+    <loc>https://moon-jam.me/tags/%E5%AD%B8%E6%B8%AC/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://moon-jam.me/tags/%E5%AD%B8%E6%B8%AC/</loc>
+    <loc>https://moon-jam.me/tags/%E6%9C%89%E6%A9%9F%E5%8C%96%E5%AD%B8/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -670,14 +686,14 @@
   </url>
   
   <url>
-    <loc>https://moon-jam.me/categories/%E6%BC%94%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://moon-jam.me/categories/%E6%95%B8%E5%AD%B8/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://moon-jam.me/categories/%E6%95%B8%E5%AD%B8/</loc>
+    <loc>https://moon-jam.me/categories/%E6%BC%94%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
