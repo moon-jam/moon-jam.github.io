@@ -328,7 +328,7 @@ II 比較難)，這樣才會有循序漸進的感覺</p>
       </tags>
   </entry>
   <entry>
-    <title>Hexo-NexT 畫出漂亮的圖表 (Mermaid)</title>
+    <title>Hexo-NexT 畫出漂亮的圖表 (Mermaid) (含明暗模式切換)</title>
     <url>/NexT-chart/</url>
     <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
 <p>常常想要畫一些圖表但總是要去用其他的工具畫完然後再把圖片貼上，這樣很麻煩，所以這邊就來介紹一下怎麼在 NexT 中畫出漂亮的圖表
@@ -407,7 +407,7 @@ II 比較難)，這樣才會有循序漸進的感覺</p>
 <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">```mermaid</span></span><br><span class="line"><span class="code">type</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></tbody></table></figure>
 <p>或是</p>
 <figure class="highlight jinja"><table><tbody><tr><td class="code"><pre><span class="line"><span class="template-tag">{% <span class="name">mermaid</span> type %}</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">{% <span class="name">endmermaid</span> %}</span></span><br></pre></td></tr></tbody></table></figure>
-<p>type 的部分後面會講到，這邊要注意的是如果是放在 codeblock 中的話，會需要到<code>_config.yml</code> 中的 <code>highlight</code> 中移除 <code>mermaid</code>，這樣子才能正確顯示 (因為我覺得用 codeblock 用 markdown 檢視的時候才會自動生成)</p>
+<p>type 的部分後面會講到，這邊要注意的是如果是放在 codeblock 中的話，會需要到<code>_config.yml</code> 中的 <code>highlight</code> 中移除 <code>mermaid</code>，這樣子才能正確顯示 (會建議使用這種方式，因為這樣子使用其他有支援 mermaid 的工具檢視 markdown 時 (如 vscode 或是 github)，這些圖表才會自動生成)</p>
 <figure class="highlight yml"><figcaption><span>Hexo config file</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">exclude_languages:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mermaid</span></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="flowchart-流程圖">Flowchart (流程圖) <a href="#flowchart-流程圖" class="headerlink"></a></h3>
 <blockquote>
