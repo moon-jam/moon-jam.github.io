@@ -416,9 +416,8 @@ II 比較難)，這樣才會有循序漸進的感覺</p>
 </blockquote>
 <pre><code class="highlight mermaid">flowchart LR
   A[This is the text in the box]--&gt;B
-  B--&gt;D[ ]
-  D--&gt;C
-  style D opacity:0</code></pre>
+  B&lt;--&gt;D
+  D-.-&gt;C</code></pre>
 <h4 id="箭頭指向">箭頭指向 <a href="#箭頭指向" class="headerlink"></a></h4>
 <ul>
 <li>TB / TD：Top to bottom</li>
@@ -426,7 +425,7 @@ II 比較難)，這樣才會有循序漸進的感覺</p>
 <li>RL：Right to left</li>
 <li>LR：Left to right</li>
 </ul>
-<p>後問待補：可以到<a href="https://mermaid.js.org/intro/">官網</a>查看</p>
+<p>… 未完待補：可以到<a href="https://mermaid.js.org/intro/">官網</a>查看</p>
 <h3 id="pie-chart-diagrams-圓餅圖">Pie chart diagrams (圓餅圖) <a href="#pie-chart-diagrams-圓餅圖" class="headerlink"></a></h3>
 <h3 id="xy-chart-長條圖折線圖">XY Chart (長條圖＆折線圖) <a href="#xy-chart-長條圖折線圖" class="headerlink"></a></h3>
 <h3 id="mindmap-心智圖">Mindmap (心智圖) <a href="#mindmap-心智圖" class="headerlink"></a></h3>
@@ -445,7 +444,7 @@ Diagram（使用者旅程圖） <a href="#user-journey-diagram使用者旅程圖
 <h3 id="gitgraph-diagrams">Gitgraph diagrams <a href="#gitgraph-diagrams" class="headerlink"></a></h3>
 <h3 id="zenuml">ZenUML <a href="#zenuml" class="headerlink"></a></h3>
 <h2 id="補充---畫數位時序圖wavedrom">補充 - 畫數位時序圖（wavedrom） <a href="#補充---畫數位時序圖wavedrom" class="headerlink"></a></h2>
-<p>這個先不講，之後有空再補 (主要是我也不太清楚他怎麼用 xd)。然後他和 Mermaid 一使用會造成字體大小會打架，如果想知道的話可以看看<a href="https://theme-next.js.org/docs/tag-plugins/wavedrom">官方文件</a>，或是<a href="https://wavedrom.com/tutorial.html">語法教學</a></p>
+<p>這個先不講，之後有空再補 (主要是我也不太清楚他怎麼用 xd)。然後他和 Mermaid 同時使用會造成字體大小會打架，如果想知道用法的話可以看看<a href="https://theme-next.js.org/docs/tag-plugins/wavedrom">官方文件</a>，或是<a href="https://wavedrom.com/tutorial.html">語法教學</a></p>
 <h2 id="結語">結語 <a href="#結語" class="headerlink"></a></h2>
 <!-- 好誒，表格做出來了～  
 如果想看更多用法可以到[官網](https://mermaid.js.org/intro/)查看 -->
