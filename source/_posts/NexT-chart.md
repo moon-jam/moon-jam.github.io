@@ -1,5 +1,5 @@
 ---
-title: Hexo-NexT 畫出漂亮的圖表 (Mermaid)
+title: Hexo-NexT 畫出漂亮的圖表 (Mermaid) (含明暗模式切換)
 lang: zh-TW
 tags:
   - Hexo
@@ -137,7 +137,7 @@ document.addEventListener('page:loaded', () => {
 });
 ```
 
-不過這樣子的話，要改頁面會需要重整，我還想不到怎麼辦法即時切換，如果有人知道的話可以告訴我～
+不過這樣子的話，要重整頁面才會切換，我還想不到怎麼辦法即時切換，如果有人知道的話拜託告訴我～
 
 ### 插入文本方式
 
@@ -157,7 +157,7 @@ type
 {% endmermaid %}
 ```
 
-type的部分後面會講到，這邊要注意的是如果是放在codeblock中的話，會需要到`_config.yml`中的`highlight`中移除`mermaid`，這樣子才能正確顯示(因為我覺得用codeblock用markdown檢視的時候才會自動生成)
+type的部分後面會講到，這邊要注意的是如果是放在codeblock中的話，會需要到`_config.yml`中的`highlight`中移除`mermaid`，這樣子才能正確顯示(會建議使用這種方式，因為這樣子使用其他有支援mermaid的工具檢視markdown時(如vscode或是github)，這些圖表才會自動生成)
 
 ```yml Hexo config file
 highlight:
@@ -173,9 +173,8 @@ highlight:
 ```mermaid
 flowchart LR
   A[This is the text in the box]-->B
-  B-->D[ ]
-  D-->C
-  style D opacity:0
+  B<-->D
+  D-.->C
 ```
 
 #### 箭頭指向
@@ -185,7 +184,7 @@ flowchart LR
 - RL：Right to left
 - LR：Left to right
 
-後問待補：可以到[官網](https://mermaid.js.org/intro/)查看
+...未完待補：可以到[官網](https://mermaid.js.org/intro/)查看
 
 ### Pie chart diagrams (圓餅圖)
 
@@ -219,7 +218,7 @@ flowchart LR
 
 ## 補充 - 畫數位時序圖（wavedrom）
 
-這個先不講，之後有空再補(主要是我也不太清楚他怎麼用xd)。然後他和Mermaid一使用會造成字體大小會打架，如果想知道的話可以看看[官方文件](https://theme-next.js.org/docs/tag-plugins/wavedrom)，或是[語法教學](https://wavedrom.com/tutorial.html)
+這個先不講，之後有空再補(主要是我也不太清楚他怎麼用xd)。然後他和Mermaid同時使用會造成字體大小會打架，如果想知道用法的話可以看看[官方文件](https://theme-next.js.org/docs/tag-plugins/wavedrom)，或是[語法教學](https://wavedrom.com/tutorial.html)
 
 ## 結語
 
