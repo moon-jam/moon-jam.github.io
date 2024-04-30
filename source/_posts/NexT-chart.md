@@ -4,11 +4,11 @@ lang: zh-TW
 tags:
   - Hexo
   - NexT
+  - 未完成
 categories:
   - 教學文
 abbrlink: 20671
 date: 2024-04-20 00:00:00
-hidden: true
 ---
 
 ## 前言
@@ -185,6 +185,8 @@ flowchart LR
 - RL：Right to left
 - LR：Left to right
 
+後問待補：可以到[官網](https://mermaid.js.org/intro/)查看
+
 ### Pie chart diagrams (圓餅圖)
 
 ### XY Chart (長條圖＆折線圖)
@@ -221,8 +223,8 @@ flowchart LR
 
 ## 結語
 
-好誒，表格做出來了～  
-如果想看更多用法可以到[官網](https://mermaid.js.org/intro/)查看
+<!-- 好誒，表格做出來了～  
+如果想看更多用法可以到[官網](https://mermaid.js.org/intro/)查看 -->
 
 ## 其他功能
 
