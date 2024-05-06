@@ -21,31 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"moon-jam.me","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="題目網址 你是個櫃子租借商，總共擁有 M 個櫃子。 現在這 M 個櫃子分別被 N 個人借用，借用量分別為 (x0, x1, x2, …xN-1) 個櫃子， 其中 x0 + x1 + x2 + … + xN-1 ≤ M 現在你想要使用 S 個空櫃子， 在被借用的櫃子只能夠 全退 或 全不退之下，最少需要請這 N 個人退還多少櫃子？ 也就是當有一個人借用 10 個櫃子時，不能夠只請他退還 5 個櫃子。">
+    <meta name="description" content="前言  一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（\(s\)）到出口（\(t\)）之間，數據可以同時傳輸的最大速度是多少。 如下圖，從 \(s\) 到 \(t\) 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 \(s\) 到 \(t\) 勢必通過路線 \(v1\rightarrow v2\) ，故這張圖的最大流量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="APCS 置物櫃分配 (zerojudge e465)">
-<meta property="og:url" content="https://moon-jam.me/zerojudge_e465/index.html">
+<meta property="og:title" content="最大流 &amp; 最小割 (Max-Flow &amp; Min-Cut)">
+<meta property="og:url" content="https://moon-jam.me/algo_Max-Flow_and_Min-Cut/index.html">
 <meta property="og:site_name" content="Moon Jam&#39;s Blog">
-<meta property="og:description" content="題目網址 你是個櫃子租借商，總共擁有 M 個櫃子。 現在這 M 個櫃子分別被 N 個人借用，借用量分別為 (x0, x1, x2, …xN-1) 個櫃子， 其中 x0 + x1 + x2 + … + xN-1 ≤ M 現在你想要使用 S 個空櫃子， 在被借用的櫃子只能夠 全退 或 全不退之下，最少需要請這 N 個人退還多少櫃子？ 也就是當有一個人借用 10 個櫃子時，不能夠只請他退還 5 個櫃子。">
+<meta property="og:description" content="前言  一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（\(s\)）到出口（\(t\)）之間，數據可以同時傳輸的最大速度是多少。 如下圖，從 \(s\) 到 \(t\) 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 \(s\) 到 \(t\) 勢必通過路線 \(v1\rightarrow v2\) ，故這張圖的最大流量">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/UkCAPWE.png">
-<meta property="og:image" content="https://i.imgur.com/95B9Abz.png">
-<meta property="article:published_time" content="2023-10-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-02T16:18:28.880Z">
+<meta property="article:published_time" content="2024-05-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-06T10:24:34.912Z">
 <meta property="article:author" content="Moon Jam">
-<meta property="article:tag" content="APCS">
+<meta property="article:tag" content="演算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/UkCAPWE.png">
 
 
-<link rel="canonical" href="https://moon-jam.me/zerojudge_e465/">
+<link rel="canonical" href="https://moon-jam.me/algo_Max-Flow_and_Min-Cut/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://moon-jam.me/zerojudge_e465/","path":"zerojudge_e465/","title":"APCS 置物櫃分配 (zerojudge e465)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://moon-jam.me/algo_Max-Flow_and_Min-Cut/","path":"algo_Max-Flow_and_Min-Cut/","title":"最大流 & 最小割 (Max-Flow & Min-Cut)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>APCS 置物櫃分配 (zerojudge e465) | Moon Jam's Blog</title>
+<title>最大流 & 最小割 (Max-Flow & Min-Cut) | Moon Jam's Blog</title><meta name="robots" content="noindex">
   
 
 
@@ -130,7 +127,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -143,6 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#def-flow-network"><span class="nav-number">2.</span> <span class="nav-text">Def: Flow Network </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%B3%AA"><span class="nav-number">3.</span> <span class="nav-text">性質 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max-flow"><span class="nav-number">4.</span> <span class="nav-text">Max Flow </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fordfulkerson-method"><span class="nav-number">4.1.</span> <span class="nav-text">Ford–Fulkerson Method </span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,7 +203,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://moon-jam.me/zerojudge_e465/">
+    <link itemprop="mainEntityOfPage" href="https://moon-jam.me/algo_Max-Flow_and_Min-Cut/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Panda_Me.png">
@@ -218,12 +216,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="APCS 置物櫃分配 (zerojudge e465) | Moon Jam's Blog">
+      <meta itemprop="name" content="最大流 & 最小割 (Max-Flow & Min-Cut) | Moon Jam's Blog">
       <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          APCS 置物櫃分配 (zerojudge e465)<a href="https://github.com/moon-jam/moon-jam.github.io/tree/main/source/_posts/zerojudge_e465.md" class="post-edit-link" title="編輯" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          最大流 & 最小割 (Max-Flow & Min-Cut)<a href="https://github.com/moon-jam/moon-jam.github.io/tree/main/source/_posts/algo_Max-Flow_and_Min-Cut.md" class="post-edit-link" title="編輯" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -233,15 +231,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2023-10-08 00:00:00" itemprop="dateCreated datePublished" datetime="2023-10-08T00:00:00+08:00">2023-10-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-03-03 00:18:28" itemprop="dateModified" datetime="2024-03-03T00:18:28+08:00">2024-03-03</time>
+      <time title="創建時間：2024-05-06 00:00:00 / 修改時間：18:24:34" itemprop="dateCreated datePublished" datetime="2024-05-06T00:00:00+08:00">2024-05-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -249,11 +241,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%A8%8B%E5%BC%8F%E9%A1%8C%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">程式題解</span></a>
+          <a href="/categories/%E6%BC%94%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">演算法</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%A8%8B%E5%BC%8F%E9%A1%8C%E8%A7%A3/APCS/" itemprop="url" rel="index"><span itemprop="name">APCS</span></a>
+          <a href="/categories/%E6%BC%94%E7%AE%97%E6%B3%95/%E5%9C%96%E8%AB%96/" itemprop="url" rel="index"><span itemprop="name">圖論</span></a>
         </span>
     </span>
 
@@ -271,14 +263,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>486</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
+      <span>3 分鐘</span>
     </span>
 </div>
 
@@ -288,23 +280,72 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><div class="note default"><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://zerojudge.tw/ShowProblem?problemid=e465">題目網址</a></p>
-<p>你是個櫃子租借商，總共擁有 M 個櫃子。 現在這 M 個櫃子分別被 N
-個人借用，借用量分別為 (x0, x1, x2, …xN-1) 個櫃子， 其中 x0 + x1 + x2 +
-… + xN-1 ≤ M</p>
-<p>現在你想要使用 S 個空櫃子， 在被借用的櫃子只能夠 全退 或
-全不退之下，最少需要請這 N 個人退還多少櫃子？ 也就是當有一個人借用 10
-個櫃子時，不能夠只請他退還 5 個櫃子。</p>
-</div>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（<span class="math inline">\(s\)</span>）到出口（<span class="math inline">\(t\)</span>）之間，數據可以同時傳輸的最大速度是多少。<br>
+如下圖，從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span>
+的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span> 勢必通過路線 <span class="math inline">\(v1\rightarrow v2\)</span>
+，故這張圖的最大流量為 2。</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --10--&gt; v1 --2--&gt; v3 --13--&gt; v4 --11--&gt; t</code></pre>
+<p>而下面這個圖的最大流量為 19，下文提供一種可能的傳輸方式：</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --10--&gt; v1
+s --17--&gt; v2
+v1 --7--&gt; v3 --11--&gt; t
+v2 --9--&gt; v4 --16--&gt; t
+v1 --6--&gt; v4</code></pre>
+<ul>
+<li>傳輸 7： <span class="math inline">\(s\rightarrow v1\rightarrow
+v3\rightarrow t\)</span></li>
+<li> 傳輸 3： <span class="math inline">\(s\rightarrow v1 \rightarrow v4
+\rightarrow t\)</span> (因為 <span class="math inline">\(s\rightarrow
+v1\)</span>
+最多只能傳輸 10 因此在前一次傳輸 7 之後，接下來就只能傳輸 3 了)</li>
+<li> 傳輸 9： <span class="math inline">\(s \rightarrow v2 \rightarrow v4
+\rightarrow t\)</span></li>
+<li>7+3+9=19</li>
+</ul>
+<p>尋找這種<code>最大流</code>的想法還可以運用在<code>最小割</code> (後文會再解釋)、最多不重複路徑、二分圖最大匹配、二分圖最小頂點覆蓋等圖論問題。</p>
 <span id="more"></span>
-<div class="note info"><p>解題思路：
-這題我的做法是先整理出哪些櫃子數量可以由數個 x 相加而成，然後再找大於等於需要櫃子量的最小值，不過這樣依照題目給定的 N、M 範圍應該是過不了的，在最糟狀況下會是<span class="math inline"> \(O(N^2+M)\)</span>，只是試了之後是可以 AC 的，後來看別人的解法是用 01 背包問題解，但也會到<span class="math inline"> \(O(MN)\)</span>，如果是這樣的範圍應該要比較像<a target="_blank" rel="external nofollow noopener noreferrer" href="https://judge.tcirc.tw/ShowProblem?problemid=d075">中一中 judge 上的這題</a>，不過輸入順序不同，需要稍微修改。</p>
-<p>🌟題目給的 S 是需要的空櫃子，但事實上那些人要給你的數量只有 S-(M-total_x)，total_x 表示所有 x 的和，也就是說，如果 S-(M-total_x) 是負的，那就代表你不需要請人退櫃子，因為你已經有足夠的空櫃子了，而當正的時候，就是你需要請人退櫃子的數量。</p>
+<h2 id="def-flow-network">Def: Flow Network <a href="#def-flow-network" class="headerlink"></a></h2>
+<ul>
+<li>A direct graph G = (V,E)</li>
+<li><span class="math inline">\(\exist\)</span> one source point( <span class="math inline">\(s\)</span> ) and one sink point( <span class="math inline">\(t\)</span> )</li>
+<li><span class="math inline">\(\forall \ edge(u,v) \notin E \Rightarrow
+c(u,v) = 0 \Rightarrow f(u,v) = 0\)</span></li>
+<li><span class="math inline">\(c(u,v)\)</span> 表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的容量 (capacity)</li>
+<li><span class="math inline">\(f(u,v)\)</span> 表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的流量 (flow)</li>
+<li><span class="math inline">\(f(u,v) = -f(v,u)\)</span></li>
+<li><span class="math inline">\(|f|=\sum_{u\in V}f(s,v)\)</span></li>
+<li> 一個 <span class="math inline">\(s-t\ cut\)</span>
+表示能將圖切成兩個集合 <span class="math inline">\(A,B\)</span> ，滿足：
+<ul>
+<li><span class="math inline">\(A\cap B = \emptyset , \ A\cup B =
+V\)</span></li>
+<li><span class="math inline">\(s\in A, \ t\in B\)</span></li>
+</ul></li>
+<li>augmenting path: 一條起點為 s，終點為 t 的簡單路徑（沒有環）</li>
+<li>Residual graph: 邊上的數字為剩餘的剩餘容量</li>
+<li> backward&nbsp;edge: 反向邊（之後會提到）</li>
+</ul>
+<h2 id="性質">性質 <a href="#性質" class="headerlink"></a></h2>
+<ul>
+<li><span class="math inline">\(\forall \ u \in V - \{s, t\} , \ \exist
+\ path: \ s \rightarrow u \rightarrow t\)</span></li>
+<li> 容量限制：恆有 <span class="math inline">\(0 \leq f(u,v) \leq
+c(u,v)\)</span></li>
+<li> 流量守恆： <span class="math inline">\(\forall \ u \in V - \{s,t\},
+\ \sum_{v\in V}f(u,v) = \sum_{v\in V}f(v,u) = 0\)</span></li>
+<li><span class="math inline">\(|f|=\sum_{u\in V}f(s,v)=\sum_{u\in
+V}f(v,t)\)</span></li>
+</ul>
+<h2 id="max-flow">Max Flow <a href="#max-flow" class="headerlink"></a></h2>
+<h3 id="fordfulkerson-method">Ford–Fulkerson Method <a href="#fordfulkerson-method" class="headerlink"></a></h3>
+<div class="note info"><p>Initialize <span class="math inline">\(f(u, v)=0 \ \forall \
+edge(u,v) \in E\)</span> while exist an augmenting path p: let f_max(p)
+be min{c(u, v), edge(u, v) in p} for each edge(u, v) in p</p>
 </div>
-<figure class="highlight c++"><figcaption><span>APCS 置物櫃分配 </span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, s, total_x=<span class="number">0</span>, x[<span class="number">100005</span>];</span><br><span class="line"><span class="type">bool</span> add[<span class="number">100005</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; add_history;</span><br><span class="line"><span class="comment">//add[i] 表示x陣列是否能任意選取使得加總為i</span></span><br><span class="line"><span class="comment">//將題目轉換判斷x陣列是否能任意選取使得加總為k，再遍歷整個陣列找大於等於需要量的最小值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(add,<span class="number">0</span>,<span class="built_in">sizeof</span>(add));</span><br><span class="line">    cin&gt;&gt; m&gt;&gt; s &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;n; i++) cin &gt;&gt; x[i], total_x+=x[i];</span><br><span class="line">    add_history.<span class="built_in">push_back</span>(<span class="number">0</span>), add[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--){</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; new_history;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> num : add_history){</span><br><span class="line">            <span class="type">int</span> cur = num+x[i];</span><br><span class="line">            <span class="keyword">if</span>(!add[cur]) add[cur]=<span class="number">1</span>, new_history.<span class="built_in">push_back</span>(cur);</span><br><span class="line">        }<span class="keyword">for</span>(<span class="type">int</span> num : new_history) add_history.<span class="built_in">push_back</span>(num),add[num]=<span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    s -= (m-total_x); <span class="comment">//s表示還需要的櫃子數量</span></span><br><span class="line">    <span class="keyword">if</span>(s&lt;=<span class="number">0</span>){</span><br><span class="line">        cout &lt;&lt; <span class="number">0</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = s;i&lt;=total_x; i++)</span><br><span class="line">            <span class="keyword">if</span>(add[i]){</span><br><span class="line">                cout &lt;&lt; i &lt;&lt; <span class="string">'\n'</span>; <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.imgur.com/UkCAPWE.png" alt="AC的Submission～">
-<img data-src="https://i.imgur.com/95B9Abz.png" alt="中一中judge AC的Submission～"></p>
-
+<!-- flag of hidden posts -->
     </div>
 
     
@@ -321,7 +362,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>文章連結：</strong>
-      <a href="https://moon-jam.me/zerojudge_e465/" title="APCS 置物櫃分配 (zerojudge e465)">https://moon-jam.me/zerojudge_e465/</a>
+      <a href="https://moon-jam.me/algo_Max-Flow_and_Min-Cut/" title="最大流 &amp; 最小割 (Max-Flow &amp; Min-Cut)">https://moon-jam.me/algo_Max-Flow_and_Min-Cut/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -330,23 +371,11 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/APCS/" rel="tag"><i class="fa fa-tag"></i> APCS</a>
+              <a href="/tags/%E6%BC%94%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 演算法</a>
           </div>
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/zerojudge_i402/" rel="prev" title="APCS 內積 (zerojudge i402)">
-                  <i class="fa fa-chevron-left"></i> APCS 內積 (zerojudge i402)
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/zerojudge_f314/" rel="next" title="APCS 勇者修練 (zerojudge f314)">
-                  APCS 勇者修練 (zerojudge f314) <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
     </footer>
   </article>
 </div>
