@@ -3,7 +3,7 @@ title: BFPRT 演算法（中位數的中位數演算法）
 tags:
   - 演算法
 categories:
-  - null
+  - 演算法
 hidden: true
 abbrlink: 3431
 date: 2024-04-17 00:00:00
