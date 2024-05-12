@@ -2504,18 +2504,18 @@ bool dfs(int rt, vector<int> &path, int threshold) {
 signed main() {
     ios;
     cin >> n >> m;
-    int sum = 0;
+    int threshold = 0;
     rep(i, 1, m) {
         int a, b, c;
         cin >> a >> b >> c;
         adj[a][b] += c;
-        sum += c;
+        tomax(threshold, c);
     }
     int ans = 0;
-    while (sum > 0) {
+    while (threshold > 0) {
         vector<int> path;
         memset(vis, 0, sizeof(vis));
-        if (dfs(1, path, sum)) {
+        if (dfs(1, path, threshold)) {
             reverse(path.begin(), path.end());
             int k = path.size();
             int flow = 1e9;
@@ -2525,7 +2525,7 @@ signed main() {
                 adj[path[i]][path[i + 1]] -= flow;
                 adj[path[i + 1]][path[i]] += flow;
             }
-        } else sum /= 2;
+        } else threshold >>= 1;
     }
     cout << ans << "\n";
     return 0;
