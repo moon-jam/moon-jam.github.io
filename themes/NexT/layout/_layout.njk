@@ -58,5 +58,26 @@
 
     gtag('config', 'G-18MK2QJN0M');
   </script>
+
+  <script>
+  function updateTagCloudColors() {
+  let darkColors = ['#555555', '#646464', '#737373', '#828282', '#929292', '#a1a1a1', '#b0b0b0', '#c0c0c0', '#cfcfcf', '#dedede', '#eeeeee'];
+  let lightColors = ['#aaaaaa', '#9a9a9a', '#8b8b8b', '#7c7c7c', '#6c6c6c', '#5d5d5d', '#4e4e4e', '#3e3e3e', '#2f2f2f', '#202020', '#111111'];
+
+  for (let i = 0; i <= 10; i++) {
+      let elements = document.querySelectorAll('.tag-cloud-' + i);
+      for (let j = 0; j < elements.length; j++) {
+        elements[j].style.borderBottomColor = lightColors[i];
+        elements[j].style.color = lightColors[i];
+        if (document.body.classList.contains('darkmode--activated')) {
+            elements[j].style.borderBottomColor = darkColors[i];
+            elements[j].style.color = darkColors[i];
+        }
+      }
+    }
+  }
+  window.onload = updateTagCloudColors;
+  document.querySelector('.darkmode-toggle').addEventListener('click', updateTagCloudColors);
+  </script>
 </body>
 </html>
