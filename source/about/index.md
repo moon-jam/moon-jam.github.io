@@ -32,20 +32,21 @@ comments: false
 
 ## 做過的專案
 
-- 「新聞產銷履歷」的 Chrome 插件 [Github](https://github.com/moon-jam/News-Traceability) / [Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
-- Hexo renderer-pandoc 的 header-link-filter (原版的 Header link 迴紋針圖示會消失，這個 lua filter 會把它加回去) [Github](https://github.com/hexojs/hexo-renderer-pandoc)
-- Discord 遠端 WOL(Wake On Lan) 機器人 [Github](https://github.com/moon-jam/discord-bot-Remote-Wake-On-LAN)
-- Discord 猜拳機器人 [Github](https://github.com/moon-jam/discord-bot-Rock-Paper-Scissors)
-- 線上跳繩競賽系統 [Github](https://github.com/moon-jam/Jump_rope)
+- 「新聞產銷履歷」的 Chrome 插件 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/News-Traceability) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
+- Hexo renderer-pandoc 的 header-link-filter [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/hexo-renderer-pandoc_header-link-filter)
+- Discord 遠端 WOL(Wake On Lan) 機器人 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/discord-bot-Remote-Wake-On-LAN)
+- Discord 猜拳機器人 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/discord-bot-Rock-Paper-Scissors)
+- 線上跳繩競賽系統 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/Jump_rope)
 - 參與製作四台 FRC 機器人
   ![由左至右分別為2022賽季、2022自辦模擬賽、2023賽季、2024賽季](https://i.imgur.com/OEXIRUA.png)
 
 ## 研習、活動參與
 
-- 2024 SITCON Camp 隊輔 ([我們小隊黑客松成果](https://github.com/moon-jam/SITCON-Camp-2024-Hackathon-Team5-Public))
+- 2024 SITCON Camp 隊輔 [<i class="fab fa-github"></i> 我們小隊黑客松成果](https://github.com/moon-jam/SITCON-Camp-2024-Hackathon-Team5-Public)
 - 112 年聽見新課綱 翻轉的聲音 - 跨域學習 - 講者
 - 2022 大學與高中再探學習歷程檔案分享會暨論壇 - 講者
-- [2020小巨蛋體育表演會花式跳繩表演者](https://youtu.be/B3KTQrXk1RM)
+- 2022 成功高中 FRC 7497 程控教學 [<i class="fa fa-pager"></i> Slide](https://slides.com/team7497) [<i class="fa-brands fa-youtube"></i> Video](https://www.youtube.com/watch?v=9Kd77XYGM5c&list=PLMYcjrq5JiPShLSeQm69oxmDeSegj_I8G&pp=iAQB)
+- 2020 小巨蛋體育表演會花式跳繩表演者 [<i class="fa-brands fa-youtube"></i> Video](https://youtu.be/B3KTQrXk1RM)
 
 {% cq %}
 「那是一個只要你夠認真、夠相信，這個世界就會對你有所回應的時代」  
