@@ -175,10 +175,11 @@ social:
   Gmail: mailto:wu.messi.wu@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
-  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  #YouTube: https://youtube.com/yourname || fab fa-youtube
   IG: https://www.instagram.com/mooooonjam || fab fa-instagram
+  FB: https://www.facebook.com/moonjam.panda || fab fa-facebook
+  YouTube: https://www.youtube.com/@Moon__Jam || fab fa-youtube
+  Vlog: https://www.youtube.com/@Moon_Jam_Vlog || fab fa-youtube
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
