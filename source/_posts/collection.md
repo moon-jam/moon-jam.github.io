@@ -17,6 +17,45 @@ date: 2023-08-28 00:00:00
 
 如果有任何想補充的相關資料都歡迎在留言區分享～
 
+## AI 工具
+
+### 模型排行榜
+
+- [LMSys Chatbot Arena](https://chat.lmsys.org)
+- [LYIHub](https://lyihub.com)
+- [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
+- [Hugging Face Open ASR Leaderboard](https://huggingface.co/spaces/hf-audio/open_asr_leaderboard)
+- [Hugging Face TTS Arena](https://huggingface.co/spaces/TTS-AGI/TTS-Arena)
+
+### 聊天
+
+- [ChatGPT](https://chat.openai.com/)
+- [Claude](https://claude.ai/chats)
+- [Gemini](https://gemini.google.com/app)
+- [Pi](https://pi.ai/)
+- [Perplexity AI](https://labs.perplexity.ai)
+
+### 搜尋
+
+- [Phind](https://www.phind.com/)
+- [Perplexity AI](https://www.perplexity.ai)
+
+### 生圖
+
+- [PixAI](https://pixai.art)
+
+### 調高解析度
+
+- [Bigjpg](https://bigjpg.com/tw)
+
+### 畫心智圖
+
+- [Albus Studio](https://studio.albus.org)
+
+### 做簡報
+
+- [Gamma](https://gamma.app)
+
 ## 地科
 
 [深/淺水波－波速、波長、波高](https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3)
