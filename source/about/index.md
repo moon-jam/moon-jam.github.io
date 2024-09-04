@@ -33,6 +33,8 @@ comments: false
 ## 做過的專案
 
 - AI Vtuber (開發中) [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
+- picoCTF Gen Score Extension [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
+- 學期評語生成器 網頁 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/AI_Gen_Semester_Comments_Tool) / [<i class="fa-solid fa-link"></i> 網站](https://moon-jam.github.io/AI_Gen_Semester_Comments_Tool/)
 - 「新聞產銷履歷」的 Chrome 插件 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/News-Traceability) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
 - Hexo renderer-pandoc 的 header-link-filter [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/hexo-renderer-pandoc_header-link-filter)
 - Discord 遠端 WOL(Wake On Lan) 機器人 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/discord-bot-Remote-Wake-On-LAN)
@@ -43,6 +45,8 @@ comments: false
 
 ## 活動參與
 
+- IThome 2024 鐵人賽 - 生成式 AI - AI VTuber 的完善之路 (進行中)
+- IThome 2024 鐵人賽 - 佛心分享-刷題不只是刷題 - 一直刷 CTF (進行中)
 - 2024 GenAI Stars生成式AI百工百業應用選拔【創意創客組】入圍複審團隊 * 2組 (進行中)
 - 2024 人工智慧高中職進階人才培育 - 學員 (進行中)
 - 2024 吳健雄科學營 - 學員 - 圖隊創意海報佳作 [🐼 Blog](/2024_WCS_Camp)
