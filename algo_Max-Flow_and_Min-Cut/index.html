@@ -19,19 +19,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-barber-shop.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"moon-jam.me","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moon-jam.me","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言  一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（\(s\)）到出口（\(t\)）之間，數據可以同時傳輸的最大速度是多少。 如下圖，從 \(s\) 到 \(t\) 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 \(s\) 到 \(t\) 勢必通過路線 \(v1\rightarrow v2\) ，故這張圖的最大流量">
+    <meta name="description" content="前言  一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（ \(s\) ）到出口（ \(t\) ）之間，數據可以同時傳輸的最大速度是多少。 如下圖，從 \(s\) 到 \(t\) 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 \(s\) 到 \(t\) 勢必通過路線 \(v1\rightarrow v2\) ，故這張圖">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最大流 &amp; 最小割 (Max-Flow &amp; Min-Cut)">
 <meta property="og:url" content="https://moon-jam.me/algo_Max-Flow_and_Min-Cut/index.html">
 <meta property="og:site_name" content="Moon Jam&#39;s Blog">
-<meta property="og:description" content="前言  一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（\(s\)）到出口（\(t\)）之間，數據可以同時傳輸的最大速度是多少。 如下圖，從 \(s\) 到 \(t\) 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 \(s\) 到 \(t\) 勢必通過路線 \(v1\rightarrow v2\) ，故這張圖的最大流量">
+<meta property="og:description" content="前言  一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（ \(s\) ）到出口（ \(t\) ）之間，數據可以同時傳輸的最大速度是多少。 如下圖，從 \(s\) 到 \(t\) 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 \(s\) 到 \(t\) 勢必通過路線 \(v1\rightarrow v2\) ，故這張圖">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2024-05-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-06T10:24:34.912Z">
+<meta property="article:published_time" content="2024-05-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-12T12:24:17.140Z">
 <meta property="article:author" content="Moon Jam">
 <meta property="article:tag" content="演算法">
+<meta property="article:tag" content="Flow">
 <meta name="twitter:card" content="summary">
 
 
@@ -42,7 +43,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://moon-jam.me/algo_Max-Flow_and_Min-Cut/","path":"algo_Max-Flow_and_Min-Cut/","title":"最大流 & 最小割 (Max-Flow & Min-Cut)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>最大流 & 最小割 (Max-Flow & Min-Cut) | Moon Jam's Blog</title><meta name="robots" content="noindex">
+<title>最大流 & 最小割 (Max-Flow & Min-Cut) | Moon Jam's Blog</title>
   
 
 
@@ -140,7 +141,15 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#def-flow-network"><span class="nav-number">2.</span> <span class="nav-text">Def: Flow Network </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%B3%AA"><span class="nav-number">3.</span> <span class="nav-text">性質 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max-flow"><span class="nav-number">4.</span> <span class="nav-text">Max Flow </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fordfulkerson-method"><span class="nav-number">4.1.</span> <span class="nav-text">Ford–Fulkerson Method </span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#network-flow%E7%B6%B2%E8%B7%AF%E6%B5%81-%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%BE%A9"><span class="nav-number">2.</span> <span class="nav-text">Network Flow(網路流)
+的基本定義 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%95%E8%AC%82%E6%9C%80%E5%A4%A7%E6%B5%81max-flow%E8%88%87%E6%9C%80%E5%B0%8F%E5%89%B2min-cut"><span class="nav-number">3.</span> <span class="nav-text">何謂最大流 (Max-Flow) 與最小割 (Min-Cut)
+</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E9%BA%BC%E6%89%BE%E5%88%B0%E6%9C%80%E5%A4%A7%E6%B5%81"><span class="nav-number">4.</span> <span class="nav-text">怎麼找到最大流？ </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#na%C3%AFve-algorithm"><span class="nav-number">4.1.</span> <span class="nav-text">Naïve Algorithm </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#na%C3%AFve-algorithm-%E8%99%9B%E6%93%AC%E7%A2%BC"><span class="nav-number">4.1.1.</span> <span class="nav-text">Naïve Algorithm 虛擬碼 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fordfulkerson-algorithm-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6ofe"><span class="nav-number">4.2.</span> <span class="nav-text">Ford–Fulkerson Algorithm
+(時間複雜度 \(O(fE)\)) </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fordfulkerson-algorithm-%E8%99%9B%E6%93%AC%E7%A2%BC"><span class="nav-number">4.2.1.</span> <span class="nav-text">Ford–Fulkerson Algorithm 虛擬碼
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A4%87%E9%9B%9C%E5%BA%A6"><span class="nav-number">4.2.2.</span> <span class="nav-text">複雜度 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#edmonds-karp-algorithm-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6ove2"><span class="nav-number">4.3.</span> <span class="nav-text">Edmonds-Karp Algorithm
+(時間複雜度 \(O(|V||E|^2)\)) </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#capacity-scaling-algorithm-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6oe21logc_max"><span class="nav-number">4.4.</span> <span class="nav-text">Capacity
+Scaling Algorithm (時間複雜度 \(O(|E|^2(1+log(c_{max}))\)) </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#capacity-scaling-algorithm-%E8%99%9B%E6%93%AC%E7%A2%BC"><span class="nav-number">4.4.1.</span> <span class="nav-text">Capacity Scaling Algorithm
+虛擬碼 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%9C%89%E5%A5%BD%E5%B9%BE%E5%80%8Bsource%E6%88%96sink%E6%80%8E%E9%BA%BC%E8%BE%A6"><span class="nav-number">5.</span> <span class="nav-text">如果有好幾個 source 或 sink 怎麼辦？
+</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81%E7%9A%84%E6%8E%A8%E5%BB%A3%E4%BE%8B%E9%A1%8C"><span class="nav-number">6.</span> <span class="nav-text">最大流的推廣 &amp; 例題 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81"><span class="nav-number">6.1.</span> <span class="nav-text">最大流 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%89%B2"><span class="nav-number">6.2.</span> <span class="nav-text">最小割 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%89%B2%E3%81%AE%E4%BE%8B%E9%A1%8C"><span class="nav-number">6.2.1.</span> <span class="nav-text">最小割の例題 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E4%B8%8D%E9%87%8D%E8%A4%87%E8%B7%AF%E5%BE%91"><span class="nav-number">6.3.</span> <span class="nav-text">最多不重複路徑 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E4%B8%8D%E9%87%8D%E8%A4%87%E8%B7%AF%E5%BE%91%E3%81%AE%E4%BE%8B%E9%A1%8C"><span class="nav-number">6.3.1.</span> <span class="nav-text">最多不重複路徑の例題 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E5%9C%96%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D"><span class="nav-number">6.4.</span> <span class="nav-text">二分圖最大匹配 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E5%9C%96%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E3%81%AE%E4%BE%8B%E9%A1%8C"><span class="nav-number">6.4.1.</span> <span class="nav-text">二分圖最大匹配の例題 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">延伸閱讀（參考資料） </span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -154,18 +163,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-count">54</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -179,6 +188,15 @@
       </span>
       <span class="links-of-author-item">
         <a href="https://www.instagram.com/mooooonjam" title="IG → https:&#x2F;&#x2F;www.instagram.com&#x2F;mooooonjam" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-instagram fa-fw"></i>IG</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/moonjam.panda" title="FB → https:&#x2F;&#x2F;www.facebook.com&#x2F;moonjam.panda" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@Moon__Jam" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@Moon__Jam" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@Moon_Jam_Vlog" title="Vlog → https:&#x2F;&#x2F;www.youtube.com&#x2F;@Moon_Jam_Vlog" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-youtube fa-fw"></i>Vlog</a>
       </span>
   </div>
 
@@ -231,9 +249,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2024-05-06 00:00:00 / 修改時間：18:24:34" itemprop="dateCreated datePublished" datetime="2024-05-06T00:00:00+08:00">2024-05-06</time>
+      <time title="創建時間：2024-05-12 00:00:00" itemprop="dateCreated datePublished" datetime="2024-05-12T00:00:00+08:00">2024-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-07-12 20:24:17" itemprop="dateModified" datetime="2024-07-12T20:24:17+08:00">2024-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,14 +287,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>1.4k</span>
+      <span>14k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>3 分鐘</span>
+      <span>25 分鐘</span>
     </span>
 </div>
 
@@ -280,8 +304,11 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
-<p>一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（<span class="math inline">\(s\)</span>）到出口（<span class="math inline">\(t\)</span>）之間，數據可以同時傳輸的最大速度是多少。<br>
+    <div class="post-body" itemprop="articleBody"><!-- TODO 把圖片改成精美動畫 -->
+<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（
+<span class="math inline">\(s\)</span> ）到出口（ <span class="math inline">\(t\)</span>
+）之間，數據可以同時傳輸的最大速度是多少。<br>
 如下圖，從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span>
 的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span> 勢必通過路線 <span class="math inline">\(v1\rightarrow v2\)</span>
 ，故這張圖的最大流量為 2。</p>
@@ -305,47 +332,559 @@ v1\)</span>
 \rightarrow t\)</span></li>
 <li>7+3+9=19</li>
 </ul>
-<p>尋找這種<code>最大流</code>的想法還可以運用在<code>最小割</code> (後文會再解釋)、最多不重複路徑、二分圖最大匹配、二分圖最小頂點覆蓋等圖論問題。</p>
+<p>上述這樣的圖叫做 Network
+Flow (網路流)，在這樣的圖上尋找這種<code>最大流</code>的想法還可以運用在<code>最小割</code> (後文會再解釋)、<code>最多不重複路徑</code>、<code>二分圖最大匹配</code>、<code>二分圖最小頂點覆蓋</code>等圖論問題。</p>
 <span id="more"></span>
-<h2 id="def-flow-network">Def: Flow Network <a href="#def-flow-network" class="headerlink"></a></h2>
+<h2 id="network-flow網路流-的基本定義"><code>Network Flow(網路流)</code>
+的基本定義 <a href="#network-flow網路流-的基本定義" class="headerlink"></a></h2>
+<p>這邊可以先看個印象，之後如果有忘的再回來看</p>
 <ul>
-<li>A direct graph G = (V,E)</li>
-<li><span class="math inline">\(\exist\)</span> one source point( <span class="math inline">\(s\)</span> ) and one sink point( <span class="math inline">\(t\)</span> )</li>
+<li>A directed graph <span class="math inline">\(G =
+(V,E)\)</span><br>
+</li>
+<li>只有一個 source point (入口，記作 <span class="math inline">\(s\)</span> ) 和一個 sink point (出口，記作 <span class="math inline">\(t\)</span> )<br>
+</li>
+<li><span class="math inline">\(|V|\)</span> 為頂點數，<span class="math inline">\(|E|\)</span> 為邊數<br>
+</li>
+<li><span class="math inline">\(c(u,v)\)</span> (Capacity)：表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的容量
+(也就等價於前面舉例的最大流量限制，是圖給定的)<br>
+</li>
+<li><span class="math inline">\(f(u,v)\)</span> (Flow)：表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的流量 (是可以自己設定的)<br>
+</li>
+<li><span class="math inline">\(|f|=\sum_{u\in V}f(s,v)\)</span>
+(也就是從起點流出的總量)</li>
+<li><span class="math inline">\(r(u,v)\)</span> (Residual Capacity)：
+<span class="math inline">\(edge(u,v)\)</span>
+上扣除已有流量還可以傳輸多少流量才會飽和，意即 <span class="math inline">\(r(u,v)=c(u,v)-f(u,v)\)</span> (Residual Capacity =
+Capacity - Flow)</li>
+<li><span class="math inline">\(c_{max}\)</span> 表示所有 <span class="math inline">\(c(u,v)\)</span> 中最大的那個</li>
+<li> Residual Graph：邊上數字皆為剩餘容量的圖</li>
+<li> augmenting path：一條起點為 <span class="math inline">\(s\)</span>
+，終點為 <span class="math inline">\(t\)</span>
+的簡單路徑（沒有環）</li>
+<li>backward&nbsp;edge：反向邊（之後會提到）</li>
 <li><span class="math inline">\(\forall \ edge(u,v) \notin E \Rightarrow
 c(u,v) = 0 \Rightarrow f(u,v) = 0\)</span></li>
-<li><span class="math inline">\(c(u,v)\)</span> 表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的容量 (capacity)</li>
-<li><span class="math inline">\(f(u,v)\)</span> 表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的流量 (flow)</li>
-<li><span class="math inline">\(f(u,v) = -f(v,u)\)</span></li>
-<li><span class="math inline">\(|f|=\sum_{u\in V}f(s,v)\)</span></li>
-<li> 一個 <span class="math inline">\(s-t\ cut\)</span>
-表示能將圖切成兩個集合 <span class="math inline">\(A,B\)</span> ，滿足：
-<ul>
-<li><span class="math inline">\(A\cap B = \emptyset , \ A\cup B =
-V\)</span></li>
-<li><span class="math inline">\(s\in A, \ t\in B\)</span></li>
-</ul></li>
-<li>augmenting path: 一條起點為 s，終點為 t 的簡單路徑（沒有環）</li>
-<li>Residual graph: 邊上的數字為剩餘的剩餘容量</li>
-<li> backward&nbsp;edge: 反向邊（之後會提到）</li>
-</ul>
-<h2 id="性質">性質 <a href="#性質" class="headerlink"></a></h2>
-<ul>
-<li><span class="math inline">\(\forall \ u \in V - \{s, t\} , \ \exist
+<li><span class="math inline">\(\forall \ u \in V - \{s, t\} , \ \exists
 \ path: \ s \rightarrow u \rightarrow t\)</span></li>
 <li> 容量限制：恆有 <span class="math inline">\(0 \leq f(u,v) \leq
 c(u,v)\)</span></li>
 <li> 流量守恆： <span class="math inline">\(\forall \ u \in V - \{s,t\},
-\ \sum_{v\in V}f(u,v) = \sum_{v\in V}f(v,u) = 0\)</span></li>
-<li><span class="math inline">\(|f|=\sum_{u\in V}f(s,v)=\sum_{u\in
-V}f(v,t)\)</span></li>
+\ \sum_{v\in V}f(u,v) = \sum_{v\in V}f(v,u)\)</span></li>
+<li> 一個 <span class="math inline">\(s-t\ cut\)</span>
+表示能將圖切成兩個集合 <span class="math inline">\(S,T\)</span> ，滿足：
+<ul>
+<li><span class="math inline">\(S\cap T = \emptyset , \ S\cup T =
+V\)</span></li>
+<li><span class="math inline">\(s\in S, \ t\in T\)</span></li>
+</ul></li>
 </ul>
-<h2 id="max-flow">Max Flow <a href="#max-flow" class="headerlink"></a></h2>
-<h3 id="fordfulkerson-method">Ford–Fulkerson Method <a href="#fordfulkerson-method" class="headerlink"></a></h3>
-<div class="note info"><p>Initialize <span class="math inline">\(f(u, v)=0 \ \forall \
-edge(u,v) \in E\)</span> while exist an augmenting path p: let f_max(p)
-be min{c(u, v), edge(u, v) in p} for each edge(u, v) in p</p>
+<!-- ## 性質
+
+- $|f|=\sum_{u\in V}f(s,v)=\sum_{u\in V}f(v,t)$ ，可以很直觀想作輸入流量等於輸出流量，或是利用流量守恆來證明：  
+  $\sum_{u \in V- \{s,t\}}(\sum_{v\in V}f(u,v)-\sum_{v\in V}f(v,u))$ $=\sum_{u\in V}f(s,v)-\sum_{u\in V}f(v,t)=0$ -->
+<h2 id="何謂最大流max-flow與最小割min-cut">何謂最大流 (Max-Flow) 與最小割 (Min-Cut)
+<a href="#何謂最大流max-flow與最小割min-cut" class="headerlink"></a></h2>
+<ul>
+<li>最大流 (Max-Flow)：從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span> 的最大流量，寫的嚴謹一點就是： <span class="math inline">\(|f|=\sum_{u\in V}f(s,v)\)</span> 的最大值</li>
+<li>最小割 (Min-Cut)：一個 <span class="math inline">\(s-t\ cut\)</span>
+，使得 <span class="math inline">\(c(S,T)=\sum_{u\in S, v\in
+T}c(u,v)\)</span> 為最小值</li>
+</ul>
+<p>而特別的是一張圖的最大流量等於最小割的容量，這個性質會在後續講述<a href="/algo_Max-Flow_and_Min-Cut/#最小割">最小割</a>時證明</p>
+<h2 id="怎麼找到最大流">怎麼找到最大流？ <a href="#怎麼找到最大流" class="headerlink"></a></h2>
+<p>我們或許可以從 <span class="math inline">\(s\)</span>
+開始，每次找到一條 augmenting
+path，然後<code>貪心</code>地將這條路徑上每個邊的流量增加路徑上所有邊中最小的 Residual
+Capacity，不斷增加流量直到沒辦法增加為止 (增加流量視同於減少等量 Residual
+Capacity)，最後一路上所增加的流量 (或是減少的 Residual Capacity)
+或許就是最大流… 嗎？</p>
+<!-- TODO 舉例 可以用Naive Algo成功的案例 -->
+<p>我們試著用這個方法來找找看。(圖上邊標示的數字代表 Residual Capacity
+，而起始時因為 Flow=0 所以 Residual Capacity = Capacity)</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --10--&gt; v1
+s --17--&gt; v2
+v1 --7--&gt; v3 --11--&gt; t
+v2 --9--&gt; v4 --16--&gt; t
+v1 --6--&gt; v4</code></pre>
+<p>一開始走 <span class="math inline">\(s \rightarrow v1 \rightarrow v3
+\rightarrow t\)</span> ，這條路線上最小的 Residual Capacity 是 7
+，所以將每條路徑的 Residual Capacity 都減 9
+，那如果已經沒有剩餘流量的話就代表不能走了，所以我們就直接將這條邊移除
+(此時累計減少的 Residual Capacity = 7)</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --3--&gt; v1
+s --17--&gt; v2
+v1 --6--&gt; v4
+v3 --4--&gt; t
+v2 --9--&gt; v4 --16--&gt; t</code></pre>
+<p>接著走 <span class="math inline">\(s \rightarrow v1 \rightarrow v4
+\rightarrow t\)</span> ，這條路線上最小的 Residual Capacity 是 3
+，於是就將路徑都減 3 ，然後移除剩餘流量為 0 的邊 (此時累計減少的
+Residual Capacity = 10)</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --17--&gt; v2
+v1 --3--&gt; v4
+v3 --4--&gt; t
+v2 --9--&gt; v4 --13--&gt; t</code></pre>
+<p>最後就只剩下 <span class="math inline">\(s \rightarrow v2 \rightarrow
+v4 \rightarrow t\)</span> ，這條路線上最小的 Residual Capacity 是 9
+，於是就將路徑都減 9，然後移除剩餘流量為 0 的邊 (此時累計減少的 Residual
+Capacity = 19)</p>
+<pre><code class="highlight mermaid">flowchart TB
+subgraph T
+v1 --3--&gt; v4
+v3 --4--&gt; t
+v4 --4--&gt; t
+end
+subgraph S
+s --8--&gt; v2
+end</code></pre>
+<p>因為已經沒辦法再找到一條 <span class="math inline">\(s\)</span> 到
+<span class="math inline">\(t\)</span>
+的簡單路徑了，所以就認為這張圖的最大流為 19
+，我們就來整理看看這個感覺會成功的想法。</p>
+<h3 id="naïve-algorithm">Naïve Algorithm <a href="#naïve-algorithm" class="headerlink"></a></h3>
+<p>因為需要找到一路上最小的 Residual
+Capacity，所以我們將圖上的邊設為 Residual
+Capacity 會相較同時紀錄 Flow 和 Capacity 來得方便，並且認定當某條邊的 Residual
+Capacity 為 0 時，那該條路徑已經不能夠走了，因此就能將終止條件<code>不斷增加流量直到沒辦法增加為止</code>改為<code>找不到一條augmenting path</code>(若是沒辦法繼續增加流量，就代表無法找到一條 augmenting
+path 上所有的 Residual
+Capacity 皆不為 0)，我們可以根據以上邏輯寫出虛擬碼：</p>
+<div class="note success"><h4 id="naïve-algorithm-虛擬碼">Naïve Algorithm 虛擬碼 <a href="#naïve-algorithm-虛擬碼" class="headerlink"></a></h4>
+<p>Initialize <span class="math inline">\(r(u, v)=c(u, v) \ \forall \
+edge(u,v) \in E\)</span><br>
+let <span class="math inline">\(answer\)</span> be <span class="math inline">\(0\)</span><br>
+while exist an augmenting path <span class="math inline">\(p\)</span><br>
+　　let <span class="math inline">\(min_r\)</span> be <span class="math inline">\(min_{edge(u, v) \in p}r(u, v)\)</span><br>
+　　　　for each <span class="math inline">\(edge(u, v)\)</span> in
+<span class="math inline">\(p\)</span><br>
+　　　　　　<span class="math inline">\(r(u, v)\)</span> -= <span class="math inline">\(min_r\)</span><br>
+　　　　　　<span class="math inline">\(answer\)</span> += <span class="math inline">\(min_r\)</span></p>
 </div>
-<!-- flag of hidden posts -->
+<p>不過呢，其實這個做法是不對的，來看個反例</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --1--&gt; a --2--&gt; t
+s --2--&gt; b --1--&gt; t
+a --1--&gt; b</code></pre>
+<p>如果一開始走的是 <span class="math inline">\(s\rightarrow a
+\rightarrow b \rightarrow t\)</span>
+的話，那整條路就中斷了，而這時的流量為 1，但很明顯的更好的做法應該是
+<span class="math inline">\(s \rightarrow a \rightarrow t\)</span> 和
+<span class="math inline">\(s \rightarrow b \rightarrow t\)</span>
+這時的流量為 2。</p>
+<p>難道努力這麼久想到的方法就這樣付之一炬了嗎？我們有沒有可能想個辦法讓把原先走錯的路線<code>復原</code>，讓路給其他的流量走呢？這就是 <code>Ford–Fulkerson Algorithm</code> 的精神。</p>
+<h3 id="fordfulkerson-algorithm-時間複雜度ofe">Ford–Fulkerson Algorithm
+(時間複雜度<span class="math inline"> \(O(fE)\)</span>) <a href="#fordfulkerson-algorithm-時間複雜度ofe" class="headerlink"></a></h3>
+<p>這就輪到的先前提到的 <code>backward edge(反向邊)</code> 出場了，我們在每次找到一條 augmenting
+path 時，將這條路徑上所有的邊的 Residual
+Capacity 減少，同時增加一條反向邊，將減少的 Residual
+Capacity 加到反向邊上，到時候其他路徑被該條路阻塞時，這條反向邊就像是能提供原先走錯路線<code>復原</code>的功能，<code>讓路</code>給其他的流量走，或許這樣講不夠清楚，我們直接將這個方法套用到先前失敗的例子上</p>
+<!-- TODO 如果有精美動畫，希望可以展示出來哪一條水流是從哪邊流的(maybe用顏色)，而撤回時就是把該顏色的水流流向復原能夠流經的地方-->
+<pre><code class="highlight mermaid">flowchart LR
+s --1--&gt; a --2--&gt; t
+s --2--&gt; b --1--&gt; t
+a --1--&gt; b</code></pre>
+<p>一開始一樣走 <span class="math inline">\(s\rightarrow a \rightarrow b
+\rightarrow t\)</span> ，因為路的最大剩餘容量為 1，因此將 augmenting path
+上的路線 - 1，並新增一條為反向剩餘容量為 1 的邊</p>
+<pre><code class="highlight mermaid">flowchart RL
+t --1--&gt; b
+a --1--&gt; s
+a --2--&gt; t
+b --1--&gt; a
+s --2--&gt; b</code></pre>
+<p>這時因為有反向邊的關係，所以還可以走 <span class="math inline">\(s
+\rightarrow b \rightarrow a \rightarrow t\)</span>
+這條路線，這條路的最大剩餘容量為 1，因此將 augmenting path
+上的路線 - 1，並新增一條為反向剩餘容量為 1 的邊，且在經過此操作後已經沒有任何 augmenting
+path，所以答案就是減少的 Residual Capacity 總量也就是 2，符合答案</p>
+<pre><code class="highlight mermaid">flowchart RL
+t --2--&gt; a
+t --1--&gt; b
+a --1--&gt; s
+b --2--&gt; s
+a --1--&gt; b</code></pre>
+<p>那麼為什麼這樣會對呢？如前文所說我們的反向邊是擔任一個<code>復原</code>的角色，當第二次路徑走
+<span class="math inline">\(b \rightarrow a \rightarrow t\)</span>
+時，就像是跟上一次的路線說：「欸，你從 <span class="math inline">\(a\)</span> 明明就可以直接走到 <span class="math inline">\(t\)</span> ，我們來交換一下，你把上次走 <span class="math inline">\(b\rightarrow t\)</span> 的路權給我，然後你就不要走
+<span class="math inline">\(a\rightarrow b\)</span>
+這條路，改走我這次幫你發現的 <span class="math inline">\(a\rightarrow
+t\)</span> 這條路，這樣一來我們才可以創造最大價值！」</p>
+<p>而實現的的方法非常簡單，只要將原先的虛擬碼再多一個建立反向邊的程式就完成了</p>
+<div class="note success"><h4 id="fordfulkerson-algorithm-虛擬碼">Ford–Fulkerson Algorithm 虛擬碼
+<a href="#fordfulkerson-algorithm-虛擬碼" class="headerlink"></a></h4>
+<p>Initialize <span class="math inline">\(r(u, v)=c(u, v) \ \forall \
+edge(u,v) \in E\)</span><br>
+let <span class="math inline">\(answer\)</span> be <span class="math inline">\(0\)</span><br>
+while exist an augmenting path <span class="math inline">\(p\)</span><br>
+　　let <span class="math inline">\(min_r\)</span> be <span class="math inline">\(min_{edge(u, v) \in p}r(u, v)\)</span><br>
+　　　　for each <span class="math inline">\(edge(u, v)\)</span> in
+<span class="math inline">\(p\)</span><br>
+　　　　　　<span class="math inline">\(r(u, v)\)</span> -= <span class="math inline">\(min_r\)</span><br>
+　　　　　　<span class="math inline">\(r(v, u)\)</span> += <span class="math inline">\(min_r\)</span><br>
+　　　　　　<span class="math inline">\(answer\)</span> += <span class="math inline">\(min_r\)</span></p>
+</div>
+<h4 id="複雜度">複雜度 <a href="#複雜度" class="headerlink"></a></h4>
+<p>考慮到最糟糕的情況，每次都只增加 1 的流量，那麼最多就會需要增加最大流量次，這裡舉一個例子：</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --100000--&gt; a --100000--&gt; t
+s --100000--&gt; b --100000--&gt; t
+a --1--&gt; b</code></pre>
+<p>考慮最糟狀況一開始從 <span class="math inline">\(s\rightarrow a
+\rightarrow b \rightarrow t\)</span> ，然後下一輪因為生成反向邊 <span class="math inline">\((b,a)\)</span> 然後走 <span class="math inline">\(s \rightarrow b \rightarrow a \rightarrow
+t\)</span> 然後下一輪再走 <span class="math inline">\(s\rightarrow a
+\rightarrow b \rightarrow t\)</span>
+…… 如此反覆下去每次都只會使得流量增加 1 直到達到最大流，而就這個例子來說就是會走 200000 次</p>
+<p>所以最壞的情況下，時間複雜度為 <span class="math inline">\(O(fE)\)</span> ， <span class="math inline">\(f\)</span> 為最大流量， <span class="math inline">\(E\)</span> 為邊數。很顯然的在流量很大很大可能
+<span class="math inline">\(10^9\)</span>
+的情況下，這種方法是不好的，那有沒有什麼樣遍歷的方法可以讓每次增加的流量盡可能的高減少遍歷次數呢？這就是 <code>Edmonds-Karp Algorithm</code> 和 <code>Capacity Scaling Algorithm</code> 在做的事。</p>
+<h3 id="edmonds-karp-algorithm-時間複雜度ove2">Edmonds-Karp Algorithm
+(時間複雜度<span class="math inline"> \(O(|V||E|^2)\)</span>) <a href="#edmonds-karp-algorithm-時間複雜度ove2" class="headerlink"></a></h3>
+<p>在找 augmenting
+path 時，除了 DFS 之外，還有 BFS 可以用啊，利用 BFS 每次尋找<code>最短</code>的 augmenting
+path 會不會比較快呢？</p>
+<p>答案是會的，以下就是證明內容：</p>
+<p>以 <span class="math inline">\(d_G(u)\)</span> 表示 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(u\)</span> 的最短距離，而若 <span class="math inline">\(u\)</span> 是 G 這張 Residual
+Graph 中<code>最短</code>的 augmenting path <span class="math inline">\(P\)</span>，那麼這條路徑上從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(u\)</span> 的距離，就會是 <span class="math inline">\(d_G(u)\)</span>（否則路徑 <span class="math inline">\(P\)</span>
+就應該走那條更短的路），而在這個狀況下，也就必定會滿足：<span class="math inline">\(d_G(v) = d_G(u) + 1\)</span> <span class="math inline">\(\ \forall \ edge(u,v) \in P\)</span>
+(否則路徑 P 就應該走那條更短的路線到 <span class="math inline">\(u\)</span> )</p>
+<p>我們在 BFS 的時候找到最短 augmenting path，令這條路徑上的最小 Residual
+Capacity 為 <span class="math inline">\(r(u, v)\)</span>
+，紀錄當前的 Residual Graph 為 <span class="math inline">\(G_1\)</span>
+，而所以在這輪之後，Residual Graph 中的 <span class="math inline">\(r(u,
+v)\)</span> 就會變成 <span class="math inline">\(0\)</span>
+，若是在之後的 Residual Graph <span class="math inline">\(G_2\)</span>
+中有一條 augmenting path 包含 <span class="math inline">\(edge(v,
+u)\)</span> ，那麼這條邊就會重新<code>復活</code>，而 <span class="math inline">\(d(u)\)</span>
+會發生神奇的變化，使得每條邊最多只會被使用 <span class="math inline">\(|V|\)</span> 次，而以下就是詳細的說明：</p>
+<ul>
+<li><span class="math inline">\(d_{G_1}(v) = d_{G_1}(u) +
+1\)</span></li>
+<li><span class="math inline">\(d_{G_2}(u) = d_{G_2}(v) +
+1\)</span></li>
+<li><span class="math inline">\(d_{G_1}(v) \leq
+d_{G_2}(v)\)</span><br>
+<details class="note info"><summary><p>證明 (建議是全部看完再來看這個)</p>
+</summary>
+<p>為了避免這邊與先前所用的符號重疊導致混淆，這邊改為使用 <span class="math inline">\(x,y,z,a,b,c\)</span> 等其它記號表示。<br>
+我們可以不失一般性的假設 <span class="math inline">\(G_2\)</span> 是
+<span class="math inline">\(G_1\)</span>
+的下一張圖，因為當這個情況下假設成立，可使用遞迴的方式證明 <span class="math inline">\(G_1\)</span> 後的數張圖皆成立 ( <span class="math inline">\(G_2\)</span> 成立則 <span class="math inline">\(G_2\)</span> 下一張圖會成立則 <span class="math inline">\(G_2\)</span> 下下一張圖成立……)<br>
+試以反證法證明 <span class="math inline">\(\forall \ x\in V, \
+d_{G_1}(x) &gt; d_{G_2}(x)\)</span> 不成立：<br>
+1. 對於 <span class="math inline">\(s\)</span> 或所有與 <span class="math inline">\(s\)</span> 僅通過一條邊聯通的節點所形成的集合
+<span class="math inline">\(Y\)</span> ，其中任意一點 <span class="math inline">\(y\)</span> 皆滿足 <span class="math inline">\(d_{G_1}(y) \leq d_{G_2}(y)\)</span><br>
+2. 由上可知，對圖上一些滿足 <span class="math inline">\(d_{G_1}(z) &gt;
+d_{G_2}(z)\)</span> 的點集 <span class="math inline">\(Z\)</span> ，
+<span class="math inline">\(Z \subsetneqq V\)</span> ，而這邊特別定義
+<span class="math inline">\(a\)</span> 為符合 <span class="math inline">\(min_{i\in Z}d_{G_2}(i)\)</span> 的一點，也就是
+<span class="math inline">\(Z\)</span> 集合中在 <span class="math inline">\(G_2\)</span> 中距離 <span class="math inline">\(s\)</span> 最近的節點。<br>
+3. <span class="math inline">\(\because Z \cap Y = \emptyset \
+\therefore\)</span> 從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(a\)</span> 一定需要一個中繼點也就是說 <span class="math inline">\(\exists \ edge(b, a)\in G_2\)</span> 使得 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(a\)</span> 的最短路徑中包含 <span class="math inline">\(edge(b, a)\)</span><br>
+<span class="math inline">\(\implies d_{G_2}(b) + 1 =
+d_{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies d_{G_2}(b) &lt;
+d_{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies b \notin Z\)</span> (因為 <span class="math inline">\(d_{G_2}(a)\)</span> 是在 <span class="math inline">\(Z\)</span> 中最短的)<br>
+<span class="math inline">\(\implies d_{G_1}(b) \leq
+d_{G_2}(b)\)</span><br>
+4. 若在 <span class="math inline">\(G_1\)</span> 的 Residual Graph 包含
+<span class="math inline">\(edge(b,a)\)</span>，而從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(a\)</span> 點的最短距離有可能是經過 <span class="math inline">\(b\)</span> 再到 <span class="math inline">\(a\)</span> 或是有另外一條更短的路<br>
+<span class="math inline">\(\implies d_{G_1}(a) \leq
+d_{G_1}(b)+1\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(a) \leq
+d_{G_2}(b)+1\)</span> (由 <span class="math inline">\(d_{G_1}(b) \leq
+d_{G_2}(b)\)</span> 推得)<br>
+<span class="math inline">\(\implies d_{G_1}(a)\leq d_{G_2}(a)\)</span>
+(由 <span class="math inline">\(d_{G_2}(a) = d_{G_2}(b)+1\)</span>
+推得)<br>
+<span class="math inline">\(\implies\)</span> 與假設 <span class="math inline">\(d_{G_1}(a) &gt; d_{G_2}(a)\)</span> 矛盾，故在
+<span class="math inline">\(G_2\)</span> 中 <span class="math inline">\(Z\)</span> 不存距離 <span class="math inline">\(s\)</span> 最近的節點，故 <span class="math inline">\(Z\)</span> 不存在 5. 若在 <span class="math inline">\(G_1\)</span> 的 Residual Graph 不包含 <span class="math inline">\(edge(b,a)\)</span> ，又因為 <span class="math inline">\(G_2\)</span> 是 <span class="math inline">\(G_1\)</span> 的下一張圖，所以這種狀況只有可能是
+<span class="math inline">\(G_1\)</span> 的 augmenting path 流經 <span class="math inline">\(edge(a,b)\)</span> ，使得在下一張圖創造了一條
+<span class="math inline">\(edge(b,a)\)</span> ，因此可以給定 <span class="math inline">\(d_{G_1}(a)+1 = d_{G_1}(b)\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(a)+1 \leq d_{G_2}(b) =
+d{G_2}(a)-1\)</span><br>
+(由 <span class="math inline">\(d_{G_1}(b) \leq d_{G_2}(b)\)</span> 和
+<span class="math inline">\(d_{G_2}(a) = d_{G_2}(b)+1\)</span>
+推得)<br>
+<span class="math inline">\(\implies d_{G_1}(a)+2 \leq
+d{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(a) &lt;
+d{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies\)</span> 與假設 <span class="math inline">\(d_{G_1}(a) &gt; d_{G_2}(a)\)</span> 矛盾，故在
+<span class="math inline">\(G_2\)</span> 中 <span class="math inline">\(Z\)</span> 不存距離 <span class="math inline">\(s\)</span> 最近的節點，故 <span class="math inline">\(Z\)</span> 不存在</p>
+<p>p.s.
+這個證明不知道為什麼感覺好像網路上找到的都有種跳太快的感覺，花了好多時間才看懂，所以這邊特別寫得很詳細，希望大家都能看懂 (<del>還是其實單純我太笨了 xd</del>)</p>
+
+</details></li>
+<li><span class="math inline">\(d_{G_1}(u)+1 \leq
+d_{G_2}(u)-1\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(u)+2 \leq
+d_{G_2}(u)\)</span><br>
+</li>
+<li><span class="math inline">\(\forall \ G, \ d_{G}(u) &lt;
+|V|\)</span> 又因為一條邊每被重複用一次就會遠離 <span class="math inline">\(s\)</span> 兩個節點<br>
+<span class="math inline">\(\implies\)</span> 每條 <span class="math inline">\(edge(u,v)\)</span> 必定只會被使用 <span class="math inline">\(\frac{|V|}{2}\)</span><br>
+</li>
+<li>總共有 <span class="math inline">\(|E|\)</span>
+條邊，每條邊最多被使用 <span class="math inline">\(\frac{|V|}{2}\)</span> 次，所以最多有 <span class="math inline">\(|E|\times\frac{|V|}{2}\)</span>
+次 BFS，又每次 BFS 的時間複雜度為 <span class="math inline">\(O(|E|)\)</span> ，所以總時間複雜度為 <span class="math inline">\(O(|V||E|^2)\)</span></li>
+</ul>
+<p><code>註：因為這個演算法的實作其實不是很方便，而且複雜度也比後面要講的差，所以這個演算法應該是比較少會用到的</code></p>
+<h3 id="capacity-scaling-algorithm-時間複雜度oe21logc_max">Capacity
+Scaling Algorithm (時間複雜度<span class="math inline"> \(O(|E|^2(1+log(c_{max}))\)</span>) <a href="#capacity-scaling-algorithm-時間複雜度oe21logc_max" class="headerlink"></a></h3>
+<p>這個演算法我喜歡多了，證明簡單設計巧妙，而且在幾乎所有的狀況下複雜度都比前者好 (除非
+<span class="math inline">\(c_{max}&gt;2^{|V|}\)</span>)，因此通常我都是使用這個演算法來寫題目。</p>
+<p>這個演算法的邏輯是設定一個 <span class="math inline">\(threshold\)</span> 每次都只使用 <span class="math inline">\(c(u,v)\geq threshold\)</span> 的邊作為 augmenting
+path 直到使用當前 <span class="math inline">\(threshold\)</span>
+無法找到一條 augmenting path 就將 <span class="math inline">\(threshold\)</span> 除以二，反覆執行直到 <span class="math inline">\(threshold=0\)</span> ，那因為 <span class="math inline">\(threshold\)</span> 找 augmenting path 的最後一次是
+<span class="math inline">\(threshold=1\)</span> 也就是 Ford–Fulkerson
+Algorithm 時的狀態，所以最後一定能找出正確的最大流</p>
+<p>定義： <span class="math inline">\(G'\)</span> 表示 Residual
+Graph 上除去所有 <span class="math inline">\(c(u,v) &lt;
+threshold\)</span> 的邊後的圖</p>
+<div class="note success"><h4 id="capacity-scaling-algorithm-虛擬碼">Capacity Scaling Algorithm
+虛擬碼 <a href="#capacity-scaling-algorithm-虛擬碼" class="headerlink"></a></h4>
+<p>Initiassze <span class="math inline">\(r(u, v)=c(u, v) \ \forall \
+edge(u,v) \in E\)</span><br>
+let <span class="math inline">\(answer\)</span> be <span class="math inline">\(0\)</span><br>
+let <span class="math inline">\(threshold\)</span> be <span class="math inline">\(c_{max}\)</span><br>
+while <span class="math inline">\(threshold &gt; 0\)</span><br>
+　　while exist an augmenting path <span class="math inline">\(p\)</span> in <span class="math inline">\(G'\)</span><br>
+　　　　let <span class="math inline">\(min_r\)</span> be <span class="math inline">\(min_{edge(u, v) \in p}r(u, v)\)</span><br>
+　　　　　　for each <span class="math inline">\(edge(u, v)\)</span> in
+<span class="math inline">\(p\)</span><br>
+　　　　　　　　<span class="math inline">\(r(u, v)\)</span> -= <span class="math inline">\(min_r\)</span><br>
+　　　　　　　　<span class="math inline">\(r(v, u)\)</span> += <span class="math inline">\(min_r\)</span><br>
+　　　　　　　　<span class="math inline">\(answer\)</span> += <span class="math inline">\(min_r\)</span><br>
+　　<span class="math inline">\(threshold = threshold/2\)</span></p>
+</div>
+<p>我們一一分解各個迴圈會被執行的時間複雜度： 很明顯的 <span class="math inline">\(threshold\)</span> 每次除以二，又 <span class="math inline">\(threshold\)</span> 起始值為 <span class="math inline">\(c_{max}\)</span> ，那就是 <span class="math inline">\(log(c_{max})\)</span> 量級的，但是因為要考慮到
+<span class="math inline">\(c_{max}=1\)</span> 的狀況，所以特別 <span class="math inline">\(+1\)</span><br>
+</p><details class="note info"><summary><p>while <span class="math inline">\(threshold &gt; 0\)</span> ： <span class="math inline">\(O(1+log(c_{max}))\)</span></p>
+</summary>
+<p>很明顯的 <span class="math inline">\(threshold\)</span>
+每次除以二，又 <span class="math inline">\(threshold\)</span> 起始值為
+<span class="math inline">\(c_{max}\)</span> ，那就是 <span class="math inline">\(log(c_{max})\)</span> 量級的，但是因為要考慮到
+<span class="math inline">\(c_{max}=1\)</span> 的狀況，所以特別 <span class="math inline">\(+1\)</span></p>
+
+</details> <details class="note info"><summary><p>while exist an augmenting path <span class="math inline">\(p\)</span>
+in <span class="math inline">\(G'\)</span> ： <span class="math inline">\(O(|E|)\)</span></p>
+</summary>
+<p>我們可以巧妙透過當前 <span class="math inline">\(flow\)</span> 和
+<span class="math inline">\(max-flow\)</span>
+的關係來說明這件事情，我們在每一輪開始前，可以確定：</p>
+<ol type="1">
+<li>每條邊的 Residual Capacity 都比上次的 <span class="math inline">\(threshold\)</span> (也就是兩倍當前的 <span class="math inline">\(threshold\)</span> ) 來得小，也就是 <span class="math inline">\(\sum r_{cur}(u,v) \leq |E| \cdot 2 \cdot
+threshold\)</span></li>
+<li> 當前這張圖的 <span class="math inline">\(max-flow\)</span>
+一定小於等於所有容量的總和 (詳見後續證明) ，也因此 <span class="math inline">\(max-flow\)</span> 與 <span class="math inline">\(flow\)</span> 的差一定也小於等於剩餘流量的總和
+(詳見後續證明)，所以在這回合中透過 augmenting
+path 增加的流量總和會小於等於剩餘流量的總和<br>
+</li>
+<li>因為只會看在 <span class="math inline">\(G'\)</span>
+上的邊，所以每次的 augmenting path 都會增加至少 <span class="math inline">\(threshold\)</span>
+的流量，結合前述兩點可知 augmenting path 增加的流量總和 <span class="math inline">\(\leq \sum r_{cur}(u,v) \leq 2 |E|
+threshold\)</span> ，因此找 augmenting path 的次數就會 <span class="math inline">\(\leq \sum \frac{r_{cur}(u,v)}{threshold} \leq
+\frac{2 |E| threshold}{threshold} = 2|E|\)</span></li>
+</ol>
+<p>所以說這輪所需花費的時間複雜度上界就會是 <span class="math inline">\(O(2|E|)=O(|E|)\)</span></p>
+<p><span id="inline-blue">證明</span><br>
+定義 <span class="math inline">\(f_{max}(u,v)\)</span> 表示當有 <span class="math inline">\(max-flow\)</span> 各個邊的流量、<span class="math inline">\(f_{cur}(u,v)\)</span> 表示當前各個邊的流量、<span class="math inline">\(r_{cur}(u,v)\)</span> 表示當前各個邊的剩餘容量</p>
+<ul>
+<li>當前這張圖的 <span class="math inline">\(max-flow\)</span>
+一定小於等於所有容量的總和<br>
+<span class="math display">\[\sum f_{max}(u,v) \leq \sum
+c(u,v)\]</span><br>
+</li>
+<li><span class="math inline">\(max-flow\)</span> 與 <span class="math inline">\(flow\)</span> 的差一定也小於等於剩餘流量的總和
+<span class="math display">\[\sum f_{max}(u,v)-f_{cur}(u,v) \leq \sum
+c(u,v)-f_{cur}(u,v) = \sum r_{cur}(u,v)\]</span></li>
+</ul>
+
+</details> <details class="note info"><summary><p>close DFS 和 for each <span class="math inline">\(edge(u, v)\)</span>
+in <span class="math inline">\(p\)</span> ： <span class="math inline">\(O(|E|)\)</span></p>
+</summary>
+<p>DFS 是 <span class="math inline">\(O(|E|)\)</span> ， <span class="math inline">\(p\)</span> 所含的路徑總量最多是 <span class="math inline">\(O(|V|)\)</span> ，則總時間複雜度 <span class="math inline">\(O(|E|+|V|) = O(|E|)\)</span></p>
+
+</details><p></p>
+<p>總時間複雜度： <span class="math inline">\(O(|E|^2(1+log(c_{max}))\)</span></p>
+<h2 id="如果有好幾個source或sink怎麼辦">如果有好幾個 source 或 sink 怎麼辦？
+<a href="#如果有好幾個source或sink怎麼辦" class="headerlink"></a></h2>
+<pre><code class="highlight mermaid">flowchart LR
+s1 ---&gt; t1
+s1 ---&gt; t2
+s2 ---&gt; t2
+s2 ---&gt; t3
+s3 ---&gt; t3
+s4 ---&gt; t3
+s4 ---&gt; t4
+s5 ---&gt; t4</code></pre>
+<p>這樣的圖可以透過增加一個新的 source <span class="math inline">\(s\)</span> 和一個新的 sink <span class="math inline">\(t\)</span> 來解決，將所有的 source 都連接到<span class="math inline"> \(s\)</span>(管線容量為無限大)，所有的 sink 也都連接到<span class="math inline"> \(t\)</span>(管線容量為無限大)，這樣就可以將問題轉換成一個 source 和 sink 的問題。</p>
+<pre><code class="highlight mermaid">flowchart LR
+s ---&gt; s1 ---&gt; t1 ---&gt;t
+s ---&gt; s1 ---&gt; t2 ---&gt;t
+s ---&gt; s2 ---&gt; t2 ---&gt;t
+s ---&gt; s2 ---&gt; t3 ---&gt;t
+s ---&gt; s3 ---&gt; t3 ---&gt;t
+s ---&gt; s4 ---&gt; t3 ---&gt;t
+s ---&gt; s4 ---&gt; t4 ---&gt;t
+s ---&gt; s5 ---&gt; t4 ---&gt;t</code></pre>
+<h2 id="最大流的推廣例題">最大流的推廣 &amp; 例題 <a href="#最大流的推廣例題" class="headerlink"></a></h2>
+<p>先回顧一下我們有那些找到最大流的演算法</p>
+<ol type="1">
+<li>Ford–Fulkerson Algorithm，時間複雜度 <span class="math inline">\(O(fE)\)</span> ， <span class="math inline">\(f\)</span> 為最大流量<br>
+</li>
+<li>Edmonds-Karp Algorithm，時間複雜度 <span class="math inline">\(O(VE^2)\)</span> (大致上不會用到)<br>
+</li>
+<li>Capacity Scaling Algorithm，時間複雜度 <span class="math inline">\(O(|E|^2(1+\log (c_{max}))\)</span></li>
+</ol>
+<p>可能大部分人寫最大流問題會直接選 Capacity Scaling
+Algorithm，因為時間複雜度最低，而且實作簡單，但這樣想就錯了，在蠻多應用中，邊的容量都是 1，這時候使用 Ford–Fulkerson
+Algorithm 就可以更簡單解決問題，而且也不會爆複雜度 (最大流量必定小於等於頂點數 - 1)。</p>
+<h3 id="最大流">最大流 <a href="#最大流" class="headerlink"></a></h3>
+<p>因為前面都講過了，所以就來個例題吧～</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cses.fi/problemset/task/1694">CSES Download
+Speed</a></p>
+<blockquote>
+<p>Consider a network consisting of n computers and m connections. Each
+connection specifies how fast a computer can send data to another
+computer.<br>
+Kotivalo wants to download some data from a server. What is the maximum
+speed he can do this, using the connections in the network?</p>
+</blockquote>
+<p>解法：因為每條容量最大會到 <span class="math inline">\(10^9\)</span>
+，所以就用 Capacity Scaling Algorithm</p>
+<details><summary>程式碼 </summary><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> adj[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt, vector&lt;<span class="type">int</span>&gt; &amp;path, <span class="type">int</span> threshold)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (vis[rt]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (rt == n) {</span><br><span class="line">        path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span> (adj[rt][i] &lt; threshold) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(i, path, threshold)) {</span><br><span class="line">            path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="type">int</span> threshold = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m) {</span><br><span class="line">        <span class="type">int</span> a, b, c;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">        adj[a][b] += c;</span><br><span class="line">        <span class="built_in">tomax</span>(threshold, c);</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (threshold &gt; <span class="number">0</span>) {</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(<span class="number">1</span>, path, threshold)) {</span><br><span class="line">            <span class="built_in">reverse</span>(path.<span class="built_in">begin</span>(), path.<span class="built_in">end</span>());</span><br><span class="line">            <span class="type">int</span> k = path.<span class="built_in">size</span>();</span><br><span class="line">            <span class="type">int</span> flow = <span class="number">1e9</span>;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) <span class="built_in">tomin</span>(flow, adj[path[i]][path[i + <span class="number">1</span>]]);</span><br><span class="line">            ans += flow;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) {</span><br><span class="line">                adj[path[i]][path[i + <span class="number">1</span>]] -= flow;</span><br><span class="line">                adj[path[i + <span class="number">1</span>]][path[i]] += flow;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> threshold &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<h3 id="最小割">最小割 <a href="#最小割" class="headerlink"></a></h3>
+<blockquote>
+<p>最小割 (Min-Cut)：一個 <span class="math inline">\(s-t\ cut\)</span>
+，使得 <span class="math inline">\(c(S,T)=\sum_{u\in S, v\in
+T}c(u,v)\)</span> 為最小值</p>
+</blockquote>
+<p>我先定義 <span class="math inline">\(f(S,T)=\sum_{u\in S, v\in
+T}f(u,v)\)</span> ，因為任何一個割的流量都來自 <span class="math inline">\(s\)</span> ，因此我們可以很輕易的推得：<br>
+<span class="math display">\[\forall \ s-t\ cut, f(S,T) =
+|f|\]</span><br>
+( <span class="math inline">\(|f|\)</span> 為 <span class="math inline">\(s\)</span> 流入的總流量)<br>
+因為每個 <span class="math inline">\(cut\)</span>
+流量都一樣，所以說我們可以把最小割問題想做是不斷把入口的流量增大，直到有<code>第一個</code>
+<span class="math inline">\(cut\)</span> ，使得 <span class="math inline">\(f(S,T)=c(S,T)\)</span>
+，那麼就找到最小割了，要怎麼知道這個是最大流呢？也很簡單，因為對於個
+<span class="math inline">\(cut\)</span> 上的每一條邊，都有 <span class="math inline">\(f(u,v)=c(u,v)\)</span>
+，若是想再增加流量，每當流經這個 <span class="math inline">\(cut\)</span>
+時，流量都會被<code>阻塞</code>，無法使得總流量變得更大。<br>
+而至於應該怎麼找到一個合法的最小割，還有最小割上的邊，可以看看下面的例題。</p>
+<h4 id="最小割の例題">最小割の例題 <a href="#最小割の例題" class="headerlink"></a></h4>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cses.fi/problemset/task/1695">CSES Police
+Chase</a></p>
+<blockquote>
+<p>Kaaleppi has just robbed a bank and is now heading to the harbor.
+However, the police wants to stop him by closing some streets of the
+city.<br>
+What is the minimum number of streets that should be closed so that
+there is no route between the bank and the harbor?</p>
+</blockquote>
+<p>解法：這題可以把所有路徑的容量都設成 1，然後用 Ford–Fulkerson
+Algorithm 找到最小割的容量了，接著利用最後一次找 augmenting
+path 拜訪過的點區分各點是屬於 <span class="math inline">\(S\)</span> 還是
+<span class="math inline">\(T\)</span> 集合 (因為最後一次找 augmenting
+path 是失敗的，整張圖已經有最大流，並且存在一個最小割上的容量 = 流量，所以說最小割的剩餘流量為 0，因此從起始點
+<span class="math inline">\(s\)</span>
+流經過那一個最小割時，所有的路線都會被<code>阻塞</code>，這時就能利用當前是否被拜訪，判斷點是在哪個集合中)，而<code>跨越</code>
+<span class="math inline">\(s\)</span> 和 <span class="math inline">\(t\)</span> 的邊，就會是最小割的其中一員。</p>
+<details><summary>程式碼</summary><figure class="highlight cpp"><figcaption><span> CSES Police Chase</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, ans;</span><br><span class="line"><span class="type">int</span> g[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == n) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)){</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[a][b] = g[b][a] = <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">1</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, n){</span><br><span class="line">            <span class="keyword">if</span>((vis[i] ^ vis[j]) &amp;&amp; !g[i][j] &amp;&amp; g[j][i]) cout &lt;&lt; i sp j &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<h3 id="最多不重複路徑">最多不重複路徑 <a href="#最多不重複路徑" class="headerlink"></a></h3>
+<p>若是將每條路徑流量都設為 1，那麼就代表這條被走過之後就不能再走了，因此最終能有多少條路徑能從起點到終點，就會是最多不重複路徑的數量，也就會是最大流量。</p>
+<p>那應該怎麼找到路徑的順序呢？可以想想看找完最大流後的 Residual
+Graph，因為演算法會幫我們把走錯的路導正，除起點與終點外，每個節點都必定只有進入和出去各 1 的流量，所以只要從起點開始，不斷找 Residual
+Capacity 為 0 的邊，然後再從這條邊的終點找下一條 Residual
+Capacity 為 0 的邊，直到找到終點為止。</p>
+<h4 id="最多不重複路徑の例題">最多不重複路徑の例題 <a href="#最多不重複路徑の例題" class="headerlink"></a></h4>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cses.fi/problemset/task/1711">CSES Distinct
+Routes</a></p>
+<blockquote>
+<p>A game consists of n rooms and m teleporters. At the beginning of
+each day, you start in room 1 and you have to reach room n. You can use
+each teleporter at most once during the game. How many days can you play
+if you choose your routes optimally?</p>
+</blockquote>
+<p>解法：這題一樣把所有路徑的容量都設成 1，然後用 Ford–Fulkerson
+Algorithm 找到最大流，然後就用前述方法即可找到各個實際路徑是怎麼走的了。</p>
+<details><summary>程式碼</summary><figure class="highlight c++"><figcaption><span> CSES Distinct Routes</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, ans = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> g[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line">vi go[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == n) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)) {</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[a][b]++;</span><br><span class="line">        go[a].<span class="built_in">eb</span>(b);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">1</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">while</span>(ans--){</span><br><span class="line">        <span class="function">vi <span class="title">path</span><span class="params">(<span class="number">1</span>,<span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="type">int</span> s = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(s!=n){</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i : go[s])</span><br><span class="line">                <span class="keyword">if</span>(!g[s][i] &amp;&amp; g[i][s]){</span><br><span class="line">                    g[i][s]=<span class="number">0</span>;</span><br><span class="line">                    s=i;</span><br><span class="line">                    path.<span class="built_in">eb</span>(i);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; path.<span class="built_in">size</span>() &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i : path) cout &lt;&lt; i &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        cout &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<h3 id="二分圖最大匹配">二分圖最大匹配 <a href="#二分圖最大匹配" class="headerlink"></a></h3>
+<p>這個的做法是先兩個集合的點，各別連接一個 source 和 sink (見<a href="/algo_Max-Flow_and_Min-Cut/#如果有好幾個source或sink怎麼辦？">如果有好幾個 source 或 sink 怎麼辦？</a>)，我們可以將圖分為四個區塊，如下圖：</p>
+<pre><code class="highlight mermaid">flowchart LR
+subgraph BEGIN
+s
+end
+subgraph LEFT
+direction LR
+a1
+a2
+a3
+end
+subgraph RIGHT
+direction LR
+b1
+b2
+b3
+end
+subgraph END
+t
+end
+s --1--&gt; a1
+s --1--&gt; a2
+s --1--&gt; a3
+a1 --1--&gt; b1
+a1 --1--&gt; b2
+a2 --1--&gt; b2
+a3 --1--&gt; b3
+a1 --1--&gt; b3
+b1 --1--&gt; t
+b2 --1--&gt; t
+b3 --1--&gt; t</code></pre>
+<p>我們可以認定一條 <span class="math inline">\(s\)</span> 流到 <span class="math inline">\(t\)</span>
+的路徑就代表一個配對，並且因為 LEFT 的每個點流入量都是 1，RIGHT 的每個點流出量是 1，所以所有點配對時最多只能使用一次，因此最終能有多少條路徑能從起點到終點，就會是最大匹配的數量，也就會是最大流量，而找路徑的方法就如同<a href="/algo_Max-Flow_and_Min-Cut/#最多不重複路徑">最多不重複路徑</a>一樣。</p>
+<h4 id="二分圖最大匹配の例題">二分圖最大匹配の例題 <a href="#二分圖最大匹配の例題" class="headerlink"></a></h4>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cses.fi/problemset/task/1696">CSES School
+Dance</a></p>
+<blockquote>
+<p>There are n boys and m girls in a school. Next week a school dance
+will be organized. A dance pair consists of a boy and a girl, and there
+are k potential pairs.<br>
+Your task is to find out the maximum number of dance pairs and show how
+this number can be achieved.</p>
+</blockquote>
+<p>解法：還是一樣把所有路徑的容量都設成 1，然後用 Ford–Fulkerson
+Algorithm 找到最大流，然後就用前面講的方法轉換成匹配結果。</p>
+<details><summary>程式碼</summary><figure class="highlight c++"><figcaption><span> CSES School Dance</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, k, ans;</span><br><span class="line"><span class="type">int</span> g[<span class="number">1003</span>][<span class="number">1003</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">1003</span>];</span><br><span class="line">vi go[<span class="number">1003</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == <span class="number">1001</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, <span class="number">1001</span>){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)){</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, k){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[<span class="number">0</span>][a] = g[a][b+<span class="number">500</span>] = g[b+<span class="number">500</span>][<span class="number">1001</span>] = <span class="number">1</span>;</span><br><span class="line">        go[<span class="number">0</span>].<span class="built_in">eb</span>(a), go[a].<span class="built_in">eb</span>(b+<span class="number">500</span>), go[b+<span class="number">500</span>].<span class="built_in">eb</span>(<span class="number">1001</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">0</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">while</span>(ans--){</span><br><span class="line">        <span class="type">int</span> a, b, s = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(s != <span class="number">1001</span>){</span><br><span class="line">            a=b, b=s;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i : go[s]) </span><br><span class="line">                <span class="keyword">if</span>(!g[s][i] &amp;&amp; g[i][s]){</span><br><span class="line">                    g[s][i]=<span class="number">1</span>;</span><br><span class="line">                    s=i;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; a sp b<span class="number">-500</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<!-- ### 二分圖最小頂點覆蓋 (Kőnig's theorem)
+
+#### 二分圖最小頂點覆蓋の例題
+
+<details><summary>程式碼</summary><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</details>
+<p>–&gt;</p>
+<!-- ### Path covers -->
+<h2 id="延伸閱讀參考資料">延伸閱讀（參考資料） <a href="#延伸閱讀參考資料" class="headerlink"></a></h2>
+<ol type="1">
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cses.fi/book/book.pdf#Flows%20and%20cuts">Competitive
+Programmer’s Handbook, Chapter 20, Flows and cuts</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm">Ford–Fulkerson
+Algorithm</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/rSYW9pKGEAU">演算法第 26 章 Maximum
+Flow</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://oi-wiki.org/graph/flow/max-flow/">OI Wiki -
+最大流</a></li>
+</ol>
+
     </div>
 
     
@@ -372,10 +911,23 @@ be min{c(u, v), edge(u, v) in p} for each edge(u, v) in p</p>
 
           <div class="post-tags">
               <a href="/tags/%E6%BC%94%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 演算法</a>
+              <a href="/tags/Flow/" rel="tag"><i class="fa fa-tag"></i> Flow</a>
           </div>
 
         
 
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/CSES_Graph_Algorithms/" rel="prev" title="CSES Graph Algorithms">
+                  <i class="fa fa-chevron-left"></i> CSES Graph Algorithms
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022_FRC_New_Taipei_City_x_Hon_Hai_Regional/" rel="next" title="2022 FRC New Taipei City x Hon Hai Regional">
+                  2022 FRC New Taipei City x Hon Hai Regional <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
@@ -406,14 +958,14 @@ be min{c(u, v), edge(u, v) in p} for each edge(u, v) in p</p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">72k</span>
+    <span title="總字數">89k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">2:11</span>
+    <span title="所需總閱讀時間">2:41</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -522,6 +1074,27 @@ darkmode.showWidget();
     gtag('js', new Date());
 
     gtag('config', 'G-18MK2QJN0M');
+  </script>
+
+  <script>
+  function updateTagCloudColors() {
+  let darkColors = ['#555555', '#646464', '#737373', '#828282', '#929292', '#a1a1a1', '#b0b0b0', '#c0c0c0', '#cfcfcf', '#dedede', '#eeeeee'];
+  let lightColors = ['#aaaaaa', '#9a9a9a', '#8b8b8b', '#7c7c7c', '#6c6c6c', '#5d5d5d', '#4e4e4e', '#3e3e3e', '#2f2f2f', '#202020', '#111111'];
+
+  for (let i = 0; i <= 10; i++) {
+      let elements = document.querySelectorAll('.tag-cloud-' + i);
+      for (let j = 0; j < elements.length; j++) {
+        elements[j].style.borderBottomColor = lightColors[i];
+        elements[j].style.color = lightColors[i];
+        if (document.body.classList.contains('darkmode--activated')) {
+            elements[j].style.borderBottomColor = darkColors[i];
+            elements[j].style.color = darkColors[i];
+        }
+      }
+    }
+  }
+  window.onload = updateTagCloudColors;
+  document.querySelector('.darkmode-toggle').addEventListener('click', updateTagCloudColors);
   </script>
 <script src="/live2dw/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>

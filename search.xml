@@ -9,6 +9,47 @@
 </blockquote>
 <span id="more"></span>
 <p>如果有任何想補充的相關資料都歡迎在留言區分享～</p>
+<h2 id="ai-工具">AI 工具 <a href="#ai-工具" class="headerlink"></a></h2>
+<h3 id="模型排行榜">模型排行榜 <a href="#模型排行榜" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://chat.lmsys.org">LMSys Chatbot Arena</a></li>
+<li><a href="https://lyihub.com">LYIHub</a></li>
+<li><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard">Hugging
+Face Open LLM Leaderboard</a></li>
+<li><a href="https://huggingface.co/spaces/hf-audio/open_asr_leaderboard">Hugging
+Face Open ASR Leaderboard</a></li>
+<li><a href="https://huggingface.co/spaces/TTS-AGI/TTS-Arena">Hugging
+Face TTS Arena</a></li>
+</ul>
+<h3 id="聊天">聊天 <a href="#聊天" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://chat.openai.com/">ChatGPT</a></li>
+<li><a href="https://claude.ai/chats">Claude</a></li>
+<li><a href="https://gemini.google.com/app">Gemini</a></li>
+<li><a href="https://pi.ai/">Pi</a></li>
+<li><a href="https://labs.perplexity.ai">Perplexity AI</a></li>
+</ul>
+<h3 id="搜尋">搜尋 <a href="#搜尋" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://www.phind.com/">Phind</a></li>
+<li><a href="https://www.perplexity.ai">Perplexity AI</a></li>
+</ul>
+<h3 id="生圖">生圖 <a href="#生圖" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://pixai.art">PixAI</a></li>
+</ul>
+<h3 id="調高解析度">調高解析度 <a href="#調高解析度" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://bigjpg.com/tw">Bigjpg</a></li>
+</ul>
+<h3 id="畫心智圖">畫心智圖 <a href="#畫心智圖" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://studio.albus.org">Albus Studio</a></li>
+</ul>
+<h3 id="做簡報">做簡報 <a href="#做簡報" class="headerlink"></a></h3>
+<ul>
+<li><a href="https://gamma.app">Gamma</a></li>
+</ul>
 <h2 id="地科">地科 <a href="#地科" class="headerlink"></a></h2>
 <p><a href="https://www.facebook.com/tnfshEarthScience/photos/a.1159604564115259/2297107093698328/?type=3">深 / 淺水波－波速、波長、波高</a>
 <a href="https://www.youtube.com/playlist?list=PLKJhYfqCgNXj8TMC2tVPVKn0A9vWf1q_m">學測地科複習</a></p>
@@ -36,6 +77,793 @@ CoNP, NP-complete, NP-hard 問題</a></p>
       </categories>
       <tags>
         <tag>熊貓文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IThome 2024 鐵人賽 AI VTuber 的完善之路 - Day1</title>
+    <url>/IThome_2024ironman_AI_VTuber_Day1/</url>
+    <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>高中畢業之後花了大概一個月的時間開發出了一套 AI VTuber
+的雛型，有測試直播過了，目前有 CLI 輸入、語音輸入、Youtube
+聊天室問答的功能，也就是完成了大概在雜談方面的開發，但這個月參加了各種活動以至於有點小小荒廢了這個專案，想在這個
+IThome 鐵人賽中至少完成：</p>
+<ol type="1">
+<li>良好記憶系統</li>
+<li>點歌</li>
+<li>翻唱歌曲</li>
+<li>會玩一款遊戲</li>
+<li>開 5 場超過 50 人以上參與的直播測試</li>
+</ol>
+<p>希望我可以順利達成目標～</p>
+<p>之前測試的<a href="https://youtu.be/CiBjItykxto?t=336">直播連結</a></p>
+<span id="more"></span>
+<h2 id="目前已有功能的流程圖">目前已有功能的流程圖 <a href="#目前已有功能的流程圖" class="headerlink"></a></h2>
+<pre><code class="highlight mermaid">flowchart TB
+option[選擇輸入方式] --1--&gt; voice[語音輸入] --&gt; ASR --&gt; llm
+option --2--&gt; cli[CLI 輸入] --&gt; llm["LLM(文字)"]
+option --3--&gt;chat[Youtube 聊天室隨機選擇] --&gt; llm
+llm --&gt; TTS
+TTS --&gt; v[VTS 轉換成嘴型]
+llm --&gt; obs[轉換成文字顯示在 OBS]</code></pre>
+<p>然後上面比較有趣的應該是我的 LLM 是拿 Dcard 上的文章 finetune
+過的，有做過一些神奇處理，然後還有爬 Dcard
+文章真的是非常的有趣，這些之後可能會來分享一下。</p>
+<h2 id="目標進度與細節">目標進度與細節 <a href="#目標進度與細節" class="headerlink"></a></h2>
+<ol type="1">
+<li>良好記憶系統 (Day2 ~ Day 8)
+<ul>
+<li>應該會先使用 RAG
+做長期記憶系統，然後短期記憶就直接拿跟他對話的前面幾句話，但把記憶放在前面的模式好像會讓他蠻多幻覺，還會有一些很詭異的回覆，可能要再多做很多很多的
+Prompt Engineering 或是 finetune 看看</li>
+</ul></li>
+<li>點歌 (Day9 ~ Day10)
+<ul>
+<li>這邊就比較簡單了，讓 LLM
+學會輸出某種指令後，可以從歌曲的資料庫中挑選一首他可能想要撥放的歌曲</li>
+</ul></li>
+<li>翻唱歌曲 (Day11 ~ Day15)
+<ul>
+<li>這邊應該會套 <a href="https://github.com/svc-develop-team/so-vits-svc">So-VITS-SVC</a>
+，但這東西我沒用過，感覺會有點久</li>
+</ul></li>
+<li>會玩一款遊戲 (Day16 ~ Day25)
+<ul>
+<li>我其實一直很想讓 AI 完 MOBA
+類遊戲，但感覺這會有點太難，可能賽後再開一個鐵人賽才有機會 xd，所以這邊我想先選一點有點挑戰但又好像不會太難的，最好還有點創意，想來想去就決定是
+<strong>日麻</strong> (應該就是用雀魂)</li>
+</ul></li>
+<li> 開 5 場超過 50 人以上參與的直播測試 (Day2 ~ Day 30)
+<ul>
+<li>反正有到一定進度就會開開直播測試，但其實可能會很困難？
+或者我可能要研究看看演算法，反正這目標就是先靠佛系經營</li>
+</ul></li>
+</ol>
+]]></content>
+      <categories>
+        <category>IThome 2024 鐵人賽</category>
+        <category>AI VTuber 的完善之路</category>
+      </categories>
+      <tags>
+        <tag>IThome 2024 鐵人賽</tag>
+        <tag>AI VTuber</tag>
+        <tag>AI</tag>
+        <tag>GAI</tag>
+        <tag>ML</tag>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IThome 2024 鐵人賽 一直刷 CTF - Day1</title>
+    <url>/IThome_2024ironman_CTF_Day1/</url>
+    <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>自從暑假參加了 AIS3
+遇到了各路大神，覺得自己實在太廢了，也聽到其實蠻多人推薦可以從打 CTF
+開始學習資安，所以就決定來參加 IThome 2024 鐵人賽，想藉由一直刷 CTF
+題目，希望結束之後可以稍稍變強一點。</p>
+<span id="more"></span>
+<p>本來想說這次就以 5000 分為目標，結果我打開 Pico
+CTF，結果發現上面怎麼都沒有分數，然後花了大概一個小時在找到底我哪邊沒設定好，結果一問之下才知道是因為
+Pico CTF
+過去各年的題目難易度對應分數並不一致，以至於相同難度的題目在不同的年份可能會有不同的分數，所以就把分數這個標準拿掉了。</p>
+<p>不過我還是覺得有個分數感覺會比較爽，然後正巧也有人在 Pico CTF 的 DC
+社群上講了差不多的想法，那麼，我就來做個插件吧～<br>
+所以 Day1 的目標就從規劃進度 + 寫題目，鬼轉成了規劃進度 + 寫個生成 Pico
+CTF 分數的酷酷插件 XD</p>
+<figure>
+<img data-src="https://i.imgur.com/rQ3SSIF.png" alt="在 Pico CTF 的 DC 社群上剛好遇到有人有一樣的想法">
+<figcaption aria-hidden="true">在 Pico CTF 的 DC
+社群上剛好遇到有人有一樣的想法</figcaption>
+</figure>
+<h2 id="規劃">規劃 <a href="#規劃" class="headerlink"></a></h2>
+<h3 id="上課">上課 <a href="#上課" class="headerlink"></a></h3>
+<p>Day2 ~ Day30 每三天看一部 Beef Soup 的影片，雖然這樣 30
+天過去也不會全部看完，但也就算了，事情太多了 owo</p>
+<h3 id="pico-ctf-刷題">Pico CTF 刷題 <a href="#pico-ctf-刷題" class="headerlink"></a></h3>
+<ul>
+<li>Day2 ~ Day9<br>
+每天 6 題 general skills</li>
+<li>Day10<br>
+3 題 general skills + 3 題 web (如果真的不會也找不到 writeup
+可以用隨便一題 medium 代替)</li>
+<li>Day 11 ~ Day 19<br>
+每天 6 題 web (如果真的不會也找不到 writeup 可以用隨便一題 medium
+代替)</li>
+<li>Day 20 ~ Day 30<br>
+每天 6 題 crypto (如果真的不會也找不到 writeup 可以用隨便一題 medium
+代替)</li>
+</ul>
+<h2 id="寫酷酷插件">寫酷酷插件 <a href="#寫酷酷插件" class="headerlink"></a></h2>
+<p>主要是寫個程式在 Practice 介面和 User Profile 介面顯示 picoGym
+的分數，分數的算法就跟上面那個人講的一樣：</p>
+<ul>
+<li>Easy: 100 points</li>
+<li>Medium: 200 points</li>
+<li>Hard: 300 points</li>
+</ul>
+<p>然後就是按照目前在哪一個頁面，去抓取對應的資料，並且算成分數，最後顯示在該頁面上。</p>
+<p>成果如下：</p>
+<figure>
+<img data-src="https://github.com/moon-jam/picoCTF-Gen-Score-Extension/blob/main/assets/Practice.png?raw=true" alt="Practice 介面">
+<figcaption aria-hidden="true">Practice 介面</figcaption>
+</figure>
+<figure>
+<img data-src="https://github.com/moon-jam/picoCTF-Gen-Score-Extension/blob/main/assets/User.png?raw=true" alt="User Profile 介面">
+<figcaption aria-hidden="true"> User Profile 介面</figcaption>
+</figure>
+<p><a href="https://github.com/moon-jam/picoCTF-Gen-Score-Extension">這裡</a>
+是插件的 Github 連結，有興趣的話可以去看看～</p>
+<p>然後很意外的是提交申請要上架，居然差不多一小時就好了，還以為要好幾天呢，可以在
+<a href="https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj">這裡</a>
+安裝這個插件～</p>
+]]></content>
+      <categories>
+        <category>IThome 2024 鐵人賽</category>
+        <category>一直刷 CTF</category>
+      </categories>
+      <tags>
+        <tag>資安</tag>
+        <tag>IThome 2024 鐵人賽</tag>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022 FRC New Taipei City x Hon Hai Regional</title>
+    <url>/2022_FRC_New_Taipei_City_x_Hon_Hai_Regional/</url>
+    <content><![CDATA[<!-- # 2022 FRC New Taipei City x Hon Hai Regional -->
+<blockquote class="blockquote-center">
+<p>高中畢業老人的小小回憶錄</p>
+
+</blockquote>
+<p>🗓️ 比賽日期：2022/03/03 ~ 2022/03/06</p>
+<span id="more"></span>
+<h2 id="備賽期">備賽期 <a href="#備賽期" class="headerlink"></a></h2>
+<p>我可能有差不多七成的寒假都待在社團吧，但其實我那時候很菜，<del>做事搞不好還會拖慢進度</del>，還好學長們都很有耐心的教導我們使用各種工具，但剛接觸的我們手工技巧太不純熟
+(<del>雖然再過了一年還是差不多爛就是了</del>)，一下切歪一下鑽錯孔，只能做一些打雜的工作，還記得當初花了一個下午用銼刀磨那些太粗的六角軸，或是用線鋸把五六片木板切成木條，還有實際參與一點程式的開發。總之就是一段挺累但可以看到自己慢慢對流程熟練，機器、場地慢慢完善的過程。</p>
+<h2 id="上場摟">上場摟 <a href="#上場摟" class="headerlink"></a></h2>
+<p>我應該算是機動，所以就到處跑來跑去，最深刻的應該就是在最後打聯盟賽的時候，大家喊
+Blue Alliance~ Blue Alliance~ Red Alliance~ Red
+Alliance~，真的超瘋，贏了之後還拿旗子跑一圈，那種激憤人心的場景是我當時覺得最有趣的事。</p>
+<h2 id="心得">心得 <a href="#心得" class="headerlink"></a></h2>
+<p>是說學長他們挺強的，尤其是從現在看回去，錢不算多，也沒有到多麼驚奇的大設計，但就是很穩，射球不算快但是很準，吊掛只能爬到
+Mid
+但是可以很快，就是這樣平穩地發揮最後全場平均得分排名第三，也不知道是不是因為這樣的特性得到
+Industrial Design Award，就如同這個獎的描述一樣</p>
+<blockquote>
+<p>Celebrates the team that demonstrates industrial design principles,
+striking a balance between form, function, and aesthetics.</p>
+</blockquote>
+<p>在當年各隊中，應該算是一個還算各種能力都蠻平衡，而且還算發揮不錯的一隊吧（<del>不知道是不是因為某位學長確實是對美學有非常強烈的堅持才會有美學平衡的部分</del>）。</p>
+<p>喔對了，還有我們那時候 scouting
+的系統真的挺猛的，有每場的機器進球數統計資料、命中率、發射位置等等的，很多其實在當時都不知道重要性，甚至是隔年我自己是隊長比賽時都沒想到，找到對手的慣性，去打破它，那才是有效的策略。</p>
+<p>但其實當初的我根本沒這麼多想法，覺得自己超強，就只想著明年要做的更快更準，把大家打趴，去打世界賽，我的好夥伴感覺也抱持著差不多的想法，我們就一直插旗，結果最後就是一整個超趕，比賽各種狀況出包，要不然應該不會連自選聯盟都進不去的
+qaq</p>
+<p>還記得當初學長說：「臺灣的蝴蝶再猛，也難以飛越美國」 (我們隊名 MARAHO
+就是寬尾鳳蝶的意思) ，我還立了個 Flag
+：「太平洋再大，也無法阻擋台灣的蝴蝶飛越」，雖然說最後確實是飛越了啦，但那不是我原本預想的樣子就是了
+owo</p>
+<h2 id="照片們">照片們 <a href="#照片們" class="headerlink"></a></h2>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/Gw4a15o.png" alt="帥帥的機器"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/Fqzy4JT.png" alt="各種牌子和獎杯"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/rCKWIQX.png" alt="和其他隊伍們的團體照"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/29pS1H4.png" alt="賽後的檢討文件"></div></div></div>
+]]></content>
+      <categories>
+        <category>FRC</category>
+      </categories>
+      <tags>
+        <tag>FRC</tag>
+        <tag>比賽</tag>
+        <tag>回憶錄</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最大流 &amp; 最小割 (Max-Flow &amp; Min-Cut)</title>
+    <url>/algo_Max-Flow_and_Min-Cut/</url>
+    <content><![CDATA[<!-- TODO 把圖片改成精美動畫 -->
+<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>一個由多個站點連接而成的網絡裡，每對站點之間都有一定的數據傳輸限制 (單向)。現在你需要計算從網絡的入口（
+<span class="math inline">\(s\)</span> ）到出口（ <span class="math inline">\(t\)</span>
+）之間，數據可以同時傳輸的最大速度是多少。<br>
+如下圖，從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span>
+的最大傳輸速度為 2，最大速度會被路徑上最大傳輸流量所限制，因爲從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span> 勢必通過路線 <span class="math inline">\(v1\rightarrow v2\)</span>
+，故這張圖的最大流量為 2。</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --10--&gt; v1 --2--&gt; v3 --13--&gt; v4 --11--&gt; t</code></pre>
+<p>而下面這個圖的最大流量為 19，下文提供一種可能的傳輸方式：</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --10--&gt; v1
+s --17--&gt; v2
+v1 --7--&gt; v3 --11--&gt; t
+v2 --9--&gt; v4 --16--&gt; t
+v1 --6--&gt; v4</code></pre>
+<ul>
+<li>傳輸 7： <span class="math inline">\(s\rightarrow v1\rightarrow
+v3\rightarrow t\)</span></li>
+<li> 傳輸 3： <span class="math inline">\(s\rightarrow v1 \rightarrow v4
+\rightarrow t\)</span> (因為 <span class="math inline">\(s\rightarrow
+v1\)</span>
+最多只能傳輸 10 因此在前一次傳輸 7 之後，接下來就只能傳輸 3 了)</li>
+<li> 傳輸 9： <span class="math inline">\(s \rightarrow v2 \rightarrow v4
+\rightarrow t\)</span></li>
+<li>7+3+9=19</li>
+</ul>
+<p>上述這樣的圖叫做 Network
+Flow (網路流)，在這樣的圖上尋找這種<code>最大流</code>的想法還可以運用在<code>最小割</code> (後文會再解釋)、<code>最多不重複路徑</code>、<code>二分圖最大匹配</code>、<code>二分圖最小頂點覆蓋</code>等圖論問題。</p>
+<span id="more"></span>
+<h2 id="network-flow網路流-的基本定義"><code>Network Flow(網路流)</code>
+的基本定義 <a href="#network-flow網路流-的基本定義" class="headerlink"></a></h2>
+<p>這邊可以先看個印象，之後如果有忘的再回來看</p>
+<ul>
+<li>A directed graph <span class="math inline">\(G =
+(V,E)\)</span><br>
+</li>
+<li>只有一個 source point (入口，記作 <span class="math inline">\(s\)</span> ) 和一個 sink point (出口，記作 <span class="math inline">\(t\)</span> )<br>
+</li>
+<li><span class="math inline">\(|V|\)</span> 為頂點數，<span class="math inline">\(|E|\)</span> 為邊數<br>
+</li>
+<li><span class="math inline">\(c(u,v)\)</span> (Capacity)：表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的容量
+(也就等價於前面舉例的最大流量限制，是圖給定的)<br>
+</li>
+<li><span class="math inline">\(f(u,v)\)</span> (Flow)：表示從 <span class="math inline">\(u\)</span> 到 <span class="math inline">\(v\)</span> 的流量 (是可以自己設定的)<br>
+</li>
+<li><span class="math inline">\(|f|=\sum_{u\in V}f(s,v)\)</span>
+(也就是從起點流出的總量)</li>
+<li><span class="math inline">\(r(u,v)\)</span> (Residual Capacity)：
+<span class="math inline">\(edge(u,v)\)</span>
+上扣除已有流量還可以傳輸多少流量才會飽和，意即 <span class="math inline">\(r(u,v)=c(u,v)-f(u,v)\)</span> (Residual Capacity =
+Capacity - Flow)</li>
+<li><span class="math inline">\(c_{max}\)</span> 表示所有 <span class="math inline">\(c(u,v)\)</span> 中最大的那個</li>
+<li> Residual Graph：邊上數字皆為剩餘容量的圖</li>
+<li> augmenting path：一條起點為 <span class="math inline">\(s\)</span>
+，終點為 <span class="math inline">\(t\)</span>
+的簡單路徑（沒有環）</li>
+<li>backward&nbsp;edge：反向邊（之後會提到）</li>
+<li><span class="math inline">\(\forall \ edge(u,v) \notin E \Rightarrow
+c(u,v) = 0 \Rightarrow f(u,v) = 0\)</span></li>
+<li><span class="math inline">\(\forall \ u \in V - \{s, t\} , \ \exists
+\ path: \ s \rightarrow u \rightarrow t\)</span></li>
+<li> 容量限制：恆有 <span class="math inline">\(0 \leq f(u,v) \leq
+c(u,v)\)</span></li>
+<li> 流量守恆： <span class="math inline">\(\forall \ u \in V - \{s,t\},
+\ \sum_{v\in V}f(u,v) = \sum_{v\in V}f(v,u)\)</span></li>
+<li> 一個 <span class="math inline">\(s-t\ cut\)</span>
+表示能將圖切成兩個集合 <span class="math inline">\(S,T\)</span> ，滿足：
+<ul>
+<li><span class="math inline">\(S\cap T = \emptyset , \ S\cup T =
+V\)</span></li>
+<li><span class="math inline">\(s\in S, \ t\in T\)</span></li>
+</ul></li>
+</ul>
+<!-- ## 性質
+
+- $|f|=\sum_{u\in V}f(s,v)=\sum_{u\in V}f(v,t)$ ，可以很直觀想作輸入流量等於輸出流量，或是利用流量守恆來證明：  
+  $\sum_{u \in V- \{s,t\}}(\sum_{v\in V}f(u,v)-\sum_{v\in V}f(v,u))$ $=\sum_{u\in V}f(s,v)-\sum_{u\in V}f(v,t)=0$ -->
+<h2 id="何謂最大流max-flow與最小割min-cut">何謂最大流 (Max-Flow) 與最小割 (Min-Cut)
+<a href="#何謂最大流max-flow與最小割min-cut" class="headerlink"></a></h2>
+<ul>
+<li>最大流 (Max-Flow)：從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(t\)</span> 的最大流量，寫的嚴謹一點就是： <span class="math inline">\(|f|=\sum_{u\in V}f(s,v)\)</span> 的最大值</li>
+<li>最小割 (Min-Cut)：一個 <span class="math inline">\(s-t\ cut\)</span>
+，使得 <span class="math inline">\(c(S,T)=\sum_{u\in S, v\in
+T}c(u,v)\)</span> 為最小值</li>
+</ul>
+<p>而特別的是一張圖的最大流量等於最小割的容量，這個性質會在後續講述<a href="/algo_Max-Flow_and_Min-Cut/#最小割">最小割</a>時證明</p>
+<h2 id="怎麼找到最大流">怎麼找到最大流？ <a href="#怎麼找到最大流" class="headerlink"></a></h2>
+<p>我們或許可以從 <span class="math inline">\(s\)</span>
+開始，每次找到一條 augmenting
+path，然後<code>貪心</code>地將這條路徑上每個邊的流量增加路徑上所有邊中最小的 Residual
+Capacity，不斷增加流量直到沒辦法增加為止 (增加流量視同於減少等量 Residual
+Capacity)，最後一路上所增加的流量 (或是減少的 Residual Capacity)
+或許就是最大流… 嗎？</p>
+<!-- TODO 舉例 可以用Naive Algo成功的案例 -->
+<p>我們試著用這個方法來找找看。(圖上邊標示的數字代表 Residual Capacity
+，而起始時因為 Flow=0 所以 Residual Capacity = Capacity)</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --10--&gt; v1
+s --17--&gt; v2
+v1 --7--&gt; v3 --11--&gt; t
+v2 --9--&gt; v4 --16--&gt; t
+v1 --6--&gt; v4</code></pre>
+<p>一開始走 <span class="math inline">\(s \rightarrow v1 \rightarrow v3
+\rightarrow t\)</span> ，這條路線上最小的 Residual Capacity 是 7
+，所以將每條路徑的 Residual Capacity 都減 9
+，那如果已經沒有剩餘流量的話就代表不能走了，所以我們就直接將這條邊移除
+(此時累計減少的 Residual Capacity = 7)</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --3--&gt; v1
+s --17--&gt; v2
+v1 --6--&gt; v4
+v3 --4--&gt; t
+v2 --9--&gt; v4 --16--&gt; t</code></pre>
+<p>接著走 <span class="math inline">\(s \rightarrow v1 \rightarrow v4
+\rightarrow t\)</span> ，這條路線上最小的 Residual Capacity 是 3
+，於是就將路徑都減 3 ，然後移除剩餘流量為 0 的邊 (此時累計減少的
+Residual Capacity = 10)</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --17--&gt; v2
+v1 --3--&gt; v4
+v3 --4--&gt; t
+v2 --9--&gt; v4 --13--&gt; t</code></pre>
+<p>最後就只剩下 <span class="math inline">\(s \rightarrow v2 \rightarrow
+v4 \rightarrow t\)</span> ，這條路線上最小的 Residual Capacity 是 9
+，於是就將路徑都減 9，然後移除剩餘流量為 0 的邊 (此時累計減少的 Residual
+Capacity = 19)</p>
+<pre><code class="highlight mermaid">flowchart TB
+subgraph T
+v1 --3--&gt; v4
+v3 --4--&gt; t
+v4 --4--&gt; t
+end
+subgraph S
+s --8--&gt; v2
+end</code></pre>
+<p>因為已經沒辦法再找到一條 <span class="math inline">\(s\)</span> 到
+<span class="math inline">\(t\)</span>
+的簡單路徑了，所以就認為這張圖的最大流為 19
+，我們就來整理看看這個感覺會成功的想法。</p>
+<h3 id="naïve-algorithm">Naïve Algorithm <a href="#naïve-algorithm" class="headerlink"></a></h3>
+<p>因為需要找到一路上最小的 Residual
+Capacity，所以我們將圖上的邊設為 Residual
+Capacity 會相較同時紀錄 Flow 和 Capacity 來得方便，並且認定當某條邊的 Residual
+Capacity 為 0 時，那該條路徑已經不能夠走了，因此就能將終止條件<code>不斷增加流量直到沒辦法增加為止</code>改為<code>找不到一條augmenting path</code>(若是沒辦法繼續增加流量，就代表無法找到一條 augmenting
+path 上所有的 Residual
+Capacity 皆不為 0)，我們可以根據以上邏輯寫出虛擬碼：</p>
+<div class="note success"><h4 id="naïve-algorithm-虛擬碼">Naïve Algorithm 虛擬碼 <a href="#naïve-algorithm-虛擬碼" class="headerlink"></a></h4>
+<p>Initialize <span class="math inline">\(r(u, v)=c(u, v) \ \forall \
+edge(u,v) \in E\)</span><br>
+let <span class="math inline">\(answer\)</span> be <span class="math inline">\(0\)</span><br>
+while exist an augmenting path <span class="math inline">\(p\)</span><br>
+　　let <span class="math inline">\(min_r\)</span> be <span class="math inline">\(min_{edge(u, v) \in p}r(u, v)\)</span><br>
+　　　　for each <span class="math inline">\(edge(u, v)\)</span> in
+<span class="math inline">\(p\)</span><br>
+　　　　　　<span class="math inline">\(r(u, v)\)</span> -= <span class="math inline">\(min_r\)</span><br>
+　　　　　　<span class="math inline">\(answer\)</span> += <span class="math inline">\(min_r\)</span></p>
+</div>
+<p>不過呢，其實這個做法是不對的，來看個反例</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --1--&gt; a --2--&gt; t
+s --2--&gt; b --1--&gt; t
+a --1--&gt; b</code></pre>
+<p>如果一開始走的是 <span class="math inline">\(s\rightarrow a
+\rightarrow b \rightarrow t\)</span>
+的話，那整條路就中斷了，而這時的流量為 1，但很明顯的更好的做法應該是
+<span class="math inline">\(s \rightarrow a \rightarrow t\)</span> 和
+<span class="math inline">\(s \rightarrow b \rightarrow t\)</span>
+這時的流量為 2。</p>
+<p>難道努力這麼久想到的方法就這樣付之一炬了嗎？我們有沒有可能想個辦法讓把原先走錯的路線<code>復原</code>，讓路給其他的流量走呢？這就是 <code>Ford–Fulkerson Algorithm</code> 的精神。</p>
+<h3 id="fordfulkerson-algorithm-時間複雜度ofe">Ford–Fulkerson Algorithm
+(時間複雜度<span class="math inline"> \(O(fE)\)</span>) <a href="#fordfulkerson-algorithm-時間複雜度ofe" class="headerlink"></a></h3>
+<p>這就輪到的先前提到的 <code>backward edge(反向邊)</code> 出場了，我們在每次找到一條 augmenting
+path 時，將這條路徑上所有的邊的 Residual
+Capacity 減少，同時增加一條反向邊，將減少的 Residual
+Capacity 加到反向邊上，到時候其他路徑被該條路阻塞時，這條反向邊就像是能提供原先走錯路線<code>復原</code>的功能，<code>讓路</code>給其他的流量走，或許這樣講不夠清楚，我們直接將這個方法套用到先前失敗的例子上</p>
+<!-- TODO 如果有精美動畫，希望可以展示出來哪一條水流是從哪邊流的(maybe用顏色)，而撤回時就是把該顏色的水流流向復原能夠流經的地方-->
+<pre><code class="highlight mermaid">flowchart LR
+s --1--&gt; a --2--&gt; t
+s --2--&gt; b --1--&gt; t
+a --1--&gt; b</code></pre>
+<p>一開始一樣走 <span class="math inline">\(s\rightarrow a \rightarrow b
+\rightarrow t\)</span> ，因為路的最大剩餘容量為 1，因此將 augmenting path
+上的路線 - 1，並新增一條為反向剩餘容量為 1 的邊</p>
+<pre><code class="highlight mermaid">flowchart RL
+t --1--&gt; b
+a --1--&gt; s
+a --2--&gt; t
+b --1--&gt; a
+s --2--&gt; b</code></pre>
+<p>這時因為有反向邊的關係，所以還可以走 <span class="math inline">\(s
+\rightarrow b \rightarrow a \rightarrow t\)</span>
+這條路線，這條路的最大剩餘容量為 1，因此將 augmenting path
+上的路線 - 1，並新增一條為反向剩餘容量為 1 的邊，且在經過此操作後已經沒有任何 augmenting
+path，所以答案就是減少的 Residual Capacity 總量也就是 2，符合答案</p>
+<pre><code class="highlight mermaid">flowchart RL
+t --2--&gt; a
+t --1--&gt; b
+a --1--&gt; s
+b --2--&gt; s
+a --1--&gt; b</code></pre>
+<p>那麼為什麼這樣會對呢？如前文所說我們的反向邊是擔任一個<code>復原</code>的角色，當第二次路徑走
+<span class="math inline">\(b \rightarrow a \rightarrow t\)</span>
+時，就像是跟上一次的路線說：「欸，你從 <span class="math inline">\(a\)</span> 明明就可以直接走到 <span class="math inline">\(t\)</span> ，我們來交換一下，你把上次走 <span class="math inline">\(b\rightarrow t\)</span> 的路權給我，然後你就不要走
+<span class="math inline">\(a\rightarrow b\)</span>
+這條路，改走我這次幫你發現的 <span class="math inline">\(a\rightarrow
+t\)</span> 這條路，這樣一來我們才可以創造最大價值！」</p>
+<p>而實現的的方法非常簡單，只要將原先的虛擬碼再多一個建立反向邊的程式就完成了</p>
+<div class="note success"><h4 id="fordfulkerson-algorithm-虛擬碼">Ford–Fulkerson Algorithm 虛擬碼
+<a href="#fordfulkerson-algorithm-虛擬碼" class="headerlink"></a></h4>
+<p>Initialize <span class="math inline">\(r(u, v)=c(u, v) \ \forall \
+edge(u,v) \in E\)</span><br>
+let <span class="math inline">\(answer\)</span> be <span class="math inline">\(0\)</span><br>
+while exist an augmenting path <span class="math inline">\(p\)</span><br>
+　　let <span class="math inline">\(min_r\)</span> be <span class="math inline">\(min_{edge(u, v) \in p}r(u, v)\)</span><br>
+　　　　for each <span class="math inline">\(edge(u, v)\)</span> in
+<span class="math inline">\(p\)</span><br>
+　　　　　　<span class="math inline">\(r(u, v)\)</span> -= <span class="math inline">\(min_r\)</span><br>
+　　　　　　<span class="math inline">\(r(v, u)\)</span> += <span class="math inline">\(min_r\)</span><br>
+　　　　　　<span class="math inline">\(answer\)</span> += <span class="math inline">\(min_r\)</span></p>
+</div>
+<h4 id="複雜度">複雜度 <a href="#複雜度" class="headerlink"></a></h4>
+<p>考慮到最糟糕的情況，每次都只增加 1 的流量，那麼最多就會需要增加最大流量次，這裡舉一個例子：</p>
+<pre><code class="highlight mermaid">flowchart LR
+s --100000--&gt; a --100000--&gt; t
+s --100000--&gt; b --100000--&gt; t
+a --1--&gt; b</code></pre>
+<p>考慮最糟狀況一開始從 <span class="math inline">\(s\rightarrow a
+\rightarrow b \rightarrow t\)</span> ，然後下一輪因為生成反向邊 <span class="math inline">\((b,a)\)</span> 然後走 <span class="math inline">\(s \rightarrow b \rightarrow a \rightarrow
+t\)</span> 然後下一輪再走 <span class="math inline">\(s\rightarrow a
+\rightarrow b \rightarrow t\)</span>
+…… 如此反覆下去每次都只會使得流量增加 1 直到達到最大流，而就這個例子來說就是會走 200000 次</p>
+<p>所以最壞的情況下，時間複雜度為 <span class="math inline">\(O(fE)\)</span> ， <span class="math inline">\(f\)</span> 為最大流量， <span class="math inline">\(E\)</span> 為邊數。很顯然的在流量很大很大可能
+<span class="math inline">\(10^9\)</span>
+的情況下，這種方法是不好的，那有沒有什麼樣遍歷的方法可以讓每次增加的流量盡可能的高減少遍歷次數呢？這就是 <code>Edmonds-Karp Algorithm</code> 和 <code>Capacity Scaling Algorithm</code> 在做的事。</p>
+<h3 id="edmonds-karp-algorithm-時間複雜度ove2">Edmonds-Karp Algorithm
+(時間複雜度<span class="math inline"> \(O(|V||E|^2)\)</span>) <a href="#edmonds-karp-algorithm-時間複雜度ove2" class="headerlink"></a></h3>
+<p>在找 augmenting
+path 時，除了 DFS 之外，還有 BFS 可以用啊，利用 BFS 每次尋找<code>最短</code>的 augmenting
+path 會不會比較快呢？</p>
+<p>答案是會的，以下就是證明內容：</p>
+<p>以 <span class="math inline">\(d_G(u)\)</span> 表示 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(u\)</span> 的最短距離，而若 <span class="math inline">\(u\)</span> 是 G 這張 Residual
+Graph 中<code>最短</code>的 augmenting path <span class="math inline">\(P\)</span>，那麼這條路徑上從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(u\)</span> 的距離，就會是 <span class="math inline">\(d_G(u)\)</span>（否則路徑 <span class="math inline">\(P\)</span>
+就應該走那條更短的路），而在這個狀況下，也就必定會滿足：<span class="math inline">\(d_G(v) = d_G(u) + 1\)</span> <span class="math inline">\(\ \forall \ edge(u,v) \in P\)</span>
+(否則路徑 P 就應該走那條更短的路線到 <span class="math inline">\(u\)</span> )</p>
+<p>我們在 BFS 的時候找到最短 augmenting path，令這條路徑上的最小 Residual
+Capacity 為 <span class="math inline">\(r(u, v)\)</span>
+，紀錄當前的 Residual Graph 為 <span class="math inline">\(G_1\)</span>
+，而所以在這輪之後，Residual Graph 中的 <span class="math inline">\(r(u,
+v)\)</span> 就會變成 <span class="math inline">\(0\)</span>
+，若是在之後的 Residual Graph <span class="math inline">\(G_2\)</span>
+中有一條 augmenting path 包含 <span class="math inline">\(edge(v,
+u)\)</span> ，那麼這條邊就會重新<code>復活</code>，而 <span class="math inline">\(d(u)\)</span>
+會發生神奇的變化，使得每條邊最多只會被使用 <span class="math inline">\(|V|\)</span> 次，而以下就是詳細的說明：</p>
+<ul>
+<li><span class="math inline">\(d_{G_1}(v) = d_{G_1}(u) +
+1\)</span></li>
+<li><span class="math inline">\(d_{G_2}(u) = d_{G_2}(v) +
+1\)</span></li>
+<li><span class="math inline">\(d_{G_1}(v) \leq
+d_{G_2}(v)\)</span><br>
+<details class="note info"><summary><p>證明 (建議是全部看完再來看這個)</p>
+</summary>
+<p>為了避免這邊與先前所用的符號重疊導致混淆，這邊改為使用 <span class="math inline">\(x,y,z,a,b,c\)</span> 等其它記號表示。<br>
+我們可以不失一般性的假設 <span class="math inline">\(G_2\)</span> 是
+<span class="math inline">\(G_1\)</span>
+的下一張圖，因為當這個情況下假設成立，可使用遞迴的方式證明 <span class="math inline">\(G_1\)</span> 後的數張圖皆成立 ( <span class="math inline">\(G_2\)</span> 成立則 <span class="math inline">\(G_2\)</span> 下一張圖會成立則 <span class="math inline">\(G_2\)</span> 下下一張圖成立……)<br>
+試以反證法證明 <span class="math inline">\(\forall \ x\in V, \
+d_{G_1}(x) &gt; d_{G_2}(x)\)</span> 不成立：<br>
+1. 對於 <span class="math inline">\(s\)</span> 或所有與 <span class="math inline">\(s\)</span> 僅通過一條邊聯通的節點所形成的集合
+<span class="math inline">\(Y\)</span> ，其中任意一點 <span class="math inline">\(y\)</span> 皆滿足 <span class="math inline">\(d_{G_1}(y) \leq d_{G_2}(y)\)</span><br>
+2. 由上可知，對圖上一些滿足 <span class="math inline">\(d_{G_1}(z) &gt;
+d_{G_2}(z)\)</span> 的點集 <span class="math inline">\(Z\)</span> ，
+<span class="math inline">\(Z \subsetneqq V\)</span> ，而這邊特別定義
+<span class="math inline">\(a\)</span> 為符合 <span class="math inline">\(min_{i\in Z}d_{G_2}(i)\)</span> 的一點，也就是
+<span class="math inline">\(Z\)</span> 集合中在 <span class="math inline">\(G_2\)</span> 中距離 <span class="math inline">\(s\)</span> 最近的節點。<br>
+3. <span class="math inline">\(\because Z \cap Y = \emptyset \
+\therefore\)</span> 從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(a\)</span> 一定需要一個中繼點也就是說 <span class="math inline">\(\exists \ edge(b, a)\in G_2\)</span> 使得 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(a\)</span> 的最短路徑中包含 <span class="math inline">\(edge(b, a)\)</span><br>
+<span class="math inline">\(\implies d_{G_2}(b) + 1 =
+d_{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies d_{G_2}(b) &lt;
+d_{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies b \notin Z\)</span> (因為 <span class="math inline">\(d_{G_2}(a)\)</span> 是在 <span class="math inline">\(Z\)</span> 中最短的)<br>
+<span class="math inline">\(\implies d_{G_1}(b) \leq
+d_{G_2}(b)\)</span><br>
+4. 若在 <span class="math inline">\(G_1\)</span> 的 Residual Graph 包含
+<span class="math inline">\(edge(b,a)\)</span>，而從 <span class="math inline">\(s\)</span> 到 <span class="math inline">\(a\)</span> 點的最短距離有可能是經過 <span class="math inline">\(b\)</span> 再到 <span class="math inline">\(a\)</span> 或是有另外一條更短的路<br>
+<span class="math inline">\(\implies d_{G_1}(a) \leq
+d_{G_1}(b)+1\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(a) \leq
+d_{G_2}(b)+1\)</span> (由 <span class="math inline">\(d_{G_1}(b) \leq
+d_{G_2}(b)\)</span> 推得)<br>
+<span class="math inline">\(\implies d_{G_1}(a)\leq d_{G_2}(a)\)</span>
+(由 <span class="math inline">\(d_{G_2}(a) = d_{G_2}(b)+1\)</span>
+推得)<br>
+<span class="math inline">\(\implies\)</span> 與假設 <span class="math inline">\(d_{G_1}(a) &gt; d_{G_2}(a)\)</span> 矛盾，故在
+<span class="math inline">\(G_2\)</span> 中 <span class="math inline">\(Z\)</span> 不存距離 <span class="math inline">\(s\)</span> 最近的節點，故 <span class="math inline">\(Z\)</span> 不存在 5. 若在 <span class="math inline">\(G_1\)</span> 的 Residual Graph 不包含 <span class="math inline">\(edge(b,a)\)</span> ，又因為 <span class="math inline">\(G_2\)</span> 是 <span class="math inline">\(G_1\)</span> 的下一張圖，所以這種狀況只有可能是
+<span class="math inline">\(G_1\)</span> 的 augmenting path 流經 <span class="math inline">\(edge(a,b)\)</span> ，使得在下一張圖創造了一條
+<span class="math inline">\(edge(b,a)\)</span> ，因此可以給定 <span class="math inline">\(d_{G_1}(a)+1 = d_{G_1}(b)\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(a)+1 \leq d_{G_2}(b) =
+d{G_2}(a)-1\)</span><br>
+(由 <span class="math inline">\(d_{G_1}(b) \leq d_{G_2}(b)\)</span> 和
+<span class="math inline">\(d_{G_2}(a) = d_{G_2}(b)+1\)</span>
+推得)<br>
+<span class="math inline">\(\implies d_{G_1}(a)+2 \leq
+d{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(a) &lt;
+d{G_2}(a)\)</span><br>
+<span class="math inline">\(\implies\)</span> 與假設 <span class="math inline">\(d_{G_1}(a) &gt; d_{G_2}(a)\)</span> 矛盾，故在
+<span class="math inline">\(G_2\)</span> 中 <span class="math inline">\(Z\)</span> 不存距離 <span class="math inline">\(s\)</span> 最近的節點，故 <span class="math inline">\(Z\)</span> 不存在</p>
+<p>p.s.
+這個證明不知道為什麼感覺好像網路上找到的都有種跳太快的感覺，花了好多時間才看懂，所以這邊特別寫得很詳細，希望大家都能看懂 (<del>還是其實單純我太笨了 xd</del>)</p>
+
+</details></li>
+<li><span class="math inline">\(d_{G_1}(u)+1 \leq
+d_{G_2}(u)-1\)</span><br>
+<span class="math inline">\(\implies d_{G_1}(u)+2 \leq
+d_{G_2}(u)\)</span><br>
+</li>
+<li><span class="math inline">\(\forall \ G, \ d_{G}(u) &lt;
+|V|\)</span> 又因為一條邊每被重複用一次就會遠離 <span class="math inline">\(s\)</span> 兩個節點<br>
+<span class="math inline">\(\implies\)</span> 每條 <span class="math inline">\(edge(u,v)\)</span> 必定只會被使用 <span class="math inline">\(\frac{|V|}{2}\)</span><br>
+</li>
+<li>總共有 <span class="math inline">\(|E|\)</span>
+條邊，每條邊最多被使用 <span class="math inline">\(\frac{|V|}{2}\)</span> 次，所以最多有 <span class="math inline">\(|E|\times\frac{|V|}{2}\)</span>
+次 BFS，又每次 BFS 的時間複雜度為 <span class="math inline">\(O(|E|)\)</span> ，所以總時間複雜度為 <span class="math inline">\(O(|V||E|^2)\)</span></li>
+</ul>
+<p><code>註：因為這個演算法的實作其實不是很方便，而且複雜度也比後面要講的差，所以這個演算法應該是比較少會用到的</code></p>
+<h3 id="capacity-scaling-algorithm-時間複雜度oe21logc_max">Capacity
+Scaling Algorithm (時間複雜度<span class="math inline"> \(O(|E|^2(1+log(c_{max}))\)</span>) <a href="#capacity-scaling-algorithm-時間複雜度oe21logc_max" class="headerlink"></a></h3>
+<p>這個演算法我喜歡多了，證明簡單設計巧妙，而且在幾乎所有的狀況下複雜度都比前者好 (除非
+<span class="math inline">\(c_{max}&gt;2^{|V|}\)</span>)，因此通常我都是使用這個演算法來寫題目。</p>
+<p>這個演算法的邏輯是設定一個 <span class="math inline">\(threshold\)</span> 每次都只使用 <span class="math inline">\(c(u,v)\geq threshold\)</span> 的邊作為 augmenting
+path 直到使用當前 <span class="math inline">\(threshold\)</span>
+無法找到一條 augmenting path 就將 <span class="math inline">\(threshold\)</span> 除以二，反覆執行直到 <span class="math inline">\(threshold=0\)</span> ，那因為 <span class="math inline">\(threshold\)</span> 找 augmenting path 的最後一次是
+<span class="math inline">\(threshold=1\)</span> 也就是 Ford–Fulkerson
+Algorithm 時的狀態，所以最後一定能找出正確的最大流</p>
+<p>定義： <span class="math inline">\(G'\)</span> 表示 Residual
+Graph 上除去所有 <span class="math inline">\(c(u,v) &lt;
+threshold\)</span> 的邊後的圖</p>
+<div class="note success"><h4 id="capacity-scaling-algorithm-虛擬碼">Capacity Scaling Algorithm
+虛擬碼 <a href="#capacity-scaling-algorithm-虛擬碼" class="headerlink"></a></h4>
+<p>Initiassze <span class="math inline">\(r(u, v)=c(u, v) \ \forall \
+edge(u,v) \in E\)</span><br>
+let <span class="math inline">\(answer\)</span> be <span class="math inline">\(0\)</span><br>
+let <span class="math inline">\(threshold\)</span> be <span class="math inline">\(c_{max}\)</span><br>
+while <span class="math inline">\(threshold &gt; 0\)</span><br>
+　　while exist an augmenting path <span class="math inline">\(p\)</span> in <span class="math inline">\(G'\)</span><br>
+　　　　let <span class="math inline">\(min_r\)</span> be <span class="math inline">\(min_{edge(u, v) \in p}r(u, v)\)</span><br>
+　　　　　　for each <span class="math inline">\(edge(u, v)\)</span> in
+<span class="math inline">\(p\)</span><br>
+　　　　　　　　<span class="math inline">\(r(u, v)\)</span> -= <span class="math inline">\(min_r\)</span><br>
+　　　　　　　　<span class="math inline">\(r(v, u)\)</span> += <span class="math inline">\(min_r\)</span><br>
+　　　　　　　　<span class="math inline">\(answer\)</span> += <span class="math inline">\(min_r\)</span><br>
+　　<span class="math inline">\(threshold = threshold/2\)</span></p>
+</div>
+<p>我們一一分解各個迴圈會被執行的時間複雜度： 很明顯的 <span class="math inline">\(threshold\)</span> 每次除以二，又 <span class="math inline">\(threshold\)</span> 起始值為 <span class="math inline">\(c_{max}\)</span> ，那就是 <span class="math inline">\(log(c_{max})\)</span> 量級的，但是因為要考慮到
+<span class="math inline">\(c_{max}=1\)</span> 的狀況，所以特別 <span class="math inline">\(+1\)</span><br>
+</p><details class="note info"><summary><p>while <span class="math inline">\(threshold &gt; 0\)</span> ： <span class="math inline">\(O(1+log(c_{max}))\)</span></p>
+</summary>
+<p>很明顯的 <span class="math inline">\(threshold\)</span>
+每次除以二，又 <span class="math inline">\(threshold\)</span> 起始值為
+<span class="math inline">\(c_{max}\)</span> ，那就是 <span class="math inline">\(log(c_{max})\)</span> 量級的，但是因為要考慮到
+<span class="math inline">\(c_{max}=1\)</span> 的狀況，所以特別 <span class="math inline">\(+1\)</span></p>
+
+</details> <details class="note info"><summary><p>while exist an augmenting path <span class="math inline">\(p\)</span>
+in <span class="math inline">\(G'\)</span> ： <span class="math inline">\(O(|E|)\)</span></p>
+</summary>
+<p>我們可以巧妙透過當前 <span class="math inline">\(flow\)</span> 和
+<span class="math inline">\(max-flow\)</span>
+的關係來說明這件事情，我們在每一輪開始前，可以確定：</p>
+<ol type="1">
+<li>每條邊的 Residual Capacity 都比上次的 <span class="math inline">\(threshold\)</span> (也就是兩倍當前的 <span class="math inline">\(threshold\)</span> ) 來得小，也就是 <span class="math inline">\(\sum r_{cur}(u,v) \leq |E| \cdot 2 \cdot
+threshold\)</span></li>
+<li> 當前這張圖的 <span class="math inline">\(max-flow\)</span>
+一定小於等於所有容量的總和 (詳見後續證明) ，也因此 <span class="math inline">\(max-flow\)</span> 與 <span class="math inline">\(flow\)</span> 的差一定也小於等於剩餘流量的總和
+(詳見後續證明)，所以在這回合中透過 augmenting
+path 增加的流量總和會小於等於剩餘流量的總和<br>
+</li>
+<li>因為只會看在 <span class="math inline">\(G'\)</span>
+上的邊，所以每次的 augmenting path 都會增加至少 <span class="math inline">\(threshold\)</span>
+的流量，結合前述兩點可知 augmenting path 增加的流量總和 <span class="math inline">\(\leq \sum r_{cur}(u,v) \leq 2 |E|
+threshold\)</span> ，因此找 augmenting path 的次數就會 <span class="math inline">\(\leq \sum \frac{r_{cur}(u,v)}{threshold} \leq
+\frac{2 |E| threshold}{threshold} = 2|E|\)</span></li>
+</ol>
+<p>所以說這輪所需花費的時間複雜度上界就會是 <span class="math inline">\(O(2|E|)=O(|E|)\)</span></p>
+<p><span id="inline-blue">證明</span><br>
+定義 <span class="math inline">\(f_{max}(u,v)\)</span> 表示當有 <span class="math inline">\(max-flow\)</span> 各個邊的流量、<span class="math inline">\(f_{cur}(u,v)\)</span> 表示當前各個邊的流量、<span class="math inline">\(r_{cur}(u,v)\)</span> 表示當前各個邊的剩餘容量</p>
+<ul>
+<li>當前這張圖的 <span class="math inline">\(max-flow\)</span>
+一定小於等於所有容量的總和<br>
+<span class="math display">\[\sum f_{max}(u,v) \leq \sum
+c(u,v)\]</span><br>
+</li>
+<li><span class="math inline">\(max-flow\)</span> 與 <span class="math inline">\(flow\)</span> 的差一定也小於等於剩餘流量的總和
+<span class="math display">\[\sum f_{max}(u,v)-f_{cur}(u,v) \leq \sum
+c(u,v)-f_{cur}(u,v) = \sum r_{cur}(u,v)\]</span></li>
+</ul>
+
+</details> <details class="note info"><summary><p>close DFS 和 for each <span class="math inline">\(edge(u, v)\)</span>
+in <span class="math inline">\(p\)</span> ： <span class="math inline">\(O(|E|)\)</span></p>
+</summary>
+<p>DFS 是 <span class="math inline">\(O(|E|)\)</span> ， <span class="math inline">\(p\)</span> 所含的路徑總量最多是 <span class="math inline">\(O(|V|)\)</span> ，則總時間複雜度 <span class="math inline">\(O(|E|+|V|) = O(|E|)\)</span></p>
+
+</details><p></p>
+<p>總時間複雜度： <span class="math inline">\(O(|E|^2(1+log(c_{max}))\)</span></p>
+<h2 id="如果有好幾個source或sink怎麼辦">如果有好幾個 source 或 sink 怎麼辦？
+<a href="#如果有好幾個source或sink怎麼辦" class="headerlink"></a></h2>
+<pre><code class="highlight mermaid">flowchart LR
+s1 ---&gt; t1
+s1 ---&gt; t2
+s2 ---&gt; t2
+s2 ---&gt; t3
+s3 ---&gt; t3
+s4 ---&gt; t3
+s4 ---&gt; t4
+s5 ---&gt; t4</code></pre>
+<p>這樣的圖可以透過增加一個新的 source <span class="math inline">\(s\)</span> 和一個新的 sink <span class="math inline">\(t\)</span> 來解決，將所有的 source 都連接到<span class="math inline"> \(s\)</span>(管線容量為無限大)，所有的 sink 也都連接到<span class="math inline"> \(t\)</span>(管線容量為無限大)，這樣就可以將問題轉換成一個 source 和 sink 的問題。</p>
+<pre><code class="highlight mermaid">flowchart LR
+s ---&gt; s1 ---&gt; t1 ---&gt;t
+s ---&gt; s1 ---&gt; t2 ---&gt;t
+s ---&gt; s2 ---&gt; t2 ---&gt;t
+s ---&gt; s2 ---&gt; t3 ---&gt;t
+s ---&gt; s3 ---&gt; t3 ---&gt;t
+s ---&gt; s4 ---&gt; t3 ---&gt;t
+s ---&gt; s4 ---&gt; t4 ---&gt;t
+s ---&gt; s5 ---&gt; t4 ---&gt;t</code></pre>
+<h2 id="最大流的推廣例題">最大流的推廣 &amp; 例題 <a href="#最大流的推廣例題" class="headerlink"></a></h2>
+<p>先回顧一下我們有那些找到最大流的演算法</p>
+<ol type="1">
+<li>Ford–Fulkerson Algorithm，時間複雜度 <span class="math inline">\(O(fE)\)</span> ， <span class="math inline">\(f\)</span> 為最大流量<br>
+</li>
+<li>Edmonds-Karp Algorithm，時間複雜度 <span class="math inline">\(O(VE^2)\)</span> (大致上不會用到)<br>
+</li>
+<li>Capacity Scaling Algorithm，時間複雜度 <span class="math inline">\(O(|E|^2(1+\log (c_{max}))\)</span></li>
+</ol>
+<p>可能大部分人寫最大流問題會直接選 Capacity Scaling
+Algorithm，因為時間複雜度最低，而且實作簡單，但這樣想就錯了，在蠻多應用中，邊的容量都是 1，這時候使用 Ford–Fulkerson
+Algorithm 就可以更簡單解決問題，而且也不會爆複雜度 (最大流量必定小於等於頂點數 - 1)。</p>
+<h3 id="最大流">最大流 <a href="#最大流" class="headerlink"></a></h3>
+<p>因為前面都講過了，所以就來個例題吧～</p>
+<p><a href="https://cses.fi/problemset/task/1694">CSES Download
+Speed</a></p>
+<blockquote>
+<p>Consider a network consisting of n computers and m connections. Each
+connection specifies how fast a computer can send data to another
+computer.<br>
+Kotivalo wants to download some data from a server. What is the maximum
+speed he can do this, using the connections in the network?</p>
+</blockquote>
+<p>解法：因為每條容量最大會到 <span class="math inline">\(10^9\)</span>
+，所以就用 Capacity Scaling Algorithm</p>
+<details><summary>程式碼 </summary><figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> adj[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt, vector&lt;<span class="type">int</span>&gt; &amp;path, <span class="type">int</span> threshold)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (vis[rt]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (rt == n) {</span><br><span class="line">        path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span> (adj[rt][i] &lt; threshold) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(i, path, threshold)) {</span><br><span class="line">            path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="type">int</span> threshold = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m) {</span><br><span class="line">        <span class="type">int</span> a, b, c;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">        adj[a][b] += c;</span><br><span class="line">        <span class="built_in">tomax</span>(threshold, c);</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (threshold &gt; <span class="number">0</span>) {</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(<span class="number">1</span>, path, threshold)) {</span><br><span class="line">            <span class="built_in">reverse</span>(path.<span class="built_in">begin</span>(), path.<span class="built_in">end</span>());</span><br><span class="line">            <span class="type">int</span> k = path.<span class="built_in">size</span>();</span><br><span class="line">            <span class="type">int</span> flow = <span class="number">1e9</span>;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) <span class="built_in">tomin</span>(flow, adj[path[i]][path[i + <span class="number">1</span>]]);</span><br><span class="line">            ans += flow;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) {</span><br><span class="line">                adj[path[i]][path[i + <span class="number">1</span>]] -= flow;</span><br><span class="line">                adj[path[i + <span class="number">1</span>]][path[i]] += flow;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> threshold &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<h3 id="最小割">最小割 <a href="#最小割" class="headerlink"></a></h3>
+<blockquote>
+<p>最小割 (Min-Cut)：一個 <span class="math inline">\(s-t\ cut\)</span>
+，使得 <span class="math inline">\(c(S,T)=\sum_{u\in S, v\in
+T}c(u,v)\)</span> 為最小值</p>
+</blockquote>
+<p>我先定義 <span class="math inline">\(f(S,T)=\sum_{u\in S, v\in
+T}f(u,v)\)</span> ，因為任何一個割的流量都來自 <span class="math inline">\(s\)</span> ，因此我們可以很輕易的推得：<br>
+<span class="math display">\[\forall \ s-t\ cut, f(S,T) =
+|f|\]</span><br>
+( <span class="math inline">\(|f|\)</span> 為 <span class="math inline">\(s\)</span> 流入的總流量)<br>
+因為每個 <span class="math inline">\(cut\)</span>
+流量都一樣，所以說我們可以把最小割問題想做是不斷把入口的流量增大，直到有<code>第一個</code>
+<span class="math inline">\(cut\)</span> ，使得 <span class="math inline">\(f(S,T)=c(S,T)\)</span>
+，那麼就找到最小割了，要怎麼知道這個是最大流呢？也很簡單，因為對於個
+<span class="math inline">\(cut\)</span> 上的每一條邊，都有 <span class="math inline">\(f(u,v)=c(u,v)\)</span>
+，若是想再增加流量，每當流經這個 <span class="math inline">\(cut\)</span>
+時，流量都會被<code>阻塞</code>，無法使得總流量變得更大。<br>
+而至於應該怎麼找到一個合法的最小割，還有最小割上的邊，可以看看下面的例題。</p>
+<h4 id="最小割の例題">最小割の例題 <a href="#最小割の例題" class="headerlink"></a></h4>
+<p><a href="https://cses.fi/problemset/task/1695">CSES Police
+Chase</a></p>
+<blockquote>
+<p>Kaaleppi has just robbed a bank and is now heading to the harbor.
+However, the police wants to stop him by closing some streets of the
+city.<br>
+What is the minimum number of streets that should be closed so that
+there is no route between the bank and the harbor?</p>
+</blockquote>
+<p>解法：這題可以把所有路徑的容量都設成 1，然後用 Ford–Fulkerson
+Algorithm 找到最小割的容量了，接著利用最後一次找 augmenting
+path 拜訪過的點區分各點是屬於 <span class="math inline">\(S\)</span> 還是
+<span class="math inline">\(T\)</span> 集合 (因為最後一次找 augmenting
+path 是失敗的，整張圖已經有最大流，並且存在一個最小割上的容量 = 流量，所以說最小割的剩餘流量為 0，因此從起始點
+<span class="math inline">\(s\)</span>
+流經過那一個最小割時，所有的路線都會被<code>阻塞</code>，這時就能利用當前是否被拜訪，判斷點是在哪個集合中)，而<code>跨越</code>
+<span class="math inline">\(s\)</span> 和 <span class="math inline">\(t\)</span> 的邊，就會是最小割的其中一員。</p>
+<details><summary>程式碼</summary><figure class="highlight cpp"><figcaption><span> CSES Police Chase</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, ans;</span><br><span class="line"><span class="type">int</span> g[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == n) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)){</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[a][b] = g[b][a] = <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">1</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, n){</span><br><span class="line">            <span class="keyword">if</span>((vis[i] ^ vis[j]) &amp;&amp; !g[i][j] &amp;&amp; g[j][i]) cout &lt;&lt; i sp j &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<h3 id="最多不重複路徑">最多不重複路徑 <a href="#最多不重複路徑" class="headerlink"></a></h3>
+<p>若是將每條路徑流量都設為 1，那麼就代表這條被走過之後就不能再走了，因此最終能有多少條路徑能從起點到終點，就會是最多不重複路徑的數量，也就會是最大流量。</p>
+<p>那應該怎麼找到路徑的順序呢？可以想想看找完最大流後的 Residual
+Graph，因為演算法會幫我們把走錯的路導正，除起點與終點外，每個節點都必定只有進入和出去各 1 的流量，所以只要從起點開始，不斷找 Residual
+Capacity 為 0 的邊，然後再從這條邊的終點找下一條 Residual
+Capacity 為 0 的邊，直到找到終點為止。</p>
+<h4 id="最多不重複路徑の例題">最多不重複路徑の例題 <a href="#最多不重複路徑の例題" class="headerlink"></a></h4>
+<p><a href="https://cses.fi/problemset/task/1711">CSES Distinct
+Routes</a></p>
+<blockquote>
+<p>A game consists of n rooms and m teleporters. At the beginning of
+each day, you start in room 1 and you have to reach room n. You can use
+each teleporter at most once during the game. How many days can you play
+if you choose your routes optimally?</p>
+</blockquote>
+<p>解法：這題一樣把所有路徑的容量都設成 1，然後用 Ford–Fulkerson
+Algorithm 找到最大流，然後就用前述方法即可找到各個實際路徑是怎麼走的了。</p>
+<details><summary>程式碼</summary><figure class="highlight c++"><figcaption><span> CSES Distinct Routes</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, ans = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> g[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line">vi go[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == n) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)) {</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[a][b]++;</span><br><span class="line">        go[a].<span class="built_in">eb</span>(b);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">1</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">while</span>(ans--){</span><br><span class="line">        <span class="function">vi <span class="title">path</span><span class="params">(<span class="number">1</span>,<span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="type">int</span> s = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(s!=n){</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i : go[s])</span><br><span class="line">                <span class="keyword">if</span>(!g[s][i] &amp;&amp; g[i][s]){</span><br><span class="line">                    g[i][s]=<span class="number">0</span>;</span><br><span class="line">                    s=i;</span><br><span class="line">                    path.<span class="built_in">eb</span>(i);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; path.<span class="built_in">size</span>() &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i : path) cout &lt;&lt; i &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        cout &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<h3 id="二分圖最大匹配">二分圖最大匹配 <a href="#二分圖最大匹配" class="headerlink"></a></h3>
+<p>這個的做法是先兩個集合的點，各別連接一個 source 和 sink (見<a href="/algo_Max-Flow_and_Min-Cut/#如果有好幾個source或sink怎麼辦？">如果有好幾個 source 或 sink 怎麼辦？</a>)，我們可以將圖分為四個區塊，如下圖：</p>
+<pre><code class="highlight mermaid">flowchart LR
+subgraph BEGIN
+s
+end
+subgraph LEFT
+direction LR
+a1
+a2
+a3
+end
+subgraph RIGHT
+direction LR
+b1
+b2
+b3
+end
+subgraph END
+t
+end
+s --1--&gt; a1
+s --1--&gt; a2
+s --1--&gt; a3
+a1 --1--&gt; b1
+a1 --1--&gt; b2
+a2 --1--&gt; b2
+a3 --1--&gt; b3
+a1 --1--&gt; b3
+b1 --1--&gt; t
+b2 --1--&gt; t
+b3 --1--&gt; t</code></pre>
+<p>我們可以認定一條 <span class="math inline">\(s\)</span> 流到 <span class="math inline">\(t\)</span>
+的路徑就代表一個配對，並且因為 LEFT 的每個點流入量都是 1，RIGHT 的每個點流出量是 1，所以所有點配對時最多只能使用一次，因此最終能有多少條路徑能從起點到終點，就會是最大匹配的數量，也就會是最大流量，而找路徑的方法就如同<a href="/algo_Max-Flow_and_Min-Cut/#最多不重複路徑">最多不重複路徑</a>一樣。</p>
+<h4 id="二分圖最大匹配の例題">二分圖最大匹配の例題 <a href="#二分圖最大匹配の例題" class="headerlink"></a></h4>
+<p><a href="https://cses.fi/problemset/task/1696">CSES School
+Dance</a></p>
+<blockquote>
+<p>There are n boys and m girls in a school. Next week a school dance
+will be organized. A dance pair consists of a boy and a girl, and there
+are k potential pairs.<br>
+Your task is to find out the maximum number of dance pairs and show how
+this number can be achieved.</p>
+</blockquote>
+<p>解法：還是一樣把所有路徑的容量都設成 1，然後用 Ford–Fulkerson
+Algorithm 找到最大流，然後就用前面講的方法轉換成匹配結果。</p>
+<details><summary>程式碼</summary><figure class="highlight c++"><figcaption><span> CSES School Dance</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, k, ans;</span><br><span class="line"><span class="type">int</span> g[<span class="number">1003</span>][<span class="number">1003</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">1003</span>];</span><br><span class="line">vi go[<span class="number">1003</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == <span class="number">1001</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, <span class="number">1001</span>){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)){</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, k){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[<span class="number">0</span>][a] = g[a][b+<span class="number">500</span>] = g[b+<span class="number">500</span>][<span class="number">1001</span>] = <span class="number">1</span>;</span><br><span class="line">        go[<span class="number">0</span>].<span class="built_in">eb</span>(a), go[a].<span class="built_in">eb</span>(b+<span class="number">500</span>), go[b+<span class="number">500</span>].<span class="built_in">eb</span>(<span class="number">1001</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">0</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">while</span>(ans--){</span><br><span class="line">        <span class="type">int</span> a, b, s = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(s != <span class="number">1001</span>){</span><br><span class="line">            a=b, b=s;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i : go[s]) </span><br><span class="line">                <span class="keyword">if</span>(!g[s][i] &amp;&amp; g[i][s]){</span><br><span class="line">                    g[s][i]=<span class="number">1</span>;</span><br><span class="line">                    s=i;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; a sp b<span class="number">-500</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</details>
+<!-- ### 二分圖最小頂點覆蓋 (Kőnig's theorem)
+
+#### 二分圖最小頂點覆蓋の例題
+
+<details><summary>程式碼</summary><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</details>
+<p>–&gt;</p>
+<!-- ### Path covers -->
+<h2 id="延伸閱讀參考資料">延伸閱讀（參考資料） <a href="#延伸閱讀參考資料" class="headerlink"></a></h2>
+<ol type="1">
+<li><a href="https://cses.fi/book/book.pdf#Flows%20and%20cuts">Competitive
+Programmer’s Handbook, Chapter 20, Flows and cuts</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm">Ford–Fulkerson
+Algorithm</a></li>
+<li><a href="https://youtu.be/rSYW9pKGEAU">演算法第 26 章 Maximum
+Flow</a></li>
+<li><a href="https://oi-wiki.org/graph/flow/max-flow/">OI Wiki -
+最大流</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>演算法</category>
+        <category>圖論</category>
+      </categories>
+      <tags>
+        <tag>演算法</tag>
+        <tag>Flow</tag>
       </tags>
   </entry>
   <entry>
@@ -118,7 +946,7 @@ CoNP, NP-complete, NP-hard 問題</a></p>
 <h2 id="knights-tour">Knight’s Tour <a href="#knights-tour" class="headerlink"></a></h2>
 <figure class="highlight c++"><figcaption><span>Knight's Tour</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> x, y;</span><br><span class="line"><span class="type">int</span> dir[<span class="number">8</span>][<span class="number">2</span>] = {{<span class="number">1</span>, <span class="number">2</span>}, {<span class="number">2</span>, <span class="number">1</span>}, {<span class="number">1</span>, <span class="number">-2</span>}, {<span class="number">-2</span>, <span class="number">1</span>}, {<span class="number">-1</span>, <span class="number">2</span>}, {<span class="number">2</span>, <span class="number">-1</span>}, {<span class="number">-1</span>, <span class="number">-2</span>}, {<span class="number">-2</span>, <span class="number">-1</span>}};</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">10</span>][<span class="number">10</span>];</span><br><span class="line">vii ans;</span><br><span class="line"><span class="type">int</span> out[<span class="number">10</span>][<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, <span class="type">int</span> cnt)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (vis[x][y]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (cnt == <span class="number">63</span>) {</span><br><span class="line">        ans.<span class="built_in">eb</span>(x, y);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    vis[x][y] = <span class="number">1</span>;</span><br><span class="line">    cnt++;</span><br><span class="line">    vector&lt;pair&lt;<span class="type">int</span>, pii&gt;&gt; go;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">0</span>, <span class="number">7</span>) {</span><br><span class="line">        <span class="keyword">if</span> (x + dir[i][<span class="number">0</span>] &gt; <span class="number">8</span> || x + dir[i][<span class="number">0</span>] &lt; <span class="number">1</span> || y + dir[i][<span class="number">1</span>] &gt; <span class="number">8</span> || y + dir[i][<span class="number">1</span>] &lt; <span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="type">int</span> nx = x + dir[i][<span class="number">0</span>], ny = y + dir[i][<span class="number">1</span>], deg = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">rep</span>(i, <span class="number">0</span>, <span class="number">7</span>) <span class="keyword">if</span> (!(nx + dir[i][<span class="number">0</span>] &gt; <span class="number">8</span> || nx + dir[i][<span class="number">0</span>] &lt; <span class="number">1</span> || ny + dir[i][<span class="number">1</span>] &gt; <span class="number">8</span> || ny + dir[i][<span class="number">1</span>] &lt; <span class="number">1</span>)) deg++;</span><br><span class="line">        go.<span class="built_in">pb</span>({deg, {nx, ny}});</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(<span class="built_in">all</span>(go));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i : go)</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(i.S.F, i.S.S, cnt)) {</span><br><span class="line">            ans.<span class="built_in">eb</span>(x,y);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    vis[x][y] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    <span class="built_in">dfs</span>(x, y, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">reverse</span>(<span class="built_in">all</span>(ans));</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, <span class="number">64</span>) { out[ans[i - <span class="number">1</span>].F][ans[i - <span class="number">1</span>].S] = i;}</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, <span class="number">8</span>) {</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, <span class="number">8</span>) cout &lt;&lt; out[j][i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        cout &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="download-speed">Download Speed <a href="#download-speed" class="headerlink"></a></h2>
-<figure class="highlight c++"><figcaption><span>Download Speed</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> adj[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt, vector&lt;<span class="type">int</span>&gt; &amp;path, <span class="type">int</span> threshold)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (vis[rt]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (rt == n) {</span><br><span class="line">        path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span> (adj[rt][i] &lt; threshold) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(i, path, threshold)) {</span><br><span class="line">            path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m) {</span><br><span class="line">        <span class="type">int</span> a, b, c;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">        adj[a][b] += c;</span><br><span class="line">        sum += c;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (sum &gt; <span class="number">0</span>) {</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(<span class="number">1</span>, path, sum)) {</span><br><span class="line">            <span class="built_in">reverse</span>(path.<span class="built_in">begin</span>(), path.<span class="built_in">end</span>());</span><br><span class="line">            <span class="type">int</span> k = path.<span class="built_in">size</span>();</span><br><span class="line">            <span class="type">int</span> flow = <span class="number">1e9</span>;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) <span class="built_in">tomin</span>(flow, adj[path[i]][path[i + <span class="number">1</span>]]);</span><br><span class="line">            ans += flow;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) {</span><br><span class="line">                adj[path[i]][path[i + <span class="number">1</span>]] -= flow;</span><br><span class="line">                adj[path[i + <span class="number">1</span>]][path[i]] += flow;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> sum /= <span class="number">2</span>;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c++"><figcaption><span>Download Speed</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> adj[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt, vector&lt;<span class="type">int</span>&gt; &amp;path, <span class="type">int</span> threshold)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (vis[rt]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (rt == n) {</span><br><span class="line">        path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span> (adj[rt][i] &lt; threshold) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(i, path, threshold)) {</span><br><span class="line">            path.<span class="built_in">push_back</span>(rt);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="type">int</span> threshold = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m) {</span><br><span class="line">        <span class="type">int</span> a, b, c;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">        adj[a][b] += c;</span><br><span class="line">        <span class="built_in">tomax</span>(threshold, c);</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (threshold &gt; <span class="number">0</span>) {</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">dfs</span>(<span class="number">1</span>, path, threshold)) {</span><br><span class="line">            <span class="built_in">reverse</span>(path.<span class="built_in">begin</span>(), path.<span class="built_in">end</span>());</span><br><span class="line">            <span class="type">int</span> k = path.<span class="built_in">size</span>();</span><br><span class="line">            <span class="type">int</span> flow = <span class="number">1e9</span>;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) <span class="built_in">tomin</span>(flow, adj[path[i]][path[i + <span class="number">1</span>]]);</span><br><span class="line">            ans += flow;</span><br><span class="line">            <span class="built_in">rep</span> (i, <span class="number">0</span>, k<span class="number">-2</span>) {</span><br><span class="line">                adj[path[i]][path[i + <span class="number">1</span>]] -= flow;</span><br><span class="line">                adj[path[i + <span class="number">1</span>]][path[i]] += flow;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> threshold &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="police-chase">Police Chase <a href="#police-chase" class="headerlink"></a></h2>
 <figure class="highlight c++"><figcaption><span>Police Chase</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">/* TYPES  */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vc vector</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vi vector<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> vii vector<span class="string">&lt;pii&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mii map<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> si set<span class="string">&lt;int&gt;</span></span></span><br><span class="line"><span class="comment">/* UTILS */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i, a, b) for (int i = a; i &lt;= b; ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rev(i, a, b) for (int i = a; i &gt;= b; --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomax(a, b) (a) = max((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> tomin(a, b) (a) = min((a), (b))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(a) a.begin(), a.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rall(a) (a).rbegin(), (a).rend()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pob pop_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ins insert</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> err(a) cerr &lt;&lt; #a &lt;&lt; <span class="string">": "</span> &lt;&lt; a &lt;&lt; <span class="string">"\n"</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sp &lt;&lt; <span class="string">" "</span> &lt;&lt;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, ans;</span><br><span class="line"><span class="type">int</span> g[<span class="number">502</span>][<span class="number">502</span>];</span><br><span class="line"><span class="type">bool</span> vis[<span class="number">502</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> rt)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(vis[rt]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(rt == n) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    vis[rt] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="keyword">if</span>(g[rt][i] &amp;&amp; <span class="built_in">dfs</span>(i)){</span><br><span class="line">            g[rt][i]--, g[i][rt]++;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m){</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[a][b] = g[b][a] = <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">dfs</span>(<span class="number">1</span>)) <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in">sizeof</span>(vis)), ans++;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n){</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, n){</span><br><span class="line">            <span class="keyword">if</span>((vis[i] ^ vis[j]) &amp;&amp; !g[i][j] &amp;&amp; g[j][i]) cout &lt;&lt; i sp j &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="school-dance">School Dance <a href="#school-dance" class="headerlink"></a></h2>
@@ -340,7 +1168,7 @@ C_2H_5Cl+HCl\)</span>、<span class="math inline">\(C_2H_5Cl+NH_3\rightarrow C_2
 <code>Functional</code>，顧名思義，他是一個多對一的圖（各個點出度皆為 1），如下表所示：</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>From</th>
 <th>1</th>
 <th>2</th>
@@ -355,7 +1183,7 @@ C_2H_5Cl+HCl\)</span>、<span class="math inline">\(C_2H_5Cl+NH_3\rightarrow C_2
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>go</td>
 <td>3</td>
 <td>4</td>
@@ -583,19 +1411,19 @@ Optimization)</a></p></li>
 c，試問滿足直排、橫排、兩個對角線上的所有數字的和都相同的解有幾個。</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><span class="math inline">\(a\)</span></th>
 <th>?</th>
 <th>?</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>?</td>
 <td>?</td>
 <td><span class="math inline">\(b\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">\(c\)</span></td>
 <td>?</td>
 <td>?</td>
@@ -607,19 +1435,19 @@ c，試問滿足直排、橫排、兩個對角線上的所有數字的和都相�
 重新定義一下</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><span class="math inline">\(a\)</span></th>
 <th><span class="math inline">\(x_1\)</span></th>
 <th><span class="math inline">\(x_2\)</span></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><span class="math inline">\(x_3\)</span></td>
 <td><span class="math inline">\(x_4\)</span></td>
 <td><span class="math inline">\(b\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">\(c\)</span></td>
 <td><span class="math inline">\(x_5\)</span></td>
 <td><span class="math inline">\(x_6\)</span></td>
@@ -694,19 +1522,19 @@ x_6, y \in \mathbb{Z}\)</span>，所以答案必為 1。</p>
 <p>寫到九宮格內如下</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><span class="math inline">\(a\)</span></th>
 <th><span class="math inline">\(2c-b\)</span></th>
 <th><span class="math inline">\(2a+c-2b\)</span></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><span class="math inline">\(2a+2c-3b\)</span></td>
 <td><span class="math inline">\(a+c-b\)</span></td>
 <td><span class="math inline">\(b\)</span></td>
 </tr>
-<tr class="even">
+<tr>
 <td><span class="math inline">\(c\)</span></td>
 <td><span class="math inline">\(2a-b\)</span></td>
 <td><span class="math inline">\(a+2c-2b\)</span></td>
@@ -1850,15 +2678,38 @@ p_{ij}\leq1\)</span>，則稱此方陣為轉移矩陣</li>
 <li><p>高斯約當法：<br>
 方程組<span class="math inline"> \(\begin{cases}a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2\\\vdots\\a_{n1}x_1+a_{n2}x_2+...+a_{nn}x_n=b_n\end{cases}\)</span></p>
 <p>其中<span class="math inline"> \(A=\begin{bmatrix}a_{11}&amp;a_{12}&amp;...&amp;a_{1n}\\a_{21}&amp;a_{22}&amp;...&amp;a_{2n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}\end{bmatrix}\)</span> 為其係數矩陣</p>
-<p>加上常數項後為增廣矩陣<span class="math inline"> \([A|b]=\begin{bmatrix} \begin{array}{cccc|c}
+<p>加上常數項後為增廣矩陣<span class="math inline"> \([A|b]=\begin{bmatrix}
+\begin{array}{cccc|c}
 a_{11}&amp;a_{12}&amp;...&amp;a_{1n}&amp;b_1\\
 a_{21}&amp;a_{22}&amp;...&amp;a_{2n}&amp;b_2\\
 \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}&amp;b_n \end{array}
+a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}&amp;b_n
+\end{array}
 \end{bmatrix}\)</span></p>
-<p>將增廣矩陣利用列運算將<span class="math inline"> \([A|b]\)</span> 化為上三角矩陣<span class="math inline"> \([U|c]=\begin{bmatrix}  \begin{array}{cccc|c}  b_{11}&amp;b_{12}&amp;...&amp;b_{1n}&amp;c_1\\  0&amp;b_{22}&amp;...&amp;b_{2n}&amp;c_2\\  \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\  0&amp;0&amp;...&amp;b_{nn}&amp;c_n  \end{array}  \end{bmatrix}\)</span></p>
-<p>將對每列除以該列最左邊的非零行首元素，得到<span class="math inline"> \([U'|c']=\begin{bmatrix}  \begin{array}{cccc|c}  1&amp;\frac{b_{12}}{b_{11}}&amp;...&amp;\frac{b_{1n}}{b_{11}}&amp;\frac{c_1}{b_{11}}\\  0&amp;1&amp;...&amp;\frac{b_{2n}}{b_{22}}&amp;\frac{c_2}{b_{22}}\\  \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\  0&amp;0&amp;...&amp;1&amp;\frac{c_n}{b_{nn}}  \end{array}  \end{bmatrix}\)</span></p>
-<p>最後將<span class="math inline"> \([U'|c']\)</span> 利用列運算將其化為<span class="math inline"> \([I|d]=\begin{bmatrix}  \begin{array}{cccc|c}  1&amp;0&amp;...&amp;0&amp;d_1\\  0&amp;1&amp;...&amp;0&amp;d_2\\  \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\  0&amp;0&amp;...&amp;1&amp;d_n  \end{array}  \end{bmatrix}\)</span><br>
+<p>將增廣矩陣利用列運算將<span class="math inline"> \([A|b]\)</span> 化為上三角矩陣<span class="math inline"> \([U|c]=\begin{bmatrix}
+  \begin{array}{cccc|c}
+  b_{11}&amp;b_{12}&amp;...&amp;b_{1n}&amp;c_1\\
+  0&amp;b_{22}&amp;...&amp;b_{2n}&amp;c_2\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+  0&amp;0&amp;...&amp;b_{nn}&amp;c_n
+  \end{array}
+  \end{bmatrix}\)</span></p>
+<p>將對每列除以該列最左邊的非零行首元素，得到<span class="math inline"> \([U'|c']=\begin{bmatrix}
+  \begin{array}{cccc|c}
+  1&amp;\frac{b_{12}}{b_{11}}&amp;...&amp;\frac{b_{1n}}{b_{11}}&amp;\frac{c_1}{b_{11}}\\
+  0&amp;1&amp;...&amp;\frac{b_{2n}}{b_{22}}&amp;\frac{c_2}{b_{22}}\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+  0&amp;0&amp;...&amp;1&amp;\frac{c_n}{b_{nn}}
+  \end{array}
+  \end{bmatrix}\)</span></p>
+<p>最後將<span class="math inline"> \([U'|c']\)</span> 利用列運算將其化為<span class="math inline"> \([I|d]=\begin{bmatrix}
+  \begin{array}{cccc|c}
+  1&amp;0&amp;...&amp;0&amp;d_1\\
+  0&amp;1&amp;...&amp;0&amp;d_2\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+  0&amp;0&amp;...&amp;1&amp;d_n
+  \end{array}
+  \end{bmatrix}\)</span><br>
 若該方程組無解，則<span class="math inline"> \([U|c]\)</span> 中有一列為<span class="math inline"> \([0,0,...,0|b]\)</span>，則<span class="math inline"> \(b\neq0\)</span><br>
 若該方程式有無限多組解，則<span class="math inline"> \([U|c]\)</span> 中有一列為<span class="math inline"> \([0,0,...,0|0]\)</span></p></li>
 <li><p> 克拉瑪公式：<br>
