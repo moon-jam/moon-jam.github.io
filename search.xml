@@ -80,6 +80,304 @@ CoNP, NP-complete, NP-hard 問題</a></p>
       </tags>
   </entry>
   <entry>
+    <title>IThome 2024 鐵人賽 一直刷 CTF - Day3</title>
+    <url>/IThome_2024ironman_CTF_Day3/</url>
+    <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>本日進度：</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">6 題 general
+skills</label></li>
+<li><label><input type="checkbox" checked=""><a href="https://youtu.be/-cMOv9QudOk?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z">【成大資安社社課】手把手 Python 教學
+— 從入門到入侵 - 看完</a></label></li>
+</ul>
+<span id="more"></span>
+<h2 id="writeup">Writeup <a href="#writeup" class="headerlink"></a></h2>
+<h3 id="第一題blame-game">第一題：Blame Game <a href="#第一題blame-game" class="headerlink"></a></h3>
+<p>去翻 <code>git log</code> ，發現最下面有個 Author 長的一副 flag
+的格式，然後試一下就對了 噎</p>
+<figure>
+<img data-src="https://i.imgur.com/bLf5Uxx.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第二題binhexa">第二題：binhexa <a href="#第二題binhexa" class="headerlink"></a></h3>
+<p>就用 <code>nc</code> 連上之後依序回答問題就可以得到 flag 了</p>
+<figure>
+<img data-src="https://i.imgur.com/Rys3dlp.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第三題repetitions">第三題：repetitions <a href="#第三題repetitions" class="headerlink"></a></h3>
+<p>把載下來的東西印出來看起來就是 base64
+過的東西，但解過一次之後還是亂的，看起來又是個
+base64，所以就再解，因為覺得這樣太累了，所以就寫了個 python
+去解，然後就得到 flag 了～</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">text = <span class="string">'''VmpGU1EyRXlUWGxTYmxKVVYwZFNWbGxyV21GV1JteDBUbFpPYWxKdFVsaFpWVlUxWVZaS1ZWWnVh</span></span><br><span class="line"><span class="string">RmRXZWtab1dWWmtSMk5yTlZWWApiVVpUVm10d1VWZFdVa2RpYlZaWFZtNVdVZ3BpU0VKeldWUkNk</span></span><br><span class="line"><span class="string">MlZXVlhoWGJYQk9VbFJXU0ZkcVRuTldaM0JZVWpGS2VWWkdaSGRXCk1sWnpWV3hhVm1KRk5XOVVW</span></span><br><span class="line"><span class="string">VkpEVGxaYVdFMVhSbFZrTTBKVVZXcE9VazFXV2toT1dHUllDbUY2UWpSWk1GWlhWa2RHZEdWRlZs</span></span><br><span class="line"><span class="string">aGkKYlRrelZERldUMkpzUWxWTlJYTkxDZz09Cg=='''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">print</span>(text)</span><br><span class="line">    text = base64.b64decode(text).decode(<span class="string">'utf-8'</span>).replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br></pre></td></tr></tbody></table></figure>
+<figure>
+<img data-src="https://i.imgur.com/iwmPJio.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第四題big-zip">第四題：Big Zip <a href="#第四題big-zip" class="headerlink"></a></h3>
+<p>解壓縮他給的檔案後，資料夾中裡面有超多的檔案，所以就用
+<code>grep</code> 來配對 <code>picoCTF{.*}</code> ，然後就找到 flag
+了～</p>
+<figure>
+<img data-src="https://i.imgur.com/LpwfNPh.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第五題first-find">第五題：First Find <a href="#第五題first-find" class="headerlink"></a></h3>
+<p>使用 <code>find</code> 指令，找到名為 <code>uber-secret.txt</code>
+的檔案，印出來就是 flag 了</p>
+<figure>
+<img data-src="https://i.imgur.com/FRPy5SW.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第六題runme.py">第六題：runme.py <a href="#第六題runme.py" class="headerlink"></a></h3>
+<p>有點太簡單，就是直接 Run 就印出來了 /</p>
+<figure>
+<img data-src="https://i.imgur.com/d9SZoSi.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h2 id="上課紀錄">上課紀錄 <a href="#上課紀錄" class="headerlink"></a></h2>
+<h3 id="lab-3---cookies">Lab 3 - cookies <a href="#lab-3---cookies" class="headerlink"></a></h3>
+<p>發現輸入 <code>snickerdoodle</code> 會出現
+<code>That is cookie! Not very special though...</code>，並且這時去查看
+cookie 會發現有一個 <code>name</code> 的索引為 <code>0</code>
+，但是在一般的時候 <code>name</code> 是 <code>-1</code> ，然後如果改成
+<code>1, 2, 3...</code>
+會有不同回應，所以就寫一個程式去窮舉看看，就像下面那樣，最後就發現在
+<code>name</code> 為 <code>18</code> 的時候會出現 flag</p>
+<figure>
+<img data-src="https://i.imgur.com/zzWrw9u.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://mercury.picoctf.net:54219/check'</span></span><br><span class="line"></span><br><span class="line">cookie = {<span class="string">"name"</span>: <span class="string">"1"</span>}</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">try_cookie</span>(<span class="params">i</span>):</span><br><span class="line">    cookie[<span class="string">"name"</span>] = <span class="built_in">str</span>(i)</span><br><span class="line">    r = requests.get(url, cookies=cookie, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">    <span class="comment"># print("trying:" + str(i), r.status_code)</span></span><br><span class="line">    <span class="keyword">if</span> r.status_code == <span class="number">200</span> <span class="keyword">and</span> <span class="string">"picoCTF"</span> <span class="keyword">in</span> r.text:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"trying:"</span> + <span class="built_in">str</span>(i), r.text)</span><br><span class="line">        <span class="built_in">print</span>(r.text)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">    threading.Thread(target=try_cookie, args=(i,)).start()</span><br></pre></td></tr></tbody></table></figure>
+<figure>
+<img data-src="https://i.imgur.com/bS09EXR.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="pwntools">pwntools <a href="#pwntools" class="headerlink"></a></h3>
+<p>pwn : 就是去找 Binary 檔的漏洞</p>
+<p>基本語法</p>
+<ul>
+<li>Interaction
+<ul>
+<li><code>io = pwn.process("cmd.exe")</code> : 跟一個程序互動 (這裡是
+cmd.exe)</li>
+<li><code>io = pwn.remote("host", port)</code> : 跟遠端主機互動</li>
+<li><code>io.interactive()</code> : 進入互動模式</li>
+<li><code>io</code> 這個物件創出來之後，後面就都是用 <code>io</code>
+來與 <code>程序</code> 或是 <code>遠端主機</code> 互動</li>
+</ul></li>
+<li> Send
+<ul>
+<li><code>io.send("whoami\n")</code> : 送出指令</li>
+<li><code>io.sendline("whoami")</code> : 送出指令並且加上換行</li>
+</ul></li>
+<li> Recv
+<ul>
+<li><code>io.recv(1024, timeout=1)</code> :
+接收回傳，第一個參數是接收的大小 (byte)，第二個參數是 timeout
+(最多等待多久)</li>
+<li><code>io.recvline()</code> : 接收回傳並且換行</li>
+<li><code>io.recvuntil("end")</code> : 接收回傳直到遇到
+<code>end</code></li>
+<li><code>io.recvlines(2)</code> : 接收回傳兩行</li>
+</ul></li>
+</ul>
+<h3 id="lab-4---echo">Lab 4 - echo <a href="#lab-4---echo" class="headerlink"></a></h3>
+<p>就是根據遠端主機的提示，將一模一樣的文字傳回去，然後就會出現
+flag，但因為主機已經關了，所以我就只有寫好程式，但應該是會對的啦 owo</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pwn</span><br><span class="line"></span><br><span class="line">io = pwn.remote(<span class="string">'140.116.246.190'</span>, <span class="number">8787</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        io.recvuntil(<span class="string">'Repeat after me:\n'</span>)</span><br><span class="line">        echo = io.recv()</span><br><span class="line">        <span class="built_in">print</span>(echo)</span><br><span class="line">        io.send(echo)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">io.interactive()</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="lab-5---eval">Lab 5 - eval <a href="#lab-5---eval" class="headerlink"></a></h3>
+<p>跟 echo 很像，但變成算 1000 道數學題，都算對之後就會給 Flag
+了，然後跟上一題一樣，主機已經關了，所以我就只有寫程式，沒有實際測過</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pwn</span><br><span class="line"></span><br><span class="line">io = pwn.remote(<span class="string">"140.116.246.190"</span>, <span class="number">8788</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        io.recvuntil(<span class="string">"Solve the problem: "</span>)</span><br><span class="line">        question = io.recv()</span><br><span class="line">        ans = <span class="built_in">eval</span>(question)</span><br><span class="line">        <span class="built_in">print</span>(question.decode(), ans)</span><br><span class="line">        io.sendline(<span class="built_in">str</span>(ans))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">io.interactive()</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="lab-6-b33fer-overflow">LAB 6 – b33fer overflow <a href="#lab-6-b33fer-overflow" class="headerlink"></a></h3>
+<p>這邊聽不是很懂，有大概理解它的原理就是要把 stack 塞爆，一路塞到
+return addr 的位置，這邊的題目是要跳到 <code>win</code>
+的地方，然後就會出現
+flag，但我其實不太知道實作細節，所以目前就先不寫他了，之後便更強了再說
+(主要是今天死線快到了，來不及研究 lol)</p>
+]]></content>
+      <categories>
+        <category>IThome 2024 鐵人賽</category>
+        <category>一直刷 CTF</category>
+      </categories>
+      <tags>
+        <tag>資安</tag>
+        <tag>IThome 2024 鐵人賽</tag>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IThome 2024 鐵人賽 一直刷 CTF - Day2</title>
+    <url>/IThome_2024ironman_CTF_Day2/</url>
+    <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>本日進度：</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">6 題 general
+skills</label></li>
+<li><label><input type="checkbox" checked=""> 第一堂課比較簡單就拆兩次看就好，<a href="https://youtu.be/-cMOv9QudOk?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z&amp;t=3734">【成大資安社社課】手把手 Python 教學
+— 從入門到入侵 - 看完 Requests</a></label></li>
+</ul>
+<span id="more"></span>
+<h2 id="writeup">Writeup <a href="#writeup" class="headerlink"></a></h2>
+<h3 id="第一題binary-search">第一題：Binary Search <a href="#第一題binary-search" class="headerlink"></a></h3>
+<p>用 ssh 連線，然後開始手動二分搜，找到 flag</p>
+<figure>
+<img data-src="https://i.imgur.com/bC5iLEw.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第二題time-machine">第二題：Time Machine <a href="#第二題time-machine" class="headerlink"></a></h3>
+<p>先把檔案載下來，然後解壓縮之後發現裡面有個 txt 檔和 .git 資料夾，txt
+檔的訊息講說要去看他的 commit history，所以就用 git log
+看了一下，就直接看到 flag 了</p>
+<figure>
+<img data-src="https://i.imgur.com/2HLHWWP.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<figure>
+<img data-src="https://i.imgur.com/d8vSTzl.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第三題super-ssh">第三題：Super SSH <a href="#第三題super-ssh" class="headerlink"></a></h3>
+<p>按照指示登入，然後就看到 flag 了</p>
+<figure>
+<img data-src="https://i.imgur.com/MKDketq.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第四題endianness">第四題：endianness <a href="#第四題endianness" class="headerlink"></a></h3>
+<p>用 Netcat 連線，然後按照指示將字串轉換成 big endian 和 little
+endian，就得到 flag 了</p>
+<p>得到的 word: ofbay</p>
+<table>
+<thead>
+<tr>
+<th>char</th>
+<th>hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o</td>
+<td>6f</td>
+</tr>
+<tr>
+<td>f</td>
+<td>66</td>
+</tr>
+<tr>
+<td>b</td>
+<td>62</td>
+</tr>
+<tr>
+<td>a</td>
+<td>61</td>
+</tr>
+<tr>
+<td>y</td>
+<td>79</td>
+</tr>
+</tbody>
+</table>
+<p>big endian: 6f66626179 little endian: 796162666f</p>
+<figure>
+<img data-src="https://i.imgur.com/1ekTaMf.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第五題commitment-issues">第五題：Commitment Issues <a href="#第五題commitment-issues" class="headerlink"></a></h3>
+<p>先看看 message.txt ，他說 TOP SECRET，然後裡面也有 .git
+資料夾，所以用 git log 看了一下，發現之前有一筆 commit message 寫
+<code>remove sensitive info</code> 所以就 checkout 到那個
+commit，然後再印出一次 message.txt 看到 flag 了</p>
+<figure>
+<img data-src="https://i.imgur.com/NONd3sY.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<figure>
+<img data-src="https://i.imgur.com/UEfthQB.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<figure>
+<img data-src="https://i.imgur.com/R3j5L4w.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h3 id="第六題collaborative-development">第六題：Collaborative
+Development <a href="#第六題collaborative-development" class="headerlink"></a></h3>
+<p>一樣有 .git 資料夾，所以就用 git log
+看了一下，發現只有一筆，再回去看了一下題目說他是多人寫作的，所以看了以下有沒有其他
+branch，果然，有其他另外三個，接著就把裡面的 flag.py
+都拿出來看看就有答案了，然後拚在一起就是 flag 了 <img data-src="https://i.imgur.com/LQluxR3.png" alt="Image"></p>
+<figure>
+<img data-src="https://i.imgur.com/94GfmiG.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<figure>
+<img data-src="https://i.imgur.com/3glt7JH.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<figure>
+<img data-src="https://i.imgur.com/dwTsHm3.png" alt="Image">
+<figcaption aria-hidden="true">Image</figcaption>
+</figure>
+<h2 id="上課紀錄">上課紀錄 <a href="#上課紀錄" class="headerlink"></a></h2>
+<h3 id="基本語法">基本語法 <a href="#基本語法" class="headerlink"></a></h3>
+<ul>
+<li><code>hex</code></li>
+<li><code>bin</code></li>
+<li><code>ord</code></li>
+<li><code>chr</code></li>
+<li><code>base64.b64encode</code></li>
+<li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+<code>%</code>, <code>**</code>, <code>pow</code></li>
+<li><code>print</code></li>
+<li><code>NUM</code>, <code>STR</code>, <code>FLOAT</code>,
+<code>LIST</code>, <code>TUPLE</code>, <code>SET</code>,
+<code>DICT</code>, <code>BOOL</code></li>
+<li><code>if</code>, <code>elif</code>, <code>else</code></li>
+<li><code>while</code>, <code>for</code></li>
+<li><code>try...except...else...finally</code></li>
+<li><code>eval</code>:　會將輸入的 String
+自動轉換成適當的型態，所以如果是 python 指令，就會發生可怕的事情 owo
+(MyFirstCTF 的 Evil Calculator)</li>
+</ul>
+<h3 id="lab-1---星星樹">Lab 1 - 星星樹 <a href="#lab-1---星星樹" class="headerlink"></a></h3>
+<p>我也要寫一行解～基本上跟 Vincent
+寫的一樣，但我把海象用在三元運算子上就能成功了，就沒用 lambda 了</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"\n"</span>.join(<span class="string">" "</span> * (a - i) + <span class="string">"*"</span> * (i * <span class="number">2</span> - <span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, a + <span class="number">1</span>)) + <span class="string">"\n"</span> + <span class="string">" "</span> * (a - <span class="number">1</span>) + <span class="string">"|"</span>) <span class="keyword">if</span> (a := <span class="built_in">int</span>(<span class="built_in">input</span>())) <span class="keyword">else</span> <span class="literal">None</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="lab-2---caesar">Lab 2 - caesar <a href="#lab-2---caesar" class="headerlink"></a></h3>
+<p>繼續一行解 lol</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">""</span>.join(<span class="built_in">chr</span>((<span class="built_in">ord</span>(i)-<span class="built_in">ord</span>(<span class="string">"o"</span>)+<span class="built_in">ord</span>(<span class="string">"b"</span>)-<span class="number">97</span>+<span class="number">26</span>)%<span class="number">26</span>+<span class="number">97</span>) <span class="keyword">if</span> i.isalpha() <span class="keyword">else</span> i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">"o33s{cl7u0a_10ir_7nxvat_on7u5}"</span>))</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="requests">Requests <a href="#requests" class="headerlink"></a></h3>
+<p>包含的方法 <img data-src="https://i.imgur.com/Jg4eiEN.png" alt="Image"></p>
+<p>講了 <code>get</code> 和 <code>post</code> 的方法，然後就結束了～</p>
+<h2 id="又修了一點插件">又修了一點插件 <a href="#又修了一點插件" class="headerlink"></a></h2>
+<p>在寫的時候發現有一點小 bug:</p>
+<ol type="1">
+<li>在 Practice
+頁面的時候如果是有翻頁或是有點選指定哪個類別時分數不會顯示，因為在
+<code>https://play.picoctf.org/practice</code> 後面還會加上
+<code>?category=5&amp;page=1</code>
+之類的文字，但我程式在寫的時候就只有判斷到
+<code>https://play.picoctf.org/practice</code>，所以就改成有包含到
+<code>https://play.picoctf.org/practice</code>
+這個字串就去抓分數，就解決了～</li>
+<li>顯示的分數不會即時更新，也就是在我解完一個新的題目的時候分數還會是舊的，需要重新整理才會刷新，因為我程式在寫的時候是判斷如果分數已經生成就不再生成一次，所以就改成每次都去檢查有沒有生成過了，如果每有就生一個一個新的，如果沒有就去更新舊的分數，這樣就沒問題了～</li>
+</ol>
+<h2 id="小小心得">小小心得 <a href="#小小心得" class="headerlink"></a></h2>
+<p>今天的題目好像有點太簡單，六題半小時不到就寫完了，寫 Writeup
+的時間比解的時間還多 xdd，希望之後也都能這麼順利 owo</p>
+]]></content>
+      <categories>
+        <category>IThome 2024 鐵人賽</category>
+        <category>一直刷 CTF</category>
+      </categories>
+      <tags>
+        <tag>資安</tag>
+        <tag>IThome 2024 鐵人賽</tag>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IThome 2024 鐵人賽 AI VTuber 的完善之路 - Day1</title>
     <url>/IThome_2024ironman_AI_VTuber_Day1/</url>
     <content><![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
