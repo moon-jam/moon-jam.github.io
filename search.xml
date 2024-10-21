@@ -2979,9 +2979,11 @@ a874</a></p>
 <span class="math inline">\(i\)</span> 病毒 RNA 序列的第 <span class="math inline">\(j\)</span> 個字元為 <span class="math inline">\(k\)</span> 時，求該點為根節點時的最小演化距離 (A,
 U, C, G 分別對應到 <span class="math inline">\(k = 1, 2, 3, 4\)</span> )
 ，而當點 <span class="math inline">\(i\)</span> 病毒序列中的第 <span class="math inline">\(j\)</span> 個字元已經被定義時 (也就是不為 @ 時)
-就將其餘的點設為極大值；在狀態轉移時，就會是<strong>所有子樹的子節點在四種狀態的最小演化距離，加上與當前結點的距離
+，就將 <span class="math inline">\(k\)</span>
+為其餘狀態的最小演化距離設為極大值。</p>
+<p>在狀態轉移時，就會是<strong>所有子樹的子節點在四種狀態的最小演化距離，加上與當前結點的距離
 (就是看子節點當前狀態是否跟父節點一樣，一樣距離就是 0 不一樣就是 1)</strong>
-的最小值，以數學式表達如下：(其中 <span class="math inline">\(child\)</span> 代表第 <span class="math inline">\(i\)</span> 個陣列的子節點個數， <span class="math inline">\(child_p\)</span> 代表點 <span class="math inline">\(i\)</span> 第 <span class="math inline">\(p\)</span> 個子節點)<br>
+的最小值，以數學式表達如下 (其中 <span class="math inline">\(child\)</span> 代表第 <span class="math inline">\(i\)</span> 個陣列的子節點個數， <span class="math inline">\(child_p\)</span> 代表點 <span class="math inline">\(i\)</span> 第 <span class="math inline">\(p\)</span> 個子節點) ：<br>
 <span class="math display">\[dp[i][j][k] = \sum_{p=1}^{child}
 min(dp[child_p][j][1] + (k != 1), dp[child_p][j][2] + (k != 2),
 dp[child_p][j][3] + (k != 3), dp[child_p][j][4] + (k !=
