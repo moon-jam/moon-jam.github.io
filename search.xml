@@ -1009,8 +1009,8 @@ C_2H_5Cl+HCl\)</span>、<span class="math inline">\(C_2H_5Cl+NH_3\rightarrow C_2
         <category>化學</category>
       </categories>
       <tags>
-        <tag>有機化學</tag>
         <tag>高中</tag>
+        <tag>有機化學</tag>
       </tags>
   </entry>
   <entry>
@@ -2628,8 +2628,8 @@ a_{n1}&amp;a_{n2}&amp;...&amp;a_{nn}&amp;b_n
       </categories>
       <tags>
         <tag>證明</tag>
-        <tag>高中</tag>
         <tag>數學</tag>
+        <tag>高中</tag>
         <tag>學測</tag>
       </tags>
   </entry>
@@ -2972,7 +2972,7 @@ a874</a></p>
 在寫這題的時候，最困難的應該就是要想怎麼定義狀態還有狀態轉移如何在 <span class="math inline">\(O(1)\)</span> 內做出來。</p>
 <p>把這題看作是求 <span class="math inline">\(m\)</span> 次 RNA 長度為
 <span class="math inline">\(1\)</span> 時的最小演化距離（把一串 RNA 拆成
-<span class="math inline">\(m\)</span> 個字元分開處理） ，最後再把這
+<span class="math inline">\(m\)</span> 個字元分開處理) ，最後再把這
 <span class="math inline">\(m\)</span> 個最小演化距離相加即可。</p>
 <p>不妨定義 <span class="math inline">\(dp[i][j][k]\)</span>
 代表目前單獨處理第 <span class="math inline">\(j\)</span> 個字元，點
