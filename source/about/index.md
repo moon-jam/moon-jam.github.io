@@ -33,8 +33,9 @@ comments: false
 ## 做過的專案
 
 - AI Vtuber (開發中) [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
+- 桌遊 Heroes of the GLOBE (2024 Nasa Space Apps Challenge) [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
 - picoCTF Gen Score Extension [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
-- 學期評語生成器 網頁 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/AI_Gen_Semester_Comments_Tool) / [<i class="fa-solid fa-link"></i> 網站](https://moon-jam.github.io/AI_Gen_Semester_Comments_Tool/)
+- 學期評語生成器 網頁 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/AI_Gen_Semester_Comments_Tool) / [<i class="fa-regular fa-window-restore"></i>  網站](https://moon-jam.github.io/AI_Gen_Semester_Comments_Tool/)
 - 「新聞產銷履歷」的 Chrome 插件 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/News-Traceability) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
 - Hexo renderer-pandoc 的 header-link-filter [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/hexo-renderer-pandoc_header-link-filter)
 - Discord 遠端 WOL(Wake On Lan) 機器人 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/discord-bot-Remote-Wake-On-LAN)
@@ -45,19 +46,26 @@ comments: false
 
 ## 活動參與
 
-- IThome 2024 鐵人賽 - 生成式 AI - AI VTuber 的完善之路 (進行中)
-- IThome 2024 鐵人賽 - 佛心分享-刷題不只是刷題 - 一直刷 CTF (進行中)
-- 2024 GenAI Stars生成式AI百工百業應用選拔【創意創客組】入圍複審團隊 * 2組 (進行中)
+- 2025 SITCON - 行銷組副組長 (進行中)
 - 2024 人工智慧高中職進階人才培育 - 學員 (進行中)
+- MOPCON 2024 - 場務組員
+- IThome 2024 鐵人賽 - 佛心分享-刷題不只是刷題 - 一直刷 CTF
+- 2024 GenAI Stars生成式AI百工百業應用選拔【創意創客組】[🐼 Blog](/2024_gai_stars)
+  - 入圍複審團隊 * 2
+  - 企業挑戰賽首獎(愛爾達科技股份有限公司) * 1
+  - 高中職組特優 * 1
+  - 網路人氣獎 * 1
 - 2024 吳健雄科學營 - 學員 - 圖隊創意海報佳作 [🐼 Blog](/2024_WCS_Camp)
 - 2024 AIS3 新型態資安實務暑期課程 - 學員 [🐼 Blog](/2024_AIS3)
 - 2024 SITCON Camp - 隊輔 [<i class="fab fa-github"></i> 我們小隊黑客松成果](https://github.com/moon-jam/SITCON-Camp-2024-Hackathon-Team5-Public) [🐼 Blog](/2024_SITCON_Camp)
 - 2024 g0v Summit - 會眾
 - 2024 SITCON - 會眾
 - 2024 FRC Southern Cross Regional - 程控 [🐼 Blog](/2024_FRC_Southern_Cross_Regional)
-- 2023 台北市資訊學科能力競賽 - 佳作
+- 2024 臺灣國際資訊奧林匹亞 (TOI) 初選 - 64 名
+- 2023 臺北市資訊學科能力競賽 - 佳作 [🐼 Blog](/thspc2023)
+- 2023 臺北市立成功高級中學校內資訊學科能力競賽 - 二等獎（第六名）
 - 2023 FRC 台灣區季後賽 - 冠軍聯盟 [🐼 Blog](/2023_FRC_Taiwan_Playoff)
-- 2023 聽見新課綱 翻轉的聲音 - 跨域學習 - 講者
+- 2023 聽見新課綱 翻轉的聲音 - 跨域學習 - 講者 [<i class="fa fa-pager"></i> Slide](https://www.canva.com/design/DAGVKV-EPwE/QICj-8YZfYYPbLbIWAz4iA/view?utm_content=DAGVKV-EPwE&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 - 2023 FRC Long Island Regional #1 - 隊長 [🐼 Blog](/2023_FRC_Long_Island_Regional_1.md)
 - 2023 資訊之芽算法班結業
 - 2023 大學與高中再探學習歷程檔案分享會暨論壇 - 講者
