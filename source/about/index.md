@@ -34,6 +34,7 @@ comments: false
 
 - AI Vtuber (開發中) [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
 - 桌遊 Heroes of the GLOBE (2024 Nasa Space Apps Challenge) [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
+- 淑女車大改裝 [<i class="fa-brands fa-youtube"></i> Youtube](https://youtube.com/playlist?list=PL5RNFkGeLf8HFmvxLRF-yQR8ZrSIp7u0Q&si=d1RsDaTF4LteagcS)
 - picoCTF Gen Score Extension [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
 - 學期評語生成器 網頁 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/AI_Gen_Semester_Comments_Tool) / [<i class="fa-regular fa-window-restore"></i>  網站](https://moon-jam.github.io/AI_Gen_Semester_Comments_Tool/)
 - 「新聞產銷履歷」的 Chrome 插件 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/News-Traceability) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
