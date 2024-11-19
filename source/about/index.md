@@ -49,6 +49,7 @@ comments: false
 
 - 2025 SITCON - 行銷組副組長 (進行中)
 - 2024 人工智慧高中職進階人才培育 - 學員 (進行中)
+- 2024 NUKCON November - 講者 [<i class="fa fa-pager"></i> Slide](https://docs.google.com/presentation/d/1r9wwS_c4ylUVc5wpdrptx5rfRI_jap0dct6g0dfj40s/edit?usp=sharing) [<i class="fa-brands fa-instagram"></i> Video](https://www.instagram.com/p/DCjb60wyRfa/)
 - MOPCON 2024 - 場務組員
 - IThome 2024 鐵人賽 - 佛心分享-刷題不只是刷題 - 一直刷 CTF
 - 2024 GenAI Stars生成式AI百工百業應用選拔【創意創客組】[🐼 Blog](/2024_gai_stars)
