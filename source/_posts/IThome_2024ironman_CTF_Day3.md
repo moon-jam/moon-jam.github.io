@@ -10,6 +10,7 @@ categories:
 abbrlink: 9481
 date: 2024-09-06
 lang:
+hidden: true
 ---
 
 ## 前言
@@ -169,3 +170,14 @@ io.interactive()
 ### LAB 6 – b33fer overflow
 
 這邊聽不是很懂，有大概理解它的原理就是要把 stack 塞爆，一路塞到 return addr 的位置，這邊的題目是要跳到 `win` 的地方，然後就會出現 flag，但我其實不太知道實作細節，所以目前就先不寫他了，之後便更強了再說 (主要是今天死線快到了，來不及研究 lol)
+
+## 參考資料
+
+- [【成大資安社社課】手把手Python教學 --- 從入門到入侵](https://youtu.be/-cMOv9QudOk?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】WEB 1](https://youtu.be/N60VGmhfhy0?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】WEB 2](https://youtu.be/PqydmB-IoYc?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】不是web3.0的 web3 - Vincent55](https://youtu.be/xjnAnrfApJo?list=PLFFwfkaPB2mqsfIQvdoT6xc0CziXhmrEV)
+- [【成大資安社社課】Crypto 1](https://youtu.be/nVXA9S9Y07M?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】Crypto 2](https://youtu.be/LtWiQxbMjwg?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】Linux 基礎指令與使用者管理](https://youtu.be/8WVrUqjBsRE?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】淺談網路與 H T T P](https://youtu.be/pNhHXhPkNcE?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)

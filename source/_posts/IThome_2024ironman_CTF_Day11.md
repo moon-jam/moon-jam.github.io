@@ -7,8 +7,8 @@ tags:
 categories:
   - IThome 2024 鐵人賽
   - 一直刷 CTF
-abbrlink: 9481
-date: 
+abbrlink: 53796
+date: 2024-09-14 00:00:00
 lang:
 ---
 
@@ -17,9 +17,10 @@ lang:
 本日進度：
 
 - [x] 6 題 web
-- [ ] 
 
 <!--more-->
+
+## 前言
 
 ## Writeup
 
@@ -91,5 +92,13 @@ Bingo~ 到 `/.DS_Store` 就看到最終的 Flag 了
 
 ![Image](https://i.imgur.com/BrJ1KTU.png)
 
-## 上課紀錄
+## 參考資料
 
+- [【成大資安社社課】手把手Python教學 --- 從入門到入侵](https://youtu.be/-cMOv9QudOk?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】WEB 1](https://youtu.be/N60VGmhfhy0?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】WEB 2](https://youtu.be/PqydmB-IoYc?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】不是web3.0的 web3 - Vincent55](https://youtu.be/xjnAnrfApJo?list=PLFFwfkaPB2mqsfIQvdoT6xc0CziXhmrEV)
+- [【成大資安社社課】Crypto 1](https://youtu.be/nVXA9S9Y07M?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】Crypto 2](https://youtu.be/LtWiQxbMjwg?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】Linux 基礎指令與使用者管理](https://youtu.be/8WVrUqjBsRE?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
+- [【成大資安社社課】淺談網路與 H T T P](https://youtu.be/pNhHXhPkNcE?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z)
