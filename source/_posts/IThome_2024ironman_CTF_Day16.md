@@ -92,7 +92,7 @@ convertor: string.rot13, convert.base64-encode, convert.base64-decode, zlib.dela
 
 ### Lab - lfi
 
-將 flag.php 用 base64 列印出來之後再解密就能得到 Flag 了
+將 flag.php 用 base64 列印 (`?page=php://filter/convert.base64-encode/resource=flag`) 出來之後再解密就能得到 Flag 了
 
 ![Image](https://i.imgur.com/RzdCCsO.png)
 
