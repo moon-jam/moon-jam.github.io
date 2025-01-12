@@ -5196,6 +5196,75 @@ b3 --1--&gt; t</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>SEO 配置 (搜尋引擎最佳化)</title>
+    <url>/SEO-Search-Engine-Optimization/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>什麼是 SEO 呢？</p>
+<blockquote>
+<p>搜尋引擎最佳化（英語：search engine optimization，縮寫為 SEO）是透過了解搜尋引擎的運作規則來調整網站，以及提高目的網站在有關搜尋引擎內排名的方式。(摘自維基百科)</p>
+</blockquote>
+<p>SEO 優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓更多人看到的過程，接下來我會先從怎麼知道目前網頁的 SEO 狀況，再一一列舉優化的方法，如果只是想要知道如何能在 google 上搜尋到自己網頁的人可以直接看最後一項 <a href="/SEO-Search-Engine-Optimization/#google-search-console">google search console</a> 的使用方式。</p>
+<span id="more"></span>
+
+<ol>
+<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E7%9B%AE%E5%89%8Dseo%E7%8B%80%E6%B3%81">網頁目前 SEO 狀況</a></li>
+<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E5%84%AA%E5%8C%96%E6%96%B9%E6%B3%95">網頁優化方法</a><br>  2.1. <a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E5%9D%80">網址</a><br>  2.2. <a href="/SEO-Search-Engine-Optimization/#%E6%96%B0%E5%A2%9Edescription">新增 description</a><br>  2.3. <a href="/SEO-Search-Engine-Optimization/#nofollow">Nofollow</a><br>  2.4. <a href="/SEO-Search-Engine-Optimization/#sitemap">sitemap</a><br>  2.5. <a href="/SEO-Search-Engine-Optimization/#robots.txt">robots.txt</a><br>  2.6. <a href="/SEO-Search-Engine-Optimization/#google-search-console">Google Search Console</a></li>
+</ol>
+<h2 id="網頁目前SEO狀況"><a href="#網頁目前SEO狀況" class="headerlink" title="網頁目前SEO狀況"></a>網頁目前 SEO 狀況</h2><p>要優化前當然要先看看自己的目前的狀況，可以到 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a>，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況<br><img data-src="https://i.imgur.com/vyUXRfU.png" alt="以我的網頁為例"><br>另外可以搜尋 <code>site:網域</code>，看看自己的網站是否有被收錄到 google 內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題<br><img data-src="https://i.imgur.com/kftLZgg.png" alt="搜尋site:網域"></p>
+<h2 id="網頁優化方法"><a href="#網頁優化方法" class="headerlink" title="網頁優化方法"></a>網頁優化方法</h2><h3 id="網址"><a href="#網址" class="headerlink" title="網址"></a>網址</h3><p>搜尋引擎不喜歡過長或是索引過多的網址 (例如說 <code>https://example.com/abc/def/ghi/jkl/mn</code>)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是 <code>success@SEO-Search-Engine-Optimization.md</code>，如果覺得這樣太麻煩的話可以使用 <a href="https://github.com/rozbo/hexo-abbrlink">abbrlink 插件</a><br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="把網址設定成檔案名稱"></p>
+<h3 id="新增description"><a href="#新增description" class="headerlink" title="新增description"></a>新增 description</h3><p>添加 description 可以讓使用者更快速了解你的文章在講什麼，所以對 SEO 也是很重要的部分，而我們需要分別在首頁和文章都個別設定相關的描述</p>
+<p><span id="inline-blue">首頁</span><br>到最外層的<code>_config.yml</code> 去修改 description<br><img data-src="https://i.imgur.com/ory8GYA.png" alt="修改最外層_config.yml的description"></p>
+<p><span id="inline-blue">文章</span><br>要新增文章的 description 有兩中方法，一個是在文章最上端的細節設定新增 <code>description: 你的description</code>，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作 description，作法很簡單，在前言的底下新增一行 <code>&lt;!--more--&gt;</code>，就完成了<br><img data-src="https://i.imgur.com/JKfxDSQ.png" alt="新增<!--more-->作為description"></p>
+<p>另外補充，可以在主題內的<code>_config.yml</code>，將 <code>read_more_btn</code> 設定為 <code>true</code>，如此一來在瀏覽你的網站時，就只會將文章中 description 的部分呈現出來，讓可讀性更高<br><img data-src="https://i.imgur.com/meLFbHF.png" alt="將read_more_btn設定為true"><br><img data-src="https://i.imgur.com/FoJcPqo.png" alt="在網頁就會出現閱讀全文的按鈕"></p>
+<h3 id="Nofollow"><a href="#Nofollow" class="headerlink" title="Nofollow"></a>Nofollow</h3><p>關於 nofollow 是什麼詳細可以看<a href="https://welly.tw/serp-rank-optimization/what-is-nofollow">這篇文章</a>，總之就是避免你的搜尋引擎權重值被別人分走，使用的是這個<a href="https://github.com/hexojs/hexo-filter-nofollow">插件</a>，如果沒有要設定什麼特別的東西的話，直接執行 <code>npm install hexo-filter-nofollow</code>，就完成了</p>
+<h3 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h3><p>sitemap 就是用來告訴搜尋引擎我這個網站有哪些網頁，方便搜尋引擎索引，要使用的插件是<a href="https://github.com/hexojs/hexo-generator-sitemap">這個</a>，執行 <code>npm install hexo-generator-sitemap</code> 下載插件<br>接著到最外層的<code>_config.yml</code>，添加以下程式碼就完成了</p>
+<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以試試看<code>你的網址/sitemap.xml</code>（如果是在本機跑的話應該就是 <code>localhost:4000/sitemap.xml</code>，有沒有出現東西，有的話就是成功了</p>
+<h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>到最外層資料夾中的 <code>source</code> 新增一個檔案 <code>robots.txt</code><br><img data-src="https://i.imgur.com/Lepvzrl.png" alt="新增robots.txt"><br>接下來再 <code>robots.txt</code> 內貼上以下內容，記得 Sitemap 後面要改成你自己的網址</p>
+<figure class="highlight plaintext"><figcaption><span>robots.txt</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/ </span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的網址/sitemap.xml</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p><span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，<code>*</code> 就是全部都可以<br><span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有 <code>Allow: /</code> 就代表全部都可以，後面那些都是保平安用的（xd<br><span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的<br><span id="inline-blue">Sitemap</span> 就是上面講到的 sitemap.xml  </p>
+<h3 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h3><p>這個是最重要的一步，前面那些事讓你的 SEO 更好，但如果沒有這個你的網頁大概根本搜尋不到，進入 <a href="https://search.google.com/search-console/about">Google Search Console</a>，新增資源<br><img data-src="https://i.imgur.com/tw67jVX.png" alt="新增資源"></p>
+<p>如果是使用 github page 的就只能用右邊的那個，他會叫你把一個 html 檔放到你的網頁中，你就將它下載，然後儲存到 <code>themes/NexT(或你用其他主題)/source</code>，重新部署之後稍等一下應該就完成了</p>
+<p>如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的 TXT 紀錄複製下來，然後添加網域的 DNS 設定，我這裡是用 namecheap，各家的使用方式也都大同小異，新增 <code>TXT Record</code>，<code>Host</code> 設定 <code>@</code>，<code>Value</code> 設定剛剛複製的 TXT 紀錄，幾分鐘後就會通過驗證了</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/4XAblPy.png" alt="複製TXT紀錄"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/y9sKq0R.png" alt="DNS設定"></div></div></div>
+
+<p>進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明</p>
+<p><span id="inline-blue">搜尋網頁索引狀態</span><br>可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊<code>要求建立索引</code>，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上<br><img data-src="https://i.imgur.com/sifijQS.png" alt="搜尋網頁索引狀態"></p>
+<p><span id="inline-blue">檢查網頁索引狀態</span><br>這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態<br><img data-src="https://i.imgur.com/saKZCae.png" alt="檢查網頁索引狀態"></p>
+<p><span id="inline-blue">新增 Sitemap</span><br>在這個頁面就是用來把之前生成的 Sitemap 交給 google 看，讓他更清楚你的網頁們<br><img data-src="https://i.imgur.com/CrguGDg.png" alt="新增Sitemap"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你的網頁現在已經可以在 google 上被查詢上了，可以在使用 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a> 看看 SEO 的分數有沒有上升，也可以看他說你哪個地方不足去修正，分數應該就可以拿到幾乎 100 的分數了，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
+<li><p>側邊欄</p>
+<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
+</li>
+<li><p><a href="/NexT-footer">頁底</a></p>
+</li>
+<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
+</li>
+<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
+</li>
+<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
+</li>
+<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
+</li>
+<li><p>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</p>
+</li>
+<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
+</li>
+<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教學文</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-NexT 一些好用的酷東東</title>
     <url>/NexT-some-cool-tools/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在這篇中所講述的是一些可以沒有，但是有的話<strong>可能</strong>會很方便的酷東東</p>
@@ -5301,75 +5370,6 @@ class Class10 {
 <li><p><a href="/SEO-Search-Engine-Optimization">SEO：搜尋引擎最佳化 (Search Engine Optimization)</a></p>
 </li>
 <li><p> 剩下的一些小工具 ✅</p>
-</li>
-<li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教學文</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SEO 配置 (搜尋引擎最佳化)</title>
-    <url>/SEO-Search-Engine-Optimization/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>什麼是 SEO 呢？</p>
-<blockquote>
-<p>搜尋引擎最佳化（英語：search engine optimization，縮寫為 SEO）是透過了解搜尋引擎的運作規則來調整網站，以及提高目的網站在有關搜尋引擎內排名的方式。(摘自維基百科)</p>
-</blockquote>
-<p>SEO 優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓更多人看到的過程，接下來我會先從怎麼知道目前網頁的 SEO 狀況，再一一列舉優化的方法，如果只是想要知道如何能在 google 上搜尋到自己網頁的人可以直接看最後一項 <a href="/SEO-Search-Engine-Optimization/#google-search-console">google search console</a> 的使用方式。</p>
-<span id="more"></span>
-
-<ol>
-<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E7%9B%AE%E5%89%8Dseo%E7%8B%80%E6%B3%81">網頁目前 SEO 狀況</a></li>
-<li><a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E9%A0%81%E5%84%AA%E5%8C%96%E6%96%B9%E6%B3%95">網頁優化方法</a><br>  2.1. <a href="/SEO-Search-Engine-Optimization/#%E7%B6%B2%E5%9D%80">網址</a><br>  2.2. <a href="/SEO-Search-Engine-Optimization/#%E6%96%B0%E5%A2%9Edescription">新增 description</a><br>  2.3. <a href="/SEO-Search-Engine-Optimization/#nofollow">Nofollow</a><br>  2.4. <a href="/SEO-Search-Engine-Optimization/#sitemap">sitemap</a><br>  2.5. <a href="/SEO-Search-Engine-Optimization/#robots.txt">robots.txt</a><br>  2.6. <a href="/SEO-Search-Engine-Optimization/#google-search-console">Google Search Console</a></li>
-</ol>
-<h2 id="網頁目前SEO狀況"><a href="#網頁目前SEO狀況" class="headerlink" title="網頁目前SEO狀況"></a>網頁目前 SEO 狀況</h2><p>要優化前當然要先看看自己的目前的狀況，可以到 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a>，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況<br><img data-src="https://i.imgur.com/vyUXRfU.png" alt="以我的網頁為例"><br>另外可以搜尋 <code>site:網域</code>，看看自己的網站是否有被收錄到 google 內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題<br><img data-src="https://i.imgur.com/kftLZgg.png" alt="搜尋site:網域"></p>
-<h2 id="網頁優化方法"><a href="#網頁優化方法" class="headerlink" title="網頁優化方法"></a>網頁優化方法</h2><h3 id="網址"><a href="#網址" class="headerlink" title="網址"></a>網址</h3><p>搜尋引擎不喜歡過長或是索引過多的網址 (例如說 <code>https://example.com/abc/def/ghi/jkl/mn</code>)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是 <code>success@SEO-Search-Engine-Optimization.md</code>，如果覺得這樣太麻煩的話可以使用 <a href="https://github.com/rozbo/hexo-abbrlink">abbrlink 插件</a><br><img data-src="https://i.imgur.com/vd9WIxo.png" alt="把網址設定成檔案名稱"></p>
-<h3 id="新增description"><a href="#新增description" class="headerlink" title="新增description"></a>新增 description</h3><p>添加 description 可以讓使用者更快速了解你的文章在講什麼，所以對 SEO 也是很重要的部分，而我們需要分別在首頁和文章都個別設定相關的描述</p>
-<p><span id="inline-blue">首頁</span><br>到最外層的<code>_config.yml</code> 去修改 description<br><img data-src="https://i.imgur.com/ory8GYA.png" alt="修改最外層_config.yml的description"></p>
-<p><span id="inline-blue">文章</span><br>要新增文章的 description 有兩中方法，一個是在文章最上端的細節設定新增 <code>description: 你的description</code>，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作 description，作法很簡單，在前言的底下新增一行 <code>&lt;!--more--&gt;</code>，就完成了<br><img data-src="https://i.imgur.com/JKfxDSQ.png" alt="新增<!--more-->作為description"></p>
-<p>另外補充，可以在主題內的<code>_config.yml</code>，將 <code>read_more_btn</code> 設定為 <code>true</code>，如此一來在瀏覽你的網站時，就只會將文章中 description 的部分呈現出來，讓可讀性更高<br><img data-src="https://i.imgur.com/meLFbHF.png" alt="將read_more_btn設定為true"><br><img data-src="https://i.imgur.com/FoJcPqo.png" alt="在網頁就會出現閱讀全文的按鈕"></p>
-<h3 id="Nofollow"><a href="#Nofollow" class="headerlink" title="Nofollow"></a>Nofollow</h3><p>關於 nofollow 是什麼詳細可以看<a href="https://welly.tw/serp-rank-optimization/what-is-nofollow">這篇文章</a>，總之就是避免你的搜尋引擎權重值被別人分走，使用的是這個<a href="https://github.com/hexojs/hexo-filter-nofollow">插件</a>，如果沒有要設定什麼特別的東西的話，直接執行 <code>npm install hexo-filter-nofollow</code>，就完成了</p>
-<h3 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h3><p>sitemap 就是用來告訴搜尋引擎我這個網站有哪些網頁，方便搜尋引擎索引，要使用的插件是<a href="https://github.com/hexojs/hexo-generator-sitemap">這個</a>，執行 <code>npm install hexo-generator-sitemap</code> 下載插件<br>接著到最外層的<code>_config.yml</code>，添加以下程式碼就完成了</p>
-<figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以試試看<code>你的網址/sitemap.xml</code>（如果是在本機跑的話應該就是 <code>localhost:4000/sitemap.xml</code>，有沒有出現東西，有的話就是成功了</p>
-<h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>到最外層資料夾中的 <code>source</code> 新增一個檔案 <code>robots.txt</code><br><img data-src="https://i.imgur.com/Lepvzrl.png" alt="新增robots.txt"><br>接下來再 <code>robots.txt</code> 內貼上以下內容，記得 Sitemap 後面要改成你自己的網址</p>
-<figure class="highlight plaintext"><figcaption><span>robots.txt</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/ </span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的網址/sitemap.xml</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p><span id="inline-blue">User-agent</span> 是代表要讓哪些搜尋引擎抓取你的網頁，<code>*</code> 就是全部都可以<br><span id="inline-blue">Allow</span> 這裡是代表允許搜尋引擎抓取網頁的哪些部分，照理來說如果有 <code>Allow: /</code> 就代表全部都可以，後面那些都是保平安用的（xd<br><span id="inline-blue">Disallow</span> 這裡就是避免搜尋引擎抓到你的字體、程式之類的<br><span id="inline-blue">Sitemap</span> 就是上面講到的 sitemap.xml  </p>
-<h3 id="Google-Search-Console"><a href="#Google-Search-Console" class="headerlink" title="Google Search Console"></a>Google Search Console</h3><p>這個是最重要的一步，前面那些事讓你的 SEO 更好，但如果沒有這個你的網頁大概根本搜尋不到，進入 <a href="https://search.google.com/search-console/about">Google Search Console</a>，新增資源<br><img data-src="https://i.imgur.com/tw67jVX.png" alt="新增資源"></p>
-<p>如果是使用 github page 的就只能用右邊的那個，他會叫你把一個 html 檔放到你的網頁中，你就將它下載，然後儲存到 <code>themes/NexT(或你用其他主題)/source</code>，重新部署之後稍等一下應該就完成了</p>
-<p>如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的 TXT 紀錄複製下來，然後添加網域的 DNS 設定，我這裡是用 namecheap，各家的使用方式也都大同小異，新增 <code>TXT Record</code>，<code>Host</code> 設定 <code>@</code>，<code>Value</code> 設定剛剛複製的 TXT 紀錄，幾分鐘後就會通過驗證了</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://i.imgur.com/4XAblPy.png" alt="複製TXT紀錄"></div><div class="group-picture-column"><img data-src="https://i.imgur.com/y9sKq0R.png" alt="DNS設定"></div></div></div>
-
-<p>進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明</p>
-<p><span id="inline-blue">搜尋網頁索引狀態</span><br>可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊<code>要求建立索引</code>，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上<br><img data-src="https://i.imgur.com/sifijQS.png" alt="搜尋網頁索引狀態"></p>
-<p><span id="inline-blue">檢查網頁索引狀態</span><br>這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態<br><img data-src="https://i.imgur.com/saKZCae.png" alt="檢查網頁索引狀態"></p>
-<p><span id="inline-blue">新增 Sitemap</span><br>在這個頁面就是用來把之前生成的 Sitemap 交給 google 看，讓他更清楚你的網頁們<br><img data-src="https://i.imgur.com/CrguGDg.png" alt="新增Sitemap"></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>恭喜你的網頁現在已經可以在 google 上被查詢上了，可以在使用 <a href="https://pagespeed.web.dev/">PageSpeed Insights</a> 看看 SEO 的分數有沒有上升，也可以看他說你哪個地方不足去修正，分數應該就可以拿到幾乎 100 的分數了，如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～</p>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ol>
-<li><p>側邊欄</p>
-<p> － <a href="/NexT-sidebar-basic">基礎配置 (關於、標籤、分類、歸檔、搜尋、頭像、個人相關連結)</a><br> － <a href="/NexT-sidebar-switch-lang">切換語言</a></p>
-</li>
-<li><p><a href="/NexT-footer">頁底</a></p>
-</li>
-<li><p><a href="/NexT-utterances-comment-box">utterances 留言板</a></p>
-</li>
-<li><p><a href="/NexT-google-analytics">Google Analytics 統計網站資訊</a></p>
-</li>
-<li><p><a href="/NexT-dark-light-mode">日 / 夜模式</a></p>
-</li>
-<li><p><a href="/NexT-live2d">live2d 角色（就是網頁右下角那隻可愛的狗狗）</a></p>
-</li>
-<li><p>SEO：搜尋引擎最佳化 (Search Engine Optimization) ✅</p>
-</li>
-<li><p><a href="/NexT-some-cool-tools">剩下的一些小工具</a></p>
 </li>
 <li><p><a href="/Hexo-NexT_custom_domain">自訂網域</a></p>
 </li>
