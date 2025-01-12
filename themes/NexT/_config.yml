@@ -38,8 +38,8 @@ custom_file_path:
 # Schemes
 # scheme: Muse
 # scheme: Mist
-scheme: Pisces
-# scheme: Gemini
+# scheme: Pisces
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -264,7 +264,7 @@ excerpt_description: true
 excerpt_length: 350
 
 # Read more button
-# If true, the read more button will be displayed in excerpt section.
+# If true, the read more button will be displayed in xcerpt section.
 read_more_btn: true
 
 # Post meta display settings
@@ -444,7 +444,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Roboto&display=swap
+  host: https://fonts.googleapis.com
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -454,7 +454,7 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Roboto
+    family: Comic Neue
     size:
 
   # Font settings for site title (.site-title).
