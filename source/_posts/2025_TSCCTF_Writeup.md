@@ -14,7 +14,7 @@ date: 2025-01-17 00:00:00
 lang:
 ---
 
-在 Qualified Scoreboard 第五，全部認得地 41，嗚嗚被虐爛了
+在 Qualified Scoreboard 第五，全部人的第 41，嗚嗚被虐爛了
 
 ![Qualified Scoreboard](https://i.imgur.com/IGyLku7.png)
 
