@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://moon-jam.me/2025_TSCCTF_Writeup/</loc>
+    <lastmod>2025-01-17</lastmod>
+  </url>
+  <url>
     <loc>https://moon-jam.me/IThome_2024ironman_CTF_Day22/</loc>
     <lastmod>2025-01-12</lastmod>
   </url>
