@@ -17,6 +17,7 @@ comments: false
 [<i class="fas fa-envelope"></i> Gmail](mailto:wu.messi.wu@gmail.com)  
 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam)  
 [<i class="fab fa-instagram"></i> Instagram](https://www.instagram.com/mooooonjam/)
+[<i class="fab fa-telegram"></i> Telegram](https://t.me/moonjam0322)
 
 ## 我做些什麼
 
@@ -47,20 +48,21 @@ comments: false
 
 ## 活動參與
 
-- 2025 SITCON - 行銷組副組長 (進行中)
 - 2024 人工智慧高中職進階人才培育 - 學員 (進行中)
+- 2025 SITCON - 行銷組副組長
 - 2024 NUKCON November - 講者 [<i class="fa fa-pager"></i> Slide](https://docs.google.com/presentation/d/1r9wwS_c4ylUVc5wpdrptx5rfRI_jap0dct6g0dfj40s/edit?usp=sharing) [<i class="fa-brands fa-instagram"></i> Video](https://www.instagram.com/p/DCjb60wyRfa/)
 - MOPCON 2024 - 場務組員
+- PyCON 2024 - 會眾
 - IThome 2024 鐵人賽 - 佛心分享-刷題不只是刷題 - 一直刷 CTF
 - 2024 GenAI Stars生成式AI百工百業應用選拔【創意創客組】[🐼 Blog](/2024_gai_stars)
   - 入圍複審團隊 * 2
   - 企業挑戰賽首獎(愛爾達科技股份有限公司) * 1
   - 高中職組特優 * 1
   - 網路人氣獎 * 1
+- 2024 HITCON - 會眾
 - 2024 吳健雄科學營 - 學員 - 圖隊創意海報佳作 [🐼 Blog](/2024_WCS_Camp)
 - 2024 AIS3 新型態資安實務暑期課程 - 學員 [🐼 Blog](/2024_AIS3)
 - 2024 SITCON Camp - 隊輔 [<i class="fab fa-github"></i> 我們小隊黑客松成果](https://github.com/moon-jam/SITCON-Camp-2024-Hackathon-Team5-Public) [🐼 Blog](/2024_SITCON_Camp)
-- 2024 g0v Summit - 會眾
 - 2024 SITCON - 會眾
 - 2024 FRC Southern Cross Regional - 程控 [🐼 Blog](/2024_FRC_Southern_Cross_Regional)
 - 2024 臺灣國際資訊奧林匹亞 (TOI) 初選 - 64 名
