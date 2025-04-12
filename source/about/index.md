@@ -16,7 +16,7 @@ comments: false
 <i class="fa-solid fa-paw"></i> 我的名字叫巫玟槿，念快一點就變成 Moon Jam 了  
 [<i class="fas fa-envelope"></i> Gmail](mailto:wu.messi.wu@gmail.com)  
 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam)  
-[<i class="fab fa-instagram"></i> Instagram](https://www.instagram.com/mooooonjam/)
+[<i class="fab fa-instagram"></i> Instagram](https://www.instagram.com/mooooonjam/)  
 [<i class="fab fa-telegram"></i> Telegram](https://t.me/moonjam0322)
 
 ## 我做些什麼
@@ -25,15 +25,15 @@ comments: false
 - 資訊科學：演算法 / 資安 / 機器學習
 - 工業繪圖：Fusion 360 / Inventor  
 - 機器人製作：Arduino / FRC  
-- 運動：跑步 / 跳繩  
-- 投資：技術分析 (SMC)  
-- 其他：讀小說 / 看動畫 / 玩遊戲
+- 運動：跑步 / 跳繩 / 桌球 
+- 其他：小說 / 動畫
 
 歡迎大家來跟我交朋友～
 
 ## 做過的專案
 
 - AI Vtuber (開發中) [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
+- 成大餐廳選隨機擇器 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/nckufood) / [<i class="fa-regular fa-window-restore"></i>  網站](https://nckufood.moon-jam.me)
 - 桌遊 Heroes of the GLOBE (2024 Nasa Space Apps Challenge) [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
 - 淑女車大改裝 [<i class="fa-brands fa-youtube"></i> Youtube](https://youtube.com/playlist?list=PL5RNFkGeLf8HFmvxLRF-yQR8ZrSIp7u0Q&si=d1RsDaTF4LteagcS)
 - picoCTF Gen Score Extension [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
