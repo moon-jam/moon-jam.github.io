@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('.task-list input[type="checkbox"]').forEach(e=>{e.nextSibling&&e.nextSibling.nodeType===Node.TEXT_NODE&&""===e.nextSibling.nodeValue.trim()||e.insertAdjacentHTML("afterend","&nbsp;")})});
