@@ -179,7 +179,7 @@ fireworks:
 pandoc:
   args:
     - "-f"
-    - "markdown"
+    - "markdown+hard_line_breaks"
     - "-t"
     - "html"
     - "--mathjax"
