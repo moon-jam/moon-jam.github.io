@@ -56,7 +56,7 @@ if (data.type === 'guess') {
 }
 ```
 
-所以就只要用 BurpSuit 修改 Websocket 的內容
+所以就只要用 BurpSuite 修改 Websocket 的內容
 
 ```json
 {"type":"backdoor","number":100,"command":"SHOW_ME_THE_ANSWER_PLZ"}
