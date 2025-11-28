@@ -32,8 +32,8 @@ comments: false
 
 ## 做過的專案
 
-- AI Vtuber （開發中） [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
-- 成大餐廳選隨機擇器 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/nckufood) / [<i class="fa-regular fa-window-restore"></i>  網站](https://nckufood.moon-jam.me)
+- AI Vtuber（開發中）[<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
+- 成大餐廳選隨機擇器（開發中）[<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/nckufood) / [<i class="fa-regular fa-window-restore"></i>  網站](https://nckufood.moon-jam.me)
 - 桌遊 Heroes of the GLOBE (2024 Nasa Space Apps Challenge) [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
 - 淑女車大改裝 [<i class="fa-brands fa-youtube"></i> YouTube](https://youtube.com/playlist?list=PL5RNFkGeLf8HFmvxLRF-yQR8ZrSIp7u0Q&si=d1RsDaTF4LteagcS)
 - picoCTF Gen Score Extension [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
@@ -48,11 +48,16 @@ comments: false
 
 ## 活動參與
 
+- 2026 SITCON 行銷組組長 (進行中)
+- 2025 NCKU FASE 成大賽車隊 - Arduino 入門 - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/ncku_fsae_arduino_beginner_course/)
+- 2025 MOPCON - Lightning Talk 講者 [<i class="fa fa-pager"></i> Slide](http://p4nd4.dev/mopcon2025-lt)
+- 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（二） - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/NCKUCTF-2025-linux-course-2)
+- 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（一） - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/NCKUCTF-2025-linux-course-1)
 - 2025 HITCON - 擺攤社群 (SITCON)
 - 2025 AIS3 新型態資安實務暑期課程 - 學員 [🐼 Blog](/2025_AIS3)
 - 2025 SCIST S5 資訊安全培訓課程 - 學員
 - 2025 SITCON Camp - 課程活動組組員
-- 2025 Best AI Awards 智慧創新大賞 【AI 應用類 - 學生組】
+- 2025 Best AI Awards 智慧創新大賞 【AI 應用類 - 學生組】 [<i class="fa-brands fa-youtube"></i> 佳作 Demo 影片](https://youtu.be/4xzv9fTCUpM)
   - 入圍決賽 * 2
   - 佳作 * 1
 - 2025 HPC x AI Winter Camp 高速計算人工智慧冬令營—學員
