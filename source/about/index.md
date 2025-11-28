@@ -15,9 +15,9 @@ comments: false
 
 <i class="fa-solid fa-paw"></i> 我的名字叫巫玟槿，念快一點就變成 Moon Jam 了
 [<i class="fas fa-envelope"></i> Gmail](mailto:wu.messi.wu@gmail.com)
-[<i class="fab fa-github"></i> Github](https://github.com/moon-jam)
+[<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam)
 [<i class="fab fa-instagram"></i> Instagram](https://www.instagram.com/mooooonjam/)
-[<i class="fab fa-telegram"></i> Telegram](https://t.me/moonjam0322)
+[<i class="fab fa-telegram"></i> Telegram](https://t.me/moonjam322)
 
 ## 我做些什麼
 
@@ -33,16 +33,16 @@ comments: false
 ## 做過的專案
 
 - AI Vtuber （開發中） [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
-- 成大餐廳選隨機擇器 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/nckufood) / [<i class="fa-regular fa-window-restore"></i>  網站](https://nckufood.moon-jam.me)
-- 桌遊 Heroes of the GLOBE (2024 Nasa Space Apps Challenge) [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
-- 淑女車大改裝 [<i class="fa-brands fa-youtube"></i> Youtube](https://youtube.com/playlist?list=PL5RNFkGeLf8HFmvxLRF-yQR8ZrSIp7u0Q&si=d1RsDaTF4LteagcS)
-- picoCTF Gen Score Extension [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
-- 學期評語生成器 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/AI_Gen_Semester_Comments_Tool) / [<i class="fa-regular fa-window-restore"></i>  網站](https://ai-comments.moon-jam.me)
-- 「新聞產銷履歷」的 Chrome 插件 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/News-Traceability) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
-- Hexo renderer-pandoc 的 header-link-filter [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/hexo-renderer-pandoc_header-link-filter)
-- Discord 遠端 WOL(Wake On Lan) 機器人 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/discord-bot-Remote-Wake-On-LAN)
-- Discord 猜拳機器人 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/discord-bot-Rock-Paper-Scissors)
-- 線上跳繩競賽系統 [<i class="fab fa-github"></i> Github](https://github.com/moon-jam/Jump_rope)
+- 成大餐廳選隨機擇器 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/nckufood) / [<i class="fa-regular fa-window-restore"></i>  網站](https://nckufood.moon-jam.me)
+- 桌遊 Heroes of the GLOBE (2024 Nasa Space Apps Challenge) [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
+- 淑女車大改裝 [<i class="fa-brands fa-youtube"></i> YouTube](https://youtube.com/playlist?list=PL5RNFkGeLf8HFmvxLRF-yQR8ZrSIp7u0Q&si=d1RsDaTF4LteagcS)
+- picoCTF Gen Score Extension [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/picoCTF-Gen-Score-Extension) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj)
+- 學期評語生成器 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/AI_Gen_Semester_Comments_Tool) / [<i class="fa-regular fa-window-restore"></i>  網站](https://ai-comments.moon-jam.me)
+- 「新聞產銷履歷」的 Chrome 插件 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/News-Traceability) / [<i class="fa-solid fa-bag-shopping"></i> Chrome Web Store](https://chromewebstore.google.com/detail/%E6%96%B0%E8%81%9E%E7%94%A2%E9%8A%B7%E5%B1%A5%E6%AD%B7/kjgmnmealhmifefanoofmddipnjgngpk?hl=zh-TW&authuser=0)
+- Hexo renderer-pandoc 的 header-link-filter [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/hexo-renderer-pandoc_header-link-filter)
+- Discord 遠端 WOL(Wake On Lan) 機器人 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/discord-bot-Remote-Wake-On-LAN)
+- Discord 猜拳機器人 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/discord-bot-Rock-Paper-Scissors)
+- 線上跳繩競賽系統 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/Jump_rope)
 - 參與製作四台 FRC 機器人
   ![由左至右分別為 2022 賽季、2022 自辦模擬賽、2023 賽季、2024 賽季](https://i.imgur.com/OEXIRUA.png)
 
