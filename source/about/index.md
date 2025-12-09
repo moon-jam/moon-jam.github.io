@@ -49,7 +49,8 @@ comments: false
 ## 活動參與
 
 - 2026 SITCON 行銷組組長 (進行中)
-- 2025 NCKU FASE 成大賽車隊 - Arduino 入門 - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/ncku_fsae_arduino_beginner_course/)
+- 2025 NCKU FASE 成大賽車隊 - Arduino 進階 - 教學 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/ncku_fsae_arduino_advance_course/)
+- 2025 NCKU FASE 成大賽車隊 - Arduino 入門 - 教學 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/ncku_fsae_arduino_beginner_course/)
 - 2025 MOPCON - Lightning Talk 講者 [<i class="fa fa-pager"></i> Slide](http://p4nd4.dev/mopcon2025-lt)
 - 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（二） - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/NCKUCTF-2025-linux-course-2)
 - 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（一） - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/NCKUCTF-2025-linux-course-1)
