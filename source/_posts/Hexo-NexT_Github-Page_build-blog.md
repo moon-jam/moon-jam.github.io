@@ -48,7 +48,7 @@ hexo s
 
 ``` no
 git init
-git add.
+git add .
 git commit -m "git init"
 
 git remote add origin Repository_url //Repository_url換成剛剛複製的那個

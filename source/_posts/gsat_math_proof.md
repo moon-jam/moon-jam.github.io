@@ -20,8 +20,8 @@ mathjax: true
 <!--more-->
 🔔建議使用電腦或平板觀看，才能獲得更好的閱讀體驗  
 ✨側邊欄有目錄，點擊即可跳轉╰(*°▽°*)╯
-{% details mode:close 要是用手機的話這邊也有目錄 %}
 
+{% note info 要是用手機的話這邊也有目錄%}
 1. [前言](/gsat_math_proof/#前言)
 2. [實數](/gsat_math_proof/#實數)
 3. [絕對值](/gsat_math_proof/#絕對值)
@@ -40,7 +40,7 @@ mathjax: true
 16. [空間](/gsat_math_proof/#空間)
 17. [參考文獻](/gsat_math_proof/#參考文獻)
 18. [心得](/gsat_math_proof/#心得)
-{% enddetails %}  
+{% endnote %}
 
 ## 實數
 
