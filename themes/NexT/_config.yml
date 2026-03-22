@@ -177,12 +177,12 @@ social:
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  IG: https://www.instagram.com/mooooonjam || fab fa-instagram
-  FB: https://www.facebook.com/moonjam.panda || fab fa-facebook
-  YouTube: https://www.youtube.com/@Moon__Jam || fab fa-youtube
-  Vlog: https://www.youtube.com/@Moon_Jam_Vlog || fab fa-youtube
+  # IG: https://www.instagram.com/mooooonjam || fab fa-instagram
+  # FB: https://www.facebook.com/moonjam.panda || fab fa-facebook
+  # YouTube: https://www.youtube.com/@Moon__Jam || fab fa-youtube
+  # Vlog: https://www.youtube.com/@Moon_Jam_Vlog || fab fa-youtube
   #Skype: skype:yourname?call|chat || fab fa-skype
-  # RSS: /atom.xml || fa fa-rss
+  RSS: /atom.xml || fa fa-rss
 
 social_icons:
   enable: true
@@ -976,4 +976,13 @@ filter_optimize:
   # lower means it will be executed first, default of Hexo is 10
   priority: 12
 
-
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
