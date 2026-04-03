@@ -3,7 +3,11 @@ title: "訂閱 Blog 動態"
 comments: false
 ---
 
-歡迎訂閱我的 Blog！輸入 Email 並點擊「訂閱」，即可收到文章的更新通知。或是可以使用 [此連結](https://follow.it/moon-jam-s-blog?leanpub) 在 Follow.it 上訂閱。
+
+
+歡迎訂閱我的 Blog！你可以透過 [RSS](https://moon-jam.me/atom.xml) 追蹤：[`/atom.xml`](/atom.xml)。
+
+若想用 Email 收到更新通知，可點擊下方訂閱，或使用 [此連結](https://follow.it/moon-jam-s-blog?leanpub) 在 Follow.it 上訂閱。
 
 {% raw %}
 <style>
