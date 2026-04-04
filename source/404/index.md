@@ -7,7 +7,7 @@ permalink: /404.html
 <div style="text-align: center">
   <h1 itemprop="name headline" class="post-title" style="font-size: 27pt; margin-bottom: 6pt;">404 Not Found！</h1>
   本連結已失效，預計將在 <span id="timeout">5</span> 秒後返回 <a href="/">首頁</a>
-  <img src="./images/404.png" style="width: 70%; text-align: center">
+  <img src="./images/404.webp" style="width: 70%; text-align: center">
 </div>
 
 {% raw %}
