@@ -117,7 +117,7 @@ local_search:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/Panda_Me.png
+  url: /images/Panda_Me.webp
   # If true, the avatar will be displayed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
