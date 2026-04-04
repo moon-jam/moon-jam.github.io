@@ -20,7 +20,7 @@ date: 2023-07-04
 ## 更新 2023/7/8
 
 我來放頭像跟favicon嘍～因為不會畫畫，所以學了stable diffusion，不過我電腦很爛，一張512*512的圖就要快一分鐘，但至少結果看起來還不錯，開心開心～
-![頭像](/images/Panda_Me.png)
+![頭像](/images/Panda_Me.webp)
 ![Favicon](/images/favicon_180.png)
 
 ## 再更新 2023/8/13
