@@ -56,9 +56,9 @@ counter:
     one: 目前共有 1 個分類
     other: "目前共有 %d 個分類"
   archive_posts:
-    zero: 沒有文章。
-    one: 目前共有 1 篇文章。
-    other: "目前共有 %d 篇文章。"
+    zero: 沒有文章
+    one: 目前寫了 1 篇文章
+    other: "目前寫了 %d 篇文章"
 state:
   posts: 文章
   tags: 標籤
