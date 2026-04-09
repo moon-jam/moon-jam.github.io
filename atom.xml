@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Moon Jam</rights>
   <subtitle>I'm a panda</subtitle>
   <title>Moon Jam's Blog</title>
-  <updated>2026-04-09T14:29:58.569Z</updated>
+  <updated>2026-04-09T14:54:17.943Z</updated>
   <entry>
     <author>
       <name>Moon Jam</name>
@@ -109,7 +109,7 @@ href="https://wiwi.blog/blog/aspect-ratio">圖片</a>的地方，於是這裡就
 <span id="more"></span>
 <h2 id="關於我的貼文頁面">關於我的<a href="/posts">貼文頁面</a> <a
 href="#關於我的貼文頁面" class="headerlink"></a></h2>
-<p>當初是因為覺得 Fresh RSS 的界面覺得不錯看 (<a
+<p>當初是因為覺得 Fresh RSS 的介面覺得不錯看 (<a
 href="https://wiwi.blog/blog/you-should-use-rss">RSS 是什麼</a>)，還有
 <a href="https://www.jaron.tw/blog/">Jaron
 的貼文頁面</a>，感覺在後面接個 XX 歲蠻酷的，於是就跟我的助手<a
@@ -121,15 +121,15 @@ role="doc-noteref"><sup>1</sup></a>
 src="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-fresh-rss.mp4"
 controls=""><a
 href="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-fresh-rss.mp4">我的
-Fresh RSS 界面</a></video>
-<figcaption aria-hidden="true">我的 Fresh RSS 界面</figcaption>
+Fresh RSS 介面</a></video>
+<figcaption aria-hidden="true">我的 Fresh RSS 介面</figcaption>
 </figure>
 <figure>
 <video
 src="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4"
 controls=""><a
-href="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4">我的貼文界面</a></video>
-<figcaption aria-hidden="true">我的貼文界面</figcaption>
+href="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4">我的貼文介面</a></video>
+<figcaption aria-hidden="true">我的貼文介面</figcaption>
 </figure>
 <p>除此之外，還有蠻多的小改動，調整了<a
 href="https://wiwi.blog/blog/letter-spacing">字距、行距</a>；把超連結顏色；還有原先我的
@@ -158,7 +158,7 @@ href="https://www.jaron.tw/blog/skill-points/">一場「點技能」的遊戲</a
 </blockquote>
 <p>以我的這個貼文的頁面來講好了，我應該花了很多時間在看我的貼文頁面有什麼地方還可以調整、怎麽樣的行距比較好看、超連結要不要調成另一個顏色等等等，更專注在那
 20%
-(這篇文章的寫作內容)，將剩餘的時間拿去寫作業、準備專題等等更值得投入時間的事情上。</p>
+（這篇文章的寫作內容），將剩餘的時間拿去寫作業、準備專題等等更值得投入時間的事情上。</p>
 <h2 id="歲了">20 歲了 <a href="#歲了" class="headerlink"></a></h2>
 <blockquote class="blockquote-center">
 <p>好快</p>
@@ -282,7 +282,7 @@ href="https://wiwi.blog/blog/aspect-ratio">圖片</a>的地方，於是這裡就
 </style>]]>
     </summary>
     <title>嗨，這是我的第一篇貼文</title>
-    <updated>2026-04-09T14:29:58.569Z</updated>
+    <updated>2026-04-09T14:54:17.943Z</updated>
   </entry>
   <entry>
     <author>
