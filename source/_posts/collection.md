@@ -15,7 +15,7 @@ date: 2023-08-28 00:00:00
 {% endcq %}
 <!--more-->
 
-如果有任何想補充的相關資料都歡迎在留言區分享～
+如果有任何想補充的相關資料都歡迎在留言區分享，或直接寫信給我 ([wu.messi.wu@gmail.com](mailto:wu.messi.wu@gmail.com))～
 
 ## AI 相關
 
