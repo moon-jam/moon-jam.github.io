@@ -976,14 +976,3 @@ filter_optimize:
   # set the priority of this plugin,
   # lower means it will be executed first, default of Hexo is 10
   priority: 12
-
-feed:
-  enable: true
-  type: atom
-  path: atom.xml
-  limit: false
-  hub:
-  content: true
-  order_by: -date
-  icon: icon.png
-  autodiscovery: true

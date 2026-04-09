@@ -95,13 +95,13 @@ sticky: true
 
 ## 關於我的[貼文頁面](/posts)
 
-當初是因為覺得 Fresh RSS 的界面覺得不錯看 ([RSS 是什麼](https://wiwi.blog/blog/you-should-use-rss))，還有 [Jaron 的貼文頁面](https://www.jaron.tw/blog/)，感覺在後面接個 XX 歲蠻酷的，於是就跟我的助手[^1] 一同完成了這個頁面，我是真的還蠻喜歡的，沒有什麼動畫，簡單，但該有的都有。
+當初是因為覺得 Fresh RSS 的介面覺得不錯看 ([RSS 是什麼](https://wiwi.blog/blog/you-should-use-rss))，還有 [Jaron 的貼文頁面](https://www.jaron.tw/blog/)，感覺在後面接個 XX 歲蠻酷的，於是就跟我的助手[^1] 一同完成了這個頁面，我是真的還蠻喜歡的，沒有什麼動畫，簡單，但該有的都有。
 
 [^1]: 我的助手是 Claude Code，但我其實應該要我自己寫的，常常做些小工具都會覺得明明自己應該也能做出來，但卻被 AI 搶走了寫程式的樂趣，還浪費時間在跟 AI 抽卡，錯失了幫自己[點更多能](https://www.jaron.tw/blog/skill-points/)的機會
 
-![我的 Fresh RSS 界面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-fresh-rss.mp4)
+![我的 Fresh RSS 介面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-fresh-rss.mp4)
 
-![我的貼文界面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4)
+![我的貼文介面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4)
 
 除此之外，還有蠻多的小改動，調整了[字距、行距](https://wiwi.blog/blog/letter-spacing)；把超連結顏色；還有原先我的 RSS 圖片會因為 [Lazy Load](https://github.com/tuupola/lazyload) 顯示不出來，於是[做了些修正](https://github.com/hexojs/hexo-generator-feed/pull/273)；修正因為 PJAX 讓我的 $LaTeX$ 無法成功 render，這些修改都可以直接看我的[部落格 Commit 記錄](https://github.com/moon-jam/moon-jam.github.io/commits/main/?since=2026-04-03&until=2026-04-09)。
 
@@ -114,7 +114,7 @@ sticky: true
 > 我覺得我需要更好地運用 80/20 法則來進一步優化時間資源的使用——更專注在那些只佔用 20% 的時間，卻創造了 80% 的價值的事上。
 > -- Jaron
 
-以我的這個貼文的頁面來講好了，我應該花了很多時間在看我的貼文頁面有什麼地方還可以調整、怎麽樣的行距比較好看、超連結要不要調成另一個顏色等等等，更專注在那 20% (這篇文章的寫作內容)，將剩餘的時間拿去寫作業、準備專題等等更值得投入時間的事情上。
+以我的這個貼文的頁面來講好了，我應該花了很多時間在看我的貼文頁面有什麼地方還可以調整、怎麽樣的行距比較好看、超連結要不要調成另一個顏色等等等，更專注在那 20% （這篇文章的寫作內容），將剩餘的時間拿去寫作業、準備專題等等更值得投入時間的事情上。
 
 ## 20 歲了
 
