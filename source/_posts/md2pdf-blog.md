@@ -14,6 +14,8 @@ lang: null
 
 ![md2pdf](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/md2pdf-demo.mp4)
 
+<!--more-->
+
 看著他運作的非常順暢我也就心滿意把作業交出去了，並順利獲得 100 分
 
 ![好誒 100 分 owo/](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/intro_comp_net_hw1_100.png)
