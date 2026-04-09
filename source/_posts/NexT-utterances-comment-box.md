@@ -1,5 +1,5 @@
 ---
-title: Hexo-NexT 留言板utterances配置
+title: Hexo-NexT 留言板 utterances 配置
 lang: zh-TW
 tags:
   - Hexo
@@ -13,7 +13,7 @@ date: 2023-08-17 00:00:00
 
 ## 前言
 
-許多Blog都有自己的留言區，可以方便地與讀者交流（~~只是我做了之後文章也沒有人看，所以也不會有交流的機會🥲~~）我要教的是用utterances，另外還有其他像是Disqus或是GitHub Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相tag），最後只好就選utterances，不過他也還是不錯用的，支援markdown語法，有亮暗主題，也算很好了啦。
+許多 Blog 都有自己的留言區，可以方便地與讀者交流（~~只是可能做了之後文章也沒有人看，所以也不會有交流的機會🥲~~），這次要分享的是用 utterances，另外還有其他像是 Disqus 或是 GitHub Gitalk，但前者會一直有廣告很討厭，後者好像有些資安疑慮（要不然他功能比較多在留言區還可以互相 tag），最後只好就選 utterances，不過他也還是不錯用的，支援 Markdown 語法，有亮暗主題，也算很好了啦。
 
 <!--more-->
 
@@ -22,14 +22,26 @@ date: 2023-08-17 00:00:00
 
 ## 安裝
 
-先簡單說一下原理，他的留言板就是用github的issue功能，用你文章的路徑、網址或是標題當作issue的Title，然後把留言的內容當作是issue的回覆，所以留言的人就必須要有github帳號才能使用
+先簡單說一下原理，他的留言板就是用 github 的 issue 功能，用你文章的路徑、網址或是標題當作 issue 的 Title，然後把留言的內容當作是 issue 的回覆，所以留言的人就必須要有 github 帳號才能使用
 
-解說完畢，實作上很簡單，就是來到主題底下的_config.yml裡將這些改一改，主題你可以自己全部都試試看，他很好心全部都列出來了，repo要改成你自己的喔，要不然就會跑來我的issue了（x
+解說完畢，實作上很簡單，就是來到主題底下的 `_config.yml` 裡將這些改一改，主題你可以自己全部都試試看，他很好心全部都列出來了，repo 要改成你自己的喔，要不然就會跑來我的 issue 了（x
 ![Image](https://i.imgur.com/J98nMDR.png)
 
-接著到你的隨便一篇文章底下去看，就會發現留言區還是沒出現，因為還要再裝一個[utterances](https://github.com/apps/utterances)，點擊安裝選擇github page的repo然後在點擊安裝就完成了
+接著到你的隨便一篇文章底下去看，就會發現留言區還是沒出現，因為還要再裝一個 [utterances](https://github.com/apps/utterances)，點擊安裝選擇 github page 的 repo 然後在點擊安裝就完成了
 
 ![Image](https://i.imgur.com/dancpB7.png)
+
+## 文章中禁用留言區
+
+只要在你的文章最上面的 [Front Matter](https://hexo.io/docs/front-matter) (就是打 `title` `tag` `categories` 那些的地方)，加上 `comments: false` 留言區就會消失了
+
+```yaml blablabla.md
+---
+title: ...
+...
+comments: false
+---
+```
 
 ## 結語
 
