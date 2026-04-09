@@ -97,4 +97,35 @@ img {
 // Use CSS text-autospace instead of pangu.js for CJK spacing
 body {
     text-autospace: ideograph-alpha ideograph-numeric;
+  letter-spacing: 0.018em;
+}
+
+figure > video {
+  margin-bottom: 0 !important;
+}
+
+video + figcaption {
+  text-align: center;
+}
+
+p {
+  margin: 0 0 1.25rem;
+  line-height: 1.75;
+}
+
+hr {
+  background: #e5e5e5;
+  height: 1.25px;
+  margin: 1.5rem 0;
+}
+
+.darkmode--activated hr {
+  background: #5c5a5a;
+}
+
+.post-body details {
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 0.5rem .75em;
+    margin: .5rem 0;
 }
