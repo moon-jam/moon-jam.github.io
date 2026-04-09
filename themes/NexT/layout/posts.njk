@@ -1,0 +1,216 @@
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template with context %}
+
+{% block title %}貼文 | {{ title }}{% endblock %}
+
+{% block class %}posts-page{% endblock %}
+
+{% block content %}
+  <div class="post-block posts-page-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h1 class="collection-header">貼文</h1>
+      </div>
+
+      {%- set post_list = [] %}
+      {%- if posts %}
+        {%- set post_list = posts.toArray() %}
+      {%- elif page.posts %}
+        {%- set post_list = page.posts.toArray() %}
+      {%- endif %}
+
+      {%- set age_base_year = 2026 %}
+      {%- set age_base_value = 20 %}
+
+      <div class="post-accordion-list">
+        {%- set current_year = '' %}
+        {%- for post in post_list %}
+          {%- set year = date(post.date, 'YYYY') %}
+          {%- if year !== current_year %}
+            {%- if current_year !== '' %}
+                </div>
+              </section>
+            {%- endif %}
+            {%- set current_year = year %}
+            {%- set current_age = current_year - age_base_year + age_base_value %}
+            <section class="posts-year-group">
+              <h2 class="posts-year-heading">
+                <span class="posts-year-label">{{ current_year }}</span>
+                <span class="posts-year-separator">・</span>
+                <span class="posts-year-age">{{ current_age }} 歲</span>
+              </h2>
+              <div class="posts-year-items">
+          {%- endif %}
+
+          <article class="post-accordion" itemscope itemtype="http://schema.org/Article">
+            <details class="post-accordion-item"
+                     data-post-path="{{ post.path }}"
+                     name="posts-accordion"
+                     {% if loop.first %} open{% endif %}>
+              <summary class="post-accordion-summary">
+                <span class="post-accordion-title" itemprop="headline">{{ post.title or __('post.untitled') }}</span>
+                <span class="post-accordion-meta">
+                  <time class="post-accordion-date"
+                        itemprop="dateCreated"
+                        datetime="{{ moment(post.date).format() }}"
+                        content="{{ date(post.date, config.date_format) }}">
+                    {{ date(post.date, 'MM-DD') }}
+                  </time>
+                  <a class="post-accordion-postlink"
+                     href="{{ url_for(post.path) }}"
+                     itemprop="url"
+                     onclick="event.stopPropagation();"
+                     onmousedown="event.stopPropagation();">
+                    原文 ↗
+                  </a>
+                </span>
+              </summary>
+
+              <div class="post-accordion-content post-body" itemprop="articleBody">
+                {{ post.content | safe }}
+                <div class="post-accordion-actions">
+                  <p class="post-accordion-readmore">
+                    <a href="{{ url_for(post.path) }}" itemprop="url">前往原文</a>
+                  </p>
+                  <button class="post-accordion-collapse"
+                          type="button"
+                      onclick="const details=this.closest('details');if(details){details.open=false;const summary=details.querySelector('summary');if(summary){summary.focus({preventScroll:true});summary.scrollIntoView({block:'nearest'});}}">
+                    收合這篇
+                  </button>
+                </div>
+              </div>
+            </details>
+          </article>
+        {%- else %}
+          <p class="post-accordion-empty">Oh no 現在他還沒發過貼文</p>
+        {%- endfor %}
+        {%- if current_year !== '' %}
+            </div>
+          </section>
+        {%- endif %}
+      </div>
+
+    </div>
+  </div>
+
+  <script data-pjax>
+    (() => {
+      const root = document.querySelector('.posts-page-block .post-accordion-list');
+      if (!root) return;
+
+      const detailsItems = Array.from(root.querySelectorAll('.post-accordion-item'));
+      const normalizePostPath = value => String(value || '').replace(/^\/+|\/+$/g, '');
+      const decodeHash = hash => {
+        const raw = String(hash || '').replace(/^#/, '');
+        if (!raw) return '';
+        try { return decodeURIComponent(raw); } catch { return raw; }
+      };
+      const currentBaseUrl = () => `${window.location.pathname}${window.location.search}`;
+
+      const clearAddressReadingState = () => {
+        history.replaceState(null, '', currentBaseUrl());
+      };
+
+      const updateAddressReadingState = details => {
+        if (!details) { clearAddressReadingState(); return; }
+        const postPath = normalizePostPath(details.dataset.postPath);
+        if (!postPath) { clearAddressReadingState(); return; }
+        const hash = `#${encodeURIComponent(postPath)}`;
+        if (window.location.hash === hash) return;
+        history.replaceState(null, '', `${currentBaseUrl()}${hash}`);
+      };
+
+      const getOpenJumpGap = details => {
+        const summary = details.querySelector('.post-accordion-summary');
+        const summaryHeight = summary ? Math.ceil(summary.getBoundingClientRect().height) : 88;
+        // Keep roughly one collapsed item worth of space above after opening.
+        return Math.max(64, Math.min(132, summaryHeight + 12));
+      };
+
+      const scrollToReadingPosition = details => {
+        const targetY = window.scrollY + details.getBoundingClientRect().top - getOpenJumpGap(details);
+        window.scrollTo(0, Math.max(0, targetY));
+      };
+
+      const jumpToReadingPosition = details => {
+        requestAnimationFrame(() => {
+          scrollToReadingPosition(details);
+        });
+      };
+
+      const setOpenItem = (target, options = {}) => {
+        const { jump = false, syncHash = true } = options;
+
+        detailsItems.forEach(item => {
+          item.open = Boolean(target && item === target);
+        });
+
+        if (!target) {
+          if (syncHash) clearAddressReadingState();
+          return;
+        }
+
+        if (syncHash) updateAddressReadingState(target);
+        if (jump) {
+          jumpToReadingPosition(target);
+        }
+      };
+
+      const openByPath = (postPath, options = {}) => {
+        const normalizedPath = normalizePostPath(postPath);
+        if (!normalizedPath) return null;
+        const target = detailsItems.find(item => normalizePostPath(item.dataset.postPath) === normalizedPath);
+        if (!target) return null;
+
+        setOpenItem(target, options);
+        return target;
+      };
+
+      detailsItems.forEach(item => {
+        const summary = item.querySelector('.post-accordion-summary');
+        if (!summary) return;
+
+        summary.addEventListener('click', event => {
+          if (event.target.closest('.post-accordion-postlink')) return;
+
+          event.preventDefault();
+
+          if (item.open) {
+            setOpenItem(null, { syncHash: true });
+            return;
+          }
+
+          setOpenItem(item, { jump: true, syncHash: true });
+        });
+      });
+
+      const initialFromHash = normalizePostPath(decodeHash(window.location.hash));
+      if (initialFromHash) {
+        const opened = openByPath(initialFromHash, { jump: true, syncHash: true });
+        if (opened) {
+          // no-op: openByPath already handled jump and hash
+        }
+      } else {
+        const defaultOpen = detailsItems.find(item => item.open);
+        if (defaultOpen) {
+          updateAddressReadingState(defaultOpen);
+        }
+      }
+
+      window.addEventListener('hashchange', () => {
+        const pathFromHash = normalizePostPath(decodeHash(window.location.hash));
+        if (!pathFromHash) {
+          setOpenItem(null, { syncHash: false });
+          return;
+        }
+
+        const opened = openByPath(pathFromHash, { jump: true, syncHash: false });
+        if (!opened) return;
+      });
+    })();
+  </script>
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}

@@ -1,0 +1,239 @@
+.post-body :not(.post-button) a {
+  color: #7090dd
+  text-decoration: none;
+  border-bottom: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.darkmode--activated .post-body :not(.post-button) a {
+  color: #a0b4f2;
+}
+
+// 貼文 page — accordion by post title
+.posts-page-block {
+  // Custom properties — only the values that CSS vars don't cover
+  --post-border: #e0e0e0;
+  --post-separator: #ebebeb;
+  --post-subtle-bg: #f5f5f5;
+  --post-subtle-hover-bg: #eaeaea;
+  --post-muted: #aaa;
+
+  .post-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .posts-year-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .posts-year-heading {
+    align-items: center;
+    border-bottom: 1px dashed var(--post-border);
+    display: inline-flex;
+    font-size: 1.2em;
+    font-weight: 700;
+    gap: 8px;
+    margin: 8px 0 0;
+    padding-bottom: 6px;
+  }
+
+  .posts-year-label {
+    color: var(--text-color);
+  }
+
+  .posts-year-separator {
+    color: var(--post-muted);
+    font-weight: 500;
+  }
+
+  .posts-year-age {
+    color: var(--blockquote-color);
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  .posts-year-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // <details> carries no border — children carry their own borders
+  .post-accordion-item {
+    overflow: visible;
+
+    > summary {
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    > summary::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // Summary always has the border; radius changes based on open/closed
+  .post-accordion-summary {
+    background: var(--content-bg-color);
+    border: 1px solid var(--post-border);
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    font-weight: 700;
+  }
+
+  // When open: flat bottom (connects to content) and sticky by CSS only
+  .post-accordion-item[open] > .post-accordion-summary {
+    border-radius: 12px 12px 0 0;
+    border-bottom-color: var(--post-separator);
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .post-accordion-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .post-accordion-title::before {
+    content: '\f105';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    transition: transform 0.2s;
+  }
+
+  .post-accordion-item[open] .post-accordion-title::before {
+    transform: rotate(90deg);
+  }
+
+  .post-accordion-date {
+    color: var(--blockquote-color);
+    font-size: 0.85em;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .post-accordion-meta {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+  }
+
+  .post-accordion-postlink {
+    background: var(--post-subtle-bg);
+    border: 1px solid var(--post-border);
+    border-radius: 999px;
+    color: var(--blockquote-color);
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 4px 9px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+
+  .post-accordion-postlink:hover {
+    background: var(--post-subtle-hover-bg);
+    border-color: var(--post-muted);
+    color: var(--text-color);
+  }
+
+  // Content: border on sides + bottom, connects seamlessly to summary
+  .post-accordion-content {
+    background: var(--content-bg-color);
+    border: 1px solid var(--post-border);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 16px;
+  }
+
+  .post-accordion-content h2 {
+    margin-top: 18px;
+  }
+
+  .post-accordion-content > h2:first-child {
+    margin-top: 8px;
+  }
+
+  .post-accordion-actions {
+    align-items: center;
+    border-top: 1px dashed var(--post-separator);
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 12px;
+  }
+
+  .post-accordion-readmore {
+    margin: 0;
+  }
+
+  .post-accordion-collapse {
+    background: var(--post-subtle-bg);
+    border: 1px solid var(--post-border);
+    border-radius: 999px;
+    color: var(--blockquote-color);
+    cursor: pointer;
+    font-size: 0.85em;
+    line-height: 1.4;
+    padding: 4px 12px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  .post-accordion-collapse:hover {
+    background: var(--post-subtle-hover-bg);
+    border-color: var(--post-muted);
+    color: var(--text-color);
+  }
+
+  .post-accordion-empty {
+    color: var(--blockquote-color);
+    margin: 8px 0 0;
+  }
+
+  @media (max-width: 767px) {
+    .post-accordion-summary {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .post-accordion-actions {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .post-accordion-collapse {
+      align-self: flex-end;
+    }
+
+    .post-accordion-meta {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+
+// Dark mode — only override the custom properties, CSS vars handle the rest
+.darkmode--activated .posts-page-block {
+  --post-border: #4a4a4a;
+  --post-separator: #4a4a4a;
+  --post-subtle-bg: #2a2a2a;
+  --post-subtle-hover-bg: #383838;
+  --post-muted: #777;
+}

@@ -16,14 +16,14 @@ hexo.extend.filter.register('after_render:html', html => {
   return html.replace(/<details(\s[^>]*)?>([\s\S]*?)<\/details>/gs, (full, attrs = '', body = '') => {
     if (!body.includes('&lt;')) return full;
 
-    // Unescape HTML entities outside of <pre> blocks (preserve escaped content in code blocks)
-    const fixedBody = body.replace(/([\s\S]*?)(<pre[\s\S]*?<\/pre>|$)/g, (_m, nonPre, pre) => {
-      const unescaped = nonPre
+    // Unescape HTML entities outside of <pre> and <code> blocks (preserve escaped content in code blocks)
+    const fixedBody = body.replace(/([\s\S]*?)(<pre[\s\S]*?<\/pre>|<code>[\s\S]*?<\/code>|$)/g, (_m, nonCode, code) => {
+      const unescaped = nonCode
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&#x2F;/g, '/')
         .replace(/&amp;/g, '&');
-      return unescaped + (pre || '');
+      return unescaped + (code || '');
     });
 
     return `<details${attrs}>${fixedBody}</details>`;
