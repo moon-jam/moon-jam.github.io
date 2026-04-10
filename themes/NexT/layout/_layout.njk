@@ -78,6 +78,7 @@
   }
   window.onload = updateTagCloudColors;
   document.querySelector('.darkmode-toggle').addEventListener('click', updateTagCloudColors);
+  document.addEventListener('pjax:success', updateTagCloudColors);
   </script>
   <script src="/js/checkbox_add_space.js"></script>
 </body>
