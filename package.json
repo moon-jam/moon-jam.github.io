@@ -6,7 +6,8 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "prepare": "husky"
   },
   "hexo": {
     "version": "7.3.0"
@@ -78,5 +79,8 @@
     "minimist": "^1.2.8",
     "object-assign": "^4.1.1",
     "punycode": "^2.3.1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
