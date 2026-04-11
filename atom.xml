@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Moon Jam</rights>
   <subtitle>I'm a panda</subtitle>
   <title>Moon Jam's Blog</title>
-  <updated>2026-04-11T13:27:02.664Z</updated>
+  <updated>2026-04-11T14:04:44.518Z</updated>
   <entry>
     <author>
       <name>Moon Jam</name>
@@ -39,7 +39,7 @@ npm (node package manager)，這樣整合也很方便，以下就照著毛哥的
 Husky 安裝</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev husky</span><br><span class="line">npx husky init</span><br></pre></td></tr></table></figure>
 <p>寫了一個使用 <code>zhtw-mcp</code> lint 的 shell script</p>
-<details><summary type="html">程式碼</summary><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">STAGED_MD_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep <span class="string">&#x27;\.md$&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$STAGED_MD_FILES</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ! <span class="built_in">command</span> -v zhtw-mcp &amp;&gt; /dev/null; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Because you want to commit Markdown files, you need to install zhtw-mcp for linting first.&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;You can reference this to get started on zhtw-mcp: https://github.com/sysprog21/zhtw-mcp?tab=readme-ov-file#getting-started&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">zhtw-mcp lint <span class="variable">$STAGED_MD_FILES</span> --explain <span class="comment"># 若檔名含空白可能需額外處理</span></span><br><span class="line">OUTPUT=$(zhtw-mcp lint <span class="variable">$STAGED_MD_FILES</span> --explain 2&gt;&amp;1)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ ! <span class="string">&quot;<span class="variable">$OUTPUT</span>&quot;</span> =~ <span class="string">&quot;: info&quot;</span> &amp;&amp; ! <span class="string">&quot;<span class="variable">$OUTPUT</span>&quot;</span> =~ <span class="string">&quot;: warning&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;You are Traditional Chinese writing master!&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;----------------&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Detect some sentences may contain improper Chinese words.&quot;</span></span><br><span class="line"><span class="built_in">exec</span> 3&lt;&amp;0</span><br><span class="line"><span class="built_in">exec</span> &lt; /dev/tty</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">&quot;Continue with commit? (y/n): &quot;</span> yn</span><br><span class="line"><span class="built_in">exec</span> &lt;&amp;3 3&lt;&amp;-</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="variable">$yn</span> <span class="keyword">in</span> </span><br><span class="line">    [Yy]* )</span><br><span class="line">        <span class="built_in">exit</span> 0</span><br><span class="line">        ;;</span><br><span class="line">    * )</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Commit abort.&quot;</span></span><br><span class="line">        <span class="built_in">exit</span> 1</span><br><span class="line">        ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<details><summary type="html">程式碼</summary><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">STAGED_MD_FILES=()</span><br><span class="line"><span class="keyword">while</span> IFS= <span class="built_in">read</span> -r -d <span class="string">&#x27;&#x27;</span> file; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">$file</span>&quot;</span> == *.md ]]; <span class="keyword">then</span></span><br><span class="line">        STAGED_MD_FILES+=(<span class="string">&quot;<span class="variable">$file</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span> &lt; &lt;(git diff --cached --name-only --diff-filter=ACM -z)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$&#123;#STAGED_MD_FILES[@]&#125;</span> -eq 0 ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ! <span class="built_in">command</span> -v zhtw-mcp &amp;&gt; /dev/null; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Because you want to commit Markdown files, you need to install zhtw-mcp for linting first.&quot;</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;You can reference this to get started on zhtw-mcp: https://github.com/sysprog21/zhtw-mcp?tab=readme-ov-file#getting-started&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">run_with_tty</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">$OSTYPE</span>&quot;</span> == <span class="string">&quot;darwin&quot;</span>* ]]; <span class="keyword">then</span> <span class="comment">#MacOS</span></span><br><span class="line">        script -q /dev/null <span class="string">&quot;<span class="variable">$@</span>&quot;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        script -q -c <span class="string">&quot;<span class="subst">$(printf <span class="string">&quot;%q &quot;</span> <span class="string">&quot;<span class="variable">$@</span>&quot;</span>)</span>&quot;</span> /dev/null</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">OUTPUT=$(run_with_tty zhtw-mcp lint <span class="string">&quot;<span class="variable">$&#123;STAGED_MD_FILES[@]&#125;</span>&quot;</span> --explain 2&gt;&amp;1)</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$OUTPUT</span>&quot;</span></span><br><span class="line">OUTPUT=$(<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$OUTPUT</span>&quot;</span> | sed <span class="string">&#x27;s/\x1b\[[0-9;]*[a-zA-Z]//g&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ ! <span class="string">&quot;<span class="variable">$OUTPUT</span>&quot;</span> =~ <span class="string">&quot;: info&quot;</span> ]] &amp;&amp; [[ ! <span class="string">&quot;<span class="variable">$OUTPUT</span>&quot;</span> =~ <span class="string">&quot;: warning&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;You are Traditional Chinese writing master!&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;----------------&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Detect some sentences may contain improper Chinese words.&quot;</span></span><br><span class="line"><span class="built_in">exec</span> 3&lt;&amp;0</span><br><span class="line"><span class="built_in">exec</span> &lt; /dev/tty</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">&quot;Continue with commit? (y/n): &quot;</span> yn</span><br><span class="line"><span class="built_in">exec</span> &lt;&amp;3 3&lt;&amp;-</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="variable">$yn</span> <span class="keyword">in</span> </span><br><span class="line">    [Yy]* )</span><br><span class="line">        <span class="built_in">exit</span> 0</span><br><span class="line">        ;;</span><br><span class="line">    * )</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Commit abort.&quot;</span></span><br><span class="line">        <span class="built_in">exit</span> 1</span><br><span class="line">        ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
 </details>
 <p>然後把 Shell Script 加入 <code>.husky/pre-commit</code>
 就完成了🎉</p>
@@ -69,7 +69,7 @@ href="https://github.com/sysprog21/zhtw-mcp/blob/main/docs/cli.md">CLI
 pre-commit 的一個 <ruby>Linter 檢查<rt>支語警察</rt></ruby>。</p>]]>
     </summary>
     <title>為 Blog 加上繁體中文 Linter (zhtw-mcp)</title>
-    <updated>2026-04-11T13:27:02.664Z</updated>
+    <updated>2026-04-11T14:04:44.518Z</updated>
   </entry>
   <entry>
     <author>
@@ -6977,6 +6977,97 @@ href="https://youtu.be/-cMOv9QudOk?list=PLFFwfkaPB2mra818QJIiPJtXFShdndl9z&amp;t
       <name>Moon Jam</name>
     </author>
     <category term="IThome 2024 鐵人賽" scheme="https://moon-jam.me/categories/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    <category term="一直刷 CTF" scheme="https://moon-jam.me/categories/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/%E4%B8%80%E7%9B%B4%E5%88%B7-CTF/"/>
+    <category term="資安" scheme="https://moon-jam.me/tags/%E8%B3%87%E5%AE%89/"/>
+    <category term="CTF" scheme="https://moon-jam.me/tags/CTF/"/>
+    <category term="IThome 2024 鐵人賽" scheme="https://moon-jam.me/tags/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    <content type="html">
+      <![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>自從暑假參加了 AIS3
+遇到了各路大神，覺得自己實在太廢了，也聽到其實蠻多人推薦可以從打 CTF
+開始學習資安，所以就決定來參加 IThome 2024 鐵人賽，想藉由一直刷 CTF
+題目，希望結束之後可以稍稍變強一點。</p>
+<span id="more"></span>
+<p>本來想說這次就以 5000 分為目標，結果我打開 Pico
+CTF，結果發現上面怎麼都沒有分數，然後花了大概一個小時在找到底我哪邊沒設定好，結果一問之下才知道是因為
+Pico CTF
+過去各年的題目難易度對應分數並不一致，以至於相同難度的題目在不同的年份可能會有不同的分數，所以就把分數這個標準拿掉了。</p>
+<p>不過我還是覺得有個分數感覺會比較爽，然後正巧也有人在 Pico CTF 的 DC
+社群上講了差不多的想法，那麼，我就來做個插件吧~<br />
+所以 Day1 的目標就從規劃進度 + 寫題目，鬼轉成了規劃進度 + 寫個生成 Pico
+CTF 分數的酷酷插件 XD</p>
+<figure>
+<img src="https://i.imgur.com/rQ3SSIF.png"
+alt="在 Pico CTF 的 DC 社群上剛好遇到有人有一樣的想法" />
+<figcaption aria-hidden="true">在 Pico CTF 的 DC
+社群上剛好遇到有人有一樣的想法</figcaption>
+</figure>
+<h2 id="規劃">規劃 <a href="#規劃" class="headerlink"></a></h2>
+<h3 id="上課">上課 <a href="#上課" class="headerlink"></a></h3>
+<p>Day2 ~ Day30 每三天看一部 Beef Soup 的影片，雖然這樣 30
+天過去也不會全部看完，但也就算了，事情太多了 owo</p>
+<h3 id="pico-ctf-刷題">Pico CTF 刷題 <a href="#pico-ctf-刷題"
+class="headerlink"></a></h3>
+<ul>
+<li>Day2 ~ Day9<br />
+每天 6 題 general skills</li>
+<li>Day10<br />
+3 題 general skills + 3 題 web (如果真的不會也找不到 writeup
+可以用隨便一題 medium 代替)</li>
+<li>Day 11 ~ Day 19<br />
+每天 6 題 web (如果真的不會也找不到 writeup 可以用隨便一題 medium
+代替)</li>
+<li>Day 20 ~ Day 30<br />
+每天 6 題 crypto (如果真的不會也找不到 writeup 可以用隨便一題 medium
+代替)</li>
+</ul>
+<h2 id="寫酷酷插件">寫酷酷插件 <a href="#寫酷酷插件"
+class="headerlink"></a></h2>
+<p>主要是寫個程式在 Practice 介面和 User Profile 介面顯示 picoGym
+的分數，分數的算法就跟上面那個人講的一樣：</p>
+<ul>
+<li>Easy: 100 points</li>
+<li>Medium: 200 points</li>
+<li>Hard: 300 points</li>
+</ul>
+<p>然後就是按照目前在哪一個頁面，去抓取對應的資料，並且算成分數，最後顯示在該頁面上。</p>
+<p>成果如下：</p>
+<figure>
+<img src="https://github.com/moon-jam/picoCTF-Gen-Score-Extension/blob/main/assets/Practice.png?raw=true"
+alt="Practice 介面" />
+<figcaption aria-hidden="true">Practice 介面</figcaption>
+</figure>
+<figure>
+<img src="https://github.com/moon-jam/picoCTF-Gen-Score-Extension/blob/main/assets/User.png?raw=true"
+alt="User Profile 介面" />
+<figcaption aria-hidden="true">User Profile 介面</figcaption>
+</figure>
+<p><a
+href="https://github.com/moon-jam/picoCTF-Gen-Score-Extension">這裡</a>
+是插件的 Github 連結，有興趣的話可以去看看～</p>
+<p>然後很意外的是提交申請要上架，居然差不多一小時就好了，還以為要好幾天呢，可以在
+<a
+href="https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj">這裡</a>
+安裝這個插件～</p>]]>
+    </content>
+    <id>https://moon-jam.me/IThome_2024ironman_CTF_Day1/</id>
+    <link href="https://moon-jam.me/IThome_2024ironman_CTF_Day1/"/>
+    <published>2024-09-03T16:00:00.000Z</published>
+    <summary type="html">
+      <![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
+<p>自從暑假參加了 AIS3
+遇到了各路大神，覺得自己實在太廢了，也聽到其實蠻多人推薦可以從打 CTF
+開始學習資安，所以就決定來參加 IThome 2024 鐵人賽，想藉由一直刷 CTF
+題目，希望結束之後可以稍稍變強一點。</p>]]>
+    </summary>
+    <title>IThome 2024 鐵人賽 一直刷 CTF - Day1</title>
+    <updated>2025-08-19T09:24:30.305Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Moon Jam</name>
+    </author>
+    <category term="IThome 2024 鐵人賽" scheme="https://moon-jam.me/categories/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
     <category term="AI VTuber 的完善之路" scheme="https://moon-jam.me/categories/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/AI-VTuber-%E7%9A%84%E5%AE%8C%E5%96%84%E4%B9%8B%E8%B7%AF/"/>
     <category term="IThome 2024 鐵人賽" scheme="https://moon-jam.me/tags/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
     <category term="AI VTuber" scheme="https://moon-jam.me/tags/AI-VTuber/"/>
@@ -7067,97 +7158,6 @@ IThome 鐵人賽中至少完成：</p>
 href="https://youtu.be/CiBjItykxto?t=336">直播連結</a></p>]]>
     </summary>
     <title>IThome 2024 鐵人賽 AI VTuber 的完善之路 - Day1</title>
-    <updated>2025-08-19T09:24:30.305Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Moon Jam</name>
-    </author>
-    <category term="IThome 2024 鐵人賽" scheme="https://moon-jam.me/categories/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    <category term="一直刷 CTF" scheme="https://moon-jam.me/categories/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/%E4%B8%80%E7%9B%B4%E5%88%B7-CTF/"/>
-    <category term="資安" scheme="https://moon-jam.me/tags/%E8%B3%87%E5%AE%89/"/>
-    <category term="CTF" scheme="https://moon-jam.me/tags/CTF/"/>
-    <category term="IThome 2024 鐵人賽" scheme="https://moon-jam.me/tags/IThome-2024-%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    <content type="html">
-      <![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
-<p>自從暑假參加了 AIS3
-遇到了各路大神，覺得自己實在太廢了，也聽到其實蠻多人推薦可以從打 CTF
-開始學習資安，所以就決定來參加 IThome 2024 鐵人賽，想藉由一直刷 CTF
-題目，希望結束之後可以稍稍變強一點。</p>
-<span id="more"></span>
-<p>本來想說這次就以 5000 分為目標，結果我打開 Pico
-CTF，結果發現上面怎麼都沒有分數，然後花了大概一個小時在找到底我哪邊沒設定好，結果一問之下才知道是因為
-Pico CTF
-過去各年的題目難易度對應分數並不一致，以至於相同難度的題目在不同的年份可能會有不同的分數，所以就把分數這個標準拿掉了。</p>
-<p>不過我還是覺得有個分數感覺會比較爽，然後正巧也有人在 Pico CTF 的 DC
-社群上講了差不多的想法，那麼，我就來做個插件吧~<br />
-所以 Day1 的目標就從規劃進度 + 寫題目，鬼轉成了規劃進度 + 寫個生成 Pico
-CTF 分數的酷酷插件 XD</p>
-<figure>
-<img src="https://i.imgur.com/rQ3SSIF.png"
-alt="在 Pico CTF 的 DC 社群上剛好遇到有人有一樣的想法" />
-<figcaption aria-hidden="true">在 Pico CTF 的 DC
-社群上剛好遇到有人有一樣的想法</figcaption>
-</figure>
-<h2 id="規劃">規劃 <a href="#規劃" class="headerlink"></a></h2>
-<h3 id="上課">上課 <a href="#上課" class="headerlink"></a></h3>
-<p>Day2 ~ Day30 每三天看一部 Beef Soup 的影片，雖然這樣 30
-天過去也不會全部看完，但也就算了，事情太多了 owo</p>
-<h3 id="pico-ctf-刷題">Pico CTF 刷題 <a href="#pico-ctf-刷題"
-class="headerlink"></a></h3>
-<ul>
-<li>Day2 ~ Day9<br />
-每天 6 題 general skills</li>
-<li>Day10<br />
-3 題 general skills + 3 題 web (如果真的不會也找不到 writeup
-可以用隨便一題 medium 代替)</li>
-<li>Day 11 ~ Day 19<br />
-每天 6 題 web (如果真的不會也找不到 writeup 可以用隨便一題 medium
-代替)</li>
-<li>Day 20 ~ Day 30<br />
-每天 6 題 crypto (如果真的不會也找不到 writeup 可以用隨便一題 medium
-代替)</li>
-</ul>
-<h2 id="寫酷酷插件">寫酷酷插件 <a href="#寫酷酷插件"
-class="headerlink"></a></h2>
-<p>主要是寫個程式在 Practice 介面和 User Profile 介面顯示 picoGym
-的分數，分數的算法就跟上面那個人講的一樣：</p>
-<ul>
-<li>Easy: 100 points</li>
-<li>Medium: 200 points</li>
-<li>Hard: 300 points</li>
-</ul>
-<p>然後就是按照目前在哪一個頁面，去抓取對應的資料，並且算成分數，最後顯示在該頁面上。</p>
-<p>成果如下：</p>
-<figure>
-<img src="https://github.com/moon-jam/picoCTF-Gen-Score-Extension/blob/main/assets/Practice.png?raw=true"
-alt="Practice 介面" />
-<figcaption aria-hidden="true">Practice 介面</figcaption>
-</figure>
-<figure>
-<img src="https://github.com/moon-jam/picoCTF-Gen-Score-Extension/blob/main/assets/User.png?raw=true"
-alt="User Profile 介面" />
-<figcaption aria-hidden="true">User Profile 介面</figcaption>
-</figure>
-<p><a
-href="https://github.com/moon-jam/picoCTF-Gen-Score-Extension">這裡</a>
-是插件的 Github 連結，有興趣的話可以去看看～</p>
-<p>然後很意外的是提交申請要上架，居然差不多一小時就好了，還以為要好幾天呢，可以在
-<a
-href="https://chromewebstore.google.com/detail/picoctf-gen-score-extensi/bejhdgeaaddmaipmfcmfdijgfjgjomjj">這裡</a>
-安裝這個插件～</p>]]>
-    </content>
-    <id>https://moon-jam.me/IThome_2024ironman_CTF_Day1/</id>
-    <link href="https://moon-jam.me/IThome_2024ironman_CTF_Day1/"/>
-    <published>2024-09-03T16:00:00.000Z</published>
-    <summary type="html">
-      <![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
-<p>自從暑假參加了 AIS3
-遇到了各路大神，覺得自己實在太廢了，也聽到其實蠻多人推薦可以從打 CTF
-開始學習資安，所以就決定來參加 IThome 2024 鐵人賽，想藉由一直刷 CTF
-題目，希望結束之後可以稍稍變強一點。</p>]]>
-    </summary>
-    <title>IThome 2024 鐵人賽 一直刷 CTF - Day1</title>
     <updated>2025-08-19T09:24:30.305Z</updated>
   </entry>
   <entry>
