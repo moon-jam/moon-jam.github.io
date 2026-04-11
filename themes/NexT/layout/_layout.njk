@@ -60,26 +60,58 @@
   </script>
 
   <script>
-  function updateTagCloudColors() {
-  let darkColors = ['#555555', '#646464', '#737373', '#828282', '#929292', '#a1a1a1', '#b0b0b0', '#c0c0c0', '#cfcfcf', '#dedede', '#eeeeee'];
-  let lightColors = ['#aaaaaa', '#9a9a9a', '#8b8b8b', '#7c7c7c', '#6c6c6c', '#5d5d5d', '#4e4e4e', '#3e3e3e', '#2f2f2f', '#202020', '#111111'];
+    (() => {
+      const styleId = 'tag-cloud-dynamic-colors';
+      const darkColors = ['#555555', '#646464', '#737373', '#828282', '#929292', '#a1a1a1', '#b0b0b0', '#c0c0c0', '#cfcfcf', '#dedede', '#eeeeee'];
+      const lightColors = ['#aaaaaa', '#9a9a9a', '#8b8b8b', '#7c7c7c', '#6c6c6c', '#5d5d5d', '#4e4e4e', '#3e3e3e', '#2f2f2f', '#202020', '#111111'];
 
-  for (let i = 0; i <= 10; i++) {
-      let elements = document.querySelectorAll('.tag-cloud-' + i);
-      for (let j = 0; j < elements.length; j++) {
-        elements[j].style.borderBottomColor = lightColors[i];
-        elements[j].style.color = lightColors[i];
-        if (document.body.classList.contains('darkmode--activated')) {
-            elements[j].style.borderBottomColor = darkColors[i];
-            elements[j].style.color = darkColors[i];
-        }
-      }
-    }
-  }
-  window.onload = updateTagCloudColors;
-  document.querySelector('.darkmode-toggle').addEventListener('click', updateTagCloudColors);
-  document.addEventListener('pjax:success', updateTagCloudColors);
+      const ensureStyleTag = () => {
+        let styleTag = document.getElementById(styleId);
+        if (styleTag) return styleTag;
+
+        styleTag = document.createElement('style');
+        styleTag.id = styleId;
+        document.head.appendChild(styleTag);
+        return styleTag;
+      };
+
+      const updateTagCloudColors = () => {
+        const colors = document.body.classList.contains('darkmode--activated') ? darkColors : lightColors;
+        const rules = colors
+          .map((color, index) => `.tag-cloud-${index}{color:${color};}`)
+          .join('');
+
+        ensureStyleTag().textContent = rules;
+      };
+
+      const watchDarkModeToggle = () => {
+        const body = document.body;
+        if (!body) return;
+
+        const observer = new MutationObserver(mutations => {
+          for (const mutation of mutations) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              updateTagCloudColors();
+              break;
+            }
+          }
+        });
+
+        observer.observe(body, {
+          attributes: true,
+          attributeFilter: ['class']
+        });
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        updateTagCloudColors();
+        watchDarkModeToggle();
+      });
+
+      document.addEventListener('pjax:success', updateTagCloudColors);
+    })();
   </script>
+
   <script src="/js/checkbox_add_space.js"></script>
 </body>
 </html>
