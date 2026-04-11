@@ -114,10 +114,10 @@ menu:
   home: / || fa fa-home
   about: /about/ || fa fa-user
   貼文: /posts/ || fa fa-pen-nib
+  隨機: /random/ || fa fa-shuffle
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  # 隨意看看: /random/ || fa fa-shuffle
   Switch Language: https://pa-7.github.io/2 || fa fa-language
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
