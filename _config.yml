@@ -196,3 +196,6 @@ feed:
   order_by: -date
   icon: icon.png
   autodiscovery: true
+
+urls:
+  path: random/index.html
