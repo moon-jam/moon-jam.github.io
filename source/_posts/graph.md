@@ -6,7 +6,6 @@ tags:
 categories:
   - 演算法
   - 圖論
-# hidden: true
 abbrlink: 56060
 date: 2023-10-27 00:00:00
 lang:
@@ -155,7 +154,7 @@ signed main(){
 
 ### Floyd-Warshall
 
-精神： Dynamic Programming
+精神：Dynamic Programming
 
 ```c++ Floyd-Warshall O(N^3) 全對全
 // dis[i][j]: 初始化為i->j這條邊的權重
@@ -168,7 +167,7 @@ for(int k=1; k<=n; k++)
 
 ### Dijkstra
 
-精神： Greedy 找不在樹上，距離樹根最短的點
+精神：Greedy 找不在樹上，距離樹根最短的點
 
 ```c++ Dijkstra O(N log N) 單對全
 #include <bits/stdc++.h>
@@ -603,9 +602,9 @@ int main()
 
 ### [neoj738](https://neoj.sprout.tw/problem/738/)
 
-### [2022附中校內賽PD](https://codeforces.com/gym/401059/problem/D)
+### [2022 附中校內賽 PD](https://codeforces.com/gym/401059/problem/D)
 
-利用DSU倒著加邊回去
+利用 DSU 倒著加邊回去
 
 ```c++
 #include <bits/stdc++.h>
@@ -675,4 +674,4 @@ signed main()
 
 ### [2022 師大附中暑期資訊培訓模擬競賽II PC](https://codeforces.com/gym/401058/problem/C)
 
-### [2020花中一模PE](https://codeforces.com/group/GG44hyrVLY/contest/297533/problem/E)
+### [2020 花中一模 PE](https://codeforces.com/group/GG44hyrVLY/contest/297533/problem/E)
