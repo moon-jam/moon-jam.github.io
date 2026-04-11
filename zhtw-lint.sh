@@ -13,8 +13,9 @@ if ! command -v zhtw-mcp &> /dev/null; then
 fi
 
 zhtw-mcp lint $STAGED_MD_FILES --explain
+OUTPUT=$(zhtw-mcp lint $STAGED_MD_FILES --explain 2>&1)
 
-if [ -z "$(zhtw-mcp lint $STAGED_MD_FILES --explain 2>&1)" ]; then
+if [[ ! "$OUTPUT" =~ ": info" && ! "$OUTPUT" =~ ": warning" ]]; then
     echo "You are Traditional Chinese writing master!"
     exit 0
 fi
