@@ -74,7 +74,7 @@
                   </p>
                   <button class="post-accordion-collapse"
                           type="button"
-                      onclick="const details=this.closest('details');if(details){details.open=false;const summary=details.querySelector('summary');if(summary){summary.focus({preventScroll:true});summary.scrollIntoView({block:'nearest'});}}">
+                      onclick="const details=this.closest('details');if(details){details.open=false;const summary=details.querySelector('summary');if(summary){summary.focus({preventScroll:true});summary.scrollIntoView({block:'nearest',behavior:'smooth'});}}">
                     收合這篇
                   </button>
                 </div>
@@ -129,7 +129,7 @@
 
       const scrollToReadingPosition = details => {
         const targetY = window.scrollY + details.getBoundingClientRect().top - getOpenJumpGap(details);
-        window.scrollTo(0, Math.max(0, targetY));
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
       };
 
       const jumpToReadingPosition = details => {
