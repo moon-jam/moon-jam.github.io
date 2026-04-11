@@ -1,0 +1,53 @@
+---
+title: 隨機貼文
+description: 隨機跳轉頁面
+comments: false
+---
+
+<p id="random-status">正在隨機挑選貼文...</p>
+
+<script data-pjax>
+(() => {
+  const statusEl = document.getElementById('random-status');
+  const fallbackEl = document.getElementById('random-fallback');
+
+  const normalizePath = value => {
+    const normalized = String(value || '')
+      .replace(/\/index\.html$/, '/')
+      .replace(/\/+$/, '');
+    return normalized || '/';
+  };
+
+  const chooseAndNavigate = async () => {
+    try {
+      const response = await fetch('/random-posts.json', { credentials: 'same-origin' });
+      if (!response.ok) throw new Error('Failed to load random-posts.json');
+
+      const urls = await response.json();
+      const currentPath = normalizePath(window.location.pathname);
+
+      const candidates = urls
+        .map(url => new URL(url, window.location.origin).pathname)
+        .map(normalizePath)
+        .filter((url, index, arr) => url && arr.indexOf(url) === index)
+        .filter(url => url !== currentPath);
+
+      if (!candidates.length) throw new Error('No post candidates available');
+
+      const target = candidates[Math.floor(Math.random() * candidates.length)];
+
+      if (typeof pjax === 'object' && typeof pjax.loadUrl === 'function') {
+        pjax.loadUrl(target);
+      } else {
+        window.location.href = target;
+      }
+    } catch (error) {
+      if (statusEl) statusEl.textContent = '隨機跳轉失敗，請改用下方連結。';
+      if (fallbackEl) fallbackEl.href = '/posts/';
+      console.error('[random-page]', error);
+    }
+  };
+
+  chooseAndNavigate();
+})();
+</script>
