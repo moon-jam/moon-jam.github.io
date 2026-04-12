@@ -103,7 +103,7 @@ sticky: true
 
 ![我的貼文介面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4)
 
-除此之外，還有蠻多的小改動，調整了[字距、行距](https://wiwi.blog/blog/letter-spacing)和超連結顏色；還有原先我的 RSS 圖片會因為 [Lazy Load](https://github.com/tuupola/lazyload) 顯示不出來，於是[做了些修正](https://github.com/hexojs/hexo-generator-feed/pull/273)；修正因為 PJAX 讓我的 $LaTeX$ 無法成功 render，這些修改都可以直接看我的[部落格 Commit 記錄](https://github.com/moon-jam/moon-jam.github.io/commits/main/?since=2026-04-03&until=2026-04-09)。
+除此之外，還有蠻多的小改動，調整了[字距、行距](https://wiwi.blog/blog/letter-spacing)和超連結顏色；還有原先我的 RSS 圖片會因為 [Lazy Load](https://github.com/tuupola/lazyload) 顯示不出來，於是[做了些修正](https://github.com/hexojs/hexo-generator-feed/pull/273)；修正因為 PJAX 讓我的 $\LaTeX$ 無法成功 render，這些修改都可以直接看我的[部落格 Commit 記錄](https://github.com/moon-jam/moon-jam.github.io/commits/main/?since=2026-04-03&until=2026-04-09)。
 
 ## 寫部落格
 

@@ -15,6 +15,8 @@ lang: zh-TW
 
 <!--more-->
 
-前幾天突然收到了來自 Google Search 的信，寫說我的網站過去二十八天達成了 600 次點擊，研究了一下發現是我之前的 [有機化學](/high_school_organic_chemistry_note/) 流量攀升，實在可喜可賀，當初真的從來沒想過部落格上最多點擊數的是化學（BTW 第二跟第三名是 [用高中數學從頭證明 det(AB)=det(A)det(B)](/det(AB)=det(A)det(B)_proof/) 和 [學測數學公式證明](/gsat_math_proof/) XD）
+前幾天突然收到了來自 Google Search 的信，寫說我的網站過去二十八天達成了 600 次點擊，研究了一下發現是我之前的 [有機化學筆記](/high_school_organic_chemistry_note/) 流量攀升，實在可喜可賀，當初真的從來沒想過部落格上最多點擊數的是化學（BTW 第二跟第三名是 [用高中數學從頭證明 det(AB)=det(A)det(B)](/det(AB)=det(A)det(B)_proof/) 和 [學測數學公式證明](/gsat_math_proof/) XD）
 
 ![截止撰文今日（2026-04-12）在 Google 搜尋都還是第一個，~~甚至打敗了均一~~](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/organic-chemistry-seo-number-one.png)
+
+另外後來問了高中的學弟才知道應該是因為最近是高中期中考，高三要考到有機化學，因此蹭了一波流量XD
