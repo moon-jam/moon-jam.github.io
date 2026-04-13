@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Moon Jam</rights>
   <subtitle>I'm a panda</subtitle>
   <title>Moon Jam's Blog</title>
-  <updated>2026-04-12T17:22:36.998Z</updated>
+  <updated>2026-04-12T17:39:44.109Z</updated>
   <entry>
     <author>
       <name>Moon Jam</name>
@@ -39,6 +39,7 @@ controls=""><a
 href="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/latex-AI-OCR-very-good.mp4">Demo!</a></video>
 <figcaption aria-hidden="true">Demo!</figcaption>
 </figure>
+<span id="more"></span>
 <p>另外我在做 OCR 時的 Prompt 是利用 Raycast 的 Snippet，讓我輸入
 <code>\2latex</code> 會自動變成以下這段文字，或也可以<a
 href="https://www.jaron.tw/docs/tutorial/text-replacement/">使用蘋果預設的替代文字</a>。</p>
@@ -67,10 +68,26 @@ class="math inline">\(LaTeX\)</span> 超好用</p>
     <summary type="html">
       <![CDATA[<p>快要考機率與統計了，無論是在寫筆記或者跟 AI 溝通要寫數學式打 <span
 class="math inline">\(LaTeX\)</span>
-實在是很慢，雖然說筆記也可以用寫的就好，<del>但用打的還是比較帥氣</del>，而且還能發到部落格上，搞不好哪天就成為]]>
+實在是很慢，雖然說筆記也可以用寫的就好，<del>但用打的還是比較帥氣</del>，而且還能發到部落格上，搞不好哪天就成為
+<a
+href="/organic-chemistry-top-seo/">熱搜冠軍</a>。另外如果直接把手寫算式的圖片貼給
+AI 的話會大幅增加對話的
+Context，還會有辨識錯誤的狀況發生，一定是不如直接給 <span
+class="math inline">\(LaTeX\)</span> 的。</p>
+<p>我的做法是先將手寫的算式單獨給 Gemini 3 的 Fast OCR 成 <span
+class="math inline">\(LaTeX\)</span>，然後將數學式再複製到筆記或是給原本跟你對話的
+AI，這樣的使用流程搭配 Mac + iPad
+可以共用剪貼簿的優勢，使用體驗是蠻優雅的。</p>
+<figure>
+<video
+src="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/latex-AI-OCR-very-good.mp4"
+controls=""><a
+href="https://raw.githubusercontent.com/moon-jam/BlogPictures/main/latex-AI-OCR-very-good.mp4">Demo!</a></video>
+<figcaption aria-hidden="true">Demo!</figcaption>
+</figure>]]>
     </summary>
     <title>AI 時代，做筆記還在手打 LaTeX ！？</title>
-    <updated>2026-04-12T17:22:36.998Z</updated>
+    <updated>2026-04-12T17:39:44.109Z</updated>
   </entry>
   <entry>
     <author>
@@ -101,7 +118,8 @@ href="/gsat_math_proof/">學測數學公式證明</a> XD）</p>
 alt="截止撰文今日（2026-04-12）在 Google 搜尋都還是第一個，甚至打敗了均一" />
 <figcaption aria-hidden="true">截止撰文今日（2026-04-12）在 Google
 搜尋都還是第一個，<del>甚至打敗了均一</del></figcaption>
-</figure>]]>
+</figure>
+<p>另外後來問了高中的學弟才知道應該是因為最近是高中期中考，高三要考到有機化學，因此蹭了一波流量XD</p>]]>
     </content>
     <id>https://moon-jam.me/organic-chemistry-top-seo/</id>
     <link href="https://moon-jam.me/organic-chemistry-top-seo/"/>
@@ -115,7 +133,7 @@ aria-hidden="true"><del>那天還剛好是愚人節</del></figcaption>
 </figure>]]>
     </summary>
     <title>那泥？我是高中有機化學的熱搜冠軍！？</title>
-    <updated>2026-04-12T17:19:11.830Z</updated>
+    <updated>2026-04-13T01:11:42.113Z</updated>
   </entry>
   <entry>
     <author>
