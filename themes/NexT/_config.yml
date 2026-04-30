@@ -113,7 +113,7 @@ open_graph:
 menu:
   home: / || fa fa-home
   about: /about/ || fa fa-user
-  貼文: /posts/ || fa fa-pen-nib
+  竹林外史: /posts/ || fa fa-pen-nib
   隨機: /random/ || fa fa-shuffle
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
