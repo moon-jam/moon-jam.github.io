@@ -11,7 +11,56 @@
   <rights>All rights reserved 2026, Moon Jam</rights>
   <subtitle>I'm a panda</subtitle>
   <title>Moon Jam's Blog</title>
-  <updated>2026-05-01T12:29:03.291Z</updated>
+  <updated>2026-05-01T19:04:06.219Z</updated>
+  <entry>
+    <author>
+      <name>Moon Jam</name>
+    </author>
+    <category term="貼文" scheme="https://moon-jam.me/categories/%E8%B2%BC%E6%96%87/"/>
+    <category term="棒球" scheme="https://moon-jam.me/tags/%E6%A3%92%E7%90%83/"/>
+    <content type="html">
+      <![CDATA[<p>今天到臺南亞太棒球場體驗了人生的第一場棒球比賽，是統一主場對戰樂天，但重點是今天有寵物席位，現場來了很多可愛的狗狗
+owo/，只是忙著看都忘了拍 (T＿T)。</p>
+<p>今天來其實是因為收到統一球迷女朋朋的邀約，感覺應該蠻有趣的所以就來了，四點開始打，但我們應該兩點多就到了，逛了逛紀念品的商店、看看攤位，本來想去拿貼紙的但我們逛太久太晚去就被領完了
+qaq</p>
+<figure>
+<img src="/baseball-game-rookie/baseball-game-field.webp"
+alt="棒球場誒" />
+<figcaption aria-hidden="true">棒球場誒</figcaption>
+</figure>
+<span id="more"></span>
+<h2 id="節奏好快噢">節奏好快噢 <a href="#節奏好快噢"
+class="headerlink"></a></h2>
+<p>我覺得棒球比賽的節奏其實比我想像快了不少，可能有很大的原因是會一直穿插啦啦隊表演，<del>根據我們學的排隊理論，讓
+Queue 中等待的 Customers
+有事做可以減少煩躁感</del>，就覺得一局一局好快就結束了，然後就中場休息，再咻咻投個幾顆，鏘鏘打了幾顆，再蹦蹦啦啦隊跳幾下三個小時就過了，真是非常的緊湊。</p>
+<h2 id="原來這就是應援嗎">原來這就是應援嗎 <a href="#原來這就是應援嗎"
+class="headerlink"></a></h2>
+<p>剛開始看球賽的時候覺得球迷的應援好直接噢，像是會為投手加油說要三振他（三振打者）、說打者要揮棒落空，或者是會噓裁判判壞球，而且主場有大喇叭還有人帶汽笛吹，感覺這樣就在場邊多少應該真的會影響到對手吧
+www，好像有點不符合我想像中的運動家精神。</p>
+<p>不過後來想想這樣好像也還好，在觀眾的角度到現場本來就是為了娛樂；在雙方球團的角度這樣的娛樂方式如果能吸引到更多人也才能讓他們持續營運下去；在球員的角度，雖然我還是覺得肯定多少會有點影響，但畢竟是他們的職業，應該也會慢慢習慣吧，而且可能抗壓性本來就該是他們實力的一部分。</p>
+<p>只要沒有人身攻擊、暴力相向、干擾比賽，場邊這樣充滿能量的應援聲勢也能算是某種程度的主場優勢吧，同時亦是種很獨特的現場體驗，真的很能讓人融入到比賽的氣氛中。</p>
+<hr />
+<p>除此之外我其實覺得看這場比賽非常有趣、刺激，能這樣將身心聚焦於球場上，暫時離開忙碌確實是很開心的活動，下次有空有機會還會想來看看
+owo/</p>]]>
+    </content>
+    <id>https://moon-jam.me/baseball-game-rookie/</id>
+    <link href="https://moon-jam.me/baseball-game-rookie/"/>
+    <published>2026-04-30T16:00:00.000Z</published>
+    <summary type="html">
+      <![CDATA[<p>今天到臺南亞太棒球場體驗了人生的第一場棒球比賽，是統一主場對戰樂天，但重點是今天有寵物席位，現場來了很多可愛的狗狗
+owo/，只是忙著看都忘了拍 (T＿T)。</p>
+<p>今天來其實是因為收到統一球迷女朋朋的邀約，感覺應該蠻有趣的所以就來了，四點開始打，但我們應該兩點多就到了，逛了逛紀念品的商店、看看攤位，本來想去拿貼紙的但我們逛太久太晚去就被領完了
+qaq</p>
+<figure>
+<img src="/baseball-game-rookie/baseball-game-field.webp"
+alt="棒球場誒" />
+<figcaption aria-hidden="true">棒球場誒</figcaption>
+</figure>]]>
+    </summary>
+    <title>棒球賽初體驗</title>
+    <updated>2026-05-01T19:04:06.219Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Moon Jam</name>
@@ -8860,8 +8909,8 @@ href="#cses-graph-algorithms" class="headerlink"></a></h2>
       <name>Moon Jam</name>
     </author>
     <category term="化學" scheme="https://moon-jam.me/categories/%E5%8C%96%E5%AD%B8/"/>
-    <category term="有機化學" scheme="https://moon-jam.me/tags/%E6%9C%89%E6%A9%9F%E5%8C%96%E5%AD%B8/"/>
     <category term="高中" scheme="https://moon-jam.me/tags/%E9%AB%98%E4%B8%AD/"/>
+    <category term="有機化學" scheme="https://moon-jam.me/tags/%E6%9C%89%E6%A9%9F%E5%8C%96%E5%AD%B8/"/>
     <content type="html">
       <![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
 <p>高中最後一次考試，想說要有個善終，也怕自己一不小心被當了，很認真讀了兩三天久久沒碰的化學，讀的時候常常想要找那種超大的表簡單說每一種烴類、官能基的性質、反應，可能就像是一些程式語法的cheat
@@ -12656,8 +12705,8 @@ class="math inline">\(n\)</span>個攤位分別販售的美食編號，請計算
     </author>
     <category term="程式題解" scheme="https://moon-jam.me/categories/%E7%A8%8B%E5%BC%8F%E9%A1%8C%E8%A7%A3/"/>
     <category term="APCS" scheme="https://moon-jam.me/categories/%E7%A8%8B%E5%BC%8F%E9%A1%8C%E8%A7%A3/APCS/"/>
-    <category term="線段樹" scheme="https://moon-jam.me/tags/%E7%B7%9A%E6%AE%B5%E6%A8%B9/"/>
     <category term="APCS" scheme="https://moon-jam.me/tags/APCS/"/>
+    <category term="線段樹" scheme="https://moon-jam.me/tags/%E7%B7%9A%E6%AE%B5%E6%A8%B9/"/>
     <category term="約瑟夫問題" scheme="https://moon-jam.me/tags/%E7%B4%84%E7%91%9F%E5%A4%AB%E5%95%8F%E9%A1%8C/"/>
     <content type="html">
       <![CDATA[<div class="note default"><p><a
