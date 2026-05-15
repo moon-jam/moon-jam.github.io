@@ -156,6 +156,11 @@
     margin-top: 8px;
   }
 
+  // Offset anchor jumps so targets aren't hidden behind the sticky summary bar
+  .post-accordion-content [id] {
+    scroll-margin-top: 64px;
+  }
+
   .post-accordion-actions {
     align-items: center;
     border-top: 1px dashed var(--post-separator);

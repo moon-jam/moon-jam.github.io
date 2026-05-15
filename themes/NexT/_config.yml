@@ -60,11 +60,12 @@ darkmode_js:
   saveInCookies: true # default: true
   label: "🌓" # default: ''
   autoMatchOsTheme: true # default: true
-  libUrl: # Set custom library cdn url for Darkmode.js
+  libUrl:
+    # Set custom library cdn url for Darkmode.js
 
-# ---------------------------------------------------------------
-# Site Information Settings
-# ---------------------------------------------------------------
+    # ---------------------------------------------------------------
+    # Site Information Settings
+    # ---------------------------------------------------------------
 
 favicon:
   small: /images/favicon.png
@@ -73,7 +74,7 @@ favicon:
   # safari_pinned_tab: /images/favicon.svg
   #android_manifest: /manifest.json
 
-# Custom Logo (Warning: Do not support scheme Mist)
+  # Custom Logo (Warning: Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.png
 
 # Creative Commons 4.0 International License.
@@ -102,14 +103,14 @@ open_graph:
     #fb_admins: <fb:admin_id>
     #fb_app_id: <fb:app_id>
 
-# ---------------------------------------------------------------
-# Menu Settings
-# ---------------------------------------------------------------
+    # ---------------------------------------------------------------
+    # Menu Settings
+    # ---------------------------------------------------------------
 
-# Usage: `Key: /link/ || icon`
-# Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.
-# Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
-# External url should start with http:// or https://
+    # Usage: `Key: /link/ || icon`
+    # Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.
+    # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
+    # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
   about: /about/ || fa fa-user
@@ -196,8 +197,7 @@ links_settings:
   # Available values: block | inline
   layout: block
 
-links:
-  #Title: https://example.com
+links: #Title: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -243,20 +243,20 @@ footer:
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
     enable: false
-    icp:
-    # The digit in the num of gongan beian.
-    gongan_id:
-    # The full num of gongan beian.
-    gongan_num:
-    # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
+    icp: # The digit in the num of gongan beian.
+
+    gongan_id: # The full num of gongan beian.
+
+    gongan_num: # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
+
     gongan_icon_url:
 
-# ---------------------------------------------------------------
-# Post Settings
-# See: https://theme-next.js.org/docs/theme-settings/posts
-# ---------------------------------------------------------------
+      # ---------------------------------------------------------------
+      # Post Settings
+      # See: https://theme-next.js.org/docs/theme-settings/posts
+      # ---------------------------------------------------------------
 
-# Use `description` in front-matter to specify post excerpt.
+      # Use `description` in front-matter to specify post excerpt.
 excerpt_description: true
 
 # Hexo supports excerpts by adding tag.
@@ -280,8 +280,8 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
-  separated_meta: true  # 在文章顯示時要不要分行
-  item_text_post: true  # 在文章要不要用文字說明(但我設true跟false都一樣有文字)
+  separated_meta: true # 在文章顯示時要不要分行
+  item_text_post: true # 在文章要不要用文字說明(但我設true跟false都一樣有文字)
   item_text_total: true # 在頁底要不要有文字說明
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
@@ -321,8 +321,8 @@ post_edit:
   url: https://github.com/moon-jam/moon-jam.github.io/tree/main/source/ # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
-# Show previous post and next post in post footer if exists
-# Available values: left | right | false
+  # Show previous post and next post in post footer if exists
+  # Available values: left | right | false
 post_navigation: left
 
 # ---------------------------------------------------------------
@@ -363,8 +363,8 @@ preconnect: false
 # Set the text alignment in posts / pages.
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
-  desktop: justify
-  mobile: justify
+  desktop: start
+  mobile: start
 
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: true
@@ -458,35 +458,35 @@ font:
     family: Comic Neue
     size:
 
-  # Font settings for site title (.site-title).
+      # Font settings for site title (.site-title).
   title:
     external: true
     family: LXGW WenKai TC
     size:
 
-  # Font settings for headlines (<h1> to <h6>).
+      # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
     family: LXGW WenKai TC
     size:
 
-  # Font settings for posts (.post-body).
+      # Font settings for posts (.post-body).
   posts:
     external: true
     family:
 
-  # Font settings for <code> and code blocks.
+      # Font settings for <code> and code blocks.
   codes:
     external: true
     family:
 
-# ---------------------------------------------------------------
-# SEO Settings
-# See: https://theme-next.js.org/docs/theme-settings/seo
-# ---------------------------------------------------------------
+      # ---------------------------------------------------------------
+      # SEO Settings
+      # See: https://theme-next.js.org/docs/theme-settings/seo
+      # ---------------------------------------------------------------
 
-# If true, site-subtitle will be added to the title of index page.
-# Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
+      # If true, site-subtitle will be added to the title of index page.
+      # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
 index_with_subtitle: false
 
 # Automatically add external URL with Base64 encrypt & decrypt.
@@ -678,8 +678,8 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active:
-  # Setting `true` means remembering the comment system selected by the visitor.
+  active: # Setting `true` means remembering the comment system selected by the visitor.
+
   storage: true
   # Lazyload all comment systems.
   lazyload: true
@@ -691,8 +691,8 @@ comments:
     #gitalk:
     #  order: -2
 
-# Disqus
-# For more information: https://disqus.com
+    # Disqus
+    # For more information: https://disqus.com
 disqus:
   enable: false
   shortname:
@@ -708,15 +708,16 @@ disqusjs:
   # api: https://disqus.skk.moe/disqus/
   api:
   apikey: # Register new application from https://disqus.com/api/applications/
-  shortname: # See: https://disqus.com/admin/settings/general/
+  shortname:
+    # See: https://disqus.com/admin/settings/general/
 
-# Changyan
-# For more information: https://changyan.kuaizhan.com
+    # Changyan
+    # For more information: https://changyan.kuaizhan.com
 changyan:
   enable: false
   appid:
-  appkey:
-  # Show comments count
+  appkey: # Show comments count
+
   count: true
 
 # LiveRe comments system
@@ -740,8 +741,8 @@ gitalk:
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
 
-# Utterances
-# For more information: https://utteranc.es
+    # Utterances
+    # For more information: https://utteranc.es
 utterances:
   enable: true
   repo: moon-jam/moon-jam.github.io # Github repository owner and name
@@ -774,8 +775,10 @@ addtoany:
 # Google Analytics
 # See: https://analytics.google.com
 google_analytics:
-  tracking_id: # <app_id>
-  # By default, NexT will load an external gtag.js script on your site.
+  tracking_id:
+    # <app_id>
+    # By default, NexT will load an external gtag.js script on your site.
+
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
 
@@ -800,32 +803,39 @@ clarity_analytics: # <project_id>
 matomo:
   enable: false
   server_url: # https://www.example.com/
-  site_id: # <your site id>
+  site_id:
+    # <your site id>
 
-# Umami Analytics
-# See: https://umami.is/
+    # Umami Analytics
+    # See: https://umami.is/
 umami:
   enable: false
   script_url: # https://umami.example.com/script.js
   website_id: # <your website id>
-  host_url: # <your umami site url>
+  host_url:
+    # <your umami site url>
 
-# Plausible Analytics
-# See: https://plausible.io/
+    # Plausible Analytics
+    # See: https://plausible.io/
 plausible:
   enable: false
   script_url: # https://plausible.io/js/script.js
-  site_domain: # www.example.com
+  site_domain:
+    # www.example.com
 
-# Show number of visitors of each article.
-# You can visit https://www.leancloud.cn to get AppID and AppKey.
+    # Show number of visitors of each article.
+    # You can visit https://www.leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
   enable: false
   app_id: # <your app id>
-  app_key: # <your app key>
-  # Required for apps from CN region
-  server_url: # <your server url>
-  # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
+  app_key:
+    # <your app key>
+    # Required for apps from CN region
+
+  server_url:
+    # <your server url>
+    # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
+
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
   security: true
@@ -837,10 +847,11 @@ firestore:
   enable: false
   collection: articles # Required, a string collection name to access firestore database
   apiKey: # Required
-  projectId: # Required
+  projectId:
+    # Required
 
-# Show Views / Visitors of the website / page with busuanzi.
-# For more information: http://ibruce.info/2015/04/04/busuanzi/
+    # Show Views / Visitors of the website / page with busuanzi.
+    # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   enable: true
   total_visitors: true
@@ -893,26 +904,28 @@ chat:
 chatra:
   enable: false
   async: true
-  id: # Visit Dashboard to get your ChatraID
-  #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
+  id:
+    # Visit Dashboard to get your ChatraID
+    #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
 
-# Tidio is a powerful, all-in-one customer service tool.
-# For more information: https://www.tidio.com
-# Dashboard: https://www.tidio.com/panel/dashboard
+    # Tidio is a powerful, all-in-one customer service tool.
+    # For more information: https://www.tidio.com
+    # Dashboard: https://www.tidio.com/panel/dashboard
 tidio:
   enable: false
-  key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
+  key:
+    # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
 
-# Gitter is a chat and networking platform.
-# For more information: https://gitter.im
+    # Gitter is a chat and networking platform.
+    # For more information: https://gitter.im
 gitter:
   enable: false
   room:
 
-# ---------------------------------------------------------------
-# CDN Settings
-# See: https://theme-next.js.org/docs/advanced-settings/vendors
-# ---------------------------------------------------------------
+    # ---------------------------------------------------------------
+    # CDN Settings
+    # See: https://theme-next.js.org/docs/advanced-settings/vendors
+    # ---------------------------------------------------------------
 
 vendors:
   # The CDN provider of NexT internal scripts.
@@ -929,9 +942,9 @@ vendors:
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
   custom_cdn_url:
 
-# Assets
-# Accelerate delivery of static files using a CDN
-# The js option is only valid when vendors.internal is local.
+    # Assets
+    # Accelerate delivery of static files using a CDN
+    # The js option is only valid when vendors.internal is local.
 css: css
 js: js
 images: images
@@ -954,8 +967,8 @@ filter_optimize:
   css:
     # minify all css files
     minify: true
-    excludes:
-    # use preload to load css elements dynamically
+    excludes: # use preload to load css elements dynamically
+
     delivery:
       - '@fortawesome/fontawesome-free'
       - 'fonts.googleapis.com'
@@ -966,13 +979,13 @@ filter_optimize:
   js:
     # minify all js files
     minify: true
-    excludes:
-    # remove the comments in each of the js files
+    excludes: # remove the comments in each of the js files
+
     remove_comments: false
   html:
     # minify all html files
     minify: true
     excludes:
-  # set the priority of this plugin,
-  # lower means it will be executed first, default of Hexo is 10
+      # set the priority of this plugin,
+      # lower means it will be executed first, default of Hexo is 10
   priority: 12

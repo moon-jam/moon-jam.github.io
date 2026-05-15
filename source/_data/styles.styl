@@ -141,3 +141,16 @@ hr {
 ruby > rt {
     font-size: 50%;
 }
+
+[id]:target {
+    animation: anchor-target-outline 1s ease-out;
+    border-radius: 2px;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+    scroll-margin-top: 0.25lh;
+}
+
+@keyframes anchor-target-outline {
+    0%, 70% { outline-color: var(--link-color, #5b8def); }
+    100%    { outline-color: transparent; }
+}
