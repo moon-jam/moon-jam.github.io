@@ -11,21 +11,7 @@
   <rights>All rights reserved 2026, Moon Jam</rights>
   <subtitle>I'm a panda</subtitle>
   <title>Moon Jam's Blog</title>
-  <updated>2026-05-18T15:25:03.772Z</updated>
-  <entry>
-    <author>
-      <name>Moon Jam</name>
-    </author>
-    <category term="貼文" scheme="https://moon-jam.me/categories/%E8%B2%BC%E6%96%87/"/>
-    <category term="設計思考" scheme="https://moon-jam.me/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/"/>
-    <category term="大學課程" scheme="https://moon-jam.me/tags/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E7%A8%8B/"/>
-    <category term="成功大學" scheme="https://moon-jam.me/tags/%E6%88%90%E5%8A%9F%E5%A4%A7%E5%AD%B8/"/>
-    <id>https://moon-jam.me/design-thinking-II-Day234/</id>
-    <link href="https://moon-jam.me/design-thinking-II-Day234/"/>
-    <published>2026-05-17T16:00:00.000Z</published>
-    <title>設計思考 II</title>
-    <updated>2026-05-18T15:25:03.772Z</updated>
-  </entry>
+  <updated>2026-05-15T12:05:51.515Z</updated>
   <entry>
     <author>
       <name>Moon Jam</name>
@@ -317,7 +303,7 @@ href="#fn2" class="footnote-ref" id="fnref2"
 role="doc-noteref"><sup>2</sup></a>，為了在未來比賽的時候可以更好的<ruby>發想出有說服力的題目與方向<rt>有憑有據地跟評審瞎扯</rt></ruby>，因此選修了這堂課，了解一些發想問題、解決問題的方法論。</p>]]>
     </summary>
     <title>設計思考 II - Day1</title>
-    <updated>2026-05-18T15:31:58.587Z</updated>
+    <updated>2026-05-18T15:37:51.432Z</updated>
   </entry>
   <entry>
     <author>
@@ -9216,8 +9202,8 @@ href="#cses-graph-algorithms" class="headerlink"></a></h2>
       <name>Moon Jam</name>
     </author>
     <category term="化學" scheme="https://moon-jam.me/categories/%E5%8C%96%E5%AD%B8/"/>
-    <category term="高中" scheme="https://moon-jam.me/tags/%E9%AB%98%E4%B8%AD/"/>
     <category term="有機化學" scheme="https://moon-jam.me/tags/%E6%9C%89%E6%A9%9F%E5%8C%96%E5%AD%B8/"/>
+    <category term="高中" scheme="https://moon-jam.me/tags/%E9%AB%98%E4%B8%AD/"/>
     <content type="html">
       <![CDATA[<h2 id="前言">前言 <a href="#前言" class="headerlink"></a></h2>
 <p>高中最後一次考試，想說要有個善終，也怕自己一不小心被當了，很認真讀了兩三天久久沒碰的化學，讀的時候常常想要找那種超大的表簡單說每一種烴類、官能基的性質、反應，可能就像是一些程式語法的cheat
