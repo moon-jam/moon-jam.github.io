@@ -47,17 +47,17 @@ mathjax: true
 ### 根號相加/減比大小
 
 這其實根本沒必要當成一個性質，但他實在太常出現了，就順便寫一下。通常這種題目是有好幾組兩個根號相加，然後根號內數字相加相同，通常是教說要開平方比大小，但其實可以從根號的下凹性質解決，假設題目是$\sqrt{3}+\sqrt{5}$、$\sqrt{2}+\sqrt{6}$，那就是離中心點$4$遠的值會比較小
-![Image](https://i.imgur.com/G5OBrLQ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_G5OBrLQ.webp)
 另外還有一種考法是兩個根號相減，根號內差值相同，一樣用下凹的性質，斜率遞減，所以是比較小的那組會比較大，假設題目是$\sqrt{5}-\sqrt{3}$、$\sqrt{7}-\sqrt{5}$，那就是$\sqrt{5}-\sqrt{3}$比較大
 
 ## 絕對值
 
 好像沒有🫠
-![Image](https://i.imgur.com/sG7jUgo.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_sG7jUgo.webp)
 
 ## 指、對數
 
-![Image](https://i.imgur.com/rHIobyh.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_rHIobyh.webp)
 
 1. 指數不等式：  
    - $a^x>a^y$，$x>y$，$a>1$  
@@ -126,7 +126,7 @@ $$|k\vec{n}| = |k||\vec{n}| = \frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}} = d(P, L)$$
 則$P$點所在直線為：$\frac{A_1x+B_1y+C_1}{\sqrt{A_1^2+B_1^2}}=\pm\frac{A_2x+B_2y+C_2}{\sqrt{A_2^2+B_2^2}}$
 
 另解：利用直線系，確定兩條直線方向向量一樣長，然後直接相加，若兩方向向量夾角為銳角則相加為銳角角平分線，相減則為鈍角，反之則相加為鈍角相減為銳角，例子如下圖：
-![角平分線](https://i.imgur.com/CUyBjhW.png)
+![角平分線](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_CUyBjhW.webp)
 
 ### 兩直線夾角
 
@@ -199,7 +199,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 1. 能因式分解畫圖形
    - 先看兩端趨勢，奇數次次方且首項係數為正，最右邊往上，最左邊往下，首項係數為負，最右邊往下，最左邊往上；偶數次次方，首項係數為正，最右邊往上，最左邊往上，首項係數為負，最右邊往下，最左邊往下  
    - 遇到因式分解内有高次方(例如$f(x)=(x-1)(x-2)^2(x-3)^3$)，偶數次方與$x$軸相切，奇數次方不用理他，由最左或最右開始畫(依照先前的趨勢上下)，以$f(x)=(x-1)(x-2)^2(x-3)^3$為例，先看次方數為6次，首項係數為正，則最左邊往上，最右邊往上，加設從最右邊開始看，一開始會從$(3,0)$由$x$軸上方穿入，在$(2,0)$與$x$軸相切後再從$(1,0)$穿出$x$軸，如下方所示。  
-  ![f(x)=(x-1)(x-2)^2(x-3)^3](https://i.imgur.com/R57ElAj.png)
+  ![f(x)=(x-1)(x-2)^2(x-3)^3](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_R57ElAj.webp)
 2. 不能因式分解$\Rightarrow$基本上學測題目靠微分都可解  
 
 ### 奇淫技巧
@@ -400,7 +400,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 
 ## 三角函數
 
-![各三角函數圖形](https://i.imgur.com/wNbf6E3.png)
+![各三角函數圖形](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_wNbf6E3.webp)
 
 1. 基本關係式：  
    - $\sin^2\theta+\cos^2\theta=1$  
@@ -411,7 +411,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
    - $\sin\frac{\theta}{2}=\sqrt{\frac{1-\cos\theta}{2}}$  
    - $\cos\frac{\theta}{2}=\sqrt{\frac{1+\cos\theta}{2}}$  
    - $\tan\frac{\theta}{2}=\sqrt{\frac{1-\cos\theta}{1+\cos\theta}}$  
-  ![幾何推半角函數值](https://i.imgur.com/V0NtuPD.png)  
+  ![幾何推半角函數值](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_V0NtuPD.webp)  
 3. 正弦推三角形面積：$S=$ $\frac{1}{2}ab\sin C=\frac{1}{2}bc\sin A=\frac{1}{2}ca\sin B$  
 4. 正弦定理：$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$  
 5. 餘弦定理：$a^2=b^2+c^2-2bc\cos A$  
@@ -511,14 +511,14 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
 18. 孟式定理：$\triangle ABC$中，若有$D, E, F$在$\overleftrightarrow{BC}, \overleftrightarrow{CA}, \overleftrightarrow{AB}$上(0點或2點在邊上)：  
     $D, E, F$三點共線的必要條件為$\frac{\overline{BD}}{\overline{DC}}\cdot\frac{\overline{CE}}{\overline{EA}}\cdot\frac{\overline{AF}}{\overline{FB}}=1$  
     {% gp 2-2 %}
-    ![0點在邊上](https://i.imgur.com/G0xEsuv.png)
-    ![2點在邊上](https://i.imgur.com/uoUv2uO.png)
+    ![0點在邊上](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_G0xEsuv.webp)
+    ![2點在邊上](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_uoUv2uO.webp)
     {% endgp %}
 19. 賽瓦定理：$\triangle ABC$中，若有$D, E, F$在$\overleftrightarrow{BC}, \overleftrightarrow{CA}, \overleftrightarrow{AB}$上(1點或3點在邊上)：  
     $\overline{AD}, \overline{BE}, \overline{CF}$三線交於一點的必要條件為$\frac{\overline{BD}}{\overline{DC}}\cdot\frac{\overline{CE}}{\overline{EA}}\cdot\frac{\overline{AF}}{\overline{FB}}=1$  
     {% gp 2-2 %}
-    ![1點在邊上](https://i.imgur.com/C8xbI1T.png)
-    ![3點在邊上](https://i.imgur.com/OxRJGjs.png)
+    ![1點在邊上](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_C8xbI1T.webp)
+    ![3點在邊上](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_OxRJGjs.webp)
     {% endgp %}  
     (孟式定理跟賽瓦定理的證明這個老師講得很清楚，[影片連結](https://youtu.be/LQvsZfUY9Ek))
 20. 平面四邊形定理：平面四邊形$ABCD$滿足$\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2$ $=\overline{AC}^2+\overline{BD}^2$
@@ -608,7 +608,7 @@ $$f(x) = \sum_{i=0}^{n} y_i \prod_{j=0, j\neq i}^{n} \frac{x - x_j}{x_i - x_j}$$
    - 點法式：$(x-x_0,y-y_0,z-z_0)\cdot\vec{n}=0$
    - 截距式：$\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1$ ($x$、$y$、$z$軸之截距為$a,b,c$)
 2. 三垂線定理：若$\overleftrightarrow{AB}\perp$平面$E$交於$B$點，$\overleftrightarrow{BC}$在平面$E$上，若有一直線$L$於平面$E$上，且$\overleftrightarrow{BC}\perp L$於$C$點，則$\overleftrightarrow{AC}\perp L$於$C$點
-   ![三垂線定理](https://i.imgur.com/HNMpI5x.png)
+   ![三垂線定理](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/gsat_math_proof_HNMpI5x.webp)
 3. 平行六面體的有號體積：$V=\vec{a}\cdot(\vec{b}\times\vec{c})=\begin{vmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{vmatrix}$
 4. 空間中三向量所張出的四面體有號體積：$V=\frac{1}{6}\vec{a}\cdot(\vec{b}\times\vec{c})=\frac{1}{6}\begin{vmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{vmatrix}$
 5. 平面$E_1$、$E_2$夾角：$\cos\theta=\pm\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}||\vec{n_2}|}$，其中$\vec{n_1}$、$\vec{n_2}$為平面$E_1$、$E_2$的法向量

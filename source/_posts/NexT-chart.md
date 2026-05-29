@@ -18,7 +18,7 @@ date: 2024-04-20 00:00:00
 <span id="inline-yellow">注意</span>  
 用 Mermaid 可以畫出各種你想表達複雜的圖，但可能不會是你想像中的樣子
 例如說你想畫出這種圖：  
-![想像中的](https://i.imgur.com/uld0lyH.png)  
+![想像中的](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-chart_uld0lyH.webp)  
 但你會畫出這種：
 
 ```mermaid

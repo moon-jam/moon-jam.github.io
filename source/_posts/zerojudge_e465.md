@@ -70,5 +70,5 @@ signed main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/UkCAPWE.png)
-![中一中judge AC的Submission～](https://i.imgur.com/95B9Abz.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_e465_UkCAPWE.webp)
+![中一中judge AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_e465_95B9Abz.webp)

@@ -27,37 +27,37 @@ lang:
 
 就單純把數字轉成二進位就結束了
 
-![Image](https://i.imgur.com/qzYltbB.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_qzYltbB.webp)
 
 ### 第二題：Codebook
 
 就把檔案下載執行，就結束了
 
-![Image](https://i.imgur.com/0ZM15DK.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_0ZM15DK.webp)
 
 ### 第三題：Magikarp Ground Mission
 
 按照指示連進 ssh 然後就一一把檔案 cat 出來最後組在一起就是 flag 了
 
-![Image](https://i.imgur.com/56liA03.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_56liA03.webp)
 
 ### 第四題：Tab, Tab, Attack
 
 用 tab 移動到 flag 的位置，然後執行就有 flag 了
 
-![Image](https://i.imgur.com/kWDoPzl.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_kWDoPzl.webp)
 
 ### 第五題：Wave a flag
 
 把檔案下載之後，先用 chmod 讓他可以執行，在按照指示在後面加上 `-h` 的參數就可以得到 flag 了
 
-![Image](https://i.imgur.com/E0ww14d.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_E0ww14d.webp)
 
 ### 第六題：Python Wrangling
 
 就看一下他程式碼，按照他加解密的方式把他給的密文和密鑰丟進去解就是答案了
 
-![Image](https://i.imgur.com/twW8yiD.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_twW8yiD.webp)
 
 ## 上課紀錄
 
@@ -65,11 +65,11 @@ lang:
 
 [google 搜尋背後做了甚麼](https://github.com/alex/what-happens-when)
 
-![Image](https://i.imgur.com/NjxW5sR.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_NjxW5sR.webp)
 
 OSI 模型的七層都是可以打的，但今天只會著重在第七層，也就是 Application layer 的打法
 
-![Image](https://i.imgur.com/DIKObNl.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_DIKObNl.webp)
 
 #### 分類
 
@@ -118,11 +118,11 @@ Content-Type: text/html
 
 #### Fronted roadmap
 
-![Image](https://i.imgur.com/mTD4tx8.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_mTD4tx8.webp)
 
 #### Backend roadmap
 
-![Image](https://i.imgur.com/e0H8Hh7.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_e0H8Hh7.webp)
 
 #### 學習曲線
 
@@ -130,40 +130,40 @@ Web security 是資安裡面最容易入門的領域?
 
 因為我們對 Web 最熟悉，所以上手最快，但學到一定階段之後就會逐間趨緩，需要靠經驗累積和漏洞靈敏度去找漏洞
 
-![Image](https://i.imgur.com/eYvlgzT.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_eYvlgzT.webp)
 
 ### Why Web Security? (為甚麼要學 Web Security?)
 
 - 今年的金盾獎得獎名單可以透過改後面的數字在公告時間前就拿到 owo
 
-  ![Image](https://i.imgur.com/gYr2OWb.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_gYr2OWb.webp)
 
 - 出去玩~
 
-  ![Image](https://i.imgur.com/BdT6lfj.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_BdT6lfj.webp)
 
 - 賺錢錢 - Bug Bounty
   而且其實 Bug Bounty 是在比耐心和漏洞的靈敏度，難度不會比 CTF 高
 
-  ![Image](https://i.imgur.com/s6qRDDd.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_s6qRDDd.webp)
 
 - Pwn2Own
 
-  ![Image](https://i.imgur.com/zk7lIUz.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_zk7lIUz.webp)
 
 - Hacking Moodle 點名
 
-  ![Image](https://i.imgur.com/nnLHoQR.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_nnLHoQR.webp)
 
   點名密碼有八碼很難爆破
 
-  ![Image](https://i.imgur.com/fXYGplo.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_fXYGplo.webp)
 
   但 qrpass 是一個 1000~9999 的數字，所以是可爆破的
 
-  ![Image](https://i.imgur.com/9TEvnj6.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_9TEvnj6.webp)
 
-![Image](https://i.imgur.com/wwWothF.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_wwWothF.webp)
 
 ### Web Base
 
@@ -171,18 +171,18 @@ Web security 是資安裡面最容易入門的領域?
 - CSS -> 皮膚
 - JavaScript -> 會動了
 
-![Image](https://i.imgur.com/XcdEu9W.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_XcdEu9W.webp)
 
 - Cookie
-  ![Image](https://i.imgur.com/PCPleP8.png)
-  ![Image](https://i.imgur.com/LdIdZOY.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_PCPleP8.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_LdIdZOY.webp)
 
   這樣就取得管理員權限了 owo
   [好用的 Cookie extension](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=zh-TW)
 
 - Session vs. Cookie
   剛剛改 Cookie 會直接變 admin 這樣太不安全了，其中一個解決的方法就是用 Session ID 來辨識身分，把 Data 存在 Server 上 (Session Data)， Cookie 只有包含 Session ID，用 Session ID 去查找，就不會有問題了
-  ![Image](https://i.imgur.com/5F6oqhw.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_5F6oqhw.webp)
 
   > SessionID 的產生方式跟前面說的一樣，通常會是一個無法猜測的亂數。你可能會想說：「很難猜是一回事，但機率不是 0 阿！」，對，的確是有機率能夠猜到，但是那個機率太低太低了（例如說幾千億分之一之類的）。而且 Server 在你亂猜猜錯幾次之後就有可能把你 ban 掉不讓你繼續猜，所以沒什麼問題。  
   > 不過這邊要特別注意的一點是 SessionID 基本上是種認證不認人的方式，也就是說一旦你的 SessionID 被偷走，別人就可以偽造你的身份來登入了。而這個 SessionID 通常都是保存在 Cookie 之中。  
@@ -196,7 +196,7 @@ Web security 是資安裡面最容易入門的領域?
 
   跟昨天改 cookie 的那題很像，而且甚至不需要一個個猜，就把 cookie 改成 cookie_monster 就好了，阿但 Lab 關了我沒辦法是 qaq
 
-  ![Image](https://i.imgur.com/WPV24Je.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_WPV24Je.webp)
 
 - hash
   - 不一樣的東西 hash 之後會不一樣，一樣的 hash 之後會一樣
@@ -205,42 +205,42 @@ Web security 是資安裡面最容易入門的領域?
   - hash collision: 兩個不一樣的東西 hash 之後一樣，這就是不安全的 hash
 - Encoding
   
-  ![Image](https://i.imgur.com/454UA0E.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_454UA0E.webp)
 
 - 常見的 encode function: base64, urlencode...
 - Tools:
   - F12: Developer Tools
   - curl: 可以用來發送 http request 的工具
   
-    ![Image](https://i.imgur.com/jXUPICn.png)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_jXUPICn.webp)
   
   - [Cheatsheet](https://github.com/w181496/Web-CTF-Cheatsheet)
 - Lab - Redirect (題目關了🥲)
   - 這題式按下 Get flag 之後會跳到一個某個網址，但又會馬上轉回來，所以就只要開發者工具打開 Network 看按下去之後轉址去了哪，然後用 curl 把內容抓下來就可以了
 
-  ![Image](https://i.imgur.com/7Lvk4Hx.png)
-  ![Image](https://i.imgur.com/lK7aIWN.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_7Lvk4Hx.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_lK7aIWN.webp)
 
 - Lab - ShibaShop (題目關了🥲)
   - 先隨便買一個東西，然後把 buy 的金額改成負的，這樣錢就就會變多，再找到 flag 購買的地址，就可以買 flag 了，然後 flag 就出來了 \owo/
 - 怎麼打
-  ![Image](https://i.imgur.com/xgUDUKy.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_xgUDUKy.webp)
   
-  ![Image](https://i.imgur.com/PIkck6o.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_PIkck6o.webp)
   Error message 可以看 404 頁面
   [好用插件](https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg)
   - 什麼是黑箱，甚麼是白箱
     - 黑箱只能靠自己慢慢戳，白箱就是有 code 可以看背後邏輯
   - Info Leak: Turn black box to white box
-    ![Image](https://i.imgur.com/TKznpPx.png)
-    ![Image](https://i.imgur.com/2o7h9n8.png)
-    ![Image](https://i.imgur.com/8o2KckN.png)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_TKznpPx.webp)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_2o7h9n8.webp)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_8o2KckN.webp)
     [酷酷插件，自動幫你有沒有 git leak 爽爽拿 0day](https://chromewebstore.google.com/detail/dotgit/pampamgoihgcedonnphgehgondkhikel?hl=en)
     [藉由 gitleak 將整份程式還原出來，從黑箱變白箱](https://github.com/lijiejie/GitHack)
-    ![Image](https://i.imgur.com/jTalgbF.png)
-    ![Image](https://i.imgur.com/9rinjXU.png)
-    ![Image](https://i.imgur.com/x2ndju7.png)
-    ![Image](https://i.imgur.com/g1OoZyA.png)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_jTalgbF.webp)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_9rinjXU.webp)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_x2ndju7.webp)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day5_g1OoZyA.webp)
   - Lab - Robots (題目關了🥲)
     - 點到 Robots.txt 中設定成 disable 的網址，打開就有了
   - Lab - gitleak (題目關了🥲)

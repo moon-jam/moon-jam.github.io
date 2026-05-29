@@ -158,13 +158,13 @@ for i in range(len(chars)):
 
 根據題目給的密文隨便 rotate 一下就得到答案了
 
-![Image](https://i.imgur.com/2PdDAFF.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day30_2PdDAFF.webp)
 
 ### 第五題：ReadMyCert
 
 查了一下解析 cert 的指令，然後就得到 flag 了
 
-![Image](https://i.imgur.com/nabNssw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day30_nabNssw.webp)
 
 ### 第六題：HideToSee
 
@@ -176,7 +176,7 @@ krxlXGU{zgyzhs_xizxp_05y2z65z}
 
 然後再用圖片中講到的 Atbash Cipher 解密看看，就成功得到 flag 了
 
-![Image](https://i.imgur.com/wp3kUxt.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day30_wp3kUxt.webp)
 
 ## 總結
 

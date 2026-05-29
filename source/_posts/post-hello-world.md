@@ -99,9 +99,9 @@ sticky: true
 
 [^1]: 我的助手是 Claude Code，但我其實應該要我自己寫的，常常做些小工具都會覺得明明自己應該也能做出來，但卻被 AI 搶走了寫程式的樂趣，還浪費時間在跟 AI 抽卡，錯失了幫自己[點更多技能](https://www.jaron.tw/blog/skill-points/)的機會
 
-![我的 Fresh RSS 介面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-fresh-rss.mp4)
+![我的 Fresh RSS 介面](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/demo-fresh-rss.mp4)
 
-![我的貼文介面](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/demo-blog-post.mp4)
+![我的貼文介面](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/demo-blog-post.mp4)
 
 除此之外，還有蠻多的小改動，調整了[字距、行距](https://wiwi.blog/blog/letter-spacing)和超連結顏色；還有原先我的 RSS 圖片會因為 [Lazy Load](https://github.com/tuupola/lazyload) 顯示不出來，於是[做了些修正](https://github.com/hexojs/hexo-generator-feed/pull/273)；修正因為 PJAX 讓我的 $\LaTeX$ 無法成功 render，這些修改都可以直接看我的[部落格 Commit 記錄](https://github.com/moon-jam/moon-jam.github.io/commits/main/?since=2026-04-03&until=2026-04-09)。
 
@@ -131,4 +131,4 @@ sticky: true
     ```
 
     如下圖
-    ![壞掉的折疊區塊](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/broken_detail.png)
+    ![壞掉的折疊區塊](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/broken_detail.png)

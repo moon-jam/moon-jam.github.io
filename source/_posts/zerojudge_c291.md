@@ -57,4 +57,4 @@ signed main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/EX8G4n9.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c291_EX8G4n9.webp)

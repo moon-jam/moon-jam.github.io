@@ -39,8 +39,8 @@ lang: zh-TW
 ## PMF vs. PDF vs. CDF
 
 {% gp 02x1 %}
-![PMF-CDF](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/pmf-cdf.svg)
-![PDF-CDF](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/pdf-cdf.svg)
+![PMF-CDF](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/pmf-cdf.svg)
+![PDF-CDF](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/pdf-cdf.svg)
 {% endgp %}
 
 - PMF: Probability Mass Function 代表的是一個**離散型隨機變數**等於某個**特定數值**的機率

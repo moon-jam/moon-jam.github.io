@@ -31,16 +31,16 @@ SEO優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓�
 ## 網頁目前SEO狀況
 
 要優化前當然要先看看自己的目前的狀況，可以到[PageSpeed Insights](https://pagespeed.web.dev)，輸入自己的網頁的網址，就可以知道目前自己網頁的狀況
-![以我的網頁為例](https://i.imgur.com/vyUXRfU.png)
+![以我的網頁為例](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_vyUXRfU.webp)
 另外可以搜尋`site:網域`，看看自己的網站是否有被收錄到google內，如果還沒做過優化之前應該是什麼都沒有的，那在經過以下的操作後，可以確認你的網頁最少最少可以被搜尋到，如果你的網頁名稱不要太普遍，基本上要出現在第一頁應該不是問題
-![搜尋site:網域](https://i.imgur.com/kftLZgg.png)
+![搜尋site:網域](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_kftLZgg.webp)
 
 ## 網頁優化方法
 
 ### 網址
 
 搜尋引擎不喜歡過長或是索引過多的網址(例如說`https://example.com/abc/def/ghi/jkl/mn`)，因此建議把網址設定成你的檔案名稱（但就是要注意檔案名稱不能是中文，不然會變成亂碼），而且盡量跟文章要有關係，像是我這篇文章的檔案名稱就是`success@SEO-Search-Engine-Optimization.md`，如果覺得這樣太麻煩的話可以使用[abbrlink插件](https://github.com/rozbo/hexo-abbrlink)
-![把網址設定成檔案名稱](https://i.imgur.com/vd9WIxo.png)
+![把網址設定成檔案名稱](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_vd9WIxo.webp)
 
 ### 新增description
 
@@ -48,15 +48,15 @@ SEO優化就是讓搜尋引擎更喜歡你的網站，讓你的網站可以讓�
 
 <span id="inline-blue">首頁</span>
 到最外層的`_config.yml`去修改description
-![修改最外層_config.yml的description](https://i.imgur.com/ory8GYA.png)
+![修改最外層_config.yml的description](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_ory8GYA.webp)
 
 <span id="inline-blue">文章</span>
 要新增文章的description有兩中方法，一個是在文章最上端的細節設定新增`description: 你的description`，但我覺得略顯麻煩，因為我的文章幾乎都有一個前言，因此我就想說直接將前言當作description，作法很簡單，在前言的底下新增一行`<!--more-->`，就完成了
-![新增<!--more-->作為description](https://i.imgur.com/JKfxDSQ.png)
+![新增<!--more-->作為description](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_JKfxDSQ.webp)
 
 另外補充，可以在主題內的`_config.yml`，將`read_more_btn`設定為`true`，如此一來在瀏覽你的網站時，就只會將文章中description的部分呈現出來，讓可讀性更高
-![將read_more_btn設定為true](https://i.imgur.com/meLFbHF.png)
-![在網頁就會出現閱讀全文的按鈕](https://i.imgur.com/FoJcPqo.png)
+![將read_more_btn設定為true](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_meLFbHF.webp)
+![在網頁就會出現閱讀全文的按鈕](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_FoJcPqo.webp)
 
 ### Nofollow
 
@@ -77,7 +77,7 @@ sitemap:
 ### robots.txt
 
 到最外層資料夾中的`source`新增一個檔案`robots.txt`
-![新增robots.txt](https://i.imgur.com/Lepvzrl.png)
+![新增robots.txt](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_Lepvzrl.webp)
 接下來再`robots.txt`內貼上以下內容，記得Sitemap後面要改成你自己的網址
 
 ``` title: robots.txt
@@ -101,29 +101,29 @@ Sitemap: https://你的網址/sitemap.xml
 ### Google Search Console
 
 這個是最重要的一步，前面那些事讓你的SEO更好，但如果沒有這個你的網頁大概根本搜尋不到，進入[Google Search Console](https://search.google.com/search-console/about)，新增資源
-![新增資源](https://i.imgur.com/tw67jVX.png)
+![新增資源](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_tw67jVX.webp)
 
 如果是使用github page的就只能用右邊的那個，他會叫你把一個html檔放到你的網頁中，你就將它下載，然後儲存到`themes/NexT(或你用其他主題)/source`，重新部署之後稍等一下應該就完成了
 
 如果是有自己網域的話，建議使用左邊的，這樣它涵蓋的範圍會比較廣，將它提供的TXT紀錄複製下來，然後添加網域的DNS設定，我這裡是用namecheap，各家的使用方式也都大同小異，新增`TXT Record`，`Host`設定`@`，`Value`設定剛剛複製的TXT紀錄，幾分鐘後就會通過驗證了
 {% grouppicture 2-2 %}
-  ![複製TXT紀錄](https://i.imgur.com/4XAblPy.png)
-  ![DNS設定](https://i.imgur.com/y9sKq0R.png)
+  ![複製TXT紀錄](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_4XAblPy.webp)
+  ![DNS設定](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_y9sKq0R.webp)
 {% endgrouppicture %}
 
 進入你的資源後裡面有很多資訊可以查詢，以下列出三點我認為較重要的說明
 
 <span id="inline-blue">搜尋網頁索引狀態</span>
 可以透過上面的搜尋看自己網頁的索引狀態，如果發現沒有建立索引可以點擊`要求建立索引`，加速建立索引的時間，讓搜尋可以在更短的時間內將它放在搜尋的頁面上
-![搜尋網頁索引狀態](https://i.imgur.com/sifijQS.png)
+![搜尋網頁索引狀態](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_sifijQS.webp)
 
 <span id="inline-blue">檢查網頁索引狀態</span>
 這個頁面可以很快看到哪些頁面已經被搜尋引擎找到，哪些已經建立索引，搭配剛剛上面的搜尋就可以迅速知道目前各個網頁的狀態
-![檢查網頁索引狀態](https://i.imgur.com/saKZCae.png)
+![檢查網頁索引狀態](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_saKZCae.webp)
 
 <span id="inline-blue">新增Sitemap</span>
 在這個頁面就是用來把之前生成的Sitemap交給google看，讓他更清楚你的網頁們
-![新增Sitemap](https://i.imgur.com/CrguGDg.png)
+![新增Sitemap](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/SEO-Search-Engine-Optimization_CrguGDg.webp)
 
 ## 結語
 

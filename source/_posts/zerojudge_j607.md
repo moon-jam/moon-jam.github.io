@@ -83,4 +83,4 @@ signed main(){
 
 PS：這題我上個月就寫了，但好像後來忘記丟上來XD
 
-![AC的Submission～](https://i.imgur.com/gr5St9d.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_j607_gr5St9d.webp)

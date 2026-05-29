@@ -30,7 +30,7 @@ date: 2023-09-13 00:00:00
 
 1. 翻轉：這邊是指上下翻轉，因此較為簡單，只要將第i列第j行的元素跟第(c-i)列第j行的元素交換即可，且其中i跟(c-i)會在一半的地方交會，且在c是奇數時(c+1)/2的那行可以不做任何操作，因此讓i從0~c/2執行過一次即可
 2. 逆時針旋轉90度：這個稍微難一點，可以想做事將左上角固定，逆時針旋轉90度，如此一來可以發現就是將(i,j)位置的元素移動到(r-j-1,i)
-![逆時針旋轉90度示意圖](https://i.imgur.com/nLZVb9U.png)
+![逆時針旋轉90度示意圖](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b266_b965_nLZVb9U.webp)
 
 ✏️多筆測資就只要把一開始的輸入包在while裡就好了
 {% endnote %}
@@ -85,4 +85,4 @@ signed main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/mBgS1b7.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b266_b965_mBgS1b7.webp)

@@ -26,51 +26,51 @@ lang:
 
 用他的密碼 `test` / `test!` 登入，但這樣好像拿不到什麼，打開 Burp Suite 攔截 request，發現有下面這兩個請求，有一個 `/next-page/id=cGljb0NURntwcm94aWVzX2Fs` 試著把它用 Base64 解碼，然後他會再跳轉一次，有另一個 id ，一樣用 Base64 解碼之後合併再一起就得到 Flag 了
 
-![Image](https://i.imgur.com/JurqiNi.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_JurqiNi.webp)
 
-![Image](https://i.imgur.com/8N2c80l.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_8N2c80l.webp)
 
 ### 第二題：Secrets
 
 點檢查發現 source 裡面有一個資料夾 secret ，所有就連過去看看 (記得最後面要加 `/` 不然會被 redirect 到 `http://saturn.picoctf.net/secret/`) ，然後到下一個頁面後又發現有個資料夾 hidden ，連過去又有個資料夾 `superhidden` ，再連過去之後就看到 Flag 了
 
-![Image](https://i.imgur.com/NnVrlp7.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_NnVrlp7.webp)
 
-![Image](https://i.imgur.com/UCD9hZ5.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_UCD9hZ5.webp)
 
-![Image](https://i.imgur.com/3ZdYj17.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_3ZdYj17.webp)
 
-![Image](https://i.imgur.com/YVO0WGz.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_YVO0WGz.webp)
 
 ### 第三題：Roboto Sans
 
 這題看了好久才想到要去看 `robots.txt` ，裡面有一些看起來像 base64 編碼後過的東西，上下兩行不太知道是什麼，中間那行解出來是 `js/myfile.txt` ，所以就去看 `js/myfile.txt` 就得到 Flag 了
 
-![Image](https://i.imgur.com/zdJtIB2.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_zdJtIB2.webp)
 
-![Image](https://i.imgur.com/acGFowS.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_acGFowS.webp)
 
-![Image](https://i.imgur.com/HdWPVny.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_HdWPVny.webp)
 
 ### 第四題：Who are you?
 
 這題很好玩，他是昨天把 `User-Agent` 改成 `picobrowser` 的進階版，這次要改的東西更多，但他都有給提示，慢慢查一個個加到 Header 裡面就完成了，分別是 `User-Agent` `Referer` `Date`  `DNT` `X-Forwarded-For` `Accept-Language` ，這些都改成他想要的之後就能得到 Flag 了
 
-![Image](https://i.imgur.com/D0TWN28.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_D0TWN28.webp)
 
-![Image](https://i.imgur.com/aGCEPCf.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_aGCEPCf.webp)
 
-![Image](https://i.imgur.com/jxwsbkn.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_jxwsbkn.webp)
 
-![Image](https://i.imgur.com/0KYHVMt.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_0KYHVMt.webp)
 
-![Image](https://i.imgur.com/gUxGPKj.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_gUxGPKj.webp)
 
-![Image](https://i.imgur.com/6xnFkJB.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_6xnFkJB.webp)
 
-![Image](https://i.imgur.com/P6e6nSb.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_P6e6nSb.webp)
 
-![Image](https://i.imgur.com/rVhV8iN.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_rVhV8iN.webp)
 
 ### 第五題：It is my Birthday
 
@@ -108,9 +108,9 @@ Upload
 ------WebKitFormBoundaryvOuQVRQUS71gBftB--
 ```
 
-![Image](https://i.imgur.com/Rf6b5uB.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_Rf6b5uB.webp)
 
-![Image](https://i.imgur.com/TiVm1g4.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_TiVm1g4.webp)
 
 ### 第六題：
 
@@ -178,7 +178,7 @@ function verify() {
 }
 ```
 
-![Image](https://i.imgur.com/Er686nJ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day14_Er686nJ.webp)
 
 ## 參考資料
 

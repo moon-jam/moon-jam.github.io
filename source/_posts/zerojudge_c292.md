@@ -63,4 +63,4 @@ signed main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/1LqU1gf.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c292_1LqU1gf.webp)

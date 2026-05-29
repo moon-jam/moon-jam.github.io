@@ -26,7 +26,7 @@ lang:
 
 看到他 python code 裡面有個函數叫做 `print_flag()` ，我就把它移動到 `if __name__ == '__main__':` 下面，然後執行就得到 Flag 了
 
-![Image](https://i.imgur.com/C6UjyBZ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day9_C6UjyBZ.webp)
 
 ### 第二題：PW Crack 5
 
@@ -46,7 +46,7 @@ def level_5_pw_check():
         print("That password is incorrect")
 ```
 
-![Image](https://i.imgur.com/RFSR79J.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day9_RFSR79J.webp)
 
 ### 第三題：PW Crack 4
 
@@ -71,13 +71,13 @@ for pw in pos_pw_list:
         break
 ```
 
-![Image](https://i.imgur.com/wHbkutd.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day9_wHbkutd.webp)
 
 ### 第四題：PW Crack 3
 
 這題跟前一題一樣是把答案寫在陣列裡面，但他只有七個，所以可以一個個慢慢試，就得到 Flag 了 (結果我就真的試了七次才猜倒也是很不容易 xddddd)
 
-![Image](https://i.imgur.com/VMh9fcz.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day9_VMh9fcz.webp)
 
 ### 第五題：1_wanna_b3_a_r0ck5tar
 
@@ -110,7 +110,7 @@ Break it down
 Shout "Bring on the rock!"
 ```
 
-![Image](https://i.imgur.com/32w6UWZ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day9_32w6UWZ.webp)
 
 後來去看別人 writeup 又去看了一下他的文件發現他是拿文字長度當每一位數字，題目本來應該是要我們去看懂他程式然後輸入進去啦，不過反正能拿到 Flag 都是好方法🫠
 
@@ -118,7 +118,7 @@ Shout "Bring on the rock!"
 
 這題我蠻喜歡的，他用 `nc` 連到伺服器，然後要到他的商店裏面買 Flag，但是 Flag 的價錢遠超過自己的資產。不過還好她有提供 source code 可以參考，看了之後發現他有擋掉買負數的 Flag，但是但是，他沒有擋掉 `total_price` 是負數，可能一般人會想說 Flag 數量是正的，那 `total_price = 900 * number_flags` 也是正的，但是打過競程的一定都知道 overflow ，只要把 Flag 數量設成 (2^31/900, 2^31-1] ，就可以得到負數的 `total_price` 了，藉由買負數價錢的東西，就可以增加自己的資產然後買 Flag 了~
 
-![Image](https://i.imgur.com/37l2nfy.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day9_37l2nfy.webp)
 
 ## 參考資料
 

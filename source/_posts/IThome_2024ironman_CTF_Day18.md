@@ -53,7 +53,7 @@ while not flag.endswith("}"):
 print(f"Final Flag: {flag}")
 ```
 
-![Image](https://i.imgur.com/N6PEcTz.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day18_N6PEcTz.webp)
 
 ## 參考資料
 

@@ -26,7 +26,7 @@ date: 2023-07-25 00:00:00
 
 這個部分跟先前[利用 Hexo + NexT + Github Page 建立自己的 Blog](/Hexo-NexT_Github-Page_build-blog/)完全一樣，要注意一下在最外層資料夾的_config.yml其中site內的language要改成en，網站才會變成英文的，還有記得branch要使用gh-pages，才能正常運作喔
 
-![language要改成en](https://i.imgur.com/DzQuENU.png)
+![language要改成en](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-sidebar-switch-lang_DzQuENU.webp)
 
 ## 側邊欄新增切換按鈕
 

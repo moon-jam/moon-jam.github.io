@@ -40,11 +40,11 @@ pip install pycryptodome
 
 > 「編碼器（英語：Encoder）是一種將資訊由一種特定格式轉換為其他特定格式的感測器、軟體或是演算法，轉換的目的可能是由於標準化、速度、保密性、保安或是為了壓縮資料。」——維基百科
 
-![Image](https://i.imgur.com/H9jeJa0.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_H9jeJa0.webp)
 
-![Image](https://i.imgur.com/ZDIXlGI.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_ZDIXlGI.webp)
 
-![Image](https://i.imgur.com/OFKzyLQ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_OFKzyLQ.webp)
 
 #### 常見文字編碼
 
@@ -61,7 +61,7 @@ pip install pycryptodome
 
 要先用 Base64 解碼，再用 HEX 解碼
 
-![Image](https://i.imgur.com/DDWsPyn.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_DDWsPyn.webp)
 
 #### Lab - F**k Encoder
 
@@ -71,7 +71,7 @@ pip install pycryptodome
 
 #### 加解密的用途
 
-![Image](https://i.imgur.com/0spEvIQ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_0spEvIQ.webp)
 
 即便被攔截如果加解密夠好，也能確保密文不被破譯
 
@@ -81,17 +81,17 @@ pip install pycryptodome
   - ROT13
   - 曹操密碼
 - 簡易替換密碼
-  - ![Image](https://i.imgur.com/WHjuU9j.png)
+  - ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_WHjuU9j.webp)
   - 解密方式：頻率分析
-  - ![Image](https://i.imgur.com/MjPl9kx.png)
+  - ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_MjPl9kx.webp)
 - 維吉尼亞密碼（Vigenere）
-  - ![Image](https://i.imgur.com/cxikvpz.png)
-  - ![Image](https://i.imgur.com/sbkAIfj.png)
+  - ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_cxikvpz.webp)
+  - ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_sbkAIfj.webp)
   - 用密鑰長度切分，每一段相同位置的偏移量會相同 (例如上圖的CSASTPK的 K 和 CSASTPI 的 I 同樣都是向右偏移兩格) ，這樣就能分別對相同位置的字幕做頻率分析
 - 波雷費密碼 (Playfair)
-  - ![Image](https://i.imgur.com/I15FDJ3.png)
+  - ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_I15FDJ3.webp)
 - 柵欄密碼 (Rail fence)
-  - ![Image](https://i.imgur.com/NwrUS0z.png)
+  - ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_NwrUS0z.webp)
   - 密鑰是有幾個 `_`
 
 #### Lab - vigenere cipher
@@ -100,7 +100,7 @@ pip install pycryptodome
 
 然後找了一下就發現了一個看起來像正確 flag 的字串
 
-![Image](https://i.imgur.com/BK3rebA.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_BK3rebA.webp)
 
 #### Lab - secure substitution
 
@@ -108,7 +108,7 @@ pip install pycryptodome
 
 丟上去跑出來的第一個就是 Flag 了
 
-![Image](https://i.imgur.com/beCSHYP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day27_beCSHYP.webp)
 
 ## 參考資料
 

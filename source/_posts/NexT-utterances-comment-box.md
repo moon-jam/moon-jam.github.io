@@ -24,11 +24,11 @@ date: 2023-08-17 00:00:00
 先簡單說一下原理，他的留言板就是用 GitHub 的 issue 功能，用你文章的路徑、網址或是標題當作 issue 的 Title，然後把留言的內容當作是 issue 的回覆，所以留言的人就必須要有 GitHub 帳號才能使用
 
 解說完畢，實作上很簡單，就是來到主題底下的 `_config.yml` 裡將這些改一改，主題你可以自己全部都試試看，他很好心全部都列出來了，repo 要改成你自己的喔，要不然就會跑來我的 issue 了（x
-![Image](https://i.imgur.com/J98nMDR.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-utterances-comment-box_J98nMDR.webp)
 
 接著到你的隨便一篇文章底下去看，就會發現留言區還是沒出現，因為還要再裝一個 [utterances](https://GitHub.com/apps/utterances)，點擊安裝選擇 GitHub page 的 repo 然後在點擊安裝就完成了
 
-![Image](https://i.imgur.com/dancpB7.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-utterances-comment-box_dancpB7.webp)
 
 ## 文章中停用留言區
 
@@ -46,7 +46,7 @@ comments: false
 
 可以自己先試試看發個留言（~~要不然可能他從此都不會被用到~~），確認都可以用之後，恭喜你就完成留言板嘍！如果有問題或者發現我有哪裡講錯，歡迎大家到底下留言區跟我討論喔～
 
-![TEST😵‍💫](https://i.imgur.com/nGHOBS4.png)
+![TEST😵‍💫](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-utterances-comment-box_nGHOBS4.webp)
 
 ## 其他功能
 

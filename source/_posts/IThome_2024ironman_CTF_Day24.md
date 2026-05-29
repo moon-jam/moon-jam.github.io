@@ -36,46 +36,46 @@ lang:
 網路也是一樣的概念，假設要去瀏覽 Google 這個網站
 
 1. Application layer (信件內容)
-   ![Image](https://i.imgur.com/TyrNoiL.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_TyrNoiL.webp)
 2. Transport layer (信封)
-   ![Image](https://i.imgur.com/Mh6F6Ru.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_Mh6F6Ru.webp)
 3. Network layer (寄件人和收件人)
-   ![Image](https://i.imgur.com/ctf7Io9.png)
-   ![Image](https://i.imgur.com/BJAtXDq.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_ctf7Io9.webp)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_BJAtXDq.webp)
 4. Link layer (郵局)
-   ![Image](https://i.imgur.com/WjtMKGY.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_WjtMKGY.webp)
 
 ### 什麼事 Mac Address
 
-![Image](https://i.imgur.com/guXiiJc.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_guXiiJc.webp)
 
 跟 IP 的差異是 IP 是可以變動的， Mac Address 是固定的，所以在區域網路裡面是檢查 Mac Address 的，而不是 IP Address
 
 在古代沒有 Switch 的時候， 適用 Hub 來連接多台電腦，但是 Hub 是沒有腦袋的，他會把信送給所有人，每台電腦會檢查 Mac Address 看那封信是不是寄給自己的，如果是就接收，如果不是就丟掉
 
-![Image](https://i.imgur.com/r575Pbz.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_r575Pbz.webp)
 
 在有 Switch 後就只會把信送給對的人
 
-![Image](https://i.imgur.com/TZKfGgs.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_TZKfGgs.webp)
 
 但在我們瀏覽網頁是用 IP Address 來找到對方的，要找到對方的 Mac Address 就要用 ARP 協定
 
-![Image](https://i.imgur.com/NIA1F6B.png)
-![Image](https://i.imgur.com/R8bhGIW.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_NIA1F6B.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_R8bhGIW.webp)
 
 會有一個 ARP Table 來記錄對方的 Mac Address，固定一段時間後會清理和更新
 
 會不會有資安問題？
 會的，如果在我問目標的 Mac Address 時，有壞人騙我說他是目標的 Mac Address，這樣就會把信送給壞人，這就是 ARP Spoofing
 
-![Image](https://i.imgur.com/3uRI4Kk.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_3uRI4Kk.webp)
 
 ### Lab - ARP Spoofing
 
 Lab 關掉了不能玩 😥
 
-![Image](https://i.imgur.com/2dhPc7O.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_2dhPc7O.webp)
 
 ```shell
 sudo tcpdump -Ai eth1
@@ -89,33 +89,33 @@ sudo arpspoof -i eth1 -t 192.168.111.1 192.168.111.2
 
 這個指令就會幫你實作 ARP Spoofing 把 `192.168.111.1` 要傳給 `192.168.111.2` 的封包攔截
 
-![Image](https://i.imgur.com/zWABU43.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_zWABU43.webp)
 
 ### 什麼是網路 - 網段
 
-![Image](https://i.imgur.com/9Qut1Lg.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_9Qut1Lg.webp)
 
 上下最不同的是，上面的送的人是區域網路，下面的是送給區域外的人，所以他是要經過 Router 來轉發的
 
 一樣用寄信來比喻
 
-![Image](https://i.imgur.com/yFWXbH2.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_yFWXbH2.webp)
 
-![Image](https://i.imgur.com/ckCjpOt.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_ckCjpOt.webp)
 
 上下最大的差異就是在區域內還是區域外，在網路內也是一樣的，要怎沒看是在區域內外等等會講
 
-![Image](https://i.imgur.com/2u1JCbv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_2u1JCbv.webp)
 
-![Image](https://i.imgur.com/xWRmV85.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_xWRmV85.webp)
 
 可以通過判斷目標 IP 是否是寄給 Default Gateway 來判斷是區域內還是區域外
 
-![Image](https://i.imgur.com/JfzeMAX.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_JfzeMAX.webp)
 
 如何知道來源 IP 和目標 IP 是不是在同一個網段？
 
-![Image](https://i.imgur.com/QC3dXek.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_QC3dXek.webp)
 
 把 Address 和 Netmask 的二進制做 AND 運算，就會是 Network ID ，俗果兩個 Network ID 一樣就是在同一個網段 (所以如果 netmask 是 `255.255.255.0` 的話其實就看 IP 前九碼是不是都一樣就知道是不是在同區域，如果 netmask 是 `255.255.0.0` 就看 IP 前六碼)
 
@@ -125,11 +125,11 @@ sudo arpspoof -i eth1 -t 192.168.111.1 192.168.111.2
 
 資料送到 router 時， router 會根據上面的路由表傳送 packet ，路由會根據他的路由地圖來決定要傳送給誰（就像我們可以利用 mtr 看到我們資料是怎麼傳送目標的)
 
-![Image](https://i.imgur.com/ARzYFfG.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_ARzYFfG.webp)
 
 上面這個就是路由表，如果是 192.168.20.5 就會通過 192.168.20.2 出去
 
-![Image](https://i.imgur.com/hg8FCbD.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_hg8FCbD.webp)
 
 router table 會以 netmask 最長的為優先  
 
@@ -137,25 +137,25 @@ default gateway 就是 `0.0.0.0/0` 的縮寫，那如果沒有 default gateway �
 
 ### TCP vs UDP
 
-![Image](https://i.imgur.com/GzBbOug.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_GzBbOug.webp)
 
 #### UDP
 
 就是直接丟過去，不管有沒有真的收到
 
-![Image](https://i.imgur.com/tdKM6ao.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_tdKM6ao.webp)
 
 #### TCP
 
 如果需要可靠信傳送，要是資料很大用 UDP 傳過去可能就會很破碎，TCP 就會每次都確認有沒有收到，有收到後才會傳下一個
 
-![Image](https://i.imgur.com/MEndg57.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_MEndg57.webp)
 
-![Image](https://i.imgur.com/Xj2Qrqw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_Xj2Qrqw.webp)
 
-![Image](https://i.imgur.com/9wLfeyg.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_9wLfeyg.webp)
 
-![Image](https://i.imgur.com/RJqKk88.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_RJqKk88.webp)
 
 因為 TCP 的效能有點差，現在有一個叫做 QUIC 的協定，他是基於 UDP 的，但是他有 TCP 的功能，所以效能會比較好
 
@@ -169,12 +169,12 @@ default gateway 就是 `0.0.0.0/0` 的縮寫，那如果沒有 default gateway �
 
 1. 換一個 IP 的協議: IPv6，但因為目前很多服務都是架在 IPv4 上，大家也都還習慣用 IPv4，所以短期間就只能用下面那個方法
 2. NAT: 既然我們 IP 不夠用，那就讓一些電腦有 IP 就好，其他電腦用假的 IP
-   ![Image](https://i.imgur.com/kNC761j.png)
-   ![Image](https://i.imgur.com/mVPj0YS.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_kNC761j.webp)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_mVPj0YS.webp)
    Router 會有一個 NAT Table 來記錄每個請求的 Source IP 和 Destination IP，然後再把 Source IP 改成 Router 的 IP，然後再把封包送出去，當對方回應時， Router 會根據 NAT Table 把封包送到對應的電腦
    但這樣還有個問題，如果有個 Server 架在 NAT 後面，外面就戳不到，解決的方法就是 Port Forwarding
-   ![Image](https://i.imgur.com/DbLNxvt.png)
-   ![Image](https://i.imgur.com/Vr2qpuD.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_DbLNxvt.webp)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day24_Vr2qpuD.webp)
    會把外面送進拉的 Port 轉換成對應的內部 IP
    [How does NAT work](https://youtu.be/xleMUfUYbGw)
 

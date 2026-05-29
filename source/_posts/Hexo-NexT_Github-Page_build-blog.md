@@ -40,10 +40,10 @@ hexo s
 ## 連接Github
 
 首先先到github新開一個 Repository（這裡附上本人的[Repository](https://github.com/moon-jam/moon-jam.github.io)）
-![到個人首頁新增一個Repository](https://i.imgur.com/yadvxfF.png)
+![到個人首頁新增一個Repository](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_Github-Page_build-blog_yadvxfF.webp)
 然後取名叫做**username**.github.io （username要改成你自己的，如果要開更多網站的話可以取其他名字，但後面有地方要小改一點）
 選public，然後其他都不要打勾，完成之後複製這一段
-![把Repository的網址複製下來](https://i.imgur.com/XwrVZEQ.png)
+![把Repository的網址複製下來](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_Github-Page_build-blog_XwrVZEQ.webp)
 然後接下來就要把資料夾跟Github連上，輸入以下這些東西
 
 ``` no
@@ -107,7 +107,7 @@ hexo d  //deploy 部署到github page
 ## Hexo 設定
 
 找到外層資料夾最底下的_config.yml，這邊就講有需要調整的，其他有興趣可以自己玩玩看
-![外層資料夾的_config.yml](https://i.imgur.com/fow2tPF.png)
+![外層資料夾的_config.yml](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_Github-Page_build-blog_fow2tPF.webp)
 
 1. Site：  
   －title就打你想為網站取的名字  
@@ -116,17 +116,17 @@ hexo d  //deploy 部署到github page
   －author打你的想叫的名字，之後如果有地方會用到作者的資訊都會直接從這裡拿  
   －language就選你想要的語言（繁體中文zh-TW，簡體中文zh-CN，香港zh-HK，英文en）  
   －timezone就留空就好
-![Site](https://i.imgur.com/CLLrsqJ.png)
+![Site](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_Github-Page_build-blog_CLLrsqJ.webp)
 2. URL：  
     －url填自己的網域，如果你有自己的網域的話就填自己的（~~之後如果哪天有的話再個教學~~ 最後面有教學喔），所以就是填github page的網址  
     －permalink是代表你文章的網址要是什麼，預設是年/月/日/文章標題，不過這裡我建議你該城:name/，你也可以用:/title這是代表用title當作網址，但如果是中文的話他會變亂碼，這樣對搜尋優化不好（原本用年月日也會因為層數太多所以讓演算法不喜歡），而且網址也會變比較難看，用:name/的話會用檔案名稱當作網址，只要你檔名取英文的就好了（也有插件是會自己生成一串數字當作網址，但這樣對搜尋優化應該也不太好)
-![剩下的兩個不用動他](https://i.imgur.com/vd9WIxo.png)
+![剩下的兩個不用動他](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_Github-Page_build-blog_vd9WIxo.webp)
 3. 找到theme的地方，後面打上主題的資料夾名稱，詳細就看後面的吧
 
 ## 套上主題
 
 我是選擇[NexT](https://theme-next.js.org)，版型相當的好看，而且很多人用，要找資源也還算好找（[這裡](https://hexo.io/themes/)可以找其他主題喔）
-![NexT的主題](https://raw.githubusercontent.com/next-theme/theme-next-docs/v8.13.0/source/images/next-schemes-dark.png)
+![NexT的主題](https://cdn.jsdelivr.net/gh/next-theme/theme-next-docs@v8.13.0/source/images/next-schemes-dark.png)
 
 ### 下載 NexT
 
@@ -148,7 +148,7 @@ theme: NexT
 
 如果要改NexT的主題(就是上面看到的那四種)，可以到```theme/NexT/_config.yml```，修改裡面的```Scheme Settings```，把想要的取消註解，其他全部註解掉（像我就是使用Pisces）
 
-![選擇想要的NexT主題](https://i.imgur.com/iXejwcC.png)
+![選擇想要的NexT主題](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_Github-Page_build-blog_iXejwcC.webp)
 
 ## NexT調整
 

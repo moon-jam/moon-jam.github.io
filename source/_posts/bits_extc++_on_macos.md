@@ -61,12 +61,12 @@ g++-11 example.cpp -o example -std=c++11
 ### 使用 [C/C++ Compile Run](https://marketplace.visualstudio.com/items?itemName=danielpinto8zz6.c-cpp-compile-run) 插件
 
 進入到插件設定頁面，搜尋`C-cpp-compile-run: Cpp-compiler`，設定使用gcc編譯。
-![設定使用gcc編譯](https://i.imgur.com/aUY9uQR.png)
+![設定使用gcc編譯](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/bits_extc++_on_macos_aUY9uQR.webp)
 
 ### 使用 [Competitive Programming Helper (cph)](https://marketplace.visualstudio.com/items?itemName=DivyanshuAgrawal.competitive-programming-helper) 插件
 
 進入到插件設定頁面，搜尋`cph.language.cpp.Command`，設定使用gcc編譯。
-![設定使用gcc編譯](https://i.imgur.com/xKEDhsr.png)
+![設定使用gcc編譯](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/bits_extc++_on_macos_xKEDhsr.webp)
 
 ## 結語
 

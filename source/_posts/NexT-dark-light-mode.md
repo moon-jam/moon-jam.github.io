@@ -48,7 +48,7 @@ darkmode_js:
 
 如果想要設定固定的背景或按鈕顏色的話可以修改backgroundColor、buttonColorDark、buttonColorLight後的色碼，例如說`backgroundColor: "#FFD9E6"`，推薦給有少女心的各位
 
-![猛男粉紅💪](https://i.imgur.com/Yr5MMiF.png)
+![猛男粉紅💪](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-dark-light-mode_Yr5MMiF.webp)
 
 ## 結語
 

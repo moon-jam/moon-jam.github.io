@@ -28,35 +28,35 @@ NoSQL = Not Only SQL
 
 比較一下
 
-![Image](https://i.imgur.com/ZYsqw9q.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_ZYsqw9q.webp)
 
 NoSQL 的特點: 不用提前定義 schema ，結構較靈活 ，更多的優點可以看 [這裡](https://www.mongodb.com/nosql-explained/nosql-vs-sql)
 
 名詞上的定義比較
 
-![Image](https://i.imgur.com/Dsv7wI0.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_Dsv7wI0.webp)
 
 範例
 
-![Image](https://i.imgur.com/E6kil0x.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_E6kil0x.webp)
 
-![Image](https://i.imgur.com/gTaY5Yx.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_gTaY5Yx.webp)
 
 No SQL Injection 的精隨
 
-![Image](https://i.imgur.com/1ajBcvD.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_1ajBcvD.webp)
 
 像是利用 `$ne` 表示不相等，因為 `xxx` 跟真正的密碼不一樣，所以就會通關
 
-![Image](https://i.imgur.com/xpYY8Bx.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_xpYY8Bx.webp)
 
 如果只回傳結果，不把細節跟你講，這樣就算成功登入，也不能知道真正的密碼
 
-![Image](https://i.imgur.com/jhFMvgw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_jhFMvgw.webp)
 
 可以用 regular expression 來迭代嘗試出結果，就跟我上次寫的 `dig blind` 道理一樣
 
-![Image](https://i.imgur.com/Lsb4yzt.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_Lsb4yzt.webp)
 
 ### Lab - no-sql-injection
 
@@ -74,16 +74,16 @@ Lab 伺服器好像掛了 qaq ，之後再試
 
 #### 先回看 url 的定義 rfc3986
 
-![Image](https://i.imgur.com/ljodqkf.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_ljodqkf.webp)
 
-![Image](https://i.imgur.com/0KUwmy1.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_0KUwmy1.webp)
 
 對於 scheme 的利用
 
 1. 本地
-  ![Image](https://i.imgur.com/rEcHVqA.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_rEcHVqA.webp)
 2. php 偽協議
-  ![Image](https://i.imgur.com/9K9Ymzg.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day21_9K9Ymzg.webp)
 
 ## 參考資料
 

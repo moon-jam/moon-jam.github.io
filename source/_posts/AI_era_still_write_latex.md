@@ -14,7 +14,7 @@ date: 2026-04-13T00:22:03+08:00
 
 我的做法是用 Gemini 3 Fast 單獨開一個 Conversation 用來將手寫算式 [OCR](https://zh.wikipedia.org/zh-tw/%E5%85%89%E5%AD%A6%E5%AD%97%E7%AC%A6%E8%AF%86%E5%88%AB) 成 $\LaTeX$（而且當你算式寫錯它還會提醒你），然後再把數學式複製到筆記或是給原本跟你對話的 AI，這樣的使用流程搭配 Mac + iPad 可以共用剪貼簿的優勢，體驗是蠻優雅的。
 
-![Demo!](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/latex-AI-OCR-very-good.mp4)
+![Demo!](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/latex-AI-OCR-very-good.mp4)
 
 <!--more-->
 
@@ -22,7 +22,7 @@ date: 2026-04-13T00:22:03+08:00
 
 > 請依照照片中的數學算式，將算式以 LaTeX 的方式輸出出來，同時也將一樣的內容打到一個 codeblock 中，並用兩個錢字號包起來 `$$` `$$`，注意，如果等式過長的話請記得在 codeblock 中要換行方便後續編輯，如果圖片中的等式本來有多行可以使用 \begin{align\*} 、\begin{gather}、\begin{multiline\*} 或多個等式來達成美觀
 
-![用 Raycast 建立 Snippet](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/raycast-snippet-2latex.png)
+![用 Raycast 建立 Snippet](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/raycast-snippet-2latex.png)
 
 {% cq %}
 TL;DR 讓 AI 幫你把手寫算式 OCR 成 $\LaTeX$ 超好用

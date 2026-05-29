@@ -23,21 +23,21 @@ date: 2023-08-07
 
 申請就是要傳一些證明你是學生的資料，如果沒過的話就多試幾次，過了之後就等一下（我看有人是幾分鐘，有人幾小時，我的話比較久好像快一個禮拜），然後就到GitHub Student Developer Pack裡面找到namecheap（我覺得這個比name.com好用一點，尤其是ssl的認證，雖然在這裡是用不到就是了），最後連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了。
 
-![連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了](https://i.imgur.com/rCrDTw2.png)
+![連結github帳號，取得折扣碼，然後找想要的網域之後結帳就完成了](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_custom_domain_rCrDTw2.webp)
 
 ## 連結Github
 
 到namecheap的domain list中選取你剛剛申請好的網域
 
-![到namecheap的domain list中選取你剛剛申請好的網域](https://i.imgur.com/hyEUpiM.png)
+![到namecheap的domain list中選取你剛剛申請好的網域](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_custom_domain_hyEUpiM.webp)
 
 點到裡面的Advanced DNS，會發現他已經幾乎幫你設定完了，把最底下CNAME Record的Value設成你的github page的網址即可
 
-![將CNAME Record的Value設成你的github page的網址](https://i.imgur.com/q0IAGja.png)
+![將CNAME Record的Value設成你的github page的網址](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_custom_domain_q0IAGja.webp)
 
 好的那在namecheap這邊已經設置完成，接下來就要到Github上了，到你的repository（然後因為前面的學生方案還會發現你變成github pro了，酷吧），點設定，到Pages，到Custom domain打上申請的網域，接下來他會跑認證，認證之後才可以把Enforce HTTPS打勾，大概等個半小時，先吃一個下午茶，就會發現你可以打勾了，恭喜，你完成摟～
 
-![一張圖道盡千言萬語](https://i.imgur.com/3ozFoIX.png)
+![一張圖道盡千言萬語](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/Hexo-NexT_custom_domain_3ozFoIX.webp)
 
 ## 結語
 

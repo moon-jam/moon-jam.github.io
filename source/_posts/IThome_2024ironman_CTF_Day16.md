@@ -26,35 +26,35 @@ lang:
 
 #### Intro
 
-![Image](https://i.imgur.com/GRT0MaA.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_GRT0MaA.webp)
 
 像是類似這樣的網址，如果把 `?file=report.pdf` 改成 `?file=../../../../etc/passwd` 就有可能得到一些機密資料
 
 #### How to Happen
 
-![Image](https://i.imgur.com/mtm74QU.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_mtm74QU.webp)
 
 #### 常用來被攻擊的路徑
 
-![Image](https://i.imgur.com/VgXG75C.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_VgXG75C.webp)
 
 其他可以參考 [這邊](https://github.com/w181496/Web-CTF-Cheatsheet?tab=readme-ov-file#lfi)
 
 #### 防禦方式
 
 - 強制加上副檔名
-  ![Image](https://i.imgur.com/iXpCBr4.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_iXpCBr4.webp)
   (可以在後面加上 Null Byte `%00` 來繞過，但在 php5.4 已經被修掉了)
 - 確認路徑前綴
-  ![Image](https://i.imgur.com/z5OgxhK.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_z5OgxhK.webp)
 
 ### Lab - Pathwalker
 
 到網頁之後她會很好心的告訴你 Flag 的位置，然後你可以用 Path Traversal 的方式去找到 Flag 了
 
-![Image](https://i.imgur.com/lM6yIJV.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_lM6yIJV.webp)
 
-![Image](https://i.imgur.com/d2ASAL1.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_d2ASAL1.webp)
 
 ### Lab - Pathwalker - waf
 
@@ -66,21 +66,21 @@ lang:
 
 其中一個就算符合 (正確應該是 `^(apple|banana|cappo)$`) ，所以就能很輕鬆地繞過了
 
-![Image](https://i.imgur.com/rI3ylCf.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_rI3ylCf.webp)
 
 ### LFI (Local File Inclusion)
 
-![Image](https://i.imgur.com/qaQZYmG.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_qaQZYmG.webp)
 
 用 include 表示他會自動把檔案 parse ，假設 include 的是 php 就會自動 parse 成 php 的東西 (如果本來某個路徑的東西是不能拿的，就可能可以用 LFI 拿到，就像下面這樣)
 
-![Image](https://i.imgur.com/7V5vLN7.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_7V5vLN7.webp)
 
 parse 之後有可能會讓一些東西不見，就像是註解的內容，這時候可以用 php 偽協議把內容轉成 base64 ，然後再解碼就可以看到原本的內容了
 
-![Image](https://i.imgur.com/ZWrMmcI.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_ZWrMmcI.webp)
 
-![Image](https://i.imgur.com/os8xiem.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_os8xiem.webp)
 
 格式: `php://filter/{read= / write= / <empty>(自己決定要讀檔還寫檔)}convertor}/resource=<file_path>`
 
@@ -88,19 +88,19 @@ convertor: string.rot13, convert.base64-encode, convert.base64-decode, zlib.dela
 
 如果有多個 convertor ，就用 `|` 來串起來
 
-![Image](https://i.imgur.com/nYetXGd.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_nYetXGd.webp)
 
 ### Lab - lfi
 
 將 flag.php 用 base64 列印 (`?page=php://filter/convert.base64-encode/resource=flag`) 出來之後再解密就能得到 Flag 了
 
-![Image](https://i.imgur.com/RzdCCsO.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_RzdCCsO.webp)
 
 ### Lab - lfi2rce
 
 這題要取得在根目錄的 Flag ，直接偷 [別人寫好的 webshell](https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT/blob/main/test.php) 來串起來用就可以了，因為他用的是 `eval` 所以要用 `system` 來執行 linux 指令，所以只要在後面加上 `&1=system('ls /')` 然後 `&1=system('cat {flag名稱}') ，就解出來了~
 
-![Image](https://i.imgur.com/wD5XHyP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day16_wD5XHyP.webp)
 
 ## 參考資料
 

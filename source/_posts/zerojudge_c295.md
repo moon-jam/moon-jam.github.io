@@ -49,4 +49,4 @@ signed main(){
 
 ```
 
-![AC的Submission～](https://i.imgur.com/38CuDQa.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c295_38CuDQa.webp)

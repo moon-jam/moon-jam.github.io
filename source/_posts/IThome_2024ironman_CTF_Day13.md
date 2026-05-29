@@ -26,23 +26,23 @@ lang:
 
 這題他提示我們說要用 `picobrowser` ，感覺就是要拿這個 User-Agent 來訪問，所以我就用 Burp Suite 來修改 User-Agent 變成 `picobrowser` 然後重新導向之後再修改一次 User-Agent 就可以看到 Flag 了
 
-![Image](https://i.imgur.com/Ph7s6h3.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_Ph7s6h3.webp)
 
-![Image](https://i.imgur.com/TaDeNKd.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_TaDeNKd.webp)
 
-![Image](https://i.imgur.com/U7BbJV8.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_U7BbJV8.webp)
 
-![Image](https://i.imgur.com/sLnXX1V.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_sLnXX1V.webp)
 
 ### 第二題：Power Cookie
 
 就把 Cookie 的 `isAdmin` 改成 `true` 就可以了
 
-![Image](https://i.imgur.com/sr9ZQAI.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_sr9ZQAI.webp)
 
-![Image](https://i.imgur.com/qHFDuj0.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_qHFDuj0.webp)
 
-![Image](https://i.imgur.com/ofdZtdn.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_ofdZtdn.webp)
 
 ### 第三題：Forbidden Paths
 
@@ -52,9 +52,9 @@ lang:
 
 所以就用 `../../../../flag.txt` 來繞過過濾器就成功得到 Flag 了
 
-![Image](https://i.imgur.com/45hjM9z.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_45hjM9z.webp)
 
-![Image](https://i.imgur.com/4cS6bZK.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_4cS6bZK.webp)
 
 ### 第四題：login
 
@@ -81,7 +81,7 @@ lang:
 
 他會把帳號密碼都用 Base64 編碼過之後再比對，那基本上也跟明文差不多，直接把它比對的 Base64 解碼就可以了
 
-![Image](https://i.imgur.com/MCAgkJP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_MCAgkJP.webp)
 
 剛好密碼就是 Flag 可以直接交上去摟～
 
@@ -110,23 +110,23 @@ app.listen(3000, () => {
 
 目標看起來應該是透過 `exec()` 來達到 RCE，因為要先截斷前一個指令，所以我先讓他輸出 panda ，然後在後面加上 `;ls` 就可以看到目錄了
 
-![Image](https://i.imgur.com/DI9ojUp.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_DI9ojUp.webp)
 
 再把那個看起來很像 Flag 檔案印出來就是答案了
 
-![Image](https://i.imgur.com/DWd0S1E.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_DWd0S1E.webp)
 
 ### 第六題：MatchTheRegex
 
 想說輸輸看他原始碼裡面寫的註解，結果就對了？？？
 
-![Image](https://i.imgur.com/0Bw94jP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_0Bw94jP.webp)
 
-![Image](https://i.imgur.com/ya3HMRq.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_ya3HMRq.webp)
 
 後來試了一下，發現他題目要的應該是輸入符合 `^p.....F` 的字串，所以不論是 `p.....F` 、 `paaaaaF` 或是 `picoCTF` 都可以通過
 
-![Image](https://i.imgur.com/tYqA5oY.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day13_tYqA5oY.webp)
 
 ## 參考資料
 

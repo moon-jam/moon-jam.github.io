@@ -31,11 +31,11 @@ date: 2023-09-22 00:00:00
    一樣直接模擬，但erase時間可以縮短至$O(log N)$  
 3. 使用約瑟夫問題演算法$O(N)$（一定AC）  
    約瑟夫問題就等價這題$k=N-1$，也就是最後只剩下一個人的狀況，也就是70%的測資，那在講正確解前，就先說原始的約瑟夫問題，這個方法的邏輯是「倒推」，假設當你已經知道有$N-1$人時，留下來的那個人會是哪一號，那應該怎麼推得$N$人時，留下來的人是誰呢？可以看一下底下這張圖（以下會用0-base為說明，但實際是1-base，所以記得最後要+1）  
-   ![N-1人的狀況](https://i.imgur.com/yXB0sd2.png)  
+   ![N-1人的狀況](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c296_yXB0sd2.webp)  
    我們不知道N個人誰會是幸運者，但是我們可以知道$m-1$號（從0開始所以第$m$個人是$m-1$號）會在第一輪出局，這時候想想看，那個人出局後就變成$N-1$人了！那出局後的狀況跟上一張圖之間有什麼差別，有什麼辦法可以將一人出局後的狀況轉換到$N-1$人的狀況呢？  
-   ![N人時m-1人在第一局會被淘汰](https://i.imgur.com/ZNeXqkN.png)  
+   ![N人時m-1人在第一局會被淘汰](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c296_ZNeXqkN.webp)  
    ❗️把出局後那個人的下一個人當成是$N-1$狀況$0$的位置，旋轉看看！  
-   ![恭喜～](https://i.imgur.com/OzH0NI7.png)  
+   ![恭喜～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c296_OzH0NI7.webp)  
    把$m$號對齊$0$號就可以找到幸運人的位置（暫且先叫他$Y$），可以簡單看一下就知道，原先$N-1$圖的每個人會相較外圈對齊的數字少$m$，因此$Y$就會是$X+m$(另外要注意如果加$m$超過$N$的話要再繞回來，就是對$X+m$取其除以$N$的餘數)
    因為知道最後剩下一個人的狀況就是自己當一個圈且編號是0，那麼就可以列出一遞迴式
    $$f(N)=(f(N-1)+m) mod N, f(1)=0$$  
@@ -148,6 +148,6 @@ signed main(){
 ```
 
 AC的Submission們～
-![AC假解O(N^2)](https://i.imgur.com/AYYXaEc.png)
-![線段樹O(N log N)](https://i.imgur.com/gOl4OLM.png)
-![約瑟夫演算法O(N)](https://i.imgur.com/NqPLLat.png)
+![AC假解O(N^2)](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c296_AYYXaEc.webp)
+![線段樹O(N log N)](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c296_gOl4OLM.webp)
+![約瑟夫演算法O(N)](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c296_NqPLLat.webp)

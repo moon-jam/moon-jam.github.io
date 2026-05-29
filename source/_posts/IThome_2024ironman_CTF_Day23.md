@@ -30,20 +30,20 @@ lang:
 
 #### 先回看 url 的定義 rfc3986
 
-![Image](https://i.imgur.com/ljodqkf.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_ljodqkf.webp)
 
-![Image](https://i.imgur.com/0KUwmy1.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_0KUwmy1.webp)
 
 對於 scheme 的利用
 
 1. 本地
-  ![Image](https://i.imgur.com/rEcHVqA.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_rEcHVqA.webp)
 2. php 偽協議
-  ![Image](https://i.imgur.com/9K9Ymzg.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_9K9Ymzg.webp)
 
 #### gopher
 
-![Image](https://i.imgur.com/U0OVwny.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_U0OVwny.webp)
 
 但 gopher 這堂課不會詳細講道，之後再看
 
@@ -54,56 +54,56 @@ lang:
 可能被阻擋的方法
 
 1. 黑名單
-  ![Image](https://i.imgur.com/y1QBoom.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_y1QBoom.webp)
 
    - 破解方法：
-      ![Image](https://i.imgur.com/ueyAIFd.png)
-      ![Image](https://i.imgur.com/KvMPbY1.png)
-      ![Image](https://i.imgur.com/MUD32zD.png)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_ueyAIFd.webp)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_KvMPbY1.webp)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_MUD32zD.webp)
 
       利用 Domain 混淆
-      ![Image](https://i.imgur.com/sCh9gjp.png)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_sCh9gjp.webp)
 
 2. 白名單
-  ![Image](https://i.imgur.com/Wup4aoG.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_Wup4aoG.webp)
 
    - 破解方法：
 
       利用 Open Redirect
-      ![Image](https://i.imgur.com/3wYfCiz.png)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_3wYfCiz.webp)
       `https://google.com/amp/moon-jam.me` 就會自動轉址到 `moon-jam.me`
-      ![Image](https://i.imgur.com/ZS9eYR1.png)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_ZS9eYR1.webp)
 
 3. DNS 解析後判斷是否合法
-  ![Image](https://i.imgur.com/GHpEr4K.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_GHpEr4K.webp)
 
     - 破解方法：
   
         利用 DNS Rebinding
-        ![Image](https://i.imgur.com/NOvLsSl.png)
+        ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_NOvLsSl.webp)
 
         [製作 DNS Rebinding 的網站](https://lock.cmpxchg8b.com/rebinder.html)
 
         上一秒的時候解析是 `8.8.8.8` 所以不會被擋掉
-        ![Image](https://i.imgur.com/ak0NxJ5.png)
+        ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_ak0NxJ5.webp)
 
         但下一秒的時候解析就變成 `127.0.0.1` 了，就能成功存取內網 ip
-        ![Image](https://i.imgur.com/LIVN8Dd.png)
+        ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_LIVN8Dd.webp)
 
         orange 做的神奇東西，在不同服務解析出來的結果不一樣
-        ![Image](https://i.imgur.com/qqfvEfU.png)
+        ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_qqfvEfU.webp)
 
 ### Lab - ssrf 1
 
 用之前介紹的方法，利用 `http://0` 會被當成 `http://localhost` ，所以就可以成功存取內網 ip
 
-![Image](https://i.imgur.com/jGfydVd.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_jGfydVd.webp)
 
 ### Lab - ssrf 2
 
 看他的程式碼知道網址的開頭要是 `httpbin.dev` ，去 `https://httpbin.dev` 看看有什麼東西，發現了
 
-![Image](https://i.imgur.com/Zm0JXIU.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_Zm0JXIU.webp)
 
 於是只要使用 `https://httpbin.dev/redirect-to?url=http://localhost/internal-only` 就可以成功存取內網 ip 拿盪 flag 了
 
@@ -130,82 +130,82 @@ while True:
 
 除了 XSS 和 CSRF 之外，還有很多其他的酷東西
 
-![Image](https://i.imgur.com/L8o8SWr.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_L8o8SWr.webp)
 
 > 網頁前端本身的限制，例如說不可能單純透過網頁讓你家的印表機列印東西，需要一個本地的伺服器，讓網頁去戳本地伺服器，再由本地伺服器去戳印表機
 
 So
 
-![Image](https://i.imgur.com/ao7YNDA.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_ao7YNDA.webp)
 
-![Image](https://i.imgur.com/RvwTkNK.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_RvwTkNK.webp)
 
 這個 CVE 只要你點開一個網頁，你的小算盤就會跳出來
 
-![Image](https://i.imgur.com/6oxMp54.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_6oxMp54.webp)
 
 或者是很多人用的 electron ，背後其實也算是一個瀏覽器，也有可能被攻擊
 
 #### XSS
 
-![Image](https://i.imgur.com/20CaJLG.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_20CaJLG.webp)
 
 Self-XSS: 只能攻擊自己的 XSS ，但可能可以透過其他攻擊手法造成更嚴重的影響
 
-![Image](https://i.imgur.com/Dp5Rdw5.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_Dp5Rdw5.webp)
 
 Blind-XSS: XSS 在不知道甚麼時候可能會被觸發，例如當你把名字改成 XSS payload
 
 有個人把自己特斯拉的名字改成 XSS payload ，有天車壞了拿去送修，結果剛好 XSS payload 被觸發，拿到 10000 USD 的 Bug Bounty
 
-![Image](https://i.imgur.com/YeJOIpu.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_YeJOIpu.webp)
 
-![Image](https://i.imgur.com/MyJkVIk.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_MyJkVIk.webp)
 
 分類
 
 1. Relfected XSS (Non-persistent XSS)
-   ![Image](https://i.imgur.com/YsfFT77.png)
-   ![Image](https://i.imgur.com/LPdmuv6.png)
-   ![Image](https://i.imgur.com/vDv01Cl.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_YsfFT77.webp)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_LPdmuv6.webp)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_vDv01Cl.webp)
 2. Stored XSS (Persistent XSS)
-   ![Image](https://i.imgur.com/gHNMDqY.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_gHNMDqY.webp)
 3. DOM-based XSS
-   ![Image](https://i.imgur.com/LgsjI8p.png)
+   ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_LgsjI8p.webp)
 
 常見 payload
 
-![Image](https://i.imgur.com/Py4uauU.png)
-![Image](https://i.imgur.com/NqehmvQ.png)
-![Image](https://i.imgur.com/zz3gOLj.png)
-![Image](https://i.imgur.com/5d5QwDo.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_Py4uauU.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_NqehmvQ.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_zz3gOLj.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_5d5QwDo.webp)
 
 常見 payload - javascript 偽協議
 
-![Image](https://i.imgur.com/Zcrcv4g.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_Zcrcv4g.webp)
 
 避免 `htmlescape`
 
-![Image](https://i.imgur.com/eszQLas.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_eszQLas.webp)
 
-![Image](https://i.imgur.com/uxmNqn4.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_uxmNqn4.webp)
 
-![Image](https://i.imgur.com/b2RFaqC.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_b2RFaqC.webp)
 
 因為 javascript 偽協議可以不包含任何雙引號，所以就可以繞過 `htmlescape`
 
 常見 payload - innerHTML bitfall
 
-![Image](https://i.imgur.com/OJoDskQ.png)
-![Image](https://i.imgur.com/2ipNEu0.png)
-![Image](https://i.imgur.com/M2Q4HXC.png)
-![Image](https://i.imgur.com/44i3u6n.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_OJoDskQ.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_2ipNEu0.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_M2Q4HXC.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_44i3u6n.webp)
 
 [玩 XSS game~](https://xss-game.appspot.com/)
 
 #### XSS worm
 
-![Image](https://i.imgur.com/JMbinYv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day23_JMbinYv.webp)
 
 ### TODO
 

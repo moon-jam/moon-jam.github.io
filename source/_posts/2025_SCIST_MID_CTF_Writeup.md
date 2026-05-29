@@ -15,7 +15,7 @@ lang:
 
 # SCIST MID CTF Writeup
 
-![Image](https://i.imgur.com/I5lei4J.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2025_SCIST_MID_CTF_Writeup_I5lei4J.webp)
 
 我是 SCIST_31 \OwO/
 
@@ -928,7 +928,7 @@ new_body = new_message.split(b".")[1]
 print("token:" + new_encode(ori_header) + "." + new_encode(new_body) + "." + new_encode(new_sig))
 ```
 
-![Image](https://i.imgur.com/JNBweOL.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2025_SCIST_MID_CTF_Writeup_JNBweOL.webp)
 
 flag: `SCIST{It's a bad practice to implement RS256 of JWT.}`
 
@@ -940,7 +940,7 @@ P.S. 為什麼找不到網路上可以用來解 sha256 LEA 的工具或是腳本
 
 在首頁的 console 看到
 
-![Image](https://i.imgur.com/Y91Vjo0.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2025_SCIST_MID_CTF_Writeup_Y91Vjo0.webp)
 
 到 `[robots.txt](https://mid.ctf.scist.org/robots.txt)` 看到
 

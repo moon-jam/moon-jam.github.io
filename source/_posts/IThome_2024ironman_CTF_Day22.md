@@ -24,33 +24,33 @@ lang:
 
 ### 第一題：SQL Direct
 
-![Image](https://i.imgur.com/gdwtG9F.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_gdwtG9F.webp)
 
 查了一下知道可以用 \d 先看看 table 的 schema，最後再用 `select * from flags;` 看看 table 的內容
 
-![Image](https://i.imgur.com/hG7qOvE.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_hG7qOvE.webp)
 
 ### 第二題：Irish-Name-Repo 1
 
 簡單的 SQL Injection，用 `' OR 1=1; # --` 輸入就可以了
 
-![Image](https://i.imgur.com/lXfbGfJ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_lXfbGfJ.webp)
 
 ### 第三題：Irish-Name-Repo 2
 
 這題好像是會把 `OR` 過濾掉，所以試了一下之後只要用 `admin'; -- #` 就可以了
 
-![Image](https://i.imgur.com/uCvR9VP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_uCvR9VP.webp)
 
 ### 第四題：Irish-Name-Repo 3
 
 這題只有 password 可以輸入，試試看 `' OR 1=1; -- #` 發現不行，想不到其他方法就開個 Burp Suite 看一下，發現他後面會自帶一個 `&debug=0` ，試試看改成 1 ，會發現他把 SQL query 顯示出來了
 
-![Image](https://i.imgur.com/snbplhQ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_snbplhQ.webp)
 
 我發現他把 `OR` 變成 `BE` 了，似乎是 `rot13` ，所以我把 `OR` 改成 `BE` ，就成功得到 flag 了
 
-![Image](https://i.imgur.com/FTfHNas.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_FTfHNas.webp)
 
 ### 第五題：Web Gauntlet
 
@@ -88,7 +88,7 @@ payload: `ad'||'min';#`
 
 然後到 filter.php 就可以看到 flag 了
 
-![Image](https://i.imgur.com/Z5RkA1w.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_Z5RkA1w.webp)
 
 ### 第六題：Web Gauntlet 2
 
@@ -98,13 +98,13 @@ filter: `or and true false union like = > < ; -- /* */ admin`
 
 payload: username `ad'||'min`, password `a' is not 'b`
 
-![Image](https://i.imgur.com/dZC96h4.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_dZC96h4.webp)
 
 ### 第七題：Web Gauntlet 3
 
 這題好像跟上一題一模一樣? 就把上提的 payload 照抄就過了
 
-![Image](https://i.imgur.com/OvTrgIg.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day22_OvTrgIg.webp)
 
 ## 參考資料
 

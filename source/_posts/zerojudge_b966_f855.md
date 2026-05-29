@@ -16,7 +16,7 @@ mathjax: true
 
 給定一維座標上一些線段，求這些線段所覆蓋的長度，注意，重疊的部分只能算一次。
 例如給定4個線段(5, 6)、(1, 2)、(4, 8)、(7, 9)，如下圖，線段覆蓋長度為6(包含1～2、4～9)。
-![覆蓋了1~2、4~9共6個格子](https://i.imgur.com/Oq742JS.png)
+![覆蓋了1~2、4~9共6個格子](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b966_f855_Oq742JS.webp)
 {% endnote %}
 <!--more-->
 
@@ -65,5 +65,5 @@ signed main(){
 
 ```
 
-![AC的Submission～](https://i.imgur.com/iXeRWtQ.png)
-![zerojudge f855 測資加強版](https://i.imgur.com/f5e2FHF.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b966_f855_iXeRWtQ.webp)
+![zerojudge f855 測資加強版](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b966_f855_f5e2FHF.webp)

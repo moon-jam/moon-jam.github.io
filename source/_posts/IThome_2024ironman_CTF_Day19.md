@@ -24,9 +24,9 @@ lang:
 
 題目很好心把他會查詢的指令列出來了，可以發現他都有用 `()` 包起來，所以截斷的時候要注意要把 `)` 也帶上，就能順利 Injection 了。
 
-![Image](https://i.imgur.com/IDavAlE.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day19_IDavAlE.webp)
 
-![Image](https://i.imgur.com/LO1unj3.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day19_LO1unj3.webp)
 
 ### Dig Arguments
 
@@ -56,9 +56,9 @@ def dig():
 
 講師給了一個 [酷酷網站](https://gtfobins.github.io/) ，可以查到很多利用一些`本來應該不是用來讀檔或執行指令的` 的指令來 bypass 的方法，就找到了這個東東，按照這個方法就可以讀到 flag 了。
 
-![Image](https://i.imgur.com/rxkhZup.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day19_rxkhZup.webp)
 
-![Image](https://i.imgur.com/uKjFGSo.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day19_uKjFGSo.webp)
 
 ## 參考資料
 

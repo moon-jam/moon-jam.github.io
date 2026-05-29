@@ -46,4 +46,4 @@ int main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/vMzsXX4.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_c290_vMzsXX4.webp)

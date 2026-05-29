@@ -41,7 +41,7 @@ def level_2_pw_check():
 
 然後執行就會有答案摟~
 
-![Image](https://i.imgur.com/CDSstUr.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day4_CDSstUr.webp)
 
 ### 第二題：PW Crack 1
 
@@ -58,7 +58,7 @@ def level_1_pw_check():
     print("That password is incorrect")
 ```
 
-![Image](https://i.imgur.com/1JZ6vHI.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day4_1JZ6vHI.webp)
 
 ### 第三題：HashingJobApp
 
@@ -100,13 +100,13 @@ while True:
 io.interactive()
 ```
 
-![Image](https://i.imgur.com/vyS4NAL.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day4_vyS4NAL.webp)
 
 ### 第四題：Glitch Cat
 
 就簡單把它傳出來的字串和字元丟到 python 裡就是答案了
 
-![Image](https://i.imgur.com/TW0yIzN.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day4_TW0yIzN.webp)
 
 ### 第五題：fixme2.py
 
@@ -125,7 +125,7 @@ else:
 print('That is correct! Here\'s your flag: ' + flag)
 ```
 
-![Image](https://i.imgur.com/eRSagUP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day4_eRSagUP.webp)
 
 ### 第六題：fixme1.py
 
@@ -141,7 +141,7 @@ print('That is correct! Here\'s your flag: ' + flag)
 print('That is correct! Here\'s your flag: ' + flag)
 ```
 
-![Image](https://i.imgur.com/kLshQi5.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day4_kLshQi5.webp)
 
 ## 參考資料
 

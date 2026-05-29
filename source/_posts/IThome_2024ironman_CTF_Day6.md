@@ -27,8 +27,8 @@ lang:
 
 利用 `ltdis.sh` 分解 `static` 檔案，就可以從 `static.ltdis.strings.txt` 中找到 Flag 了
 
-![Image](https://i.imgur.com/SXcqpHY.png)
-![Image](https://i.imgur.com/kkgEVwM.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_SXcqpHY.webp)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_kkgEVwM.webp)
 
 ### 第二題：Nice netcat...
 
@@ -47,7 +47,7 @@ while True:
 print(text)
 ```
 
-![Image](https://i.imgur.com/bnhklQB.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_bnhklQB.webp)
 
 ### 第三題：Obedient Cat
 
@@ -60,33 +60,33 @@ print(text)
 ### 第五題：First Grep
 
 下載檔案後，用 `grep` 就能找到 Flag 了
-![Image](https://i.imgur.com/J6bJSP2.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_J6bJSP2.webp)
 
 ### 第六題：Bases
 
 用 `base64` 解碼就能得到 Flag 了
 
-![Image](https://i.imgur.com/hyNbDA7.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_hyNbDA7.webp)
 
 ## 上課紀錄
 
 ### Language Trick - php
 
 - 簡單語法
-  ![Image](https://i.imgur.com/aYvLppY.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_aYvLppY.webp)
 - Weak type
-  ![Image](https://i.imgur.com/48FxJ2B.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_48FxJ2B.webp)
   `0e` 開頭的東西會自動轉型成科學記號
-  ![Image](https://i.imgur.com/qEtbysm.png)
-  ![Image](https://i.imgur.com/hHMLZzs.png)
-  ![Image](https://i.imgur.com/33d9yla.png)
-  ![Image](https://i.imgur.com/UPtQUT0.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_qEtbysm.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_hHMLZzs.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_33d9yla.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_UPtQUT0.webp)
   還有其他若型別轉換的範例，如下的真直表
-  ![Image](https://i.imgur.com/a6tRpHz.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_a6tRpHz.webp)
 - Parameter Array
-  ![Image](https://i.imgur.com/Zb2FjOA.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_Zb2FjOA.webp)
 - Lab - phpisnice
-  ![Image](https://i.imgur.com/OWX8SdF.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_OWX8SdF.webp)
   雖然他 Lab 還是關掉了，但他有給 code ，所以我可以自己玩玩看!
   去查剛剛那些 [MD5 會有問題的字串](https://github.com/JohnHammond/ctf-katana?tab=readme-ov-file#php) 然後找到了這個
   
@@ -96,16 +96,16 @@ print(text)
   
   指定 A=0e215962017 這題應該就能拿到 Flag 了
 - Lab - phpisbest
-  ![Image](https://i.imgur.com/6Qa6T5t.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_6Qa6T5t.webp)
   因為他要先過 `strcmp($A, $B) == 0` 所以先把兩個用成不一樣的陣列，這樣會 `null == 0 -> true` 就過了，然後 MD5 只要兩個都是陣列就會 `null == null -> true`，就可以拿到 Flag 了
 - File vs Route
-  ![Image](https://i.imgur.com/V4YZb0h.png)
-  ![Image](https://i.imgur.com/OQyQqYj.png)
-  ![Image](https://i.imgur.com/1MELC6v.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_V4YZb0h.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_OQyQqYj.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_1MELC6v.webp)
 - Webshell (shell on web)
   惡意的 Webshell
-  ![Image](https://i.imgur.com/WfJcHBd.png)
-  ![Image](https://i.imgur.com/bGzjcIh.png)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_WfJcHBd.webp)
+  ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_bGzjcIh.webp)
 
   ```plaintext
     POST /upload.php HTTP/1.1\r\n
@@ -139,19 +139,19 @@ print(text)
 
   怎麼抵擋呢?
   1. 錯誤示範 - 用前端擋，可以輕易繞過
-    ![Image](https://i.imgur.com/nu7sTqM.png)
+    ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_nu7sTqM.webp)
   2. 檢查 File Content Type
       但是如果把 Request 的 Content-Type 改掉 (例如image/png) 就可以 bypass 了
   3. 檢查 File signature
       - magic number: 透過檢查檔案的開頭幾個 byte 來判斷檔案類型
-        ![Image](https://i.imgur.com/Wei7vN0.png)
+        ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_Wei7vN0.webp)
         但這東西也很容易被偽造，只要在前面加上簽名就可以了
-        ![Image](https://i.imgur.com/0Qgu6l8.png)
+        ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_0Qgu6l8.webp)
         在前面加上 gif87a 後端就會以為上傳的是 gif
   4. 副檔名
       - whitelist
       - blacklist
-      ![Image](https://i.imgur.com/Fx6F16L.png)
+      ![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day6_Fx6F16L.webp)
       但需要全部都擋掉，不然把副檔名改成 `phP` 之類的就可能可以繞過
 - Lab - uploader (lab 關掉了)
   照抄剛剛可以觸發 Webshell php，然後就能從根目錄取得 Flag 了

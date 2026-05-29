@@ -35,7 +35,7 @@ lang:
 strings strings | grep pico  
 ```
 
-![Image](https://i.imgur.com/lGZyBiT.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_lGZyBiT.webp)
 
 ### 第三題：what's a net cat?
 
@@ -45,7 +45,7 @@ strings strings | grep pico
 nc jupiter.challenges.picoctf.org 25103 
 ```
 
-![Image](https://i.imgur.com/UuV6CAI.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_UuV6CAI.webp)
 
 ### 第四題：Lets Warm Up
 
@@ -57,15 +57,15 @@ nc jupiter.challenges.picoctf.org 25103
 
 這題真的比較難，使用第一個 server 取得密碼
 
-![Image](https://i.imgur.com/dBmtTBl.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_dBmtTBl.webp)
 
 接下來連到第二個 server，然後用剛剛的密碼登入後，他會問一些問題，就網路查一下就有了
 
-![Image](https://i.imgur.com/OWFm2Wh.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_OWFm2Wh.webp)
 
 接下來看一下他題目說的，flag 在 root 下面，但我們 cd 過去之後卻發現沒有 read 的權限
 
-![Image](https://i.imgur.com/a7GgX1H.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_a7GgX1H.webp)
 
 但有個就坐 `/script.py` 的東西，是可以讀的，看了一下內容
 
@@ -121,23 +121,23 @@ ln -s /root/flag.txt /home/player/banner
 
 然後按下 `Ctrl + C` 之後再連一次就能看到 Flag 了
 
-![Image](https://i.imgur.com/tir6IJI.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_tir6IJI.webp)
 
 ### 第六題：SansAlpha
 
 規定終端不能使用任何字母，這我隨便猜 `*/*` 找到 `flag` 位置之後就不知道要怎麼做了 qaq，於是我去找了別人的 Writeup
 
-![Image](https://i.imgur.com/x44sSY4.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_x44sSY4.webp)
 
 看到有人是找到了 base64 的位置 `/bin/base64`，然後讓他把 Flag 的內容 base64 一次，之後再自己 decode 回來
 
 但這邊要注意的是如果直接用 `/???/????64` 會跟 `/bin/x86_64` 混淆，所以要用 `/*/???[!_]64` 這樣才能找到正確的位置
 
-![Image](https://i.imgur.com/gdENjp9.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_gdENjp9.webp)
 
-![Image](https://i.imgur.com/zz1wcWz.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_zz1wcWz.webp)
 
-![Image](https://i.imgur.com/ZBsAR5J.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day7_ZBsAR5J.webp)
 
 ## 參考資料
 

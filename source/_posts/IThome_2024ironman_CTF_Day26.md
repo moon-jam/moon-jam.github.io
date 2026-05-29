@@ -22,33 +22,33 @@ lang:
 
 ## Linux 基礎指令與使用者管理
 
-![Image](https://i.imgur.com/crswIVm.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_crswIVm.webp)
 
 ### Kernel Space vs User Space
 
-![Image](https://i.imgur.com/Cmt2y72.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_Cmt2y72.webp)
 
 區分成這樣是為了讓 Kernel 方便管理 User Space 的 Application ，避免有些 Application 搶資源，這時候就可以由 Kernel Space 停止那些指令運行
 
 ### Shell
 
-![Image](https://i.imgur.com/RFSND8t.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_RFSND8t.webp)
 
 ### SSH
 
 Secure Shell Protocol
 
-![Image](https://i.imgur.com/L8lFFSA.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_L8lFFSA.webp)
 
 [SSH 金鑰登入 就不用打密碼了](https://blog.gtwang.org/linux/linux-ssh-public-key-authentication/)
 
 ### Linux 目錄架構
 
-![Image](https://i.imgur.com/aIJTb9C.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_aIJTb9C.webp)
 
 ### 檔案種類
 
-![Image](https://i.imgur.com/2dh0cQk.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_2dh0cQk.webp)
 
 #### 正規檔案 (Regular File)
 
@@ -91,50 +91,50 @@ Secure Shell Protocol
 
 #### 用戶 /etc/password
 
-![Image](https://i.imgur.com/7j0LQsL.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_7j0LQsL.webp)
 
 密碼不會存在這，所以上面是寫 `x`
 
 #### 用戶 /etc/shadow
 
-![Image](https://i.imgur.com/VBwPnAJ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_VBwPnAJ.webp)
 
 #### 群組 /etc/group
 
-![Image](https://i.imgur.com/x6EP4D5.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_x6EP4D5.webp)
 
 #### 群組 /etc/gshadow
 
-![Image](https://i.imgur.com/cb7ZUgf.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_cb7ZUgf.webp)
 
 ### 權限
 
-![Image](https://i.imgur.com/uYL8Ucw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_uYL8Ucw.webp)
 
 #### 目錄的權限
 
-> r ：\
-> 表示具有讀取目錄結構清單的權限，可以查詢該目錄下的檔名資料。 \
-> w ：\
-> 建立新的檔案與目錄；\
-> 刪除已經存在的檔案與目錄(不論該檔案的權限為何！)\
-> 將已存在的檔案或目錄進行更名；\
-> 搬移該目錄內的檔案、目錄位置。\
-> x (access directory)：\
-> 使用者能否進入該目錄成為工作目錄的用途（能否cd進入）\
+> r ：
+> 表示具有讀取目錄結構清單的權限，可以查詢該目錄下的檔名資料。
+> w ：
+> 建立新的檔案與目錄；
+> 刪除已經存在的檔案與目錄(不論該檔案的權限為何！)
+> 將已存在的檔案或目錄進行更名；
+> 搬移該目錄內的檔案、目錄位置。
+> x (access directory)：
+> 使用者能否進入該目錄成為工作目錄的用途（能否cd進入）
 
-![Image](https://i.imgur.com/WrkLjvg.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_WrkLjvg.webp)
 
 #### 特殊權限 SUID/SGID/SBIT
 
-> SUID：執行時相當於擁有檔案owner的權限，僅對檔案生效\
-> SGID：\
-> 對檔案設定：執行時相當於擁有檔案group的權限\
-> 對目錄設定：此目錄下的有效群組(effective group)將會變成該目錄的群組\
-> SBIT：僅能對目錄設定，使用者在該目錄下建立檔案或目錄時，僅有自己與 root 才有權力刪除該檔案\
-> SUID = 4 SGID = 2 SBIT = 1         _755
+> SUID：執行時相當於擁有檔案owner的權限，僅對檔案生效
+> SGID：
+> 對檔案設定：執行時相當於擁有檔案group的權限
+> 對目錄設定：此目錄下的有效群組(effective group)將會變成該目錄的群組
+> SBIT：僅能對目錄設定，使用者在該目錄下建立檔案或目錄時，僅有自己與 root 才有權力刪除該檔案
+> SUID = 4 SGID = 2 SBIT = 1 \_755
 
-![Image](https://i.imgur.com/sixviML.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_sixviML.webp)
 
 #### Umask
 
@@ -142,7 +142,7 @@ Secure Shell Protocol
 
 `-S`: 顯示成比較好檢視的樣子
 
-![Image](https://i.imgur.com/z3UIhku.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day26_z3UIhku.webp)
 
 ### 未知的指令
 

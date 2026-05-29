@@ -24,27 +24,27 @@ lang:
 
 ### Injection (駭客的填字遊戲)
 
-![Image](https://i.imgur.com/y5iWGg3.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_y5iWGg3.webp)
 
 把所有車牌都刪掉了 xddd
 
-![Image](https://i.imgur.com/WIwk4gl.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_WIwk4gl.webp)
 
 [讚讚的影片說明](https://youtu.be/WWJTsKaJT_g?si=Q3cZWVAqUkfB6Cvg)
 
 這次會提到的
 
-![Image](https://i.imgur.com/3WVKgr6.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_3WVKgr6.webp)
 
 #### Code Injection
 
 以 python eval 舉例
 
-![Image](https://i.imgur.com/logfdq8.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_logfdq8.webp)
 
 其他常見的危險函式
 
-![Image](https://i.imgur.com/sJZbGSw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_sJZbGSw.webp)
 
 如何預防?
 
@@ -54,57 +54,57 @@ Code Injection 常常會出現在 IOT 設備 (像是監視器、TX link 之類�
 
 #### Command Injection
 
-![Image](https://i.imgur.com/fizUAJk.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_fizUAJk.webp)
 
 指令就會變成 `dig vincent55.tw; id`
 
 基本技巧 `;` `|` `&&` `||`
 
-![Image](https://i.imgur.com/ggJZvGk.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_ggJZvGk.webp)
 
 command substitution
 
-![Image](https://i.imgur.com/mCveGNN.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_mCveGNN.webp)
 
 如果空白被過濾了 - 用 `${IFS}` / `<`
 
-![Image](https://i.imgur.com/MCQKUP0.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_MCQKUP0.webp)
 
 如果有一些 keyword 被過濾了
 
-![Image](https://i.imgur.com/69MmYeJ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_69MmYeJ.webp)
 
 ### Lab - dig
 
 這題她有提供原始碼，可以知道背後的執行邏輯是 `<pre><?= system("dig '" . $_POST['name'] . "';") ?></pre>` ，所以可以用 `';` 來截斷 `dig` 然後就能在後面輸入想要的指令了，先用 `ls` 找到 Flag 的位置，然後再印出來就是答案摟
 
-![Image](https://i.imgur.com/t4QVkPM.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_t4QVkPM.webp)
 
-![Image](https://i.imgur.com/9p1z9dA.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_9p1z9dA.webp)
 
 ### Lab - dig waf1
 
 這題多檔了一些字 `blacklist = ['|', '&', ';', '>', '<', "\n", 'flag'];` ，可以用之前的 code substitution 來繞過
 
-![Image](https://i.imgur.com/aWF3spJ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_aWF3spJ.webp)
 
 ### Lab - dig waf2
 
 這題多檔了空白，用 `${IFS}` 就能通過了
 
-![Image](https://i.imgur.com/Boo8ori.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_Boo8ori.webp)
 
 ### Reverse shell
 
 Normal shell: ssh
 
-![Image](https://i.imgur.com/c5gRgjw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_c5gRgjw.webp)
 
 Reverse shell 就是改成從 server 主動連線到 client
 
-![Image](https://i.imgur.com/2MRqmS8.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_2MRqmS8.webp)
 
-![Image](https://i.imgur.com/rzza9V9.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_rzza9V9.webp)
 
 [這邊](https://www.revshells.com/) 有各種不同的 reverse shell
 
@@ -114,40 +114,40 @@ Reverse shell 就是改成從 server 主動連線到 client
 
 簡介
 
-![Image](https://i.imgur.com/jCbLoYT.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_jCbLoYT.webp)
 
-![Image](https://i.imgur.com/diIYRxW.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_diIYRxW.webp)
 
-![Image](https://i.imgur.com/W0VqYqh.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_W0VqYqh.webp)
 
 `SELECT title, subtitle, context FROM articles;`
 這邊是要找出 title, subtitle, context 這三個欄位的資料
 
-![Image](https://i.imgur.com/Eo7UdZC.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_Eo7UdZC.webp)
 
 `SELECT * FROM articles;`
 找出所有欄位的資料
 
-![Image](https://i.imgur.com/haP21Dv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_haP21Dv.webp)
 
 `SELECT * FROM articles WHERE id = 2;`
 找出 id 為 2 的資料
 
-![Image](https://i.imgur.com/PZOX4J1.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_PZOX4J1.webp)
 
 這邊就有點像是前面 command injection 一樣，可以讓他做一些壞壞的事情
 
 `SELECT * FROM articles WHERE id = 3; DROP TABLE articles;`
 
-![Image](https://i.imgur.com/PSaEbhN.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_PSaEbhN.webp)
 
 另外如果是在處理登入的資料庫是用 `SELECT * FROM user='' AND pass=` 來做判斷帳密是否正確，那就有可能發生下面一張的問題
 
-![Image](https://i.imgur.com/ddMisBO.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_ddMisBO.webp)
 
 藉由 `'` 截斷 和 `--` 註解的方式，可以讓他不管密碼是什麼的狀況下登入
 
-![Image](https://i.imgur.com/3MtXInv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day17_3MtXInv.webp)
 
 分類
 

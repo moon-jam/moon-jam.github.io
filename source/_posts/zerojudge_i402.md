@@ -80,4 +80,4 @@ int main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/IbR0NzM.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_i402_IbR0NzM.webp)

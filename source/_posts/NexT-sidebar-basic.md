@@ -32,7 +32,7 @@ hexo new page categories
 ```
 
 接著應該會發現在source裡面多出了三個資料夾
-![生成的三個資料夾](https://i.imgur.com/Y27wMgQ.png)
+![生成的三個資料夾](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-sidebar-basic_Y27wMgQ.webp)
 點進去後會發現一個叫做```index.html```的東西，點進去後輸入以下內容（xxx依照about、tags、categories哪個資料夾填入）
 
 ``` yml
@@ -109,7 +109,7 @@ local_search:
 
 這個更簡單，在theme主題的_config.yml，搜尋```avatar```，然後將你想要的頭像放到theme主題中`/source/images`
 
-![頭像檔案要存放的地方](https://i.imgur.com/AudEpQN.png)
+![頭像檔案要存放的地方](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-sidebar-basic_AudEpQN.webp)
 
 然後將`url`後設定為`/images/image_name`，以我的頭像為例，其檔名叫做`Panda_Me.png`，而`rounded`代表是否要顯示在圓框內，`rotated`表示滑鼠移到頭像上時是否要旋轉
 

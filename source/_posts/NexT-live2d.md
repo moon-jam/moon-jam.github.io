@@ -13,7 +13,7 @@ date: 2023-09-09
 ## 前言
 
 這次要做的就是網頁右下角那隻可愛的狗狗，可以幫你看家招攬客人，還可以跟他一起玩，可說是一舉數得
-![可愛的狗狗](https://i.imgur.com/cxJLFJn.png)
+![可愛的狗狗](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-live2d_cxJLFJn.webp)
 <!--more-->
 
 1. [安裝live 2d](/NexT-live2d/#安裝live-2d)
@@ -54,8 +54,8 @@ live2d:
 
 到了這裡應該已經有狗狗出現在你的網頁上面了，不過還有很多模型可以選擇，像是貓咪或是可愛的小女孩，可以從[這裡](https://blog.csdn.net/wang_123_zy/article/details/87181892#live2dwidgetmodelchitose_12)看到所有模型的預覽，不過我試過好以個之後還是覺得狗狗好可愛，或是也可以像我一樣中文的版面放狗，英文的版面放貓。
 
-![喵～](https://i.imgur.com/Bp0nf0U.png)
-![真香](https://i.imgur.com/EpN4LqQ.png)
+![喵～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-live2d_Bp0nf0U.webp)
+![真香](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-live2d_EpN4LqQ.webp)
 
 那選好了想要的模型就可以來下載了，下面是所有模型的名稱，只要輸入`npm install 模型名稱`就可以下載了，例如我上面的貓咪就是`npm install live2d-widget-model-tororo`，如果是live2d-widget-model-haru/01或live2d-widget-model-haru/02的話就統一用`npm install live2d-widget-model-haru`
 

@@ -27,13 +27,13 @@ lang:
 
 去翻 `git log` ，發現最下面有個 Author 長的一副 flag 的格式，然後試一下就對了 噎
 
-![Image](https://i.imgur.com/bLf5Uxx.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_bLf5Uxx.webp)
 
 ### 第二題：binhexa
 
 就用 `nc` 連上之後依序回答問題就可以得到 flag 了
 
-![Image](https://i.imgur.com/Rys3dlp.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_Rys3dlp.webp)
 
 ### 第三題：repetitions
 
@@ -53,25 +53,25 @@ while True:
     text = base64.b64decode(text).decode('utf-8').replace('\n', '')
 ```
 
-![Image](https://i.imgur.com/iwmPJio.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_iwmPJio.webp)
 
 ### 第四題：Big Zip
 
 解壓縮他給的檔案後，資料夾中裡面有超多的檔案，所以就用 `grep` 來配對 `picoCTF{.*}` ，然後就找到 flag 了~
 
-![Image](https://i.imgur.com/LpwfNPh.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_LpwfNPh.webp)
 
 ### 第五題：First Find
 
 使用 `find` 指令，找到名為 `uber-secret.txt` 的檔案，印出來就是 flag 了
 
-![Image](https://i.imgur.com/FRPy5SW.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_FRPy5SW.webp)
 
 ### 第六題：runme.py
 
 有點太簡單，就是直接 Run 就印出來了 \owo/
 
-![Image](https://i.imgur.com/d9SZoSi.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_d9SZoSi.webp)
 
 ## 上課紀錄
 
@@ -79,7 +79,7 @@ while True:
 
 發現輸入 `snickerdoodle` 會出現 `That is cookie! Not very special though...`，並且這時去查看 cookie 會發現有一個 `name` 的索引為 `0` ，但是在一般的時候 `name` 是 `-1` ，然後如果改成 `1, 2, 3...` 會有不同回應，所以就寫一個程式去窮舉看看，就像下面那樣，最後就發現在 `name` 為 `18` 的時候會出現 flag
 
-![Image](https://i.imgur.com/zzWrw9u.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_zzWrw9u.webp)
 
 ```python
 import requests
@@ -101,7 +101,7 @@ for i in range(1000):
     threading.Thread(target=try_cookie, args=(i,)).start()
 ```
 
-![Image](https://i.imgur.com/bS09EXR.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day3_bS09EXR.webp)
 
 ### pwntools
 

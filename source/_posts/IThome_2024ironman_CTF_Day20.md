@@ -32,17 +32,17 @@ lang:
 
 這題我有觀察到可以 path traversal，但是我亂戳戳不到東西，過了大概十分鐘，又沒忍住點了一下 hint ，才發現要戳的東西就是寫在原始碼裡面的 `config.php` ，就能前往下一關了
 
-![Image](https://i.imgur.com/xZD3Ha4.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_xZD3Ha4.webp)
 
-![Image](https://i.imgur.com/nLS1RQl.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_nLS1RQl.webp)
 
 #### stage 4
 
 這題她沒有一個地方讀取 `👀` ，但有個 `extract($_POST)` 可以利用 `POST` 的方式輸入 `👀` ，之後就跟 `lfi2rce` 一樣，利用 [php filter chain 構造出 webshell](https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT/blob/main/test.php) ，就能得到 Flag 了
 
-![Image](https://i.imgur.com/J7iMxyo.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_J7iMxyo.webp)
 
-![Image](https://i.imgur.com/MBxcvve.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_MBxcvve.webp)
 
 Note: 這邊要注意的是這個 webshell 指令最後需要的參數 `1`，他是透過 `$_GET[1]` 來取得的，所以要寫在網址後面解析，不是寫在 POST 裡面
 
@@ -93,7 +93,7 @@ USER daemon
 ENTRYPOINT ["python", "/app/main.py"]
 ```
 
-![Image](https://i.imgur.com/D41SaaE.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_D41SaaE.webp)
 
 ```python
 result:
@@ -145,11 +145,11 @@ f"python gen.py {user_input}", shell=True, capture_output=True, text=True).stdou
 
 可以讓我們利用類似 `;id` 這樣的方式來達到 RCE，空白就用 `${IFS}` 來代替，隨便戳戳看之後就能拿到 Flag 了
 
-![Image](https://i.imgur.com/bsNKWDc.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_bsNKWDc.webp)
 
-![Image](https://i.imgur.com/ea7xOKB.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_ea7xOKB.webp)
 
-![Image](https://i.imgur.com/NXWwza5.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day20_NXWwza5.webp)
 
 ## 參考資料
 

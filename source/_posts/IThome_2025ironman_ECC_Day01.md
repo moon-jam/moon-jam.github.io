@@ -35,19 +35,19 @@ lang:
 
 因為我英文不太好，又懶得看文字，就直接上 YouTube 上看看有沒有些資源可以參考
 
-![在 Youtube 上查 ECC 橢圓曲線加密的中文結果](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/ECC_serach_on_YouTube.png)
+![在 Youtube 上查 ECC 橢圓曲線加密的中文結果](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/ECC_serach_on_YouTube.png)
 
 所以我就把兩部影片看完了，挺酷的，給定一條曲線： $y^2 = x^3 + ax + b$
 
 為曲線上的點，定義一種特別的加法和乘法， $A+B=C$ 如下圖所示，$C$ 為過 $A$ 與 $B$ 直線，和曲線的交點對稱 X 軸後的點
 
-![曲線上點的加法](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/ECC_Add.png)
+![曲線上點的加法](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/ECC_Add.png)
 
-![這樣定義的加法具有結合律（沒截到完整的圖，但相信大家應該可以看得懂）](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/ECC_Add_associative.png)
+![這樣定義的加法具有結合律（沒截到完整的圖，但相信大家應該可以看得懂）](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/ECC_Add_associative.png)
 
 而 $A + A$ 就是 A 點切線與曲線的交點對稱 X 軸後的點，並定義這個點為 $2A$ 如下
 
-![曲線上點的乘法](https://raw.githubusercontent.com/moon-jam/BlogPictures/main/ECC_multi.png)
+![曲線上點的乘法](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/ECC_multi.png)
 
 因為加法有結合律，所以明顯的 $3A = A + 2A$，$2A + 2A = 4A$，對 $kA$ 的那個點只需要做 $\log_{2} k$ 次的運算就能找到，這個小細節對後面講到時間效率時會有幫助。
 

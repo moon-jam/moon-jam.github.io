@@ -27,21 +27,21 @@ lang:
 
 用 ssh 連線，然後開始手動二分搜，找到 flag
 
-![Image](https://i.imgur.com/bC5iLEw.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_bC5iLEw.webp)
 
 ### 第二題：Time Machine
 
 先把檔案載下來，然後解壓縮之後發現裡面有個 txt 檔和 .git 資料夾，txt 檔的訊息講說要去看他的 commit history，所以就用 git log 看了一下，就直接看到 flag 了
 
-![Image](https://i.imgur.com/2HLHWWP.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_2HLHWWP.webp)
 
-![Image](https://i.imgur.com/d8vSTzl.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_d8vSTzl.webp)
 
 ### 第三題：Super SSH
 
 按照指示登入，然後就看到 flag 了
 
-![Image](https://i.imgur.com/MKDketq.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_MKDketq.webp)
 
 ### 第四題：endianness
 
@@ -60,28 +60,28 @@ lang:
 big endian: 6f66626179
 little endian: 796162666f
 
-![Image](https://i.imgur.com/1ekTaMf.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_1ekTaMf.webp)
 
 ### 第五題：Commitment Issues
 
 先看看 message.txt ，他說 TOP SECRET，然後裡面也有 .git 資料夾，所以用 git log 看了一下，發現之前有一筆 commit message 寫 `remove sensitive info` 所以就 checkout 到那個 commit，然後再印出一次 message.txt 看到 flag 了
 
-![Image](https://i.imgur.com/NONd3sY.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_NONd3sY.webp)
 
-![Image](https://i.imgur.com/UEfthQB.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_UEfthQB.webp)
 
-![Image](https://i.imgur.com/R3j5L4w.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_R3j5L4w.webp)
 
 ### 第六題：Collaborative Development
 
 一樣有 .git 資料夾，所以就用 git log 看了一下，發現只有一筆，再回去看了一下題目說他是多人寫作的，所以看了以下有沒有其他 branch，果然，有其他另外三個，接著就把裡面的 flag.py 都拿出來看看就有答案了，然後拚在一起就是 flag 了
-![Image](https://i.imgur.com/LQluxR3.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_LQluxR3.webp)
 
-![Image](https://i.imgur.com/94GfmiG.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_94GfmiG.webp)
 
-![Image](https://i.imgur.com/3glt7JH.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_3glt7JH.webp)
 
-![Image](https://i.imgur.com/dwTsHm3.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_dwTsHm3.webp)
 
 ## 上課紀錄
 
@@ -119,7 +119,7 @@ print("".join(chr((ord(i)-ord("o")+ord("b")-97+26)%26+97) if i.isalpha() else i 
 ### Requests
 
 包含的方法
-![Image](https://i.imgur.com/Jg4eiEN.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day2_Jg4eiEN.webp)
 
 講了 `get` 和 `post` 的方法，然後就結束了~
 

@@ -17,7 +17,7 @@ mathjax: true
 
 下圖為家族的關係圖：0 是 7 的孩子， 1、2 和 3 是 0 的孩子， 4 和 5 是 1 的孩子， 6 是 3 的孩子。
 可以發現最遠的親戚關係為4(或 5)和6，他們的"血緣距離"是 4 (4→1→0→3→6)。
-<img src="https://i.imgur.com/fa0kw3h.png" width = "250" alt="血緣關係" align=center />
+<img src="https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b967_fa0kw3h.webp" width = "250" alt="血緣關係" align=center />
 給予任一家族的關係圖，請找出最遠的"血緣距離"。
 {% endnote %}
 <!--more-->
@@ -83,4 +83,4 @@ signed main(){
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/mj7e6IY.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_b967_mj7e6IY.webp)

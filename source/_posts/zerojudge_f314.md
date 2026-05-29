@@ -90,4 +90,4 @@ signed main()
 }
 ```
 
-![AC的Submission～!](https://i.imgur.com/Y4nntSL.png)
+![AC的Submission～!](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_f314_Y4nntSL.webp)

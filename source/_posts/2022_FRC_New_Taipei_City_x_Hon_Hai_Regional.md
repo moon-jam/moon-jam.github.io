@@ -47,12 +47,12 @@ lang:
 
 {% gp 4-3 %}
 
-![帥帥的機器](https://i.imgur.com/Gw4a15o.png)
+![帥帥的機器](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2022_FRC_New_Taipei_City_x_Hon_Hai_Regional_Gw4a15o.webp)
 
-![各種牌子和獎杯](https://i.imgur.com/Fqzy4JT.png)
+![各種牌子和獎杯](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2022_FRC_New_Taipei_City_x_Hon_Hai_Regional_Fqzy4JT.webp)
 
-![和其他隊伍們的團體照](https://i.imgur.com/rCKWIQX.png)
+![和其他隊伍們的團體照](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2022_FRC_New_Taipei_City_x_Hon_Hai_Regional_rCKWIQX.webp)
 
-![賽後的檢討文件](https://i.imgur.com/29pS1H4.png)
+![賽後的檢討文件](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2022_FRC_New_Taipei_City_x_Hon_Hai_Regional_29pS1H4.webp)
 
 {% endgp %}

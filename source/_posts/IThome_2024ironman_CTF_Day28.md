@@ -24,11 +24,11 @@ lang:
 
 ### XOR
 
-![Image](https://i.imgur.com/TC7cmgZ.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_TC7cmgZ.webp)
 
 ### MOD
 
-![Image](https://i.imgur.com/yms7Qj7.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_yms7Qj7.webp)
 
 ### Lab - XOR wormup
 
@@ -50,37 +50,37 @@ print({result.decode()})
 
 ### 流密碼
 
-![Image](https://i.imgur.com/arAPaTX.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_arAPaTX.webp)
 
 #### 隨機數
 
-![Image](https://i.imgur.com/EmZmTpv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_EmZmTpv.webp)
 
 ##### 偽隨機數
 
-![Image](https://i.imgur.com/rbi5s58.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_rbi5s58.webp)
 
-![Image](https://i.imgur.com/ACkE2aL.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_ACkE2aL.webp)
 
 #### 線性同餘生成器 (Linear Congruential Generator)
 
-![Image](https://i.imgur.com/qlvKoCn.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_qlvKoCn.webp)
 
-![Image](https://i.imgur.com/cqS7Nan.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_cqS7Nan.webp)
 
-![Image](https://i.imgur.com/ATlq3yR.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_ATlq3yR.webp)
 
-![Image](https://i.imgur.com/DJI6Uiy.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_DJI6Uiy.webp)
 
 #### 其他常見方法
 
-![Image](https://i.imgur.com/b6ijdxU.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_b6ijdxU.webp)
 
 #### 反饋位移生成器 (Feedback Shift Register)
 
-![Image](https://i.imgur.com/YCEkSYS.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_YCEkSYS.webp)
 
-![Image](https://i.imgur.com/xRBOzHv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_xRBOzHv.webp)
 
 ### lab - eof-almost baby prng
 
@@ -90,7 +90,7 @@ print({result.decode()})
 
 ### 對稱式加密
 
-![Image](https://i.imgur.com/zO68JRG.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_zO68JRG.webp)
 
 重點是 **使用同一把鑰匙**
 
@@ -103,31 +103,31 @@ print({result.decode()})
 
 #### Feistel Network
 
-![Image](https://i.imgur.com/dGaAKs5.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_dGaAKs5.webp)
 
 #### DES (Data Encryption Standard)
 
-![Image](https://i.imgur.com/fLYccox.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_fLYccox.webp)
 
-![Image](https://i.imgur.com/sJ9GnKY.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_sJ9GnKY.webp)
 
-![Image](https://i.imgur.com/leafhwv.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_leafhwv.webp)
 
-![Image](https://i.imgur.com/N3xsOAS.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_N3xsOAS.webp)
 
 #### Substitution-Permutation Network
 
-![Image](https://i.imgur.com/URyyjmX.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_URyyjmX.webp)
 
 #### AES (Advanced Encryption Standard)
 
-![Image](https://i.imgur.com/0OW7vJe.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_0OW7vJe.webp)
 
-![Image](https://i.imgur.com/qh3p4NV.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_qh3p4NV.webp)
 
-![Image](https://i.imgur.com/cXFzP3U.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_cXFzP3U.webp)
 
-![Image](https://i.imgur.com/kPJEXG2.png)
+![Image](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day28_kPJEXG2.webp)
 
 ## TODO
 

@@ -19,16 +19,16 @@ Google Analytics（後文簡稱為GA）是一個由Google所提供的網站流�
 ## 教學開始！
 
 首先到[GA的官網](https://analytics.google.com/)註冊一個帳號，接著到管理建立帳戶、資源、最後切換到資料串流
-![建立帳戶、資源、切換到資料串流](https://i.imgur.com/wdINP2I.png)
+![建立帳戶、資源、切換到資料串流](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-google-analytics_wdINP2I.webp)
 
 新增串流，選擇網頁
-![新增串流](https://i.imgur.com/7ZZQnoB.png)
+![新增串流](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-google-analytics_7ZZQnoB.webp)
 
 設定串流名稱、串流網址，他會自動生成GA id（就是最後的評估id），把他複製下來等等會用到
-![設定資料並複製id](https://i.imgur.com/XI7htXE.png)
+![設定資料並複製id](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-google-analytics_XI7htXE.webp)
 
 這次不去改_congif.yml的內容，雖然說他裡面也有可以設定GA的地方，但不知道為什麼我試過之後沒辦法使用，這裡我們直接改他的layout，首先到theme->{your-theme-name}->layout->_layout.njk
-![切換到_layout.njk](https://i.imgur.com/CVdViKM.png)
+![切換到_layout.njk](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-google-analytics_CVdViKM.webp)
 
 在body的上方插入以下程式碼，請務必將 'your-id' 替換為剛剛複製的id
 
@@ -44,10 +44,10 @@ Google Analytics（後文簡稱為GA）是一個由Google所提供的網站流�
 </script>
 ```
 
-![將程式碼插入到body的上方](https://i.imgur.com/4mtAFID.png)
+![將程式碼插入到body的上方](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-google-analytics_4mtAFID.webp)
 
 重啟網站（使用`hexo s`）並重新載入網頁，然後前往GA -> 報表 -> 即時，檢查是否有變化，有時可能需要等待一段時間才能看到數據更新。
-![查看即時報表有沒有變化](https://i.imgur.com/dZ0ZkQ6.png)
+![查看即時報表有沒有變化](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-google-analytics_dZ0ZkQ6.webp)
 
 ## 結語
 

@@ -23,7 +23,7 @@ lang:
 不過我還是覺得有個分數感覺會比較爽，然後正巧也有人在 Pico CTF 的 DC 社群上講了差不多的想法，那麼，我就來做個插件吧~  
 所以 Day1 的目標就從規劃進度 + 寫題目，鬼轉成了規劃進度 + 寫個生成 Pico CTF 分數的酷酷插件 XD
 
-![在 Pico CTF 的 DC 社群上剛好遇到有人有一樣的想法](https://i.imgur.com/rQ3SSIF.png)
+![在 Pico CTF 的 DC 社群上剛好遇到有人有一樣的想法](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/IThome_2024ironman_CTF_Day1_rQ3SSIF.webp)
 
 ## 規劃
 

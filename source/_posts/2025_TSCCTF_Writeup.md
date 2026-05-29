@@ -15,9 +15,9 @@ lang:
 
 在 Qualified Scoreboard 第五，全部人的第 41，嗚嗚被虐爛了
 
-![Qualified Scoreboard](https://i.imgur.com/IGyLku7.png)
+![Qualified Scoreboard](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2025_TSCCTF_Writeup_IGyLku7.webp)
 
-![Overall Scoreboard](https://i.imgur.com/bImlzwR.png)
+![Overall Scoreboard](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/2025_TSCCTF_Writeup_bImlzwR.webp)
 
 <!--more-->
 

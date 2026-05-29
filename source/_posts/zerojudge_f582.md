@@ -15,7 +15,7 @@ date: 2023-10-13 00:00:00
 
 科學家發現了$n$種病毒，編號分別是$1$到$n$，已知每一種病毒可以用一個RNA序列來表達，RNA序列是一個長度為$m$的字串，其中包含A、U、C、G、@等字元，其中 @ 為科學家沒觀察清楚的位置，可能為 A、U、C、G 其中任何一種。
 科學家也研究出了這些病毒的演化關係，除了一個最原始的病毒以外，每一種病毒都是從另一個病毒演化而來的，這些病毒會構成一個樹狀結構的病毒族譜(如圖)。
-![病毒族譜](https://i.imgur.com/KtX6lgN.png)
+![病毒族譜](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_f582_KtX6lgN.webp)
 
 兩個 RNA 序列的的距離定義為它們的漢明距離，也就是相異的位數個數。更具體的說，對於兩個長度都是 $m$ 的 RNA 序列 $a, b$，它們的漢明距離就是有幾個位置 $i$ 滿足 $a_i\neq b_i$ 。
 
@@ -103,4 +103,4 @@ int main() {
 }
 ```
 
-![AC的Submission～](https://i.imgur.com/oPVFbeE.png)
+![AC的Submission～](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/zerojudge_f582_oPVFbeE.webp)

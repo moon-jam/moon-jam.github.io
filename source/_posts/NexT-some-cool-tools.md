@@ -19,8 +19,8 @@ mathjax: true
 
 ## vscode-imgur
 
-![vscode-imgur](https://i.imgur.com/m8LaSvK.png)
-![實際執行](https://i.imgur.com/jPm7V6t.gif)
+![vscode-imgur](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_m8LaSvK.webp)
+![實際執行](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_jPm7V6t.webp)
 就是要申請API讓vscode使用，詳細教學可以[看這邊](https://israynotarray.com/hexo/20201012/473855281/)
 
 ## 閱讀更多按鈕
@@ -47,7 +47,7 @@ mathjax: true
 
 另外一個方法就是到最外層資料夾中的`source`新建一個`_data`的資料夾，然後在裡面新增`styles.styl`這個檔案（也就是`source/data/styles.styl`，然後將剛剛上面的程式碼貼在裡面，最後到`theme/NexT(改成你的主題名稱)/_config.yml`將custom_file_path的最後一項`style: source/_data/styles.styl`的註解取消，就完成了
 
-![開啟custom_file_path設定](https://i.imgur.com/ndD3yh1.png)
+![開啟custom_file_path設定](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_ndD3yh1.webp)
 
 ## MathJax
 
@@ -87,8 +87,8 @@ $$
 
 ## 文章編輯按鈕
 
-![修改主題中的_config.yml](https://i.imgur.com/72o7nFY.png)
-![實際狀況](https://i.imgur.com/EFMiCya.png)
+![修改主題中的_config.yml](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_72o7nFY.webp)
+![實際狀況](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_EFMiCya.webp)
 
 ## Travis Ci 自動部署
 
@@ -97,13 +97,13 @@ $$
 ## npm套件自動更新
 
 不知道你有沒有在生成網頁的時候出現npm套件的問題(可能就是在執行`hexo clean` `hexo g` `hexo d` `hexo s`時)，如下圖，在經過多次測試之後發現大部分都是因為版本有問題，後來我發現了一個[檢查套件版本的工具](https://github.com/raineorshine/npm-check-updates)，自動檢查哪些版本過舊並升級，大多數狀況在升級後就沒事了
-![我hexo-optimize出問題](https://i.imgur.com/BovidcP.png)
+![我hexo-optimize出問題](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_BovidcP.webp)
 
 ## Hexo PDF預覽
 
 可以在網頁裡展示PDF，[hexo-pdf](https://github.com/superalsrk/hexo-pdf)
 記得要把主題內的pdf設成`true`
-![把主題內的pdf設成true](https://i.imgur.com/EMpal5Z.png)
+![把主題內的pdf設成true](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_EMpal5Z.webp)
 然後如果想讓每個頁面出現的pdf不一樣大可以用以下程式碼
 
 ``` html
