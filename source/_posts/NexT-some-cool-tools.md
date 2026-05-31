@@ -23,6 +23,14 @@ mathjax: true
 ![實際執行](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_jPm7V6t.webp)
 就是要申請API讓vscode使用，詳細教學可以[看這邊](https://israynotarray.com/hexo/20201012/473855281/)
 
+{% note warning %}
+但若儲存在 Imgur 上的，但有時候額載入速度會很慢或是根本載不出來，而且其實他們的[使用條款](https://imgur.com/tos) 也是明確禁止我們將 Imgur 作為個人網站的圖床使用
+
+> "Also, don't use Imgur to host image libraries you link to from elsewhere, content for your website, advertising, avatars, or anything else that turns us into your content delivery network."
+
+建議可以使用 PicGo + GitHub 或 Cloudflare R2 作為圖床會較為安全，詳見〈[關於我部落格上的圖片們](/about-blog-image)〉
+{% endnote %}
+
 ## 閱讀更多按鈕
 
 如果沒有這個的話在一開始首頁的地方全部文章都會是展開的，這樣對於要翻看有哪些內容就很不方便，網站整體觀感也會不好，因此可以新增一個閱讀更多的按鈕，設定每篇文章要顯示多少內容給使用者看，這個部分我有在[SEO優化的description中說明](/SEO-Search-Engine-Optimization/#新增description)
@@ -106,8 +114,8 @@ $$
 ![把主題內的pdf設成true](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/NexT-some-cool-tools_EMpal5Z.webp)
 然後如果想讓每個頁面出現的pdf不一樣大可以用以下程式碼
 
-``` html
-<embed src="ooxx.pdf" width=100% height="自己設" type="application/pdf">
+```html
+<embed src="ooxx.pdf" width="100%" height="自己設" type="application/pdf" />
 ```
 
 ## NexT Group Picture
