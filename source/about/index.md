@@ -45,7 +45,7 @@ comments: false
 - Discord 猜拳機器人 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/discord-bot-Rock-Paper-Scissors)
 - 線上跳繩競賽系統 [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/Jump_rope)
 - 參與製作四台 FRC 機器人
-  ![由左至右分別為 2022 賽季、2022 自辦模擬賽、2023 賽季、2024 賽季](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/about_OEXIRUA.webp)
+  ![由左至右分別為 2022 賽季、2022 自辦模擬賽、2023 賽季、2024 賽季](https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/webp/frc_robots.webp)
 
 ## 比賽經歷
 
