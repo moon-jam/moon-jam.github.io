@@ -66,8 +66,11 @@
                 </span>
               </summary>
 
-              <div class="post-accordion-content post-body" itemprop="articleBody">
-                {{ post.content | safe }}
+              <div class="post-accordion-content">
+                <div class="post-accordion-body post-body"
+                     itemprop="articleBody"
+                     data-post-url="{{ url_for(post.path) }}"
+                     data-loaded="false"></div>
                 <div class="post-accordion-actions">
                   <p class="post-accordion-readmore">
                     <a href="{{ url_for(post.path) }}" itemprop="url">前往原文</a>
@@ -138,17 +141,96 @@
         });
       };
 
+      // Lazily fetch each post's body from its standalone permalink the first
+      // time it is opened. Only one item holds content at a time (single-open),
+      // and fetched HTML is cached in memory for instant re-open.
+      const contentCache = new Map();
+
+      const reinitContent = () => {
+        // Mirror what pjax navigation does so injected content gets its dynamic
+        // features (MathJax / Mermaid / FancyBox listen on `page:loaded`; the
+        // rest — copy buttons, table/video wrap, lazyload — run in boot.refresh).
+        document.dispatchEvent(new Event('page:loaded', { bubbles: true }));
+        if (window.NexT && NexT.boot && typeof NexT.boot.refresh === 'function') {
+          NexT.boot.refresh();
+        }
+      };
+
+      const clearItemContent = item => {
+        const body = item.querySelector('.post-accordion-body');
+        if (!body) return;
+        body.innerHTML = '';
+        body.dataset.loaded = 'false';
+      };
+
+      const renderError = (body, url) => {
+        body.dataset.loaded = 'false';
+        body.innerHTML = `
+          <div class="post-accordion-error">
+            <p>內容載入失敗。</p>
+            <p>
+              <button type="button" class="post-accordion-retry">重新載入</button>
+              <a href="${url}">前往原文 ↗</a>
+            </p>
+          </div>`;
+        const retry = body.querySelector('.post-accordion-retry');
+        if (retry) {
+          retry.addEventListener('click', () => {
+            const details = body.closest('details');
+            if (details) loadContent(details);
+          });
+        }
+      };
+
+      const loadContent = async details => {
+        const body = details.querySelector('.post-accordion-body');
+        if (!body || body.dataset.loaded === 'true') return;
+
+        const url = body.dataset.postUrl;
+        const cacheKey = normalizePostPath(details.dataset.postPath);
+
+        if (contentCache.has(cacheKey)) {
+          body.innerHTML = contentCache.get(cacheKey);
+          body.dataset.loaded = 'true';
+          reinitContent();
+          return;
+        }
+
+        body.innerHTML = '<div class="post-accordion-loading">載入中…</div>';
+
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const html = await res.text();
+          const doc = new DOMParser().parseFromString(html, 'text/html');
+          const fetchedBody = doc.querySelector('.post-body[itemprop="articleBody"]');
+          if (!fetchedBody) throw new Error('post body not found');
+
+          const content = fetchedBody.innerHTML;
+          contentCache.set(cacheKey, content);
+          body.innerHTML = content;
+          body.dataset.loaded = 'true';
+          reinitContent();
+        } catch (err) {
+          renderError(body, url);
+        }
+      };
+
       const setOpenItem = (target, options = {}) => {
         const { jump = false, syncHash = true } = options;
 
         detailsItems.forEach(item => {
-          item.open = Boolean(target && item === target);
+          const isTarget = Boolean(target && item === target);
+          item.open = isTarget;
+          if (!isTarget) clearItemContent(item);
         });
 
         if (!target) {
           if (syncHash) clearAddressReadingState();
           return;
         }
+
+        loadContent(target);
 
         if (syncHash) updateAddressReadingState(target);
         if (jump) {
@@ -184,17 +266,26 @@
         });
       });
 
-      const initialFromHash = normalizePostPath(decodeHash(window.location.hash));
-      if (initialFromHash) {
-        const opened = openByPath(initialFromHash, { jump: true, syncHash: true });
-        if (opened) {
-          // no-op: openByPath already handled jump and hash
+      // Defer the first content load until after NexT's scripts have loaded and
+      // registered their `page:loaded` listeners (this inline script runs while
+      // the body is still parsing, before NexT.boot exists).
+      const runInitialOpen = () => {
+        const initialFromHash = normalizePostPath(decodeHash(window.location.hash));
+        if (initialFromHash) {
+          openByPath(initialFromHash, { jump: true, syncHash: true });
+        } else {
+          const defaultOpen = detailsItems.find(item => item.open);
+          if (defaultOpen) {
+            updateAddressReadingState(defaultOpen);
+            loadContent(defaultOpen);
+          }
         }
+      };
+
+      if (document.readyState === 'complete') {
+        runInitialOpen();
       } else {
-        const defaultOpen = detailsItems.find(item => item.open);
-        if (defaultOpen) {
-          updateAddressReadingState(defaultOpen);
-        }
+        window.addEventListener('load', runInitialOpen, { once: true });
       }
 
       window.addEventListener('hashchange', () => {

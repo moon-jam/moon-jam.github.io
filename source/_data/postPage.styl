@@ -152,7 +152,7 @@
     margin-top: 18px;
   }
 
-  .post-accordion-content > h2:first-child {
+  .post-accordion-body > h2:first-child {
     margin-top: 8px;
   }
 
@@ -196,6 +196,50 @@
   .post-accordion-empty {
     color: var(--blockquote-color);
     margin: 8px 0 0;
+  }
+
+  // Lazy-load states for injected post content
+  .post-accordion-loading,
+  .post-accordion-error {
+    color: var(--blockquote-color);
+    padding: 24px 8px;
+    text-align: center;
+  }
+
+  .post-accordion-loading::before {
+    content: '\f110'; // fa-spinner
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 8px;
+    animation: post-accordion-spin 0.8s linear infinite;
+    display: inline-block;
+  }
+
+  @keyframes post-accordion-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .post-accordion-error p {
+    margin: 6px 0;
+  }
+
+  .post-accordion-retry {
+    background: var(--post-subtle-bg);
+    border: 1px solid var(--post-border);
+    border-radius: 999px;
+    color: var(--blockquote-color);
+    cursor: pointer;
+    font-size: 0.85em;
+    line-height: 1.4;
+    margin-right: 8px;
+    padding: 4px 12px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  .post-accordion-retry:hover {
+    background: var(--post-subtle-hover-bg);
+    border-color: var(--post-muted);
+    color: var(--text-color);
   }
 
   @media (max-width: 767px) {
