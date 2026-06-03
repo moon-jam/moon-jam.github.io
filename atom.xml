@@ -11,7 +11,50 @@
   <rights>All rights reserved 2026, Moon Jam</rights>
   <subtitle>I'm a panda</subtitle>
   <title>Moon Jam's Blog</title>
-  <updated>2026-05-31T07:01:45.030Z</updated>
+  <updated>2026-06-03T15:08:24.217Z</updated>
+  <entry>
+    <author>
+      <name>Moon Jam</name>
+    </author>
+    <category term="貼文" scheme="https://moon-jam.me/categories/%E8%B2%BC%E6%96%87/"/>
+    <category term="數學" scheme="https://moon-jam.me/tags/%E6%95%B8%E5%AD%B8/"/>
+    <category term="math" scheme="https://moon-jam.me/tags/math/"/>
+    <content type="html">
+      <![CDATA[<p>最近在寫<a
+href="https://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0107&amp;sem=2&amp;co_no=P764200&amp;class_code=">排隊理論</a>作業，題目其實不多，但我已經寫了兩天了還沒寫完，<strong>實在是好多數學噢</strong>，又是
+<a
+href="https://zh.wikipedia.org/zh-tw/%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B">PDE</a>
+又是 Laplace Transform，還時不時出現 Power
+Series，當然還有機率與統計。</p>
+<p>當初只修了工程數學（一），根本沒學過 PDE
+怎麽解，然後大一微積分<ruby>也沒有說到什麼偏微分的細節<rt>或是可能我忘記了</rt></ruby>，而且就連一些自然數基本的性質都不太記得，當然
+Laplace Transform
+要怎麼變也是忘光光，搞不好比較熟的還是機率與統計，<ruby><del>因為我現在正在修</del><rt>雖然可能沒有很認真上課就是了</rt></ruby>。</p>
+<p>另外我還有一個不知道是優點還缺點的性格，就是我總會想搞懂所有公式、定理的證明，在目前基礎知識該記得的都忘記、再兩天就要交作業的狀況下，實在非常刺激，我也知道最好的方法應該是把那些公式當工具用，等未來有空再去研究，但我就是有點控制不住我的好奇心啊！！！<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></p>
+<p>希望我能在明天寫完作業 \|/</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>我前陣子買了本書：<a
+href="https://www.books.com.tw/products/0010976966">〈好奇心行動攻略〉</a>，真的該好好看看了
+XD<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>]]>
+    </content>
+    <id>https://moon-jam.me/too-many-math/</id>
+    <link href="https://moon-jam.me/too-many-math/"/>
+    <published>2026-06-02T16:00:00.000Z</published>
+    <summary type="html">
+      <![CDATA[<p>最近在寫<a
+href="https://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0107&amp;sem=2&amp;co_no=P764200&amp;class_code=">排隊理論<]]>
+    </summary>
+    <title>好多數學</title>
+    <updated>2026-06-03T15:08:24.217Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Moon Jam</name>
