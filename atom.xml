@@ -1250,8 +1250,8 @@ Markdown 這種原先設計就是為了讓你不煩惱排版的語言，輸出�
 手動換頁，但是這樣需要反復調整，非常耗時廢力的，於是，我決定做一個可以即時預覽
 Markdown 輸出的 PDF 工具；在這個時代這件事情並不怎麽難，一邊上課一邊下
 prompt，不多時就做出了個還不錯的成品：<a
-href="https://moon-jam.me/md2pdf/"
-class="uri">https://moon-jam.me/md2pdf/</a></p>
+href="https://md2pdf.moon-jam.me/"
+class="uri">https://md2pdf.moon-jam.me/</a></p>
 <figure>
 <video
 src="https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/md2pdf-demo.mp4"
@@ -1298,8 +1298,8 @@ Markdown 這種原先設計就是為了讓你不煩惱排版的語言，輸出�
 手動換頁，但是這樣需要反復調整，非常耗時廢力的，於是，我決定做一個可以即時預覽
 Markdown 輸出的 PDF 工具；在這個時代這件事情並不怎麽難，一邊上課一邊下
 prompt，不多時就做出了個還不錯的成品：<a
-href="https://moon-jam.me/md2pdf/"
-class="uri">https://moon-jam.me/md2pdf/</a></p>
+href="https://md2pdf.moon-jam.me/"
+class="uri">https://md2pdf.moon-jam.me/</a></p>
 <figure>
 <video
 src="https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/md2pdf-demo.mp4"
@@ -1309,7 +1309,7 @@ href="https://cdn.jsdelivr.net/gh/moon-jam/BlogPictures@main/md2pdf-demo.mp4">md
 </figure>]]>
     </summary>
     <title>md2pdf</title>
-    <updated>2026-05-29T10:43:09.161Z</updated>
+    <updated>2026-08-31T15:06:45.997Z</updated>
   </entry>
   <entry>
     <author>
