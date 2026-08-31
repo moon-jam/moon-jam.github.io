@@ -33,7 +33,9 @@ comments: false
 
 ## 做過的專案
 
-- AI Vtuber（開發中）[<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
+- md2pdf [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/md2pdf) / [<i class="fa-regular fa-window-restore"></i> 網站](https://md2pdf.moon-jam.me)
+- Data Structure Playground [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/Data-Structure-Playground) / [<i class="fa-regular fa-window-restore"></i> 網站](https://ds-play.moon-jam.me)
+- AI Vtuber [<i class="fa-brands fa-youtube"></i> 聊天室測試直播影片](https://www.youtube.com/watch?v=CiBjItykxto)
 - 成大餐廳選隨機擇器（開發中）[<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/nckufood) / [<i class="fa-regular fa-window-restore"></i> 網站](https://nckufood.moon-jam.me)
 - 桌遊 Heroes of the GLOBE (2024 NASA Space Apps Challenge) [<i class="fab fa-github"></i> GitHub](https://github.com/moon-jam/NASA-Space-Challenge-2024-GLOBE-Protocol-Games) / [<i class="fa-regular fa-window-restore"></i> 桌遊網頁](https://globe-game.moon-jam.me/) / [<i class="fa-regular fa-window-restore"></i> NASA Space Apps Challenge Project Page](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/ecoecho/)
 - 淑女車大改裝 [<i class="fa-brands fa-youtube"></i> YouTube](https://youtube.com/playlist?list=PL5RNFkGeLf8HFmvxLRF-yQR8ZrSIp7u0Q&si=d1RsDaTF4LteagcS)
@@ -69,12 +71,12 @@ comments: false
 
 ## 演講/分享
 
-- 2026 [延展實境](https://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0114&sem=2&co_no=P75M900&class_code) - 課堂論文分享：Vox-Fusion: DenseTracking and Mapping with Voxel-based Neural Implicit Representation [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/vox-fusion/)
-- 2025 NCKU FASE 成大賽車隊 - Arduino 進階 - 教學 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/ncku_fsae_arduino_advance_course/)
-- 2025 NCKU FASE 成大賽車隊 - Arduino 入門 - 教學 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/ncku_fsae_arduino_beginner_course/)
-- 2025 MOPCON - Lightning Talk 講者 [<i class="fa fa-pager"></i> Slide](http://p4nd4.dev/mopcon2025-lt)
-- 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（二） - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/NCKUCTF-2025-linux-course-2)
-- 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（一） - 講者 [<i class="fa fa-pager"></i> Slide](https://p4nd4.dev/NCKUCTF-2025-linux-course-1)
+- 2026 [延展實境](https://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0114&sem=2&co_no=P75M900&class_code) - 課堂論文分享：Vox-Fusion: DenseTracking and Mapping with Voxel-based Neural Implicit Representation [<i class="fa fa-pager"></i> Slide](https://p.巫.tw/vox-fusion/)
+- 2025 NCKU FASE 成大賽車隊 - Arduino 進階 - 教學 [<i class="fa fa-pager"></i> Slide](https://p.巫.tw/ncku_fsae_arduino_advance_course/)
+- 2025 NCKU FASE 成大賽車隊 - Arduino 入門 - 教學 [<i class="fa fa-pager"></i> Slide](https://p.巫.tw/ncku_fsae_arduino_beginner_course/)
+- 2025 MOPCON - Lightning Talk 講者 [<i class="fa fa-pager"></i> Slide](http://p.巫.tw/mopcon2025-lt)
+- 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（二） - 講者 [<i class="fa fa-pager"></i> Slide](https://p.巫.tw/NCKUCTF-2025-linux-course-2)
+- 2025 NCKUCTF 成大資安社 - 114-1 成大資安社 Linux 基礎教學（一） - 講者 [<i class="fa fa-pager"></i> Slide](https://p.巫.tw/NCKUCTF-2025-linux-course-1)
 - 2024 NUKCON November - 講者 [<i class="fa fa-pager"></i> Slide](https://docs.google.com/presentation/d/1r9wwS_c4ylUVc5wpdrptx5rfRI_jap0dct6g0dfj40s/edit?usp=sharing) [<i class="fa-brands fa-instagram"></i> Video](https://www.instagram.com/p/DCjb60wyRfa/)
 - 2023 聽見新課綱 翻轉的聲音 - 跨域學習 - 講者 [<i class="fa fa-pager"></i> Slide](https://www.canva.com/design/DAGVKV-EPwE/QICj-8YZfYYPbLbIWAz4iA/view?utm_content=DAGVKV-EPwE&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 - 2023 大學與高中再探學習歷程檔案分享會暨論壇 - 海報分享
