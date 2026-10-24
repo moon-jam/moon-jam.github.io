@@ -115,6 +115,7 @@ menu:
   home: / || fa fa-home
   about: /about/ || fa fa-user
   竹林外史: /posts/ || fa fa-pen-nib
+  即時動態: https://now.moon-jam.me/ || fa fa-fire
   隨機: /random/ || fa fa-shuffle
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
