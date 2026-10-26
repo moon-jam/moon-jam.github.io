@@ -266,9 +266,9 @@
         });
       });
 
-      // Defer the first content load until after NexT's scripts have loaded and
-      // registered their `page:loaded` listeners (this inline script runs while
-      // the body is still parsing, before NexT.boot exists).
+      // Wait for the document and NexT's scripts, not images or external widgets.
+      // Waiting for window.load can leave the initially open post empty while
+      // an unrelated resource is still loading.
       const runInitialOpen = () => {
         const initialFromHash = normalizePostPath(decodeHash(window.location.hash));
         if (initialFromHash) {
@@ -282,10 +282,10 @@
         }
       };
 
-      if (document.readyState === 'complete') {
-        runInitialOpen();
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', runInitialOpen, { once: true });
       } else {
-        window.addEventListener('load', runInitialOpen, { once: true });
+        runInitialOpen();
       }
 
       window.addEventListener('hashchange', () => {
